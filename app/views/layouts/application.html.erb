@@ -20,43 +20,43 @@
   <body>
     <div class="container">
       <div id="skip"><a href="#content">Skip to Main Content</a></div> 
-      <header class="site-header">
-        <div class="site-header__top">
-          <div class="wrapper site-header__wrapper">
-            <div class="site-header__middle">
+      <header class="header">
+        <div class="header_top">
+          <div class="wrapper header_wrapper">
+            <div class="header_middle">
               <%= link_to image_tag("wugSLEEP.png", alt: "PinkWug Logo", class: "logo"), "/" %>
               <a href="/" class="logo"><br>Pink&nbsp;Wug</a>
             </div>
-            <div class="site-header__end top">
+            <div class="header_end top">
               <a href="#" class="button">Support on Ko-Fi</a>
               <a href="#" class="button">Support on Patreon</a>
             </div>
           </div>
         </div>
-        <div class="headerBorder"></div>
-        <div class="site-header__bottom">
-          <div class="wrapper site-header__wrapper">
-            <div class="site-header__start">
+        <div class="header_Border"></div>
+        <div class="header_bottom">
+          <div class="wrapper header_wrapper">
+            <div class="header_start">
               <nav class="nav">
-                <button class="nav__toggle" aria-expanded="false" type="button">
+                <button class="nav_toggle" aria-expanded="false" type="button">
                   Menu
                 </button>
-                <ul class="nav__wrapper">
-                  <li class="nav__item"><a href="#">Comics</a></li>
-                  <li class="nav__item"><a href="#">Store</a></li>
-                  <li class="nav__item"><a href="#">Suggestions</a></li>
-                  <li class="nav__item"><a href="#">Discord</a></li>
-                  <li class="nav__item"><a href="#">Contact Me</a></li>
+                <ul class="nav_wrapper">
+                  <li class="nav_item"><a href="#">Comics</a></li>
+                  <li class="nav_item"><a href="#">Store</a></li>
+                  <li class="nav_item"><a href="#">Suggestions</a></li>
+                  <li class="nav_item"><a href="#">Discord</a></li>
+                  <li class="nav_item"><a href="#">Contact Me</a></li>
                 </ul>
               </nav>
             </div>
 
-            <div class="site-header__end bottom">
+            <div class="header_end bottom">
               <div class="search">
-                <button class="search__toggle" giaria-label="Open search">
+                <button class="search_toggle" giaria-label="Open search">
                   Search
                 </button>
-                <form class="search__form" action="">
+                <form class="search_form" action="">
                   <label class="sr-only" for="search">Search</label>
                   <input
                     type="search"
@@ -94,13 +94,13 @@
         <div class="content"><%= yield %></div>
       </main>
       <footer>
-        <div class="footerBorder"></div>
+        <div class="footer_Border"></div>
         <div class="socialMediaLinks">
-          <%= link_to image_tag("facebook.svg", alt: "Facebook Logo", class: "bottomLogo"), "https://www.facebook.com/PinkWug" %>
-          <%= link_to image_tag("twitter.svg", alt: "Twitter Logo", class: "bottomLogo"), "https://twitter.com/pinkwug"%>
-          <%= link_to image_tag("instagram.svg", alt: "Instagram Logo", class: "bottomLogo"), "https://www.instagram.com/pinkwug/"  %>
-          <%= link_to image_tag("reddit.svg", alt: "Reddit Logo", class: "bottomLogo"), "https://www.reddit.com/r/PinkWug/"  %>
-          <%= link_to image_tag("tumblr.svg", alt: "Tumblr Logo", class: "bottomLogo"), "https://pinkwug.tumblr.com/"  %>
+          <%= link_to image_tag("facebook.svg", alt: "Facebook Logo", class: "bottom_Logo"), "https://www.facebook.com/PinkWug" %>
+          <%= link_to image_tag("twitter.svg", alt: "Twitter Logo", class: "bottom_Logo"), "https://twitter.com/pinkwug"%>
+          <%= link_to image_tag("instagram.svg", alt: "Instagram Logo", class: "bottom_Logo"), "https://www.instagram.com/pinkwug/"  %>
+          <%= link_to image_tag("reddit.svg", alt: "Reddit Logo", class: "bottom_Logo"), "https://www.reddit.com/r/PinkWug/"  %>
+          <%= link_to image_tag("tumblr.svg", alt: "Tumblr Logo", class: "bottom_Logo"), "https://pinkwug.tumblr.com/"  %>
         </div>
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>

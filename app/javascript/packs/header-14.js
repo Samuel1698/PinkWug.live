@@ -1,5 +1,5 @@
-let navToggle = document.querySelector(".nav__toggle");
-let navWrapper = document.querySelector(".nav__wrapper");
+let navToggle = document.querySelector(".nav_toggle");
+let navWrapper = document.querySelector(".nav_wrapper");
 let content = document.querySelector(".content");
 
 navToggle.addEventListener("click", function () {
@@ -18,8 +18,8 @@ navToggle.addEventListener("click", function () {
   }
 });
 
-let searchToggle = document.querySelector(".search__toggle");
-let searchForm = document.querySelector(".search__form");
+let searchToggle = document.querySelector(".search_toggle");
+let searchForm = document.querySelector(".search_form");
 
 searchToggle.addEventListener("click", showSearch);
 

@@ -26,15 +26,13 @@ class StripsController < ApplicationController
 			render action: 'edit'
 		end
 	end
-	def prev
-	end
 	def latest
 		redirect_to action: 'show', id: Strip.last
 	end
 	
 	private
 		def set_strip
-			@strip = Strip.find(params[:id])
+			@strip = Strip.friendly.find(params[:id])
 		end
 		def strip_params
 			strip_params = params.require(:strip).permit(:title,:subtext, :image, :transcript)
