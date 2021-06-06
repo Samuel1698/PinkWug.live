@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= @title + ' | ' if @title %>Pink Wug</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="apps/assets/javascripts/header-14.js">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="skip"><a href="#content">Skip to Main Content</a></div> 
+      <header class="site-header">
+        <div class="site-header__top">
+          <div class="wrapper site-header__wrapper">
+            <div class="site-header__middle">
+              <%= link_to image_tag("wugSLEEP.png", alt: "PinkWug Logo", class: "logo"), "/" %>
+              <a href="/" class="logo"><br>Pink&nbsp;Wug</a>
+            </div>
+            <div class="site-header__end top">
+              <a href="#" class="button">Support on Ko-Fi</a>
+              <a href="#" class="button">Support on Patreon</a>
+            </div>
+          </div>
+        </div>
+        <div class="headerBorder"></div>
+        <div class="site-header__bottom">
+          <div class="wrapper site-header__wrapper">
+            <div class="site-header__start">
+              <nav class="nav">
+                <button class="nav__toggle" aria-expanded="false" type="button">
+                  Menu
+                </button>
+                <ul class="nav__wrapper">
+                  <li class="nav__item"><a href="#">Comics</a></li>
+                  <li class="nav__item"><a href="#">Store</a></li>
+                  <li class="nav__item"><a href="#">Suggestions</a></li>
+                  <li class="nav__item"><a href="#">Discord</a></li>
+                  <li class="nav__item"><a href="#">Contact Me</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="site-header__end bottom">
+              <div class="search">
+                <button class="search__toggle" aria-label="Open search">
+                  Search
+                </button>
+                <form class="search__form" action="">
+                  <label class="sr-only" for="search">Search</label>
+                  <input
+                    type="search"
+                    name=""
+                    id="search"
+                    placeholder="Search comics or store"
+                  />
+                </form>
+              </div>
+              <a href="#" class="cart">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 128 128" width="128px" height="128px">
+                  <g id="surface22466917">
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 102 98 C 102 102.398438 98.398438 106 94 106 C 89.601562 106 86 102.398438 86 98 C 86 93.601562 89.601562 90 94 90 C 98.398438 90 102 93.601562 102 98 Z M 102 98 "/>
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 66 98 C 66 102.398438 62.398438 106 58 106 C 53.601562 106 50 102.398438 50 98 C 50 93.601562 53.601562 90 58 90 C 62.398438 90 66 93.601562 66 98 Z M 66 98 "/>
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 94 88 C 89.199219 88 85.199219 91.398438 84.199219 96 L 67.800781 96 C 66.800781 91.398438 62.800781 88 58 88 C 52.398438 88 48 92.398438 48 98 C 48 103.601562 52.398438 108 58 108 C 62.800781 108 66.800781 104.601562 67.800781 100 L 84.199219 100 C 85.199219 104.601562 89.199219 108 94 108 C 99.601562 108 104 103.601562 104 98 C 104 92.398438 99.601562 88 94 88 Z M 58 104 C 54.601562 104 52 101.398438 52 98 C 52 94.601562 54.601562 92 58 92 C 61.398438 92 64 94.601562 64 98 C 64 101.398438 61.398438 104 58 104 Z M 94 104 C 90.601562 104 88 101.398438 88 98 C 88 94.601562 90.601562 92 94 92 C 97.398438 92 100 94.601562 100 98 C 100 101.398438 97.398438 104 94 104 Z M 94 104 "/>
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 60 66 L 96 66 L 96 70 L 60 70 Z M 60 66 "/>
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 110 38 L 43.601562 38 L 40.601562 24.601562 C 40 22 37.601562 20 34.800781 20 L 18 20 C 14.601562 20 12 22.601562 12 26 C 12 29.398438 14.601562 32 18 32 L 26 32 C 29.398438 32 32 29.398438 32 26 L 32 24 L 34.800781 24 C 35.800781 24 36.601562 24.601562 36.800781 25.601562 L 46.800781 70.199219 C 47.800781 74.800781 51.800781 78 56.601562 78 L 100 78 C 104.398438 78 108.398438 75 109.601562 70.800781 L 115.601562 49.601562 C 115.800781 48.800781 116 47.800781 116 46.800781 L 116 44 C 116 40.601562 113.398438 38 110 38 Z M 28 26 C 28 27.199219 27.199219 28 26 28 L 18 28 C 16.800781 28 16 27.199219 16 26 C 16 24.800781 16.800781 24 18 24 L 28 24 Z M 112 46.800781 C 112 47.398438 112 48 111.800781 48.398438 L 105.800781 69.601562 C 105 72.199219 102.601562 74 100 74 L 56.398438 74 C 53.601562 74 51.199219 72 50.601562 69.398438 L 44.601562 42 L 110 42 C 111.199219 42 112 42.800781 112 44 Z M 112 46.800781 "/>
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 4 44 L 34 44 L 34 48 L 4 48 Z M 4 44 "/>
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 8 56 L 38 56 L 38 60 L 8 60 Z M 8 56 "/>
+                  <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 16 68 L 42 68 L 42 72 L 16 72 Z M 16 68 "/>
+                  </g>
+                </svg>
+              </a>
+              <a href="#">
+                <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" width="128px" height="128px">
+                  <path d="M 16 5 C 12.144531 5 9 8.144531 9 12 C 9 14.410156 10.230469 16.550781 12.09375 17.8125 C 8.527344 19.34375 6 22.882813 6 27 L 8 27 C 8 22.570313 11.570313 19 16 19 C 20.429688 19 24 22.570313 24 27 L 26 27 C 26 22.882813 23.472656 19.34375 19.90625 17.8125 C 21.769531 16.550781 23 14.410156 23 12 C 23 8.144531 19.855469 5 16 5 Z M 16 7 C 18.773438 7 21 9.226563 21 12 C 21 14.773438 18.773438 17 16 17 C 13.226563 17 11 14.773438 11 12 C 11 9.226563 13.226563 7 16 7 Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="content"><%= yield %></div>
+      </main>
+      <footer>
+        <div class="footerBorder"></div>
+        <div class="socialMediaLinks">
+          <%= link_to image_tag("facebook.svg", alt: "Facebook Logo", class: "bottomLogo"), "https://www.facebook.com/PinkWug" %>
+          <%= link_to image_tag("twitter.svg", alt: "Twitter Logo", class: "bottomLogo"), "https://twitter.com/pinkwug"%>
+          <%= link_to image_tag("instagram.svg", alt: "Instagram Logo", class: "bottomLogo"), "https://www.instagram.com/pinkwug/"  %>
+          <%= link_to image_tag("reddit.svg", alt: "Reddit Logo", class: "bottomLogo"), "https://www.reddit.com/r/PinkWug/"  %>
+          <%= link_to image_tag("tumblr.svg", alt: "Tumblr Logo", class: "bottomLogo"), "https://pinkwug.tumblr.com/"  %>
+        </div>
+        <p>© 2021, PinkWug powered by Sam D</p>
+      </footer>
+      <%= javascript_pack_tag 'header-14.js' %>
+    </div>
+  </body>
+  </html>

@@ -1,0 +1,428 @@
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+img { max-width: 100%; vertical-align: middle; border: 0; }
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+$dark-blue: RGBA(144,174,207);
+$light-grey: RGBA(204,214,226);
+$dark-brown: RGBA(49,49,49);
+$light-brown: #51595b;
+$highlight-color: RGBA(162,221,237);
+$sky-blue: RGBA(185,228,235);
+$dark: #493D3F;
+$purple: #8177D5;
+$red: #E67573;
+
+// =============================================================================
+// Base tags
+// =============================================================================
+
+@font-face {
+    font-family: 'jollygood_sansbasic', sans-serif;
+    src: font-url('pixilate_-_jollygood_sans_basic-webfont.woff2') format('woff2'),
+         font-url('pixilate_-_jollygood_sans_basic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+	font-size: 1.125rem;
+	line-height: 1.5;
+}
+body {
+	margin: 0;
+}
+h1 {
+	font-size: 2vw; 
+	text-align: center; 
+	font-weight: normal;
+}
+h2 {
+	font-size: 1rem;
+	text-align: center;
+	font-weight: lighter;
+}
+a {
+	text-decoration: none;
+
+	:hover, :focus, :active {
+		color: currentColor;
+	}
+}
+
+// Hiding the text inside the buttons
+.visually-hidden { //https://accessibility.18f.gov/hidden-content/
+    border: 0;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+}
+#skip a {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	a:focus {
+	position:static;
+	width:auto;
+	height:auto;
+	}
+}
+
+body:hover .visually-hidden a, 
+body:hover .visually-hidden input, 
+body:hover .visually-hidden button { display: none}
+
+// =============================================================================
+// Nav
+// =============================================================================
+
+.logo {
+  font-weight: bold;
+  font-size: 27px;
+  width: 85px;
+  color: white;
+}
+.site-header a {
+	color: white;
+}
+.site-header__top {
+  background-color: $dark-brown;
+  ul {
+    display: flex;
+  }
+  li:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  .site-header__start {
+    display: none;
+  }
+}
+.site-header__bottom {
+  position: relative;
+  background-color: $dark-brown;
+}
+.site-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.site-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.site-header__end {
+  display: flex;
+  align-items: center;
+}
+.site-header__end.top {
+  > * + * {
+    margin-left: 1.5rem;
+  }
+}
+.site-header__end.bottom {
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+.headerBorder {
+	background-color: $dark-brown;
+	border-bottom: 1px solid black;
+}
+.nav__item {
+  &:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  a {
+    display: block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    margin-right: 1rem;
+  }
+  &.active {
+    a {
+      border-left-color: $highlight-color;
+    }
+  }
+}
+.nav__toggle {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 0;
+  width: 58px;
+  height: 22px;
+  background: url("icons8-menu.svg") center/20px no-repeat;
+  border: 0;
+}
+.search {
+  display: flex;
+}
+.search__toggle {
+  appearance: none;
+  order: 1;
+  font-size: 0;
+  width: 34px;
+  height: 34px;
+  background: url("icons8-search.svg") center/22px no-repeat;
+  border: 0;
+  &.active {
+    background: url("icons8-macos-close.svg") center/22px no-repeat;
+  }
+}
+
+.search__form {
+  display: none;
+  &.active {
+    display: block;
+  }
+  input {
+    min-width: 200px;
+    appearance: none;
+    border: 0;
+    background-color: #fff;
+    border-radius: 0;
+    font-size: 0.88rem;
+    padding: 0.5rem;
+  }
+}
+// =============================================================================
+// Main css
+// =============================================================================
+
+header {
+	grid-area: header;
+}
+main {
+	grid-area: main;
+	margin: 0 auto 30px;
+	min-width: 350px;
+}
+
+.comicNav {
+
+	display: grid;
+	grid-template-areas:
+	  "first  previous random next recent";
+	font-size: 24px;
+	a {
+		background-color: white;
+		border: none;
+		text-align: center;
+		padding: 6px;
+		cursor: pointer;
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+	}
+
+	//first button
+	.fa-angle-double-left {
+		grid-area: first;
+	}
+	//previus button
+	.fa-angle-left {
+		grid-area: previous;
+	}
+	//Random Button
+	.fa-rotate-right {
+		grid-area: random;
+		font-size: 18px;
+	} 
+	//Next Button
+	.fa-angle-right {
+		grid-area: next;
+	}
+	//Most Recent Button
+	.fa-angle-double-right{
+		grid-area: recent;
+	}
+}
+
+footer {
+	grid-area: footer;
+}
+
+.bottomLogo {
+	width: 32px;
+}
+.container {
+	display:grid;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+}
+.content.active { //media query for medium? screens to drop margin for search bar + and - menu
+	margin-top: 290px;
+}
+
+// =============================================================================
+// footer
+// =============================================================================
+
+footer {
+	text-align: center;
+	font-size: .75rem;
+	color: white;
+	background-color: $dark-brown;
+	margin-top: 30px;
+	padding-bottom: 40px;
+	
+	a {
+	margin: 0px 6px;
+	padding: 7px 2px 12px;
+	}
+}
+ 
+.footerBorder {
+	padding: 40px;
+	background-color: $dark-brown;
+	border-bottom: 1px solid black;
+}
+.socialMediaLinks {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+// =============================================================================
+// Media queries
+// =============================================================================
+
+$small: 750px;
+$medium: 940px;
+$big: 1200px;
+//-----------------------------------------------
+// For smaller screens. From 350 to 750 pixels
+// ----------------------------------------------
+@media (max-width: $small){
+	main {
+		max-width: $small;
+	}
+	.nav__item.active {
+		a {
+		border-bottom-color: $highlight-color; 
+		}
+	}
+	.search__form {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		background-color: red;
+		input {
+		  width: 100%;
+		  border-bottom: 1px solid #979797;
+		}
+	}
+}
+// ---------------------------------------------------
+// For iPads and tablets. Between 751 and 940 pixels
+// ---------------------------------------------------
+@media (max-width: $medium - 1) {
+	main {
+		max-width: $medium;
+	}
+	.site-header__end.bottom {
+		order: -1;
+		.cart {
+			margin-right: 1.5rem;
+		}
+		.search {
+			margin-left: 0;
+		}
+	}
+	.nav__wrapper {
+	  position: absolute;
+	  top: 100%;
+	  right: 0;
+	  left: 0;
+	  z-index: 2;
+	  background-color: $light-brown;
+	  visibility: hidden;
+	  opacity: 0;
+	  transform: translateY(-100%);
+	  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+	  &.active {
+	    visibility: visible;
+	    opacity: 1;
+	    transform: translateY(0);
+	  }
+	}
+	.nav__item a {
+		padding: 1rem;
+	}
+	.search__toggle {
+		position: absolute;
+		right: 5.5rem;
+		top: 0.65rem;
+	}
+}
+
+
+// ---------------------------------------------------
+// For laptop and desktop size screens. From 940 pixels to 1200
+// ---------------------------------------------------
+@media (min-width: $medium){
+	h1 {
+		font-size: 1.75vw;
+	}
+	main {
+		max-width: 890px;
+	}
+	// Header
+	.site-header__wrapper {
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
+	}
+	.site-header__end.bottom {
+		> *:not(:last-child){
+			margin-right: 1.5rem;
+		}
+	}
+	.nav__wrapper {
+		display: flex;
+	}
+	.nav__item svg{
+		display: block;
+		margin: 0 auto 0.5rem;
+	}
+	.nav__toggle {
+		display: none;
+	}
+
+	//Grid template
+	.container {
+		grid-template-columns: 75px 1fr 1fr 1fr 75px;
+		grid-template-areas: 
+		 "header header   header header header"
+		 // "first  previous random next   recent"
+		 ".....  main     main   main   ......"
+		 "footer footer footer footer footer";
+		 ;
+	}
+}
+// -----------------------------------------
+// For bigger monitors. 1200px +
+// -----------------------------------------
+@media (min-width: $big) {
+	h1 {
+		font-size: 2vw;
+	}
+}

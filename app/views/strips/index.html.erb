@@ -1,0 +1,23 @@
+<h1>Listing Comics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @strips.each do |strip| %>
+      <tr>
+        <td><%= strip.title %></td>
+        <td><%= strip.image %></td>
+        <td><%= link_to "Show", strip %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
