@@ -21,6 +21,13 @@ strips = [
 		},
 		image: 'GameStops stocks, Hedge funds and rWallstreetsbets explained.jpg'
 	},
+	{ attributes: {
+		title: "Avocado", 
+		subtext: "Collab with ThingsInSquares", 
+		transcript: "Pink Wug reading a headline from his laptop reading: How to pay off student loans... 'eat less avocado' highlighted among the text of the newspaper. Next panel is pink wug calculating, the phrase '12654 fewer avocados' appears among different equations. Next panel shows him vomiting an avocado and counting, saying 'that makes 31...' Next panel shows him handing a banker the keys to a truck full of avocados in the back, saying 'I'm paying off my debt please'", 
+		},
+		image: 'avocado (collab with ThingsInSquares).png'
+	},
 ]
 
 #Grey wug wearing an elephant hat receives mail. Letter reads: my beloved GOP, my worse half, my partner in war crime. i cant spell political duopoly without you. please come back, if not for me, for our donors. your truly, establishment dems ❤️. Next panel is someone off screen asking: what are you reading? Next panel, the GOP wug turns around, throws the letter on a trashcan and says "nothing to worry about babe". The hidden wug is wearing a bundle and axe, implying it's a fascists. for Can they come back together
