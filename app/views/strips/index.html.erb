@@ -3,18 +3,18 @@
 <table>
   <thead>
     <tr>
+      <th>Comic</th>
       <th>Title</th>
-      <th>Image</th>
-      <th colspan="3"></th>
+      <th>Last Updated</th>
     </tr>
   </thead>
 
   <tbody>
     <% @strips.each do |strip| %>
       <tr>
+        <td><%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[200,200]))), strip %></td>
         <td><%= strip.title %></td>
-        <td><%= strip.image %></td>
-        <td><%= link_to "Show", strip %></td>
+        <td><%= strip.updated_at %></td>
       </tr>
     <% end %>
   </tbody>
