@@ -1,29 +1,28 @@
-<h1><%= @strip.title %></h1>
-<h2><%= @strip.subtext %></h2>
+<h1><%= @title %></h1>
+<h2><%= @subtext %></h2>
 
 <div class="comic_Nav" id="content">
     
-	<%= link_to strip_path(Strip.first) + '#content', {class: 'fa fa-angle-double-left', method: :get} do %>
+	<%= link_to @first_strip, {class: 'fa fa-angle-double-left', method: :get} do %>
 		<span class="visually-hidden">First Comic</span>
 	<% end %>
   
-	<%= link_to @strip.previous, {class: 'fa fa-angle-left' , method: :get} do %>
+	<%= link_to @previous_strip, {class: 'fa fa-angle-left' , method: :get} do %>
 		<span class="visually-hidden">Previous</span>
 	<% end %>
 
-  <%= link_to @strip.random, {class: 'fa fa-rotate-right' , method: :get} do %>
+  <%= link_to @random_strip, {class: 'fa fa-rotate-right' , method: :get} do %>
 		<span class="visually-hidden">Random</span>
 	<% end %>
 
-	<%= link_to @strip.next, {class: 'fa fa-angle-right' , method: :get} do %>
+	<%= link_to @next_strip, {class: 'fa fa-angle-right' , method: :get} do %>
 		<span class="visually-hidden">Next</span>
-	<% end %>
+	<% end %> 
 
-	<%= link_to strip_path(Strip.last) + '#content', {class: 'fa fa-angle-double-right' , method: :get} do %>
+	<%= link_to @last_strip, {class: 'fa fa-angle-double-right' , method: :get} do %>
 		<span class="visually-hidden">Most Recent</span>
 	<% end %>
     
-
 </div>
 
 <%= image_tag(url_for(@strip.image), alt: @strip.transcript, class: 'comic') %>

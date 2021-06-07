@@ -5,6 +5,27 @@ class StripsController < ApplicationController
 	end
 	def show
 		@title = @strip.title
+		@subtext = @strip.subtext
+		@id = @strip.id
+
+		@first_strip = strip_path(Strip.first)<<"#content"
+
+		if Strip.where(["id < ?", @id]).order('id').last.nil?
+			@previous_strip = @first_strip
+		else
+			@previous_strip = strip_path(Strip.where(["id < ?", @id]).order('id').last)<<"#content"
+		end
+
+		@random_strip = strip_path(Strip.where(["id != ?", @id]).order_by_rand.first)<<"#content"
+
+		if Strip.where(["id > ?", @id]).order('id').first.nil?
+			@next_strip  = @last_strip
+		else
+			@next_strip = strip_path(Strip.where(["id > ?", @id]).order('id').first)<<"#content"
+		end
+
+		@last_strip = strip_path(Strip.last)<<"#content"
+
 	end
 	def new
 		@strip = Strip.new

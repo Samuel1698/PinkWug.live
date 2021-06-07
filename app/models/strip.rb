@@ -6,14 +6,5 @@ class Strip < ApplicationRecord
 	extend FriendlyId
 	friendly_id :title, use: [:slugged, :finders]
 
-	def previous
-		Strip.where(["id < ?", id]).order('id').last
-	end
-	def random
-		Strip.where(["id != ?", id]).order_by_rand.first
-	end
-	def next
-		Strip.where(["id > ?", id]).order('id').first
-	end
 	
 end
