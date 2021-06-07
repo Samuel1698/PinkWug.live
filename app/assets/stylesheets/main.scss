@@ -219,7 +219,6 @@ main {
 	margin: 0 auto 30px;
 	min-width: 350px;
 }
-
 .comic_Nav {
 	display: grid;
 	grid-template-areas:
@@ -252,11 +251,9 @@ main {
 		grid-area: recent;
 	}
 }
-
 footer {
 	grid-area: footer;
 }
-
 .bottom_Logo {
 	width: 32px;
 }
@@ -266,14 +263,6 @@ footer {
 	"header"
 	"main"
 	"footer";
-}
-.content { 
-	&.search_margin{
-		margin-top: 36px;
-	}
-	&.menu_margin {
-		margin-top: 290px;
-	}
 }
 
 // =============================================================================
@@ -373,6 +362,16 @@ footer {
 			  width: 100%;
 			  border-bottom: 1px solid #979797;
 			}
+		}
+	}
+	.content { 
+		&.search_margin{
+			margin-top: 2.5em;
+			transition: margin-top 0.1s ease-out, 0.1s ease-out;
+		}
+		&.menu_margin {
+			margin-top: 16.5em;
+			transition: margin-top 0.3s ease-out, 0.3s ease-out;
 		}
 	}
 }
