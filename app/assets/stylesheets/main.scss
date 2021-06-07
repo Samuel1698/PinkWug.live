@@ -233,6 +233,10 @@ main {
 		&:not(:last-child){
 			margin-right: 20px;
 		}
+		&.disabled {
+			pointer-events: none;
+			color: grey;
+		}
 	}
 	.fa-angle-double-left {
 		grid-area: first;

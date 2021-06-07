@@ -1,3 +1,7 @@
+// =======================================================================
+// Header
+// =======================================================================
+
 let navToggle = document.querySelector(".nav_toggle");
 let navWrapper = document.querySelector(".nav_ul");
 let content = document.querySelector(".content");
@@ -39,4 +43,31 @@ function showSearch() {
     searchToggle.setAttribute("aria-label", "Open search");
     content.classList.remove("search_margin");
   }
+}
+
+// =======================================================================
+// Comic Navigation
+// =======================================================================
+
+let current_strip  = window.location; 
+let first_strip    = document.querySelector(".fa-angle-double-left");
+let previous_strip = document.querySelector(".fa-angle-left");
+let next_strip     = document.querySelector(".fa-angle-right");
+let last_strip     = document.querySelector(".fa-angle-double-right");
+
+if (first_strip.href == current_strip) {
+  first_strip.setAttribute('href', "#");
+  first_strip.classList.add("disabled");
+}
+if (previous_strip.href == current_strip) {
+  previous_strip.setAttribute('href', "#");
+  previous_strip.classList.add("disabled");
+}
+if (next_strip.href == current_strip) {
+  next_strip.setAttribute('href', "#");
+  next_strip.classList.add("disabled");
+}
+if (last_strip.href == current_strip) {
+  last_strip.setAttribute('href', "#");
+  last_strip.classList.add("disabled");
 }
