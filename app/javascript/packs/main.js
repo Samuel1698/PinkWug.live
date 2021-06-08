@@ -60,19 +60,23 @@ if (first_strip == current_strip) {
   let first_strip = document.querySelector(".fa-angle-double-left");  
   first_strip.setAttribute('href', "#");
   first_strip.classList.add("disabled");
+  first_strip.querySelector(".visually-hidden").remove();
 }
 if (previous_strip == current_strip) {
   let previous_strip = document.querySelector(".fa-angle-left");
   previous_strip.setAttribute('href', "#");
   previous_strip.classList.add("disabled");
+  previous_strip.querySelector(".visually-hidden").remove();
 }
 if (next_strip == current_strip) {
   let next_strip = document.querySelector(".fa-angle-right");
   next_strip.setAttribute('href', "#");
   next_strip.classList.add("disabled");
+  next_strip.querySelector(".visually-hidden").remove();
 }
 if (last_strip == current_strip) {
   let last_strip = document.querySelector(".fa-angle-double-right");
   last_strip.setAttribute('href', "#");
   last_strip.classList.add("disabled");
+  last_strip.querySelector(".visually-hidden").remove();
 }
