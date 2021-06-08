@@ -30,6 +30,7 @@ gem 'devise', '~> 4.8'
 gem 'friendly_id', '~> 5.4.0'
 # Use Active Admin for content management
 gem 'activeadmin', '~> 2.2'
+gem 'arctic_admin'
 # Resize image attachments
 gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
