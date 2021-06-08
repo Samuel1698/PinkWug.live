@@ -5,7 +5,7 @@
     <tr>
       <th>Comic</th>
       <th>Title</th>
-      <th>Last Updated</th>
+      <th>Upload Date</th>
     </tr>
   </thead>
 
@@ -14,7 +14,7 @@
       <tr>
         <td><%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[200,200]))), strip %></td>
         <td><%= strip.title %></td>
-        <td><%= strip.updated_at %></td>
+        <td><%= strip.created_at.strftime("%m/%d/%Y") %></td>
       </tr>
     <% end %>
   </tbody>
