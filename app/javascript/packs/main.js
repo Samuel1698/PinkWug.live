@@ -49,25 +49,30 @@ function showSearch() {
 // Comic Navigation
 // =======================================================================
 
-let current_strip  = window.location; 
-let first_strip    = document.querySelector(".fa-angle-double-left");
-let previous_strip = document.querySelector(".fa-angle-left");
-let next_strip     = document.querySelector(".fa-angle-right");
-let last_strip     = document.querySelector(".fa-angle-double-right");
+let regex = /^[^#]*/;
+let current_strip  = window.location.toString().match(regex).toString(); 
+let first_strip    = document.querySelector(".fa-angle-double-left").href.toString().match(regex).toString();
+let previous_strip = document.querySelector(".fa-angle-left").href.toString().match(regex).toString();
+let next_strip     = document.querySelector(".fa-angle-right").href.toString().match(regex).toString();
+let last_strip     = document.querySelector(".fa-angle-double-right").href.toString().match(regex).toString();
 
-if (first_strip.href == current_strip) {
+if (first_strip == current_strip) {
+  let first_strip = document.querySelector(".fa-angle-double-left");  
   first_strip.setAttribute('href', "#");
   first_strip.classList.add("disabled");
 }
-if (previous_strip.href == current_strip) {
+if (previous_strip == current_strip) {
+  let previous_strip = document.querySelector(".fa-angle-left");
   previous_strip.setAttribute('href', "#");
   previous_strip.classList.add("disabled");
 }
-if (next_strip.href == current_strip) {
+if (next_strip == current_strip) {
+  let next_strip = document.querySelector(".fa-angle-right");
   next_strip.setAttribute('href', "#");
   next_strip.classList.add("disabled");
 }
-if (last_strip.href == current_strip) {
+if (last_strip == current_strip) {
+  let last_strip = document.querySelector(".fa-angle-double-right");
   last_strip.setAttribute('href', "#");
   last_strip.classList.add("disabled");
 }
