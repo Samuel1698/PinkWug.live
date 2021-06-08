@@ -1,6 +1,6 @@
 ActiveAdmin.register Strip do
 
-  permit_params :title, :subtext ,:image, :transcript
+  permit_params :title, :subtext ,:image, :transcript, :created_at, :updated_at
 
   filter :title
   filter :created_at 
