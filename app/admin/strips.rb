@@ -18,15 +18,19 @@ ActiveAdmin.register Strip do
     actions
   end
   
-  
-  # show do 
-  #   h2 strip.title
-  #   h3 strip.subtext
-  #   a image_tag(rails_blob_path(strip.image, disposition: "image", only_path: true), size: "600x600")
-  #   h4 strip.transcript
-  # end
-
-
+  show do 
+    attributes_table do 
+      row :title
+      row :subtext
+      row :image do |strip|
+        image_tag url_for(strip.image.variant(resize_to_fit:[700,700]))
+      end
+      row :transcript
+      row :created_at
+      row :updated_at
+    end
+  end
+ 
   form do |f|
     f.inputs "Strip Details" do
       f.input :title 
