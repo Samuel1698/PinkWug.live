@@ -128,7 +128,7 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.comments = false
+  config.comments = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
@@ -256,20 +256,19 @@ ActiveAdmin.setup do |config|
   #
   # To disable/customize for the :admin namespace:
   #
-  #   config.namespace :admin do |admin|
-  #
-  #     # Disable the links entirely
-  #     admin.download_links = false
-  #
-  #     # Only show XML & PDF options
-  #     admin.download_links = [:xml, :pdf]
-  #
-  #     # Enable/disable the links based on block
-  #     #   (for example, with cancan)
-  #     admin.download_links = proc { can?(:view_download_links) }
-  #
-  #   end
+  # config.namespace :admin do |admin|
 
+  #   # Disable the links entirely
+  #   admin.download_links = false
+
+  #   # Only show XML & PDF options
+  #   #admin.download_links = [:xml, :pdf]
+
+  #   # Enable/disable the links based on block
+  #   #   (for example, with cancan)
+  #   admin.download_links = proc { can?(:view_download_links) }
+
+  # end
   # == Pagination
   #
   # Pagination is enabled by default for all resources.

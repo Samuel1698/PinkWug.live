@@ -7,7 +7,8 @@ ActiveAdmin.register Strip do
   filter :updated_at
 
 
-  index do 
+  index download_links: false do    
+
     selectable_column
     column :image do |strip|
       image_tag url_for(strip.image.variant(resize_to_limit:[200,200]))
