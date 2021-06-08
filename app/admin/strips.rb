@@ -38,6 +38,7 @@ ActiveAdmin.register Strip do
       f.input :image, as: :file if !f.object.image.attached?
       f.input :image, image_preview: :true if f.object.image.attached?
       f.input :transcript, hint: "Not required. Good for accessibility. Describe every panel of the comic"
+      f.input :created_at, as: :date_select
     end
     f.actions 
   end
