@@ -4,41 +4,21 @@ class StripsController < ApplicationController
 		@strips = Strip.all 
 	end
 	def show
-		@title = @strip.title
+		@title   = @strip.title
 		@subtext = @strip.subtext
-		@id = @strip.id
+		@id      = @strip.id
 
-		@first_strip = Strip.first
-		@last_strip = Strip.last
+		@first_strip    = Strip.first
+		@last_strip     = Strip.last
 		@previous_strip = Strip.where(["id < ?", @id]).order('id').last || @first_strip
-		@next_strip = Strip.where(["id > ?", @id]).order('id').first || @last_strip
-		@random_strip = Strip.where(["id != ?", @id]).order_by_rand.first
+		@next_strip     = Strip.where(["id > ?", @id]).order('id').first || @last_strip
+		@random_strip   = Strip.where(["id != ?", @id]).order_by_rand.first
 
 		@first_strip    = strip_path(@first_strip, anchor: 'content')
 		@last_strip     = strip_path(@last_strip, anchor: 'content')
 		@previous_strip = strip_path(@previous_strip, anchor: 'content')
 		@next_strip     = strip_path(@next_strip, anchor: 'content')
 		@random_strip   = strip_path(@random_strip, anchor: 'content')
-	end
-	def new
-		@strip = Strip.new
-	end
-	def create
-		@strip = Strip.new(strip_params)
-		if @strip.save
-			redirect_to @strip, notice: 'Strip was successfully created'
-		else
-			render action: 'new'
-		end
-	end
-	def edit
-	end
-	def update
-		if @strip.update(strip_params)
-			redirect_to @strip, notice: "Strip was sucessfully updated"
-		else
-			render action: 'edit'
-		end
 	end
 	def latest
 		redirect_to action: 'show', id: Strip.last
