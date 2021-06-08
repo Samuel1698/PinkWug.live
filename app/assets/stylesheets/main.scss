@@ -8,16 +8,11 @@ img { max-width: 100%; vertical-align: middle; border: 0; }
 // Variables
 // =============================================================================
 
-$dark-blue: RGBA(144,174,207);
-$light-grey: RGBA(204,214,226);
 $dark-brown: RGBA(49,49,49);
 $light-brown: #51595b;
 $highlight-color: RGBA(162,221,237);
-$sky-blue: RGBA(185,228,235);
-$dark: #493D3F;
-$purple: #8177D5;
-$red: #E67573;
-$small: 750px;
+$cyan: #7ac3c38a;
+$small: 600px;
 $medium: 940px;
 $big: 1200px;
 
@@ -43,11 +38,6 @@ h1 {
 	text-align: center; 
 	font-weight: normal;
 }
-h2 {
-	font-size: 1rem;
-	text-align: center;
-	font-weight: lighter;
-}
 a {
 	text-decoration: none;
 	color: black;
@@ -67,6 +57,7 @@ a {
 	  position: absolute;
 	  width: 1px;
 }
+// Skip all navigation and jump to content
 #skip a {
 	position:absolute;
 	left:-10000px;
@@ -245,8 +236,7 @@ main {
 		grid-area: previous;
 	}
 	.fa-rotate-right {
-		grid-area: random;
-		font-size: 18px;
+		grid-area: random;	
 	}
 	.fa-angle-right {
 		grid-area: next;
@@ -301,14 +291,15 @@ footer {
 // =============================================================================
 
 //-----------------------------------------------
-// From 350 to 750 pixels
+// From 350 to 600 pixels
 // ----------------------------------------------
 @media (max-width: $small){
+
 	main {
 		max-width: $small;
 	}
 	h1 {		
-		font-size: 1.3rem; 
+		font-size: 1rem; 
 	}
 	li.active a{
 		border-bottom-color: $highlight-color; 
@@ -354,7 +345,7 @@ footer {
 		button {
 			position: absolute;
 			right: 5.5rem;
-			top: 1.1rem;
+			top: 1.09rem;
 		}
 		form {
 			position: absolute;
@@ -368,7 +359,7 @@ footer {
 			}
 		}
 	}
-	.content { 
+	.bottom_margin { 
 		&.search_margin{
 			margin-top: 2.5em;
 			transition: margin-top 0.1s ease-out, 0.1s ease-out;
@@ -380,15 +371,30 @@ footer {
 	}
 }
 // ---------------------------------------------------
-// Between 751 and 940 pixels
+// Between 601 and 940 pixels
 // ---------------------------------------------------
 @media (min-width: $small +1) {
 	main {
 		max-width: $medium;
 	}
 	h1 {
-		font-size: 1.4rem;
+		font-size: 1.1rem;
+		margin-right: 16px;
+		margin-left: 16px;
 	}
+	.content {
+		max-width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	// .container {
+	// 		grid-template-columns: 20px 1fr 20px;
+	// 		grid-template-areas: 
+	// 		 "header header header"
+	// 		 ".....  main  ......"
+	// 		 "footer footer footer";
+	// 		 ;
+	// 	}
 }
 
 // ---------------------------------------------------

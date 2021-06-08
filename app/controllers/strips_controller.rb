@@ -14,11 +14,11 @@ class StripsController < ApplicationController
 		@next_strip     = Strip.where(["id > ?", @id]).order('id').first || @last_strip
 		@random_strip   = Strip.where(["id != ?", @id]).order_by_rand.first
 
-		@first_strip    = strip_path(@first_strip, anchor: 'content')
-		@last_strip     = strip_path(@last_strip, anchor: 'content')
-		@previous_strip = strip_path(@previous_strip, anchor: 'content')
-		@next_strip     = strip_path(@next_strip, anchor: 'content')
-		@random_strip   = strip_path(@random_strip, anchor: 'content')
+		@first_strip    = strip_path(@first_strip)
+		@last_strip     = strip_path(@last_strip)
+		@previous_strip = strip_path(@previous_strip)
+		@next_strip     = strip_path(@next_strip)
+		@random_strip   = strip_path(@random_strip)
 	end
 	def latest
 		redirect_to action: 'show', id: Strip.last
