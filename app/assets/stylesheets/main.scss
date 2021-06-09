@@ -112,6 +112,7 @@ nav {
 		    margin-right: 1.5rem;
 		  }
 		  a {
+		  	font-size: 0.8rem;
 		    display: block;
 		    padding-top: .5rem;
 		    padding-bottom: .5rem;
@@ -238,7 +239,14 @@ nav {
 	  }
   }
 }
-
+.header_end.bottom {
+	.cart {
+		height: 22px;
+	}
+	.user {
+		height: 20px;
+	}
+}
 // =============================================================================
 // Main css
 // =============================================================================
@@ -306,7 +314,7 @@ footer {
 
 footer {
 	text-align: center;
-	font-size: .75rem;
+	font-size: 13px;
 	color: white;
 	background-color: $dark-brown;
 	margin-top: 30px;
