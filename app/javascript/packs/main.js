@@ -49,31 +49,34 @@ function showSearch() {
 // Comic Navigation
 // =======================================================================
 
-let current_strip  = window.location; 
-let first_strip    = document.querySelector(".fa-angle-double-left");
-let previous_strip = document.querySelector(".fa-angle-left");
-let next_strip     = document.querySelector(".fa-angle-right");
-let last_strip     = document.querySelector(".fa-angle-double-right");
+let current_strip  = window.location.pathname; 
+let first_strip    = document.querySelectorAll(".fa-angle-double-left");
+let previous_strip = document.querySelectorAll(".fa-angle-left");
+let next_strip     = document.querySelectorAll(".fa-angle-right");
+let last_strip     = document.querySelectorAll(".fa-angle-double-right");
 
-if (first_strip.href == current_strip) {
-  first_strip.setAttribute('href', "#");
-  first_strip.classList.add("disabled");
-  first_strip.querySelector(".visually-hidden").remove();
+for (i = 0; i < 2; i++){
+  if (first_strip[i].pathname == current_strip) {
+    first_strip[i].setAttribute('href', "#");
+    first_strip[i].classList.add("disabled");
+    first_strip[i].querySelector(".visually-hidden").remove();
+  }
+  if (previous_strip[i].pathname == current_strip) {
+    previous_strip[i].setAttribute('href', "#");
+    previous_strip[i].classList.add("disabled");
+    previous_strip[i].querySelector(".visually-hidden").remove();
+  }
+  if (next_strip[i].pathname == current_strip) {
+    next_strip[i].setAttribute('href', "#");
+    next_strip[i].classList.add("disabled");
+    next_strip[i].querySelector(".visually-hidden").remove();
+  }
+  if (last_strip[i].pathname == current_strip) {
+    last_strip[i].setAttribute('href', "#");
+    last_strip[i].classList.add("disabled");
+    last_strip[i].querySelector(".visually-hidden").remove();
+  }
 }
-if (previous_strip.href == current_strip) {
-  previous_strip.setAttribute('href', "#");
-  previous_strip.classList.add("disabled");
-  previous_strip.querySelector(".visually-hidden").remove();
-}
-if (next_strip.href == current_strip) {
-  next_strip.setAttribute('href', "#");
-  next_strip.classList.add("disabled");
-  next_strip.querySelector(".visually-hidden").remove();
-}
-if (last_strip.href == current_strip) {
-  last_strip.setAttribute('href', "#");
-  last_strip.classList.add("disabled");
-  last_strip.querySelector(".visually-hidden").remove();
-}
+
 
 let ViewWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
