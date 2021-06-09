@@ -16,13 +16,12 @@ $fiery-coral: #FF424D;
 $small: 600px;
 $medium: 940px;
 $big: 1200px;
-
+$biggest: 1440px;
 // =============================================================================
 // Base tags
 // =============================================================================
 
 @font-face {
-    font-family: 'jollygood_sansbasic', sans-serif;
     src: font-url('pixilate_-_jollygood_sans_basic-webfont.woff2') format('woff2'),
          font-url('pixilate_-_jollygood_sans_basic-webfont.woff') format('woff');
     font-weight: normal;
@@ -32,6 +31,9 @@ html {
 	font-size: 1.125rem;
 }
 body {
+	font-family: 'jollygood_sansbasic', sans-serif;
+	font-weight: normal;
+	font-style: normal;
 	margin: 0;
 	padding: 0;
 }
@@ -45,6 +47,9 @@ a {
 	:hover, :focus, :active {
 		color: currentColor;
 	}
+}
+image {
+	max-width: 1780px;
 }
 
 // Hiding the text inside the buttons
@@ -67,9 +72,9 @@ a {
 	height:1px;
 	overflow:hidden;
 	a:focus {
-	position:static;
-	width:auto;
-	height:auto;
+		position:static;
+		width:auto;
+		height:auto;
 	}
 }
 
@@ -149,7 +154,7 @@ nav {
 		text-shadow: none;
 		font-weight: 700;
 		font-size: 14px;
-		background: url("Digital-Patreon-Logo_White.png") 8% 58%/16px no-repeat,
+		background: url("icons8-patreon.svg") 8% 58%/18px no-repeat,
 								linear-gradient($fiery-coral,$fiery-coral);
 		span {
 			color: white;
@@ -419,18 +424,10 @@ footer {
 		margin-left: 16px;
 	}
 	.content {
-		max-width: 80vw;
+		max-width: 75vw;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	// .container {
-	// 		grid-template-columns: 20px 1fr 20px;
-	// 		grid-template-areas: 
-	// 		 "header header header"
-	// 		 ".....  main  ......"
-	// 		 "footer footer footer";
-	// 		 ;
-	// 	}
 }
 
 // ---------------------------------------------------
@@ -441,7 +438,7 @@ footer {
 		max-width: 890px;
 	}
 	h1 {
-		font-size: 1.7rem;
+		font-size: 1.2rem;
 	}
 	.header_wrapper {
 		padding-top: 0.7rem;
@@ -469,7 +466,11 @@ footer {
 			height: 34px;
 		}
 	}
-
+	.content {
+		max-width: 50vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	//Grid template
 	.container {
 		grid-template-columns: 75px 1fr 1fr 1fr 75px;
@@ -477,7 +478,6 @@ footer {
 		 "header header   header header header"
 		 ".....  main     main   main   ......"
 		 "footer footer footer footer footer";
-		 ;
 	}
 }
 // -----------------------------------------
@@ -485,6 +485,20 @@ footer {
 // -----------------------------------------
 @media (min-width: $big) {
 	h1 {
-		font-size: 2rem;
+		font-size: 1.3rem;
+	}
+	.content {
+		max-width: 34vw;
+	}
+}
+// -----------------------------------------
+// For biggest monitors. 1440px +
+// -----------------------------------------
+@media (min-width: $biggest){
+	h1 {
+		font-size: 1.5rem;
+	}
+	.content {
+		max-width: 30vw;
 	}
 }
