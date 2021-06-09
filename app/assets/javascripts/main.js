@@ -77,13 +77,13 @@ for (i = 0; i < 2; i++){
   }
 }
 
-window.addEventListener('onresize', changeWindowSize);
+window.addEventListener('resize', changeWindowSize);
 window.addEventListener('load', changeWindowSize);
 
 function changeWindowSize(){
   let viewPort      = window.innerHeight;
   let headerHeight  = document.querySelector(".header").offsetHeight;
-  let contentHeight = document.querySelector(".content").offsetHeight;
+  let contentHeight = document.querySelector(".main").offsetHeight;
   let footerHeight  = document.querySelector(".footer").offsetHeight;
   
   let whiteSpace    = viewPort - (headerHeight + contentHeight + footerHeight + 25);
