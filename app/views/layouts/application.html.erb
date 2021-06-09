@@ -24,16 +24,12 @@
         <div class="header_top">
           <div class="wrapper header_wrapper">
             <div class="header_middle">
-              <%= link_to image_tag("wugSLEEP.png", class: "logo"), "/" %>
+              <%= link_to image_tag("wugSLEEP.png", class: "logo"), root_path %>
               <a href="/" class="logo"><br>Pink&nbsp;Wug</a>
             </div>
             <div class="header_end top">
-              <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#51595b', 'E1E84WNF9');kofiwidget2.draw();</script>
-              <a href="https://www.patreon.com/pinkwug" target="_blank" class="patreon">
-                <button>
-                  <span>Become a Patron</span>
-                </button>
-              </a>
+              <%= link_to image_tag("SupportMe_blue@2x.png", height: "36", border: "0", alt: "Support me on Ko-fi", style: "border:0px;height:36px;"), "https://ko-fi.com/L3L42AQKS", target: "_blank" %>
+              <%= link_to image_tag("Patreon-Button.png", height: "36", border: "0", alt: "Support me on Patreon", style: "border:0px;height:36px;"), "https://www.patreon.com/pinkwug", target: "_blank" %>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ class StripsController < ApplicationController
 	
 	private
 		def set_strip
-			@strip = Strip.friendly.find(params[:id])
+			@strip = Strip.find(params[:id])
 		end
 		def strip_params
 			strip_params = params.require(:strip).permit(:title,:subtext, :image, :transcript)
