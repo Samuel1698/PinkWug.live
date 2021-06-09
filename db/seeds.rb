@@ -8,29 +8,24 @@
 
 strips = [
 	{ attributes: {
-		title: "their problem", 
-		subtext: "unions",
+		title: "their problem",
 		transcript: "if you take a break, it's your problem. If everyone takes a break, it's their problem.",
 		},
 		image: 'their_problem.jpg'
 	},
 	{ attributes: {
-		title: "GameStops stocks", 
-		subtext: "Hedge funds and rWallstreetsbets explained", 
+		title: "GameStops stocks Hedge funds and rWallstreetsbets explained",
 		transcript: "Two capitalist shaking hands, announcer saying: no one knows what happened, so sadly no one can be held accountable. Breaking news headline says: Once in a lifetime recession happens again. Next panel is reddit comments, first one by tendieslord69 saying: IT LITERALLY CANNOT GO TITS UP, next comment is by mywifesboyfriend:💎💎🤚🤚. Next comment is by 420chan saying: We're going to the moon boys. Next panel is a TV announcer saying: The governemnt needs to stpe in! sinister forces are destroy8ing rich people money!. Breaking news banner on the bottom says: Should every redditor be prosecuted?", 
 		},
 		image: 'GameStops stocks, Hedge funds and rWallstreetsbets explained.jpg'
 	},
 	{ attributes: {
-		title: "Avocado", 
-		subtext: "Collab with ThingsInSquares", 
+		title: "Avocado (Collab with ThingsInSquares)",
 		transcript: "Pink Wug reading a headline from his laptop reading: How to pay off student loans... 'eat less avocado' highlighted among the text of the newspaper. Next panel is pink wug calculating, the phrase '12654 fewer avocados' appears among different equations. Next panel shows him vomiting an avocado and counting, saying 'that makes 31...' Next panel shows him handing a banker the keys to a truck full of avocados in the back, saying 'I'm paying off my debt please'", 
 		},
 		image: 'avocado (collab with ThingsInSquares).png'
 	},
 ]
-
-#Grey wug wearing an elephant hat receives mail. Letter reads: my beloved GOP, my worse half, my partner in war crime. i cant spell political duopoly without you. please come back, if not for me, for our donors. your truly, establishment dems ❤️. Next panel is someone off screen asking: what are you reading? Next panel, the GOP wug turns around, throws the letter on a trashcan and says "nothing to worry about babe". The hidden wug is wearing a bundle and axe, implying it's a fascists. for Can they come back together
 strips.each do |strip|
 	if Strip.find_by(title: strip[:attributes][:title])
 	   puts "#{strip[:attributes][:title]} already exists, skipping"
