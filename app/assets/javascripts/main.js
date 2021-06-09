@@ -1,20 +1,19 @@
 // =======================================================================
 // Header
 // =======================================================================
-
 let navToggle = document.querySelector(".nav_toggle");
 let navWrapper = document.querySelector(".nav_ul");
-let bottom_margin = document.querySelector(".bottom_margin");
+let content = document.querySelector(".content");
 
 navToggle.addEventListener("click", function () {
   if (navWrapper.classList.contains("active")) {
     this.setAttribute("aria-expanded", "false");
     this.setAttribute("aria-label", "menu");
     navWrapper.classList.remove("active");
-    bottom_margin.classList.remove("search_margin", "menu_margin");
+    content.classList.remove("search_margin", "menu_margin");
   } else {
     navWrapper.classList.add("active");
-    bottom_margin.classList.add("menu_margin");
+    content.classList.add("menu_margin");
     this.setAttribute("aria-label", "close menu");
     this.setAttribute("aria-expanded", "true");
     searchForm.classList.remove("active");
@@ -30,18 +29,18 @@ searchToggle.addEventListener("click", showSearch);
 function showSearch() {
   searchForm.classList.toggle("active");
   searchToggle.classList.toggle("active");
-  bottom_margin.classList.add("search_margin");
+  content.classList.add("search_margin");
 
   navToggle.setAttribute("aria-expanded", "false");
   navToggle.setAttribute("aria-label", "menu");
   navWrapper.classList.remove("active");
-  bottom_margin.classList.remove("menu_margin");
+  content.classList.remove("menu_margin");
 
   if (searchToggle.classList.contains("active")) {
     searchToggle.setAttribute("aria-label", "Close search");
   } else {
     searchToggle.setAttribute("aria-label", "Open search");
-    bottom_margin.classList.remove("search_margin");
+    content.classList.remove("search_margin");
   }
 }
 
@@ -78,5 +77,17 @@ for (i = 0; i < 2; i++){
   }
 }
 
+window.addEventListener('onresize', changeWindowSize);
+window.addEventListener('load', changeWindowSize);
 
-let ViewWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+function changeWindowSize(){
+  let viewPort      = window.innerHeight;
+  let headerHeight  = document.querySelector(".header").offsetHeight;
+  let contentHeight = document.querySelector(".content").offsetHeight;
+  let footerHeight  = document.querySelector(".footer").offsetHeight;
+  
+  let whiteSpace    = viewPort - (headerHeight + contentHeight + footerHeight + 25);
+  whiteSpace = whiteSpace + "px";
+
+  document.querySelector(".white_space").style.minHeight = whiteSpace;
+}

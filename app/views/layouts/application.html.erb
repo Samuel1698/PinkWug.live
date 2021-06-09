@@ -95,9 +95,10 @@
         </div>
       </header>
       <main>
-        <div class="bottom_margin"><%= yield %></div>
+        <%= yield %>
       </main>
-      <footer>
+      <div class="white_space"></div>
+      <footer class="footer">
         <div class="footer_Border"></div>
         <div class="socialMediaLinks">
           <%= link_to image_tag("facebook.svg", alt: "Facebook Logo", class: "bottom_Logo"), "https://www.facebook.com/PinkWug", target: "_blank" %>

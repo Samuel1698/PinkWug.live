@@ -17,6 +17,7 @@ $small: 600px;
 $medium: 940px;
 $big: 1200px;
 $biggest: 1440px;
+
 // =============================================================================
 // Base tags
 // =============================================================================
@@ -256,7 +257,7 @@ header {
 }
 main {
 	grid-area: main;
-	margin: 0 auto 30px;
+	margin: 0 auto 25px;
 	min-width: 350px;
 }
 .comic_Nav {
@@ -300,11 +301,15 @@ footer {
 .bottom_Logo {
 	width: 32px;
 }
+.white_space {
+	grid-area: white_space;
+}
 .container {
 	display:grid;
 	grid-template-areas: 
 	"header"
 	"main"
+	"white_space"
 	"footer";
 }
 
@@ -317,11 +322,12 @@ footer {
 	font-size: 13px;
 	color: white;
 	background-color: $dark-brown;
-	margin-top: 30px;
-	padding-bottom: 40px;
 	a {
 	margin: 0px 6px;
 	padding: 7px 2px 12px;
+	}
+	p {
+		padding-bottom: 40px;
 	}
 }
  
@@ -408,7 +414,7 @@ footer {
 			}
 		}
 	}
-	.bottom_margin { 
+	.content { 
 		&.search_margin{
 			margin-top: 2.5em;
 			transition: margin-top 0.1s ease-out, 0.1s ease-out;
@@ -485,6 +491,7 @@ footer {
 		grid-template-areas: 
 		 "header header   header header header"
 		 ".....  main     main   main   ......"
+		 "white_space white_space white_space white_space white_space"
 		 "footer footer footer footer footer";
 	}
 }
