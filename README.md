@@ -13,9 +13,9 @@ I started working on this project with the permission of PinkWug to practice wha
 
 ## Previews:
 ### Desktop:
-![DesktopPreview](https://user-images.githubusercontent.com/43931665/121558598-cc765b80-c9e3-11eb-824f-4f87d4acf85b.png)
+![DesktopPreview](https://user-images.githubusercontent.com/43931665/121565216-46a9de80-c9ea-11eb-8c76-8496ec8d44e7.png)
 ### Mobile:
-![MobilePreview](https://user-images.githubusercontent.com/43931665/121557948-32aeae80-c9e3-11eb-943a-5d9098a11d87.png)
+![MobilePreview](https://user-images.githubusercontent.com/43931665/121565399-693bf780-c9ea-11eb-85ca-db7b4046c744.png)
 ### Admin:
 ![AdminPreview](https://user-images.githubusercontent.com/43931665/121558341-99cc6300-c9e3-11eb-887a-c2c4aa00ca9d.png)
 ### The basic relationship map for future implementation: 
@@ -57,6 +57,7 @@ I started working on this project with the permission of PinkWug to practice wha
 - [ ] orders
 - [ ] line_items
 - [ ] reviews
+- [ ] Search
 
 ### Later Consideration
 - [ ] Tests
