@@ -22,21 +22,33 @@ I started working on this project with the permission of PinkWug to practice wha
 ![SQL - Pink Wug](https://user-images.githubusercontent.com/43931665/121552046-2411c880-c9de-11eb-8eda-647e53827834.png)
 
 ## To-Do:
-### Comics
-- [x] Active Admin
-  - [x] Use different template
-  - [x] Modify views
+### Active Admin
+- [x] Use ArcticAdmin template
+- [x] Modify actions
+- [x] strips controller
+- [ ] tags controller
+### Front End
+- [ ] Show
+  - [x] Mobile Responsive
+  - [x] Header
+  - [x] Fonts
+  - [x] Kofi-Patreon buttons
+  - [x] Title & Comic Navigation
+  - [x] White Space divider
+  - [x] Footer
+  - [ ] Tags
+- [ ] Index
+  - [x] Date format
+  - [ ] Mobile Responsive
+  - [ ] Toggle gallery/details button 
+### Comics  
 - [x] strips
   - [x] Model/Controller
   - [x] Views
-  - [x] ActiveAdmin Integration
-  - [x] Front End
-- [ ] tags
+- [x] tags
   - [x] Model/Controller
-  - [ ] ActiveAdmin Integration
 - [ ] strips_tags
-  - [ ] Model/Controller        
-  - [ ] Front End
+  - [ ] Model/Controller
 
 ### e-commerce
 - [ ] costumers
@@ -47,5 +59,7 @@ I started working on this project with the permission of PinkWug to practice wha
 - [ ] reviews
 
 ### Later Consideration
- - [ ] Comments
- - [ ] Votes
+- [ ] Tests
+- [ ] Image processing for screen optimized crop
+- [ ] Comments
+- [ ] Votes
