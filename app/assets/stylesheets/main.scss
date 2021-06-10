@@ -14,7 +14,7 @@ $highlight-color: RGBA(162,221,237);
 $cyan: #7ac3c38a;
 $fiery-coral: #FF424D;
 $kofi: #29ABE0;
-$small: 600px;
+$small: 530px;
 $medium: 940px;
 $big: 1200px;
 $biggest: 1440px;
@@ -204,8 +204,6 @@ nav {
 		}
 	}
 }
-
-
 .header_Border {
 	background-color: $dark-brown;
 	border-bottom: 1px solid black;
@@ -350,7 +348,6 @@ footer {
 // From 350 to 600 pixels
 // ----------------------------------------------
 @media (max-width: $small){
-
 	main {
 		max-width: $small;
 	}
@@ -359,6 +356,19 @@ footer {
 	}
 	li.active a{
 		border-bottom-color: $highlight-color; 
+	}
+	.header_end.top {
+		button {
+			font-size: 0;
+			&.patreon {
+				background: url("icons8-patreon-black.svg") 50% 50%/20px no-repeat,
+										linear-gradient($fiery-coral,$fiery-coral);
+			}
+			&.kofi {
+				background: url("Ko-fi_Icon_RGB_stroke.png") 50% 50%/36px no-repeat,
+										linear-gradient($kofi,$kofi);
+			}
+		}
 	}
 }
 // ---------------------------------------------------
