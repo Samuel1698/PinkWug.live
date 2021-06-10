@@ -179,9 +179,7 @@ nav {
 		line-height: 32px;
 		display: inline-block;
 		padding: 2px 10px 2px 36px;
-		text-align: center;
 		border-radius: 7px;
-		color: white;
 		cursor: pointer;
 		border: 0 none white;
 		text-decoration: none;
@@ -190,20 +188,17 @@ nav {
 		font-weight: 700;
 		font-size: 14px;
 		&.patreon {
-			background: url("icons8-patreon.svg") 6% 52%/20px no-repeat,
+			background: url("icons8-patreon-black.svg") 8% 50%/16px no-repeat,
 									linear-gradient($fiery-coral,$fiery-coral);
 		}
 		&.kofi {
-			background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+			background: url("Ko-fi_Icon_RGB_stroke.png") 4% 50%/28px no-repeat,
 									linear-gradient($kofi,$kofi);
 		}
-
 		span {
-			color: white;
+			color: black;
 			letter-spacing: -0.15px;
-			vertical-align: middle;
 			padding: 0;
-			text-align: center;
 			text-decoration: none;
 			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
 		}
