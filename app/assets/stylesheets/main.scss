@@ -13,6 +13,7 @@ $light-brown: #51595b;
 $highlight-color: RGBA(162,221,237);
 $cyan: #7ac3c38a;
 $fiery-coral: #FF424D;
+$kofi: #29ABE0;
 $small: 600px;
 $medium: 940px;
 $big: 1200px;
@@ -21,10 +22,10 @@ $biggest: 1440px;
 // =============================================================================
 // Base tags
 // =============================================================================
-
 @font-face {
-    src: font-url('pixilate_-_jollygood_sans_basic-webfont.woff2') format('woff2'),
-         font-url('pixilate_-_jollygood_sans_basic-webfont.woff') format('woff');
+    font-family: 'jollygood_sansbasic';
+    src: url('../fonts/pixilate_-_jollygood_sans_basic-webfont.woff2') format('woff2'),
+         url('../fonts/pixilate_-_jollygood_sans_basic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -137,39 +138,6 @@ nav {
   width: 85px;
   color: white;
 }
-.patreon {
-	button {
-		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-		line-height: 36px;
-		min-width: 150px;
-		display: inline-block;
-		padding: 2px 10px 2px 36px;
-		text-align: center;
-		border-radius: 7px;
-		color: white;
-		cursor: pointer;
-		overflow-wrap: break-word;
-		vertical-align: middle;
-		border: 0 none white;
-		font-family: 'Quicksand',Helvetica,Century Gothic,sans-serif;
-		text-decoration: none;
-		text-shadow: none;
-		font-weight: 700;
-		font-size: 14px;
-		background: url("icons8-patreon.svg") 8% 58%/18px no-repeat,
-								linear-gradient($fiery-coral,$fiery-coral);
-		span {
-			color: white;
-			letter-spacing: -0.15px;
-			vertical-align: middle;
-			line-height: 33px;
-			padding: 0;
-			text-align: center;
-			text-decoration: none;
-			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
-		}
-	}
-}
 .header_top {
   background-color: $dark-brown;
   ul {
@@ -205,6 +173,44 @@ nav {
   	}
   }
 }
+.header_end.top {
+	button {
+		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+		line-height: 32px;
+		display: inline-block;
+		padding: 2px 10px 2px 36px;
+		text-align: center;
+		border-radius: 7px;
+		color: white;
+		cursor: pointer;
+		border: 0 none white;
+		text-decoration: none;
+		text-shadow: none;
+		font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
+		font-weight: 700;
+		font-size: 14px;
+		&.patreon {
+			background: url("icons8-patreon.svg") 6% 52%/20px no-repeat,
+									linear-gradient($fiery-coral,$fiery-coral);
+		}
+		&.kofi {
+			background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+									linear-gradient($kofi,$kofi);
+		}
+
+		span {
+			color: white;
+			letter-spacing: -0.15px;
+			vertical-align: middle;
+			padding: 0;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+		}
+	}
+}
+
+
 .header_Border {
 	background-color: $dark-brown;
 	border-bottom: 1px solid black;

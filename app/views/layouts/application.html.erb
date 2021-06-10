@@ -14,7 +14,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="apps/assets/javascripts/main.js">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700">
   </head>
 
   <body>
@@ -28,8 +28,16 @@
               <a href="/" class="logo"><br>Pink&nbsp;Wug</a>
             </div>
             <div class="header_end top">
-              <%= link_to image_tag("SupportMe_blue@2x.png", height: "36", border: "0", alt: "Support me on Ko-fi", style: "border:0px;height:36px;"), "https://ko-fi.com/L3L42AQKS", target: "_blank" %>
-              <%= link_to image_tag("Patreon-Button.png", height: "36", border: "0", alt: "Support me on Patreon", style: "border:0px;height:36px;"), "https://www.patreon.com/pinkwug", target: "_blank" %>
+              <a href="https://ko-fi.com/L3L42AQKS" target="_blank">
+                <button class="kofi">
+                  <span>Support me on Ko-Fi</span>
+                </button>
+              </a>
+              <a href="https://www.patreon.com/pinkwug" target="_blank">
+                <button class="patreon">
+                  <span>Become a Patron</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
