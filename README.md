@@ -26,7 +26,7 @@ I started working on this project with the permission of PinkWug to practice wha
 - [x] Use ArcticAdmin template
 - [x] Modify actions
 - [x] strips controller
-- [ ] tags controller
+- [x] tags controller
 ### Front End
 - [ ] Show
   - [x] Mobile Responsive
@@ -47,8 +47,8 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Views
 - [x] tags
   - [x] Model/Controller
-- [ ] strips_tags
-  - [ ] Model/Controller
+- [x] strip_tags
+  - [x] Model/Controller
 
 ### e-commerce
 - [ ] costumers

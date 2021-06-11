@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_05_172126) do
+ActiveRecord::Schema.define(version: 2021_06_11_000653) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -70,6 +70,15 @@ ActiveRecord::Schema.define(version: 2021_06_05_172126) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "strip_tags", force: :cascade do |t|
+    t.integer "strip_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["strip_id"], name: "index_strip_tags_on_strip_id"
+    t.index ["tag_id"], name: "index_strip_tags_on_tag_id"
+  end
+
   create_table "strips", force: :cascade do |t|
     t.string "title"
     t.string "subtext"
@@ -81,13 +90,6 @@ ActiveRecord::Schema.define(version: 2021_06_05_172126) do
     t.index ["slug"], name: "index_strips_on_slug", unique: true
   end
 
-  create_table "strips_tags", force: :cascade do |t|
-    t.integer "strip_id", null: false
-    t.integer "tag_id", null: false
-    t.index ["strip_id"], name: "index_strips_tags_on_strip_id"
-    t.index ["tag_id"], name: "index_strips_tags_on_tag_id"
-  end
-
   create_table "tags", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
@@ -95,6 +97,6 @@ ActiveRecord::Schema.define(version: 2021_06_05_172126) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "strips_tags", "strips"
-  add_foreign_key "strips_tags", "tags"
+  add_foreign_key "strip_tags", "strips"
+  add_foreign_key "strip_tags", "tags"
 end

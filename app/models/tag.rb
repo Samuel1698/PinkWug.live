@@ -1,5 +1,6 @@
 class Tag < ApplicationRecord
-	# validates: :title
+	validates :title, presence: true
 
-	has_and_belongs_to_many :strips
+	has_many :strip_tags 
+	has_many :strips, through: :strip_tags
 end
