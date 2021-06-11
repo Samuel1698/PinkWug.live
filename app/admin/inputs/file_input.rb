@@ -21,6 +21,6 @@ class FileInput < Formtastic::Inputs::FileInput
   end
 
   def image_preview_html
-    template.image_tag(rails_blob_path(@object.send(method), disposition: "attachment", only_path: true), size: "600x600", :class => "image-preview")
+    template.image_tag(rails_blob_path(@object.send(method), disposition: "attachment", only_path: true), width: "600", :class => "image-preview")
   end
 end
