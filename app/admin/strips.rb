@@ -41,7 +41,7 @@ ActiveAdmin.register Strip do
       f.input :title
       f.input :subtext, hint: "Short description. Only visible on search results"
       f.input :image, as: :file if !f.object.image.attached?
-      f.input :image, hint: "If you change image file, it wont show up here yet until you click Update Strip!", image_preview: :true if f.object.image.attached?
+      f.input :image, hint: "If you change image file, it wont show up here until you click Update Strip!", image_preview: :true if f.object.image.attached?
       f.input :transcript, hint: "Not required. Good for accessibility. Describe every panel of the comic", :input_html => { :rows => 10 }
       # f.input :tags, :input_html => {:multiple => true} do
       #   f.has_many :strip_tags, as: :select, allow_destroy: true do |s|

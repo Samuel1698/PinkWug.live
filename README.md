@@ -34,7 +34,7 @@ I started working on this project with the permission of PinkWug to practice wha
   - [ ] Breadcrumb
   - [ ] Sitemap
 ### Front End
-- [ ] Show
+- [x] Show
   - [x] Mobile Responsive
   - [x] Header
   - [x] Fonts
@@ -42,7 +42,6 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Title & Comic Navigation
   - [x] White Space divider
   - [x] Footer
-  - [ ] Tags
 - [ ] Index
   - [x] Date format
   - [ ] Mobile Responsive
