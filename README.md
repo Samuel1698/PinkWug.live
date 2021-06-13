@@ -26,7 +26,9 @@ I started working on this project with the permission of PinkWug to practice wha
 - [x] Use ArcticAdmin template
 - [x] Modify actions
 - [x] strips controller
-- [x] tags controller
+- [ ] tags controller
+  - [x] Works
+  - [ ] Form Partial
 ### Front End
 - [ ] Show
   - [x] Mobile Responsive
