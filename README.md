@@ -22,13 +22,17 @@ I started working on this project with the permission of PinkWug to practice wha
 ![SQL - Pink Wug](https://user-images.githubusercontent.com/43931665/121552046-2411c880-c9de-11eb-8eda-647e53827834.png)
 
 ## To-Do:
-### Active Admin
+### Back End
 - [x] Use ArcticAdmin template
 - [x] Modify actions
 - [x] strips controller
 - [ ] tags controller
-  - [x] Works
-  - [ ] Form Partial
+  - [x] Functionality
+  - [ ] Active Admin Form Partial
+- [ ] SEO
+  - [x] Meta tags
+  - [ ] Breadcrumb
+  - [ ] Sitemap
 ### Front End
 - [ ] Show
   - [x] Mobile Responsive

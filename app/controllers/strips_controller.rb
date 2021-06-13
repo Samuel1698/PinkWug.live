@@ -7,6 +7,7 @@ class StripsController < ApplicationController
 		@title   = @strip.title
 		@subtext = @strip.subtext
 		@id      = @strip.id
+		@keyword = @strip.tags.pluck(:title)
 
 		@first_strip    = Strip.first
 		@last_strip     = Strip.last
@@ -23,12 +24,11 @@ class StripsController < ApplicationController
 	def latest
 		redirect_to action: 'show', id: Strip.last
 	end
-	
 	private
 		def set_strip
 			@strip = Strip.find(params[:id])
 		end
 		def strip_params
-			strip_params = params.require(:strip).permit(:title, :image, :transcript)
+			params.require(:strip).permit(:title, :subtext, :image, :transcript, :tag_ids)
 		end
 	end
