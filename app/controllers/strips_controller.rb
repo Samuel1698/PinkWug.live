@@ -7,7 +7,7 @@ class StripsController < ApplicationController
 		@title   = @strip.title
 		@subtext = @strip.subtext
 		@id      = @strip.id
-		@keyword = @strip.tags.pluck(:title)
+		@keyword = @strip.tags.pluck(:title).push("Pink Wug", "Comics")
 
 		@first_strip    = Strip.first
 		@last_strip     = Strip.last
