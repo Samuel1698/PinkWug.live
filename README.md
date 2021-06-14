@@ -31,6 +31,7 @@ I started working on this project with the permission of PinkWug to practice wha
   - [ ] Breadcrumb
   - [ ] Sitemap
 - [ ] Use Turbolinks for comic navigation bar?
+  - [ ] whiteSpace.js not working properly on Logo click
 ### Front End
 - [ ] Archive
   - [x] Date format

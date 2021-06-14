@@ -18,7 +18,7 @@ $blurple: #5865F2;
 $small: 530px;
 $medium: 940px;
 $big: 1200px;
-$biggest: 1440px;
+$biggest: 2000px;
 
 // =============================================================================
 // Base tags
@@ -481,9 +481,9 @@ footer {
 // Between 601 and 940 pixels
 // ---------------------------------------------------
 @media (min-width: $small +1) {
-	main {
-		max-width: $medium;
-	}
+	// main {
+	// 	max-width: $medium;
+	// }
 	h1, h2 {
 		font-size: 1.1rem;
 		margin-right: 16px;
@@ -493,19 +493,19 @@ footer {
 		font-size: 1rem;
 	}
 	.content {
-		max-width: 70vw;
+		max-width: 65vw;
 		margin-left: auto;
 		margin-right: auto;
 	}
 }
 
 // ---------------------------------------------------
-// From 940 pixels to 1200
+// From 940 pixels to 1080
 // ---------------------------------------------------
 @media (min-width: $medium){
-	main {
-		max-width: 890px;
-	}
+	// main {
+	// 	max-width: 890px;
+	// }
 	h1{
 		font-size: 1.2rem;
 	}
@@ -557,7 +557,7 @@ footer {
 	}
 }
 // -----------------------------------------
-// For bigger monitors. 1200px +
+// For bigger monitors. 1080px +
 // -----------------------------------------
 @media (min-width: $big) {
 	h1 {
@@ -570,7 +570,7 @@ footer {
 		font-size: 1rem;
 	}
 	.content {
-		max-width: 30vw;
+		max-width: 33vw;
 	}
 }
 // -----------------------------------------
@@ -580,7 +580,7 @@ footer {
 	h1 {
 		font-size: 1.5rem;
 	}
-	.content{
-		max-width: 35vw;
+	.content {
+		max-width: 36vw;
 	}
 }
