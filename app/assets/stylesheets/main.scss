@@ -51,8 +51,8 @@ a {
 		color: currentColor;
 	}
 }
-image {
-	max-width: 1780px;
+.comic {
+	//max-width: 1780px;
 }
 
 // Hiding the text inside the buttons
@@ -265,7 +265,7 @@ nav {
 	    display: block;
 	  }
 	  input {
-	    min-width: 200px;
+	    min-width: 250px;
 	    appearance: none;
 	    border: 0;
 	    background-color: #fff;
@@ -354,7 +354,6 @@ footer {
 
 footer {
 	text-align: center;
-	font-size: 13px;
 	color: white;
 	background-color: $dark-brown;
 	a {
@@ -362,6 +361,7 @@ footer {
 	padding: 7px 2px 12px;
 	}
 	p {
+		font-size: 13px;
 		padding-bottom: 40px;
 	}
 }
@@ -493,7 +493,7 @@ footer {
 		font-size: 1rem;
 	}
 	.content {
-		max-width: 75vw;
+		max-width: 70vw;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -570,7 +570,7 @@ footer {
 		font-size: 1rem;
 	}
 	.content {
-		max-width: 35vw;
+		max-width: 30vw;
 	}
 }
 // -----------------------------------------
@@ -580,7 +580,7 @@ footer {
 	h1 {
 		font-size: 1.5rem;
 	}
-	.content {
+	.content{
 		max-width: 35vw;
 	}
 }

@@ -23,9 +23,6 @@ I started working on this project with the permission of PinkWug to practice wha
 
 ## To-Do:
 ### Back End
-- [x] Use ArcticAdmin template
-- [x] Modify actions
-- [x] strips controller
 - [ ] tags controller
   - [x] Functionality
   - [ ] Active Admin Form Partial
@@ -33,27 +30,13 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Meta tags
   - [ ] Breadcrumb
   - [ ] Sitemap
+- [ ] Use Turbolinks for comic navigation bar?
 ### Front End
-- [x] Show
-  - [x] Mobile Responsive
-  - [x] Header
-  - [x] Fonts
-  - [x] Kofi-Patreon buttons
-  - [x] Title & Comic Navigation
-  - [x] White Space divider
-  - [x] Footer
-- [ ] Index
+- [ ] Archive
   - [x] Date format
   - [ ] Mobile Responsive
   - [ ] Toggle gallery/details button 
-### Comics  
-- [x] strips
-  - [x] Model/Controller
-  - [x] Views
-- [x] tags
-  - [x] Model/Controller
-- [x] strip_tags
-  - [x] Model/Controller
+- [x] About Me
 
 ### e-commerce
 - [ ] costumers
@@ -67,5 +50,7 @@ I started working on this project with the permission of PinkWug to practice wha
 ### Later Consideration
 - [ ] Tests
 - [ ] Image processing for screen optimized crop
-- [ ] Comments
-- [ ] Votes
+- [ ] Comments?
+- [ ] Votes?
+- [ ] OpenGraph 
+- [ ] Twitter Card meta_tag

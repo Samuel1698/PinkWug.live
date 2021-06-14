@@ -13,5 +13,5 @@ function changeWindowSize(){
   var whiteSpace    = viewPort - (headerHeight + contentHeight + footerHeight + 25);
   whiteSpace = whiteSpace + "px";
 
-  document.querySelector(".white_space").style.minHeight = whiteSpace;
+  document.querySelector(".white_space").style.minHeight = whiteSpace >= 0 ? whiteSpace : 0;
 }
