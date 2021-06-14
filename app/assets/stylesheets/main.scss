@@ -14,6 +14,7 @@ $highlight-color: RGBA(162,221,237);
 $cyan: #7ac3c38a;
 $fiery-coral: #FF424D;
 $kofi: #29ABE0;
+$blurple: #5865F2;
 $small: 530px;
 $medium: 940px;
 $big: 1200px;
@@ -39,7 +40,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-h1 {
+h1, h2 {
 	text-align: center; 
 	font-weight: normal;
 }
@@ -173,7 +174,7 @@ nav {
   	}
   }
 }
-.header_end.top {
+.header_buttons, .support_buttons {
 	button {
 		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 		line-height: 32px;
@@ -187,6 +188,16 @@ nav {
 		font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
 		font-weight: 700;
 		font-size: 14px;
+		span {
+			letter-spacing: -0.15px;
+			padding: 0;
+			text-decoration: none;
+			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+		}
+	}
+}
+.header_buttons {
+	button {
 		&.patreon {
 			background: url("icons8-patreon-black.svg") 8% 50%/16px no-repeat,
 									linear-gradient($fiery-coral,$fiery-coral);
@@ -195,14 +206,39 @@ nav {
 			background: url("Ko-fi_Icon_RGB_stroke.png") 4% 50%/28px no-repeat,
 									linear-gradient($kofi,$kofi);
 		}
-		span {
-			color: black;
-			letter-spacing: -0.15px;
-			padding: 0;
-			text-decoration: none;
-			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+	}
+	span {
+		color: black;
+	}
+}
+.support_buttons {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	button {
+		&.patreon {
+			background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
+									linear-gradient($fiery-coral,$fiery-coral);
+		}
+		&.kofi {
+			background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+									linear-gradient($kofi,$kofi);
 		}
 	}
+	span {
+		color: white;
+	}
+}
+.discord_logo {
+	border-radius: 7px;
+	border: 0 none white;
+	padding: 4px 10px;
+	display: block;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: $blurple;
+	height: 32px;
 }
 .header_Border {
 	background-color: $dark-brown;
@@ -351,13 +387,18 @@ footer {
 	main {
 		max-width: $small;
 	}
-	h1 {		
+	h1, h2 {		
 		font-size: 1rem; 
+	}
+	p {
+		font-size: 0.8rem;
+		margin-right: 16px;
+		margin-left: 16px;
 	}
 	li.active a{
 		border-bottom-color: $highlight-color; 
 	}
-	.header_end.top {
+	.header_buttons {
 		button {
 			font-size: 0;
 			&.patreon {
@@ -443,10 +484,13 @@ footer {
 	main {
 		max-width: $medium;
 	}
-	h1 {
+	h1, h2 {
 		font-size: 1.1rem;
 		margin-right: 16px;
 		margin-left: 16px;
+	}
+	p {
+		font-size: 1rem;
 	}
 	.content {
 		max-width: 75vw;
@@ -462,8 +506,14 @@ footer {
 	main {
 		max-width: 890px;
 	}
-	h1 {
+	h1{
 		font-size: 1.2rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 1rem;
 	}
 	.header_wrapper {
 		padding-top: 0.7rem;
@@ -512,6 +562,12 @@ footer {
 @media (min-width: $big) {
 	h1 {
 		font-size: 1.3rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 1rem;
 	}
 	.content {
 		max-width: 35vw;
