@@ -28,7 +28,7 @@
               <%= link_to image_tag("wugSLEEP.png", class: "logo"), root_path %>
               <a href="/" class="logo"><br>Pink&nbsp;Wug</a>
             </div>
-            <div class="header_end top">
+            <div class="header_end header_buttons top">
               <a href="https://ko-fi.com/L3L42AQKS" target="_blank">
                 <button class="kofi">
                   <span>Support me on Ko-Fi</span>
@@ -38,7 +38,7 @@
                 <button class="patreon">
                   <span>Become a Patron</span>
                 </button>
-              </a>y
+              </a>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
                   <li><a href="">Store</a></li>
                   <li><a href="#">Suggestions</a></li>
                   <li><a href="https://discord.gg/pinkwug" target="_blank">Discord</a></li>
-                  <li><a href="#">Contact Me</a></li>
+                  <li><a href="/about">About Me</a></li>
                 </ul>
               </nav>
             </div>
@@ -100,7 +100,9 @@
         </div>
       </header>
       <main class="main">
-        <%= yield %>
+        <div class="content">
+          <%= yield %>
+        </div> 
       </main>
       <div class="white_space"></div>
       <footer class="footer">
@@ -114,7 +116,9 @@
         </div>
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>
-      <%= javascript_include_tag "main.js", "data-turbolinks-track" => true  %>
+      <%= javascript_include_tag "header.js", "data-turbolinks-track" => true  %>
+      <%= javascript_include_tag "whiteSpace.js", "data-turbolinks-track" => true  %>
+      <%= javascript_include_tag "comicNav.js", "data-turbolinks-track" => true  %>
     </div>
   </body>
   </html>
