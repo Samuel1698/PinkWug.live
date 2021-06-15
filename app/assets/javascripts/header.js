@@ -44,3 +44,17 @@ function showSearch() {
   }
 }
 
+window.addEventListener('resize', changeButtons);
+window.addEventListener('turbolinks:load', changeButtons);
+window.addEventListener('load', changeButtons);
+
+function changeButtons(){
+  if (window.innerWidth < 540){
+    document.querySelector(".kofi").getElementsByTagName("span")[0].innerHTML = "Ko-fi";
+    document.querySelector(".patreon").getElementsByTagName("span")[0].innerHTML = "Patreon";
+  }
+  else {
+    document.querySelector(".kofi").getElementsByTagName("span")[0].innerHTML = "Support me on Ko-fi";
+    document.querySelector(".patreon").getElementsByTagName("span")[0].innerHTML = "Support me on Patreon"
+  }
+}
