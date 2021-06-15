@@ -15,7 +15,7 @@ $cyan: #7ac3c38a;
 $fiery-coral: #FF424D;
 $kofi: #29ABE0;
 $blurple: #5865F2;
-$small: 530px;
+$small: 540px;
 $medium: 940px;
 $big: 1200px;
 $biggest: 2000px;
@@ -50,9 +50,6 @@ a {
 	:hover, :focus, :active {
 		color: currentColor;
 	}
-}
-.comic {
-	//max-width: 1780px;
 }
 
 // Hiding the text inside the buttons
@@ -95,7 +92,7 @@ header {
 	color: white;
 	}
 }
-nav {
+nav { //Menu
 	button {
   position: absolute;
   cursor: pointer;
@@ -209,9 +206,9 @@ nav {
 	}
 	span {
 		color: black;
-	}
+	} //Patreon and Kofi buttons
 }
-.support_buttons {
+.support_buttons {  //Buttons for About Me page
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
@@ -398,19 +395,6 @@ footer {
 	li.active a{
 		border-bottom-color: $highlight-color; 
 	}
-	.header_buttons {
-		button {
-			font-size: 0;
-			&.patreon {
-				background: url("icons8-patreon-black.svg") 50% 50%/20px no-repeat,
-										linear-gradient($fiery-coral,$fiery-coral);
-			}
-			&.kofi {
-				background: url("Ko-fi_Icon_RGB_stroke.png") 50% 50%/36px no-repeat,
-										linear-gradient($kofi,$kofi);
-			}
-		}
-	}
 }
 // ---------------------------------------------------
 // Between 350 and 939 pixels
@@ -468,11 +452,11 @@ footer {
 	}
 	.content { 
 		&.search_margin{
-			margin-top: 2.5em;
+			margin-top: 2.5rem;
 			transition: margin-top 0.1s ease-out, 0.1s ease-out;
 		}
 		&.menu_margin {
-			margin-top: 16.5em;
+			margin-top: 12.5rem; //4em for each extra menu item
 			transition: margin-top 0.3s ease-out, 0.3s ease-out;
 		}
 	}
@@ -481,9 +465,6 @@ footer {
 // Between 601 and 940 pixels
 // ---------------------------------------------------
 @media (min-width: $small +1) {
-	// main {
-	// 	max-width: $medium;
-	// }
 	h1, h2 {
 		font-size: 1.1rem;
 		margin-right: 16px;
@@ -503,9 +484,6 @@ footer {
 // From 940 pixels to 1080
 // ---------------------------------------------------
 @media (min-width: $medium){
-	// main {
-	// 	max-width: 890px;
-	// }
 	h1{
 		font-size: 1.2rem;
 	}
@@ -557,7 +535,7 @@ footer {
 	}
 }
 // -----------------------------------------
-// For bigger monitors. 1080px +
+// For bigger monitors. 1200px +
 // -----------------------------------------
 @media (min-width: $big) {
 	h1 {
@@ -574,7 +552,7 @@ footer {
 	}
 }
 // -----------------------------------------
-// For biggest monitors. 1440px +
+// For biggest monitors. 2000px +
 // -----------------------------------------
 @media (min-width: $biggest){
 	h1 {
