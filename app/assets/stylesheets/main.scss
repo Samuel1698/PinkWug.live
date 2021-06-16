@@ -196,16 +196,16 @@ nav { //Menu
 .header_buttons {
 	button {
 		&.patreon {
-			background: url("icons8-patreon-black.svg") 8% 50%/16px no-repeat,
+			background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
 									linear-gradient($fiery-coral,$fiery-coral);
 		}
 		&.kofi {
-			background: url("Ko-fi_Icon_RGB_stroke.png") 4% 50%/28px no-repeat,
+			background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
 									linear-gradient($kofi,$kofi);
 		}
 	}
 	span {
-		color: black;
+		color: white;
 	} //Patreon and Kofi buttons
 }
 .support_buttons {  //Buttons for About Me page

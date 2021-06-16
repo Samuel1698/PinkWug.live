@@ -30,14 +30,14 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Meta tags
   - [ ] Breadcrumb
   - [ ] Sitemap
-- [ ] Use Turbolinks for comic navigation bar?
-  - [ ] whiteSpace.js not working properly on Logo click
+- [ ] Search
+- [ ] Tags as array: true on create_strips.rb
 ### Front End
 - [ ] Archive
   - [x] Date format
   - [ ] Mobile Responsive
-  - [ ] Toggle gallery/details button 
-- [x] About Me
+  - [ ] Toggle gallery/details button
+  - [ ] Filter
 
 ### e-commerce
 - [ ] costumers

@@ -1,4 +1,6 @@
-<h1><%= title 'Comic List' %></h1>
+<% set_meta_tags description: 'Archive of Pink Wug previous comics',
+                  keywords: 'Pink Wug, All Comics, past, previous' %>
+<h1><%= title 'Comic Archive' %></h1>
 
 <table>
   <thead>
@@ -12,7 +14,7 @@
   <tbody>
     <% @strips.each do |strip| %>
       <tr>
-        <td><%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[200,200]))), strip %></td>
+        <td><%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[300,300]))), strip %></td>
         <td><%= strip.title %></td>
         <td><%= strip.created_at.strftime("%m/%d/%Y") %></td>
       </tr>
@@ -20,4 +22,3 @@
   </tbody>
 </table>
 
-<br>
