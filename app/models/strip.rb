@@ -1,9 +1,15 @@
 class Strip < ApplicationRecord
 	validates :title, :image, presence: true
 	
-	has_many :strip_tags 
-	has_many :tags, through: :strip_tags
-	accepts_nested_attributes_for :strip_tags, allow_destroy: true
+	serialize :keywords, Array
+
+	def keywords_raw
+		self.keywords.join(", ") unless self.keywords.nil?
+	end
+	def keywords_raw=(values)
+		self.keywords = []
+		self.keywords=values.split(", ")
+	end
 
 	has_one_attached :image
 	extend FriendlyId
