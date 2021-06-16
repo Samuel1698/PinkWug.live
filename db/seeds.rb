@@ -47,7 +47,8 @@ strips = [
 		keywords: [ "Workers", "Job", "Monopoly", "Corporations", "Unions"],
 		},
 		image: 'Union for me, but not for thee.jpg',
-	},{ attributes: {
+	},
+	{ attributes: {
 		title: "Relatable",
 		description: "My reaction when someone says they relate to my comics",
 		transcript: "Yellow wug says 'I relate so much to your comics'.
@@ -55,6 +56,16 @@ strips = [
 		keywords: [ "Non-political"],
 		},
 		image: 'Relatable.jpg',
+	},
+	{ attributes: {
+		title: "Why nurses are superheroes",
+		description: "All the similarities between nurses and superheroes",
+		transcript: "They're paid with applause (nurse is pictured picking up a penny). 
+		Their job is seen as their moral duty (capitalist wug threatens the nurse with a gun and says 'you wont abandon your patients right?'
+		government dont want them realising the power they hold (nurse carrying a sign for 'nurses united' while a cop and guy in suit glare)", 
+		keywords: [ "Nurses", "Heroes", "Essential workers", "Unions", "Moral duty", "patients", "government", "power"],
+		},
+		image: 'Why nurses are superheroes.jpg',
 	},
 ]
 
