@@ -4,10 +4,10 @@ class StripsController < ApplicationController
 		@strips = Strip.all 
 	end
 	def show
-		@title   = @strip.title
-		@subtext = @strip.subtext
-		@id      = @strip.id
-		@keyword = @strip.tags.pluck(:title).push("Pink Wug", "Comics")
+		@title       = @strip.title
+		@description = @strip.description
+		@keywords    = @strip.keywords.push("Pink Wug", "Comics")
+		@id          = @strip.id
 
 		@first_strip    = Strip.first
 		@last_strip     = Strip.last
@@ -29,6 +29,6 @@ class StripsController < ApplicationController
 			@strip = Strip.find(params[:id])
 		end
 		def strip_params
-			params.require(:strip).permit(:title, :subtext, :image, :transcript, :tag_ids)
+			params.require(:strip).permit(:title, :description, :image, :keywords, :transcript)
 		end
 	end
