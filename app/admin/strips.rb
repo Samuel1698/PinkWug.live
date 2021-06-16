@@ -51,8 +51,6 @@ ActiveAdmin.register Strip do
       f.has_many :strip_tags, allow_destroy: true do |t|
         t.input :tag, hint: "You have to create these separately if none match, match as many as possible. It's good for Search Engine Optimization"
       end
-      
-     
       # f.has_many :strip_tags, 
       #            new_record: 'Add Tag', 
       #            remove_record: 'Remove', 
