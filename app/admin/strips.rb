@@ -3,13 +3,13 @@ ActiveAdmin.register Strip do
   permit_params :title, :description, :image, :keywords, :transcript, :created_at, :updated_at
 
   filter :title
-  filter :tags
-  filter :created_at 
-  filter :updated_at
+  filter :created_at
 
+  ActiveAdmin.setup do |config|
+    config.localize_format = :long
+  end
 
   index download_links: false do |f|
-
     f.selectable_column
     f.column :image do |strip|
       image_tag url_for(strip.image.variant(resize_to_limit:[200,10000]))
@@ -38,7 +38,7 @@ ActiveAdmin.register Strip do
     f.inputs "Comic Details" do
       f.input :title
       f.input :description, placeholder: "Short description. Only visible on search results"
-      f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search would bring this comic? Don't repeat title", placeholder: "Example: dashboard, admin, form"
+      f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Don't repeat title", placeholder: "Example: dashboard, admin, form"
       f.input :image, as: :file if !f.object.image.attached?
       f.input :image, hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
       f.input :transcript, hint: "Not required. Good for accessibility.", placeholder:  "Describe every panel of the comic", :input_html => { :rows => 5 }
