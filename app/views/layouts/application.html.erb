@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= display_meta_tags site: 'Pink Wug' %>
-    <%= display_meta_tags title: @title %>
-    <%= display_meta_tags description: @description %>
-    <%= display_meta_tags keywords: @keywords %>
-
-    
+    <%= display_meta_tags site: 'Pink Wug' %>    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= yield(:head) %>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700">
@@ -101,9 +97,7 @@
         </div>
       </header>
       <main class="main">
-        <div class="content">
-          <%= yield %>
-        </div> 
+        <%= yield %>
       </main>
       <div class="white_space"></div>
       <footer class="footer">

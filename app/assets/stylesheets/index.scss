@@ -1,0 +1,18 @@
+.table {
+	display: flex;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	min-height: 2rem;
+	align-items: center;
+	text-align: center;
+	&:first-child .cell {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.cell {
+	 	width: 300px;
+	}
+}

@@ -1,11 +1,10 @@
 class StripsController < ApplicationController
 	before_action :set_strip, only: [:show]
 	def index
-		@strips = Strip.all 
+		@strips = Strip.all.reverse
 	end
 	def show
 		@title       = @strip.title
-		@description = @strip.description
 		@keywords    = @strip.keywords.push("Pink Wug", "Comics")
 		@id          = @strip.id
 

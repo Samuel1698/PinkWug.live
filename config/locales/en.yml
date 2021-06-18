@@ -32,7 +32,7 @@
 en:
   date:
     formats:
-      long: "%b %d %Y"
+      long: "%b-%d-%Y"
   time:
     formats:
-      long: "%b %d %Y"
+      long: "%b-%d-%Y"

@@ -1,24 +1,23 @@
-<% set_meta_tags description: 'Archive of Pink Wug previous comics',
-                  keywords: 'Pink Wug, All Comics, past, previous' %>
+<% content_for :head do  %>
+  <% set_meta_tags description: 'Archive of Pink Wug previous comics',
+                      keywords: 'Pink Wug, all comics, past, previous, archive' %>
+  <% stylesheet_link_tag "index" %>
+<% end %>
 <h1><%= title 'Comic Archive' %></h1>
+<div class="table">
+  <div class="row">
+    <div class="cell">Comic</div>
+    <div class="cell">Title</div>
+    <div class="cell">Date</div>
+  </div>
+<% @strips.each do |strip| %>
+  <div class="row">
+    <%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[300,300])), class: 'cell'), strip %>
+    <p class="cell"><%= strip.title %></p>
+    <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
+  </div>
+<% end %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Comic</th>
-      <th>Title</th>
-      <th>Upload Date</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @strips.each do |strip| %>
-      <tr>
-        <td><%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[300,300]))), strip %></td>
-        <td><%= strip.title %></td>
-        <td><%= strip.created_at.strftime("%m/%d/%Y") %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
