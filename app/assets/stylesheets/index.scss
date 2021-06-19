@@ -2,20 +2,24 @@
 
 .img_container {
 	float: left;
-	position: relative;
+	position: absolute;
 	left: 0;
-	transform: translate(0%, -33%);
+	transform: translate(0%, -24%);
 	padding-left: 14px;
 	button {
 	  appearance: none;
 	  font-size: 0;
-	  width: 36px;
-	  height: 36px;
+	  width: 32px;
+	  height: 32px;
 	  cursor: pointer;
-	  background: url("icons8-image-gallery.svg") center/36px no-repeat;
+	  background: url("icons8-image-gallery.svg") center/32px no-repeat;
 	  border: 0;
 	  &.gallery {
-	    background: url("icons8-list.svg") center/36px no-repeat;
+	    background: url("icons8-list.svg") center/32px no-repeat;
+	  }
+	  &.hidden {
+	  	width: 0;
+	  	height: 0;
 	  }
 	}
 }
