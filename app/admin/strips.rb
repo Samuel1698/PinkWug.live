@@ -3,6 +3,8 @@ ActiveAdmin.register Strip do
   permit_params :title, :description, :image, :keywords, :transcript, :created_at, :updated_at
 
   filter :title
+  filter :description
+  filter :transcript
   filter :created_at
 
   ActiveAdmin.setup do |config|
@@ -41,7 +43,7 @@ ActiveAdmin.register Strip do
       f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Don't repeat title", placeholder: "Example: dashboard, admin, form"
       f.input :image, as: :file if !f.object.image.attached?
       f.input :image, hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
-      f.input :transcript, hint: "Not required. Good for accessibility.", placeholder:  "Describe every panel of the comic", :input_html => { :rows => 5 }
+      f.input :transcript, hint: "Not required. Good for accessibility and searchability.", :input_html => { :rows => 5 }
       f.input :created_at, as: :date_picker, label: "Created in"
     end
     f.actions 
