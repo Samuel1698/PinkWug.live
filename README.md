@@ -27,7 +27,7 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Meta tags
   - [ ] Breadcrumb
   - [ ] Sitemap
-- [ ] Search
+- [x] Search
 ### Front End
 - [ ] Archive
   - [x] Date format

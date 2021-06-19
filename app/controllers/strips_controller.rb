@@ -1,7 +1,7 @@
 class StripsController < ApplicationController
 	before_action :set_strip, only: [:show]
 	def index
-		@strips = Strip.all.reverse
+		@strips = Strip.filtered(query_params).reverse
 	end
 	def show
 		@title       = @strip.title
@@ -29,5 +29,9 @@ class StripsController < ApplicationController
 		end
 		def strip_params
 			params.require(:strip).permit(:title, :description, :image, :keywords, :transcript)
+		end
+		def query_params
+			query_params = params[:query]
+			query_params ? query_params.permit(:text) : {}
 		end
 	end
