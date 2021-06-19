@@ -28,6 +28,8 @@ I started working on this project with the permission of PinkWug to practice wha
   - [ ] Breadcrumb
   - [ ] Sitemap
 - [x] Search
+  - [x] Search by title, description, keywords or transcript
+  - [ ] Javascript to listen to form changes to refresh the list
 ### Front End
 - [ ] Archive
   - [x] Date format
