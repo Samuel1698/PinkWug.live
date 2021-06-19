@@ -8,7 +8,6 @@ toggle.addEventListener("click", function(){
 	  line.classList.add("line");
 	  toggle.classList.remove("gallery");
 		table.classList.remove("gallery");
-
 		for (i = 0; i < rows.length; i++){
 			rows[i].classList.remove("gallery");
 		}

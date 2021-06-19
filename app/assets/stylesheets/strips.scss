@@ -67,6 +67,9 @@ a {
 		height:auto;
 	}
 }
+.container {
+	min-width: 350px;
+}
 
 body:hover .visually-hidden a, 
 body:hover .visually-hidden input, 
@@ -273,12 +276,7 @@ nav { //Menu
 // =============================================================================
 // Main css
 // =============================================================================
-
-header {
-	grid-area: header;
-}
 main {
-	grid-area: main;
 	margin: 0 auto 25px;
 	min-width: 350px;
 }
@@ -317,14 +315,8 @@ main {
 		grid-area: recent;
 	}
 }
-footer {
-	grid-area: footer;
-}
 .bottom_Logo {
 	width: 32px;
-}
-.white_space {
-	grid-area: white_space;
 }
 // =============================================================================
 // footer
