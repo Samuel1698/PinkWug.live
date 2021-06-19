@@ -23,19 +23,17 @@ I started working on this project with the permission of PinkWug to practice wha
 
 ## To-Do:
 ### Back End
-- [ ] tags controller
-  - [x] Functionality
-  - [ ] Active Admin Form Partial
 - [ ] SEO
   - [x] Meta tags
   - [ ] Breadcrumb
   - [ ] Sitemap
 - [ ] Search
-- [ ] Tags as array: true on create_strips.rb
+- [ ] Root doesn't trigger turbolinks:load event
+- [ ] Separate js files per view
 ### Front End
 - [ ] Archive
   - [x] Date format
-  - [ ] Mobile Responsive
+  - [x] Mobile Responsive
   - [ ] Toggle gallery/details button
   - [ ] Filter
 

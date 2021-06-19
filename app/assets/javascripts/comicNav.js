@@ -1,7 +1,3 @@
-// =======================================================================
-// Comic Navigation
-// =======================================================================
-
 var current_strip  = window.location.pathname; 
 var first_strip    = document.querySelectorAll(".fa-angle-double-left");
 var previous_strip = document.querySelectorAll(".fa-angle-left");

@@ -1,6 +1,3 @@
-// =======================================================================
-// White Space
-// =======================================================================
 window.addEventListener('resize', changeWindowSize);
 window.addEventListener('turbolinks:load', changeWindowSize);
 window.addEventListener('load', changeWindowSize);

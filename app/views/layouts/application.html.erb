@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= display_meta_tags site: 'Pink Wug' %>    
+    <%= yield(:head) %>
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= yield(:head) %>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700">
@@ -112,8 +113,8 @@
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>
       <%= javascript_include_tag "header.js", "data-turbolinks-track" => true  %>
-      <%= javascript_include_tag "comicNav.js", "data-turbolinks-track" => true  %>
       <%= javascript_include_tag "whiteSpace.js", "data-turbolinks-track" => true  %>
+      <%= yield(:javascripts) %>
     </div>
   </body>
   </html>

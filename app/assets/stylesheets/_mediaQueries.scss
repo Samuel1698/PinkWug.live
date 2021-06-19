@@ -1,0 +1,176 @@
+//-----------------------------------------------
+// From 350 to 600 pixels
+// ----------------------------------------------
+@media (max-width: $small){
+	main {
+		max-width: $small;
+	}
+	h1, h2 {		
+		font-size: 1rem; 
+	}
+	p {
+		font-size: 0.8rem;
+		margin-right: 16px;
+		margin-left: 16px;
+	}
+	li.active a{
+		border-bottom-color: $highlight-color; 
+	}
+}
+// ---------------------------------------------------
+// Between 350 and 939 pixels
+// ---------------------------------------------------
+@media (max-width: $medium - 1) {
+	.header_end.bottom {
+		order: -1;
+		height: 24px;
+		.cart {
+			margin-right: 1.5rem;
+		}
+		.search {
+			margin-left: 0;
+		}
+	}
+	nav {
+		ul {
+		  position: absolute;
+		  top: 100%;
+		  right: 0;
+		  left: 0;
+		  z-index: 2;
+		  background-color: $light-brown;
+		  visibility: hidden;
+		  opacity: 0;
+		  transform: translateY(-100%);
+		  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+		  &.active {
+		    visibility: visible;
+		    opacity: 1;
+		    transform: translateY(0);
+		  }
+		  li a {
+		  	padding: 1rem;
+		  }
+		}
+	}
+	.search {
+		button {
+			position: absolute;
+			right: 5.5rem;
+			top: 1.09rem;
+		}
+		form {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			background-color: red;
+			input {
+			  width: 100%;
+			  border-bottom: 1px solid #979797;
+			}
+		}
+	}
+	.main { 
+		&.search_margin{
+			margin-top: 2.5rem;
+			transition: margin-top 0.1s ease-out, 0.1s ease-out;
+		}
+		&.menu_margin {
+			margin-top: 12.5rem; //4em for each extra menu item
+			transition: margin-top 0.3s ease-out, 0.3s ease-out;
+		}
+	}
+}
+// ---------------------------------------------------
+// Between 601 and 940 pixels
+// ---------------------------------------------------
+@media (min-width: $small +1) {
+	h1, h2 {
+		font-size: 1.1rem;
+		margin-right: 16px;
+		margin-left: 16px;
+	}
+	p {
+		font-size: 1rem;
+	}
+	.content {
+		max-width: 65vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// ---------------------------------------------------
+// From 940 pixels to 1080
+// ---------------------------------------------------
+@media (min-width: $medium){
+	h1{
+		font-size: 1.2rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 1rem;
+	}
+	.header_wrapper {
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
+	}
+	.header_end.bottom {
+		> *:not(:last-child){
+			margin-right: 1.5rem;
+		}
+	}
+	nav {
+		button {
+			display: none;
+		}
+		ul {
+			display: flex;
+			li svg {
+				display: block;
+				margin: 0 auto 0.5rem;
+			}
+		}
+	}
+	.search {
+		button.active {
+			height: 34px;
+		}
+	}
+	.content {
+		max-width: 50vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+// -----------------------------------------
+// For bigger monitors. 1200px +
+// -----------------------------------------
+@media (min-width: $big) {
+	h1 {
+		font-size: 1.3rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 1rem;
+	}
+	.content {
+		max-width: 33vw;
+	}
+}
+// -----------------------------------------
+// For biggest monitors. 2000px +
+// -----------------------------------------
+@media (min-width: $biggest){
+	h1 {
+		font-size: 1.5rem;
+	}
+	.content {
+		max-width: 36vw;
+	}
+}
