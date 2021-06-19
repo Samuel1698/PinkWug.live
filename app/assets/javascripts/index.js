@@ -22,3 +22,14 @@ toggle.addEventListener("click", function(){
 		}
 	}
 });
+
+window.addEventListener('resize', removeToggle);
+window.addEventListener('turbolinks:visit', removeToggle);
+window.addEventListener('load', removeToggle);
+
+function removeToggle(){
+	toggle.classList.remove("hidden");
+	if (window.innerWidth <= 700) {
+		toggle.classList.add("hidden");
+	}
+}

@@ -28,7 +28,8 @@ I started working on this project with the permission of PinkWug to practice wha
   - [ ] Breadcrumb
   - [ ] Sitemap
 - [ ] Search
-- [ ] Root doesn't trigger turbolinks:load event
+- [x] Root doesn't trigger turbolinks:load event
+- [ ] Rename strips#index to /comics or /all
 ### Front End
 - [ ] Archive
   - [x] Date format
