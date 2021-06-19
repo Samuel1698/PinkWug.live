@@ -1,8 +1,9 @@
 <% content_for :head do  %>
   <% set_meta_tags description: 'Archive of Pink Wug previous comics',
                       keywords: 'Pink Wug, all comics, past, previous, archive' %>
-  <% stylesheet_link_tag "index" %>
+  <%= stylesheet_link_tag "index" %>
 <% end %>
+
 <div class="div">
   <div class="img_container">
     <button class="toggle gallery">
@@ -25,7 +26,6 @@
   <% end %>
   </div>
 </div>
-
 <% content_for :javascripts do %>
   <%= javascript_include_tag "index.js", "data-turbolinks-track" => true %>
 <% end %>

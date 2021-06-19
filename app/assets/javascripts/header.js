@@ -41,7 +41,7 @@ function showSearch() {
 }
 
 window.addEventListener('resize', changeButtons);
-window.addEventListener('turbolinks:load', changeButtons);
+window.addEventListener('turbolinks:visit', changeButtons);
 window.addEventListener('load', changeButtons);
 
 function changeButtons(){

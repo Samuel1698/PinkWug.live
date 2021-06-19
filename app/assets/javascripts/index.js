@@ -1,4 +1,4 @@
-var toggle = document.querySelector(".toggle");
+var toggle        = document.querySelector(".toggle");
 var line          = document.querySelector(".div");
 var table         = document.querySelector(".table");
 var rows          = document.querySelectorAll(".row");
