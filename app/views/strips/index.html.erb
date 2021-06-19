@@ -3,18 +3,29 @@
                       keywords: 'Pink Wug, all comics, past, previous, archive' %>
   <% stylesheet_link_tag "index" %>
 <% end %>
-<h1><%= title 'Comic Archive' %></h1>
-<div class="table">
-  <div class="row">
-    <div class="cell">Comic</div>
-    <div class="cell">Title</div>
-    <div class="cell">Date</div>
+<div class="div">
+  <div class="img_container">
+    <button class="toggle gallery">
+      <span>Toggle</span>
+    </button>
   </div>
-<% @strips.each do |strip| %>
-  <div class="row">
-    <%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[300,300])), class: 'cell'), strip %>
-    <p class="cell"><%= strip.title %></p>
-    <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
+  <h1><%= title 'Comic Archive' %></h1>
+  <div class="table gallery">
+    <div class="row gallery">
+      <div class="cell">Comic</div>
+      <div class="cell">Title</div>
+      <div class="cell">Date</div>
+    </div>
+  <% @strips.each do |strip| %>
+    <div class="row gallery">
+      <%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[400,400])), class: 'cell'), strip %>
+      <p class="cell"><%= strip.title %></p>
+      <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
+    </div>
+  <% end %>
   </div>
-<% end %>
 </div>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "index.js", "data-turbolinks-track" => true %>
+<% end %>

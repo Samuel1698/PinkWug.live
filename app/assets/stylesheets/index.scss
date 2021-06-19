@@ -1,3 +1,24 @@
+@import "variables";
+
+.img_container {
+	float: left;
+	position: relative;
+	left: 0;
+	transform: translate(0%, -33%);
+	padding-left: 14px;
+	button {
+	  appearance: none;
+	  font-size: 0;
+	  width: 36px;
+	  height: 36px;
+	  cursor: pointer;
+	  background: url("icons8-health-data.svg") center/36px no-repeat;
+	  border: 0;
+	  &.gallery {
+	    background: url("icons8-image.svg") center/36px no-repeat;
+	  }
+	}
+}
 .table {
 	display: flex;
 	flex-direction: column;
@@ -12,7 +33,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-between;
+		.cell {
+			min-width: 200px;
+		}
 	}
 	.cell {
 		min-width: 200px;
@@ -20,9 +44,39 @@
 	}
 }
 
+.table.gallery {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.row.gallery {
+	flex-direction: column;
+	justify-content: flex-start;
+	&:first-child {
+		display: none;
+	}
+	p {
+		margin: 2px 0px 10px;
+		padding: 0 10px;
+		font-size: 0.7rem;
+		font-weight: 300;
+		color: grey;
+		&:last-child {
+			display: none;
+		}
+	}
+}
+.line {
+	margin-right: auto;
+	margin-left: auto;
+}
 @media (max-width: 700px) {
 	.row {
 		flex-direction: column;
+		justify-content: flex-start;
 		&:first-child {
 			display: none;
 		}
@@ -37,5 +91,16 @@
 			}
 		}
 	}
-
+	@media (min-width: 520px) {
+		.table {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
+@media (min-width: $medium){
+	.line {
+		max-width: 75vw;
+	}
 }

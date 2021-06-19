@@ -8,5 +8,8 @@
 	<%= render 'comicNav' %>
 	<%= image_tag(url_for(@strip.image), alt: @strip.transcript, class: 'comic') %>
 	<%= render 'comicNav' %>
-</div>	
+</div>
 
+<% content_for :javascripts do %>
+  <% javascript_include_tag "comicNav.js", "data-turbolinks-track" => true %>
+<% end %>
