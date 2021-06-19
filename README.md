@@ -29,12 +29,11 @@ I started working on this project with the permission of PinkWug to practice wha
   - [ ] Sitemap
 - [ ] Search
 - [ ] Root doesn't trigger turbolinks:load event
-- [ ] Separate js files per view
 ### Front End
 - [ ] Archive
   - [x] Date format
   - [x] Mobile Responsive
-  - [ ] Toggle gallery/details button
+  - [x] Toggle gallery/details button
   - [ ] Filter
 
 ### e-commerce

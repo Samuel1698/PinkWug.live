@@ -1,5 +1,5 @@
 window.addEventListener('resize', changeWindowSize);
-window.addEventListener('turbolinks:load', changeWindowSize);
+window.addEventListener('turbolinks:visit', changeWindowSize);
 window.addEventListener('load', changeWindowSize);
 
 function changeWindowSize(){
