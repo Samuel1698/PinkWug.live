@@ -15,4 +15,5 @@ class Strip < ApplicationRecord
 	extend FriendlyId
 	friendly_id :title, use: [:slugged, :finders]
 
+	scope :filtered, ->(query_params) { Strip::Filter.new.filter(self,query_params)}
 end

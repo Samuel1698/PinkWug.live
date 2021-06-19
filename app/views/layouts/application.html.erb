@@ -59,18 +59,13 @@
 
             <div class="header_end bottom">
               <div class="search">
-                <button class="search_toggle" giaria-label="Open search">
-                  Search
-                </button>
-                <form class="search_form" action="">
-                  <label class="sr-only" for="search">Search</label>
-                  <input
-                    type="search"
-                    name=""
-                    id="search"
-                    placeholder="Search comics or store"
-                  />
-                </form>
+                  <button class="search_toggle" giaria-label="Open search">
+                    Search
+                  </button>
+                <%= form_for :query, url: strips_path, method: :get, html: {class: 'search_form'} do |form|  %>
+                  <%= form.label 'Search', class: 'sr-only' %>
+                  <%= form.text_field :text, placeholder: 'Search comics or store', value: params.dig('query', 'text') %>
+                <% end %>
               </div>
               <a href="#" class="cart">
                 <?xml version="1.0" encoding="UTF-8"?>
