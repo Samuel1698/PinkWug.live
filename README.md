@@ -30,12 +30,15 @@ I started working on this project with the permission of PinkWug to practice wha
 - [x] Search
   - [x] Search by title, description, keywords or transcript
   - [ ] Javascript to listen to form changes to refresh the list
+- [ ] Author Comments/Announcements
 ### Front End
 - [ ] Archive
   - [x] Date format
   - [x] Mobile Responsive
   - [x] Toggle gallery/details button
-  - [ ] Filter
+  - [ ] Filter by dates and titles
+- [ ] View
+  - [ ] Author Comments
 
 ### e-commerce
 - [ ] costumers
@@ -49,7 +52,5 @@ I started working on this project with the permission of PinkWug to practice wha
 ### Later Consideration
 - [ ] Tests
 - [ ] Image processing for screen optimized crop
-- [ ] Comments?
-- [ ] Votes?
 - [ ] OpenGraph 
 - [ ] Twitter Card meta_tag

@@ -20,7 +20,7 @@ strips = [
 		title: "their problem",
 		description: "General strike explained",
 		transcript: "if you take a break, it's your problem. If everyone takes a break, it's their problem.",
-		keywords: ["Strike", "Capitalism"],
+		keywords: ["Strike", "Capitalism", "Unions", "Amazon"],
 		created_at: "04/02/2021",
 		},
 		image: 'their_problem.jpg',
