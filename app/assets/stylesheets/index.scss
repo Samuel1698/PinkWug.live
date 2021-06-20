@@ -5,7 +5,7 @@
 	position: absolute;
 	left: 0;
 	transform: translate(0%, -24%);
-	padding-left: 14px;
+	padding-left: 18px;
 	button {
 	  appearance: none;
 	  font-size: 0;
@@ -37,6 +37,13 @@
 		justify-content: center;
 		align-items: center;
 		justify-content: space-between;
+		button {
+			padding: 6px 10px;
+			appearance: none;
+			cursor: pointer;
+			border: 0 none white;
+			background: url("icons8-sort.svg") 80% 25%/24px no-repeat;
+		}
 	}
 	.cell {
 		width: 200px;
