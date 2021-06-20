@@ -43,6 +43,12 @@
 			cursor: pointer;
 			border: 0 none white;
 			background: url("icons8-sort.svg") 80% 25%/24px no-repeat;
+			&.desc {
+				background: url("icons8-sort-down.svg") 80% 70%/24px no-repeat;
+			}
+			&.asc {
+		    background: url("icons8-sort-up.svg") 80% -20%/24px no-repeat;
+			}
 		}
 	}
 	.cell {
