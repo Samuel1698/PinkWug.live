@@ -38,47 +38,65 @@ function removeToggle(){
 		}
 	}
 }
-function sortExceptF(list, state){
+// Sorts the array based on the array key "property"
+function dynamicSort(property, state){
+	var sortOrder = 1;
+	if (state == "desc")
+		sortOrder = -1
+	return function (a,b){
+		if (property == "stTitle")
+			var result = (a[property].toLowerCase() < b[property].toLowerCase() ? - 1 : (a[property].toLowerCase() > b[property].toLowerCase()) ? 1: 0);
+		if (property == "stDate")
+			var result = (new Date(b[property]) - new Date(a[property]));
+		return result * sortOrder;
+	}
+}
+// Removes the first element of the array of objects
+// Sorts the array of objects(list) through dynamicSort
+// Inserts the first element back to place
+function sortExceptF(list, property, state){
 	let temp = list[0];
 	list.shift();
-	if (state == "asc")
-		list.sort((a, b) => (a.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase() > b.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase()) ? 1 : -1);
-	if (state == "desc")
-		list.sort((a, b) => (a.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase() < b.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase()) ? 1 : -1);
+	list.sort(dynamicSort(property, state))
 	list.unshift(temp);
-	 
 	return 0;
 }
 
 var title = document.querySelector(".title");
-title.addEventListener("click", function(){
-	//First elements are the table head, ignored from the sorting
-	var cell = [{stImage: "none",stTitle: "none",stDate: "none"}]; 
-	for(let i = 1; i < (rows.length); i++){
-		cell.push({
-			stImage: rows[i].getElementsByClassName("cell")[0].src,
-			stTitle: rows[i].getElementsByClassName("cell")[1].innerHTML,
-			stDate:  rows[i].getElementsByClassName("cell")[2].innerHTML,
-		})
+var date  = document.querySelector(".date");
+title.addEventListener("click", switchRows("stTitle")); 
+date.addEventListener("click", switchRows("stDate")); 
+
+	function switchRows(property){
+		return function(){
+			//First elements are the table head, ignored from the sorting
+			var cell = [{stImage: "none",stTitle: "none",stDate: "none"}]; 
+			for(let i = 1; i < (rows.length); i++){
+				cell.push({
+					stImage: rows[i].getElementsByClassName("cell")[0].src,
+					stTitle: rows[i].getElementsByClassName("cell")[1].innerHTML,
+					stDate:  rows[i].getElementsByClassName("cell")[2].innerHTML,
+				})
+			}
+			// If the title doesnt contain ASCending, do that order
+			// Default element doesnt contain either ASC nor DESC
+			// As the default order is by ID (should match date)
+			if      (!this.classList.contains("asc")){ 
+				this.classList.remove("desc"); // Use these classes for styling the button
+				this.classList.add("asc");
+				sortExceptF(cell, property, "asc");
+			}
+			// If the title doesnt contain DESCending, do that order
+			else if (!this.classList.contains("desc")){ 
+				this.classList.remove("asc");
+				this.classList.add("desc");
+				sortExceptF(cell, property, "desc");
+			}
+			// Change the values of all key:value pairs according to new order
+			for(let i = 1; i < (rows.length); i++) {
+				rows[i].getElementsByClassName("cell")[0].src       = cell[i].stImage; 
+				rows[i].getElementsByClassName("cell")[1].innerHTML = cell[i].stTitle; 
+				rows[i].getElementsByClassName("cell")[2].innerHTML = cell[i].stDate;
+			}
+		};
 	}
-	// If the title doesnt contain ASCending, do that order
-	// Default element doesnt contain either ASC nor DESC
-	// As the default order is by ID (should match date)
-	if      (!title.classList.contains("asc")){ 
-		title.classList.remove("desc"); // Use these classes for styling the button
-		title.classList.add("asc");
-		sortExceptF(cell, "asc");
-	}
-	// If the title doesnt contain DESCending, do that order
-	else if (!title.classList.contains("desc")){ 
-		title.classList.remove("asc");
-		title.classList.add("desc");
-		sortExceptF(cell, "desc");
-	}
-	// Change the values of all key:value pairs according to new order
-	for(let i = 1; i < (rows.length); i++) {
-		rows[i].getElementsByClassName("cell")[0].src       = cell[i].stImage; 
-		rows[i].getElementsByClassName("cell")[1].innerHTML = cell[i].stTitle; 
-		rows[i].getElementsByClassName("cell")[2].innerHTML = cell[i].stDate;
-	}
-});
