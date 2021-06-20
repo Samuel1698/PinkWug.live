@@ -1,4 +1,14 @@
 @import "variables";
+// Only for kofi-patreon logo
+@media (max-width: 554px){
+	.header_buttons button {
+		&.patreon {
+			padding: 2px 10px 2px 26px;
+			background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
+									linear-gradient($fiery-coral,$fiery-coral);
+		}
+	}
+}
 //-----------------------------------------------
 // From 350 to 600 pixels
 // ----------------------------------------------

@@ -93,6 +93,10 @@
 	margin-left: auto;
 }
 @media (max-width: 700px) {
+	.img_container {
+		position: absolute;
+		left: -10000px;
+	}
 	.row {
 		flex-direction: column;
 		justify-content: flex-start;

@@ -1,14 +1,13 @@
-
-//Event for resize
+//Event for window resize
 window.addEventListener('resize', addWhiteSpace("resize")); 
 //Turbolinks navigation
 document.addEventListener('turbolinks:load', addWhiteSpace("Turbolinks: load")); 
 
-function addWhiteSpace(cons) {
+function addWhiteSpace(content) {
   return function(){
     // Uncomment console.logs for debugging
     // console.log("-------------------------------");
-    // console.log(cons);
+    // console.log(content);
     var viewPort      = window.innerHeight;
     var headerHeight  = document.querySelector(".header").offsetHeight;
     var contentHeight = document.querySelector(".main").offsetHeight;
