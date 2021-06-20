@@ -41,11 +41,11 @@ function removeToggle(){
 // Sorts the array based on the array key "property"
 function dynamicSort(property, state){
 	var sortOrder = 1;
-	if (state == "desc")
+	if (state == "asc")
 		sortOrder = -1
 	return function (a,b){
 		if (property == "stTitle")
-			var result = (a[property].toLowerCase() < b[property].toLowerCase() ? - 1 : (a[property].toLowerCase() > b[property].toLowerCase()) ? 1: 0);
+			var result = (a[property].toLowerCase() < b[property].toLowerCase() ? 1 : - 1);
 		if (property == "stDate")
 			var result = (new Date(b[property]) - new Date(a[property]));
 		return result * sortOrder;
@@ -78,9 +78,9 @@ date.addEventListener("click", switchRows("stDate"));
 					stDate:  rows[i].getElementsByClassName("cell")[2].innerHTML,
 				})
 			}
-			// If the title doesnt contain ASCending, do that order
-			// Default element doesnt contain either ASC nor DESC
-			// As the default order is by ID (should match date)
+			// If the title/date doesnt contain ASCending, do that order
+			// Default title doesnt contain either ASC nor DESC
+			// As the default order is by DESC Date
 			if      (!this.classList.contains("asc")){ 
 				this.classList.remove("desc"); // Use these classes for styling the button
 				this.classList.add("asc");
