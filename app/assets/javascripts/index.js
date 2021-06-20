@@ -22,22 +22,6 @@ toggle.addEventListener("click", function(){
 	}
 });
 
-window.addEventListener('resize', removeToggle);
-window.addEventListener('turbolinks:load', removeToggle);  //this doesnt work???
-window.addEventListener('load', removeToggle);
-
-function removeToggle(){
-	toggle.classList.remove("hidden");
-	if (window.innerWidth <= 700) {
-		toggle.classList.add("hidden");
-		line.classList.remove("line");
-		table.classList.add("gallery");
-		toggle.classList.add("gallery");
-		for (i = 0; i < rows.length; i++){
-			rows[i].classList.add("gallery");
-		}
-	}
-}
 // Sorts the array based on the array key "property"
 function dynamicSort(property, state){
 	var sortOrder = 1;

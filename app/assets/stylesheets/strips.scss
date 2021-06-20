@@ -133,9 +133,9 @@ nav { //Menu
   background-color: $dark-brown;
   ul {
     display: flex;
-  }
-  li:not(:last-child) {
-    margin-right: 1.5rem;
+	  li:not(:last-child) {
+	    margin-right: 1.5rem;
+	  }
   }
   .header_start {
     display: none;
@@ -155,7 +155,7 @@ nav { //Menu
   display: flex;
   align-items: center;
   &.top > * + * {
-  	margin-left: 1.5rem;
+  	margin-left: 1rem;
   }
   &.bottom{
   	svg {
@@ -189,7 +189,7 @@ nav { //Menu
 .header_buttons {
 	button {
 		&.patreon {
-			background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
+			background: url("icons8-patreon-white.svg") 6% 50%/16px no-repeat,
 									linear-gradient($fiery-coral,$fiery-coral);
 		}
 		&.kofi {

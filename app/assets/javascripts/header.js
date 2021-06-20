@@ -4,6 +4,7 @@ var main = document.querySelector(".main");
 var searchToggle = document.querySelector(".search_toggle");
 var searchForm = document.querySelector(".search_form");
 
+// Navigation Menu
 navToggle.addEventListener("click", function () {
   if (navWrapper.classList.contains("active")) {
     this.setAttribute("aria-expanded", "false");
@@ -20,6 +21,7 @@ navToggle.addEventListener("click", function () {
   }
 });
 
+// Search form
 searchToggle.addEventListener("click", function() {
   searchForm.classList.toggle("active");
   searchToggle.classList.toggle("active");

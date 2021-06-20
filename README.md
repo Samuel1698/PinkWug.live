@@ -31,6 +31,8 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Search by title, description, keywords or transcript
 - [ ] Author Comments/Announcements
 - [ ] Comic navigation doesnt use turbolinks
+- [ ] Cannot read property 'remove' of null in comicNav.js when using archive links
+- [ ] Turbolinks history nav opens menu bar
 ### Front End
 - [x] Archive
   - [x] Date format
