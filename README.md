@@ -36,6 +36,11 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Mobile Responsive
   - [x] Toggle gallery/details button
   - [ ] Filter by dates and titles
+    - [x] Titles Ascending
+    - [ ] Titles Descending
+    - [ ] Date Ascending
+    - [ ] Date Descending
+  - [ ] Different icon for ascending and descending order
 - [ ] View
   - [ ] Author Comments
   - [ ] Fix Patreon logo not displaying properly on small screens
