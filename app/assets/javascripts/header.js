@@ -20,9 +20,7 @@ navToggle.addEventListener("click", function () {
   }
 });
 
-searchToggle.addEventListener("click", showSearch);
-
-function showSearch() {
+searchToggle.addEventListener("click", function() {
   searchForm.classList.toggle("active");
   searchToggle.classList.toggle("active");
   main.classList.add("search_margin");
@@ -38,14 +36,14 @@ function showSearch() {
     searchToggle.setAttribute("aria-label", "Open search");
     main.classList.remove("search_margin");
   }
-}
+});
 
 window.addEventListener('resize', changeButtons);
 window.addEventListener('turbolinks:visit', changeButtons);
 window.addEventListener('load', changeButtons);
 
 function changeButtons(){
-  if (window.innerWidth < 540){
+  if (window.innerWidth < 555){
     document.querySelector(".kofi").getElementsByTagName("span")[0].innerHTML = "Ko-fi";
     document.querySelector(".patreon").getElementsByTagName("span")[0].innerHTML = "Patreon";
   }

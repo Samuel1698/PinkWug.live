@@ -64,7 +64,7 @@
                   </button>
                 <%= form_for :query, url: strips_path, method: :get, html: {class: 'search_form'} do |form|  %>
                   <%= form.label 'Search', class: 'sr-only' %>
-                  <%= form.text_field :text, placeholder: 'Search comics or store', value: params.dig('query', 'text') %>
+                  <%= form.text_field :text, placeholder: 'Search comics or store', value: params.dig('query', 'text'), autocomplete: 'off' %>
                 <% end %>
               </div>
               <a href="#" class="cart">
