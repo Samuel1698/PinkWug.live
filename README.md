@@ -37,9 +37,9 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Toggle gallery/details button
   - [ ] Filter by dates and titles
     - [x] Titles Ascending
-    - [ ] Titles Descending
-    - [ ] Date Ascending
-    - [ ] Date Descending
+    - [x] Titles Descending
+    - [x] Date Ascending
+    - [x] Date Descending
   - [ ] Different icon for ascending and descending order
 - [ ] View
   - [ ] Author Comments
