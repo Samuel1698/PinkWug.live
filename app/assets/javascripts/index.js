@@ -38,10 +38,13 @@ function removeToggle(){
 		}
 	}
 }
-function sortExceptF(list){
-	let temp = list[0].stTitle;
+function sortExceptF(list, state){
+	let temp = list[0];
 	list.shift();
-	list.sort((a, b) => (a.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase() > b.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase()) ? 1 : -1);
+	if (state == "asc")
+		list.sort((a, b) => (a.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase() > b.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase()) ? 1 : -1);
+	if (state == "desc")
+		list.sort((a, b) => (a.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase() < b.stTitle.replace(/\s+/g, '').substring(0, 4).toLowerCase()) ? 1 : -1);
 	list.unshift(temp);
 	 
 	return 0;
@@ -49,13 +52,8 @@ function sortExceptF(list){
 
 var title = document.querySelector(".title");
 title.addEventListener("click", function(){
-	var cell = [
-		{
-			stImage: "none",
-			stTitle: "none",
-			stDate:  "none", 
-		},
-	];
+	//First elements are the table head, ignored from the sorting
+	var cell = [{stImage: "none",stTitle: "none",stDate: "none"}]; 
 	for(let i = 1; i < (rows.length); i++){
 		cell.push({
 			stImage: rows[i].getElementsByClassName("cell")[0].src,
@@ -63,7 +61,21 @@ title.addEventListener("click", function(){
 			stDate:  rows[i].getElementsByClassName("cell")[2].innerHTML,
 		})
 	}
-	sortExceptF(cell);
+	// If the title doesnt contain ASCending, do that order
+	// Default element doesnt contain either ASC nor DESC
+	// As the default order is by ID (should match date)
+	if      (!title.classList.contains("asc")){ 
+		title.classList.remove("desc"); // Use these classes for styling the button
+		title.classList.add("asc");
+		sortExceptF(cell, "asc");
+	}
+	// If the title doesnt contain DESCending, do that order
+	else if (!title.classList.contains("desc")){ 
+		title.classList.remove("asc");
+		title.classList.add("desc");
+		sortExceptF(cell, "desc");
+	}
+	// Change the values of all key:value pairs according to new order
 	for(let i = 1; i < (rows.length); i++) {
 		rows[i].getElementsByClassName("cell")[0].src       = cell[i].stImage; 
 		rows[i].getElementsByClassName("cell")[1].innerHTML = cell[i].stTitle; 
