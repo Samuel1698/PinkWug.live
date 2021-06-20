@@ -48,7 +48,7 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Whitespace.js doesn't trigger when loading from archive
 - [ ] View
   - [ ] Author Comments
-  - [ ] Fix Patreon logo not displaying properly on small screens
+  - [x] Fix Patreon logo not displaying properly on small screens
 
 ### e-commerce
 - [ ] costumers
