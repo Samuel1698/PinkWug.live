@@ -30,6 +30,7 @@ I started working on this project with the permission of PinkWug to practice wha
 - [x] Search
   - [x] Search by title, description, keywords or transcript
 - [ ] Author Comments/Announcements
+- [ ] Comic navigation doesnt use turbolinks
 ### Front End
 - [x] Archive
   - [x] Date format
@@ -42,6 +43,7 @@ I started working on this project with the permission of PinkWug to practice wha
     - [x] Date Descending
   - [x] Different icon for ascending and descending order
   - [x] Remove title/date class when the other is clicked
+  - [x] Whitespace.js doesn't trigger when loading from archive
 - [ ] View
   - [ ] Author Comments
   - [ ] Fix Patreon logo not displaying properly on small screens
