@@ -12,7 +12,7 @@ toggle.addEventListener("click", function(){
 			rows[i].classList.remove("gallery");
 		}
 	}
-	else {                                   //If gallery view is off, toggle on
+	else { //If gallery view is off, toggle on
 		line.classList.remove("line");
 		table.classList.add("gallery");
 		toggle.classList.add("gallery");
@@ -22,21 +22,19 @@ toggle.addEventListener("click", function(){
 	}
 });
 
-window.addEventListener('resize', removeToggle());
-window.addEventListener('turbolinks:visit', removeToggle());
-window.addEventListener('load', removeToggle());
+window.addEventListener('resize', removeToggle);
+window.addEventListener('turbolinks:load', removeToggle);  //this doesnt work???
+window.addEventListener('load', removeToggle);
 
 function removeToggle(){
-	return function(){
-		toggle.classList.remove("hidden");
-		if (window.innerWidth <= 700) {
-			toggle.classList.add("hidden");
-			line.classList.remove("line");
-			table.classList.add("gallery");
-			toggle.classList.add("gallery");
-			for (i = 0; i < rows.length; i++){
-				rows[i].classList.add("gallery");
-			}
+	toggle.classList.remove("hidden");
+	if (window.innerWidth <= 700) {
+		toggle.classList.add("hidden");
+		line.classList.remove("line");
+		table.classList.add("gallery");
+		toggle.classList.add("gallery");
+		for (i = 0; i < rows.length; i++){
+			rows[i].classList.add("gallery");
 		}
 	}
 }
@@ -69,38 +67,38 @@ var date  = document.querySelector(".date");
 title.addEventListener("click", switchRows("stTitle")); 
 date.addEventListener("click", switchRows("stDate")); 
 
-	function switchRows(property){
-		return function(){
-			//First elements are the table head, ignored from the sorting
-			var cell = [{stImage: "none",stTitle: "none",stDate: "none"}]; 
-			for(let i = 1; i < (rows.length); i++){
-				cell.push({
-					stImage: rows[i].getElementsByClassName("cell")[0].src,
-					stTitle: rows[i].getElementsByClassName("cell")[1].innerHTML,
-					stDate:  rows[i].getElementsByClassName("cell")[2].innerHTML,
-				})
-			}
-			// If the title/date doesnt contain ASCending, do that order
-			// Default title doesnt contain either ASC nor DESC
-			// As the default order is by DESC Date
-			if      (!this.classList.contains("asc")){ 
-				title.classList.remove("desc"); 
-				date.classList.remove("desc"); 
-				this.classList.add("asc");
-				sortExceptF(cell, property, "asc");
-			}
-			// If the title doesnt contain DESCending, do that order
-			else if (!this.classList.contains("desc")){ 
-				title.classList.remove("asc");
-				date.classList.remove("asc"); 
-				this.classList.add("desc");
-				sortExceptF(cell, property, "desc");
-			}
-			// Change the values of all key:value pairs according to new order
-			for(let i = 1; i < (rows.length); i++) {
-				rows[i].getElementsByClassName("cell")[0].src       = cell[i].stImage; 
-				rows[i].getElementsByClassName("cell")[1].innerHTML = cell[i].stTitle; 
-				rows[i].getElementsByClassName("cell")[2].innerHTML = cell[i].stDate;
-			}
-		};
-	}
+function switchRows(property){
+	return function(){
+		//First elements are the table head, ignored from the sorting
+		var cell = [{stImage: "none",stTitle: "none",stDate: "none"}]; 
+		for(let i = 1; i < (rows.length); i++){
+			cell.push({
+				stImage: rows[i].getElementsByClassName("cell")[0].src,
+				stTitle: rows[i].getElementsByClassName("cell")[1].innerHTML,
+				stDate:  rows[i].getElementsByClassName("cell")[2].innerHTML,
+			})
+		}
+		// If the title/date doesnt contain ASCending, do that order
+		// Default title doesnt contain either ASC nor DESC
+		// As the default order is by DESC Date
+		if      (!this.classList.contains("asc")){ 
+			title.classList.remove("desc"); 
+			date.classList.remove("desc"); 
+			this.classList.add("asc");
+			sortExceptF(cell, property, "asc");
+		}
+		// If the title doesnt contain DESCending, do that order
+		else if (!this.classList.contains("desc")){ 
+			title.classList.remove("asc");
+			date.classList.remove("asc"); 
+			this.classList.add("desc");
+			sortExceptF(cell, property, "desc");
+		}
+		// Change the values of all key:value pairs according to new order
+		for(let i = 1; i < (rows.length); i++) {
+			rows[i].getElementsByClassName("cell")[0].src       = cell[i].stImage; 
+			rows[i].getElementsByClassName("cell")[1].innerHTML = cell[i].stTitle; 
+			rows[i].getElementsByClassName("cell")[2].innerHTML = cell[i].stDate;
+		}
+	};
+}

@@ -11,4 +11,5 @@
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "comicNav.js", "data-turbolinks-track" => true %>
+  <script>document.querySelector(".comic").addEventListener('load', addWhiteSpace("load"));</script>
 <% end %>

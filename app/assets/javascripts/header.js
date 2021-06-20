@@ -39,7 +39,7 @@ searchToggle.addEventListener("click", function() {
 });
 
 window.addEventListener('resize', changeButtons);
-window.addEventListener('turbolinks:visit', changeButtons);
+window.addEventListener('turbolinks:load', changeButtons);
 window.addEventListener('load', changeButtons);
 
 function changeButtons(){

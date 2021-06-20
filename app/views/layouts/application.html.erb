@@ -107,8 +107,8 @@
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>
     </div>
-    <%= yield(:javascripts) %>
-    <%= javascript_include_tag "header.js", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "whiteSpace.js", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "header.js", "data-turbolinks-track" => true %>
+    <%= yield(:javascripts) %>
   </body>
   </html>
