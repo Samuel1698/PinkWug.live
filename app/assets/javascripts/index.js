@@ -1,7 +1,7 @@
-var toggle        = document.querySelector(".toggle");
-var line          = document.querySelector(".div");
-var table         = document.querySelector(".table");
-var rows          = document.querySelectorAll(".row");
+var toggle = document.querySelector(".toggle");
+var line   = document.querySelector(".div");
+var table  = document.querySelector(".table");
+var rows   = document.querySelectorAll(".row");
 
 toggle.addEventListener("click", function(){
 	if (table.classList.contains("gallery")){ //If gallery view is on, toggle off
@@ -22,19 +22,21 @@ toggle.addEventListener("click", function(){
 	}
 });
 
-window.addEventListener('resize', removeToggle);
-window.addEventListener('turbolinks:visit', removeToggle);
-window.addEventListener('load', removeToggle);
+window.addEventListener('resize', removeToggle());
+window.addEventListener('turbolinks:visit', removeToggle());
+window.addEventListener('load', removeToggle());
 
 function removeToggle(){
-	toggle.classList.remove("hidden");
-	if (window.innerWidth <= 700) {
-		toggle.classList.add("hidden");
-		line.classList.remove("line");
-		table.classList.add("gallery");
-		toggle.classList.add("gallery");
-		for (i = 0; i < rows.length; i++){
-			rows[i].classList.add("gallery");
+	return function(){
+		toggle.classList.remove("hidden");
+		if (window.innerWidth <= 700) {
+			toggle.classList.add("hidden");
+			line.classList.remove("line");
+			table.classList.add("gallery");
+			toggle.classList.add("gallery");
+			for (i = 0; i < rows.length; i++){
+				rows[i].classList.add("gallery");
+			}
 		}
 	}
 }
@@ -82,13 +84,15 @@ date.addEventListener("click", switchRows("stDate"));
 			// Default title doesnt contain either ASC nor DESC
 			// As the default order is by DESC Date
 			if      (!this.classList.contains("asc")){ 
-				this.classList.remove("desc"); // Use these classes for styling the button
+				title.classList.remove("desc"); 
+				date.classList.remove("desc"); 
 				this.classList.add("asc");
 				sortExceptF(cell, property, "asc");
 			}
 			// If the title doesnt contain DESCending, do that order
 			else if (!this.classList.contains("desc")){ 
-				this.classList.remove("asc");
+				title.classList.remove("asc");
+				date.classList.remove("asc"); 
 				this.classList.add("desc");
 				sortExceptF(cell, property, "desc");
 			}

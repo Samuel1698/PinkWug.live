@@ -31,16 +31,17 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] Search by title, description, keywords or transcript
 - [ ] Author Comments/Announcements
 ### Front End
-- [ ] Archive
+- [x] Archive
   - [x] Date format
   - [x] Mobile Responsive
   - [x] Toggle gallery/details button
-  - [ ] Filter by dates and titles
+  - [x] Filter by dates and titles
     - [x] Titles Ascending
     - [x] Titles Descending
     - [x] Date Ascending
     - [x] Date Descending
-  - [ ] Different icon for ascending and descending order
+  - [x] Different icon for ascending and descending order
+  - [x] Remove title/date class when the other is clicked
 - [ ] View
   - [ ] Author Comments
   - [ ] Fix Patreon logo not displaying properly on small screens
