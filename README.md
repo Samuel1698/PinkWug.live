@@ -13,13 +13,10 @@ I started working on this project with the permission of PinkWug to practice wha
 
 ## Previews:
 ### Desktop:
-![DesktopPreview](https://user-images.githubusercontent.com/43931665/121565216-46a9de80-c9ea-11eb-8c76-8496ec8d44e7.png)
-### Mobile:
-![MobilePreview](https://user-images.githubusercontent.com/43931665/121565399-693bf780-c9ea-11eb-85ca-db7b4046c744.png)
-### Admin:
-![AdminPreview](https://user-images.githubusercontent.com/43931665/121558341-99cc6300-c9e3-11eb-887a-c2c4aa00ca9d.png)
-### The basic relationship map for future implementation: 
-![SQL - Pink Wug](https://user-images.githubusercontent.com/43931665/121552046-2411c880-c9de-11eb-8eda-647e53827834.png)
+https://user-images.githubusercontent.com/43931665/122866722-757f5900-d2f6-11eb-9b31-c733ca82eaff.mp4
+### Admin Dashboard:
+https://user-images.githubusercontent.com/43931665/122866855-a52e6100-d2f6-11eb-9113-662be519c5b7.mp4
+
 
 ## To-Do:
 ### Back End
