@@ -40,6 +40,7 @@ searchToggle.addEventListener("click", function() {
   }
 });
 
+// This needs some optimization
 window.addEventListener('resize', changeButtons);
 window.addEventListener('turbolinks:load', changeButtons);
 window.addEventListener('load', changeButtons);

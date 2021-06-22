@@ -29,10 +29,12 @@ I started working on this project with the permission of PinkWug to practice wha
   - [ ] Sitemap
 - [x] Search
   - [x] Search by title, description, keywords or transcript
+  - [ ] WhiteSpace.js not displaying properly on search
 - [ ] Author Comments/Announcements
 - [ ] Comic navigation doesnt use turbolinks
 - [ ] Cannot read property 'remove' of null in comicNav.js when using archive links
 - [ ] Turbolinks history nav opens menu bar
+- [ ] Tests
 ### Front End
 - [x] Archive
   - [x] Date format
@@ -60,7 +62,6 @@ I started working on this project with the permission of PinkWug to practice wha
 - [ ] Search
 
 ### Later Consideration
-- [ ] Tests
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
 - [ ] Twitter Card meta_tag
