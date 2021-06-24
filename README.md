@@ -35,13 +35,12 @@ I started working on this project with the permission of PinkWug to practice wha
 - [ ] Cannot read property 'remove' of null in comicNav.js when using archive links
 - [ ] Turbolinks history nav opens menu bar
 ### Tests
-- [ ] Models 
-  - [ ] validates presence of title, image
-  - [ ] has_one_attached image
+- [x] Models 
+  - [x] validates presence of title, image, transcript
 - [ ] Views
   - [ ] Index
-  - [ ] show
-- [ ] Admin CRUD
+  - [x] show
+- [x] Admin CRUD
 ### Front End
 - [x] Archive
   - [x] Date format
