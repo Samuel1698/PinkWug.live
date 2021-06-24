@@ -37,10 +37,11 @@ I started working on this project with the permission of PinkWug to practice wha
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
-- [ ] Views
-  - [ ] Index
-  - [x] show
 - [x] Admin CRUD
+- [ ] Views
+  - [x] Show
+  - [ ] Index
+  - [ ] comic navigation
 ### Front End
 - [x] Archive
   - [x] Date format

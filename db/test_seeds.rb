@@ -1,5 +1,53 @@
 strips = [
 	{ attributes: {
+		title: "GameStops stocks Hedge funds and rWallstreetsbets explained",
+		description: "The effect of Reddit on the stock market",
+		transcript: "Two capitalist shaking hands, announcer saying: no one knows what happened, so sadly no one can be held accountable. Breaking news headline says: Once in a lifetime recession happens again. Next panel is reddit comments, first one by tendieslord69 saying: IT LITERALLY CANNOT GO TITS UP, next comment is by mywifesboyfriend:💎💎🤚🤚. Next comment is by 420chan saying: We're going to the moon boys. Next panel is a TV announcer saying: The governemnt needs to stpe in! sinister forces are destroy8ing rich people money!. Breaking news banner on the bottom says: Should every redditor be prosecuted?", 
+		keywords: ["Reddit", "GME", "Stock Market", "Wall Street"],
+		created_at: "27/01/2021",
+		},
+		image: 'GameStops stocks, Hedge funds and rWallstreetsbets explained.jpg',
+	},
+	{ attributes: {
+		title: "their problem",
+		description: "General strike explained",
+		transcript: "if you take a break, it's your problem. If everyone takes a break, it's their problem.",
+		keywords: ["Strike", "Capitalism", "Unions", "Amazon"],
+		created_at: "04/02/2021",
+		},
+		image: 'their_problem.jpg',
+	},
+	{ attributes: {
+		title: "Avocado (Collab with ThingsInSquares)",
+		description: "Millenials and their student debt",
+		transcript: "Pink Wug reading a headline from his laptop reading: How to pay off student loans... 'eat less avocado' highlighted among the text of the newspaper. Next panel is pink wug calculating, the phrase '12654 fewer avocados' appears among different equations. Next panel shows him vomiting an avocado and counting, saying 'that makes 31...' Next panel shows him handing a banker the keys to a truck full of avocados in the back, saying 'I'm paying off my debt please'", 
+		keywords: ["Student Debt", "Loans", "Millenials"],
+		created_at: "11/02/2021",
+		},
+		image: 'avocado (collab with ThingsInSquares).png',
+	},
+	{ attributes: {
+		title: "NPCs",
+		description: "Republicans' reaction to any police killing involving black people",
+		transcript: "Breaking News, police killed an unarmed black man.
+		Closeup of grey wug's thought process, executing a program called bootlicking.exe that contains 'Is the victim perfect? if yes, dig deeper, ask again. If no, he was no angel'.
+		Grey wug quote tweets someone who says cops shouldn't execute people with 'ummm actually if you look at his fb photos...'", 
+		keywords: ["Republicans", "Fascists", "BLM", "Breaking News", "Twitter", "No angel", "Police"],
+		created_at: "14/04/2021",
+		},
+		image: 'NPCs.jpg',
+	},
+	{ attributes: {
+		title: "Relatable",
+		description: "My reaction when someone says they relate to my comics",
+		transcript: "Yellow wug says 'I relate so much to your comics'.
+		Pink wug replies: damn I'm sorry to hear that", 
+		keywords: [ "Non-political"],
+		created_at: "29/04/2021",
+		},
+		image: 'Relatable.jpg',
+	},
+	{ attributes: {
 		title: "Why nurses are superheroes",
 		description: "All the similarities between nurses and superheroes",
 		transcript: "They're paid with applause (nurse is pictured picking up a penny). 
