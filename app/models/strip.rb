@@ -1,5 +1,5 @@
 class Strip < ApplicationRecord
-	validates :title, :image, presence: true
+	validates :title, :image, :keywords, presence: true
 	has_one_attached :image
 
 	extend FriendlyId
