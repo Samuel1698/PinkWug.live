@@ -26,10 +26,10 @@ ActiveAdmin.register Strip do
     attributes_table do 
       row :title
       row :description
+      row :keywords
       row :image do |strip|
         image_tag url_for(strip.image.variant(resize_to_fit:[700,10000]))
       end
-      row :keywords
       row :transcript
       row :created_at
       row :updated_at
