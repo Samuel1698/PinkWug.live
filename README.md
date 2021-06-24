@@ -29,12 +29,19 @@ I started working on this project with the permission of PinkWug to practice wha
   - [ ] Sitemap
 - [x] Search
   - [x] Search by title, description, keywords or transcript
-  - [ ] WhiteSpace.js not displaying properly on search
+  - [x] WhiteSpace.js not displaying properly on search
 - [ ] Author Comments/Announcements
 - [ ] Comic navigation doesnt use turbolinks
 - [ ] Cannot read property 'remove' of null in comicNav.js when using archive links
 - [ ] Turbolinks history nav opens menu bar
-- [ ] Tests
+### Tests
+- [ ] Models 
+  - [ ] validates presence of title, image
+  - [ ] has_one_attached image
+- [ ] Views
+  - [ ] Index
+  - [ ] show
+- [ ] Admin CRUD
 ### Front End
 - [x] Archive
   - [x] Date format

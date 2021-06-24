@@ -20,15 +20,9 @@ class StripsController < ApplicationController
 		@next_strip     = strip_path(@next_strip)
 		@random_strip   = strip_path(@random_strip)
 	end
-	def latest
-		redirect_to action: 'show', id: Strip.last
-	end
 	private
 		def set_strip
 			@strip = Strip.find(params[:id])
-		end
-		def strip_params
-			params.require(:strip).permit(:title, :description, :image, :keywords, :transcript)
 		end
 		def query_params
 			query_params = params[:query]

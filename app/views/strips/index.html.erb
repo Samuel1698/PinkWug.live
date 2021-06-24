@@ -32,4 +32,5 @@
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "index.js", "data-turbolinks-track" => true %>
+  <script>document.querySelector(".table").lastElementChild.querySelector(".cell").addEventListener('load', addWhiteSpace("load"));</script>
 <% end %>
