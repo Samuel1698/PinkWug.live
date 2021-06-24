@@ -15,12 +15,12 @@ for (i = 0; i < 2; i++){
     previous_strip[i].classList.add("disabled");
     previous_strip[i].querySelector(".visually-hidden").remove();
   }
-  if (next_strip[i].pathname == current_strip) {
+  if (next_strip[i].pathname == current_strip || location.pathname == "/") {
     next_strip[i].setAttribute('href', "#");
     next_strip[i].classList.add("disabled");
     next_strip[i].querySelector(".visually-hidden").remove();
   }
-  if (last_strip[i].pathname == current_strip) {
+  if (last_strip[i].pathname == current_strip || location.pathname == "/") {
     last_strip[i].setAttribute('href', "#");
     last_strip[i].classList.add("disabled");
     last_strip[i].querySelector(".visually-hidden").remove();
