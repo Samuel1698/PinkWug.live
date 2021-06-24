@@ -25,6 +25,7 @@ RSpec.feature "admin creates new strip", type: :feature do
 
     #Validate that strip was created
     expect(page).to have_css 'div', text: "Strip was successfully created."
+    expect(page).to have_css 'td', text: "Relatable"
   end
   scenario "unsuccessfully" do 
     visit new_admin_strip_path

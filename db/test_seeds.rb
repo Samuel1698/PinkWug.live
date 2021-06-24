@@ -18,15 +18,6 @@ strips = [
 		image: 'their_problem.jpg',
 	},
 	{ attributes: {
-		title: "Avocado (Collab with ThingsInSquares)",
-		description: "Millenials and their student debt",
-		transcript: "Pink Wug reading a headline from his laptop reading: How to pay off student loans... 'eat less avocado' highlighted among the text of the newspaper. Next panel is pink wug calculating, the phrase '12654 fewer avocados' appears among different equations. Next panel shows him vomiting an avocado and counting, saying 'that makes 31...' Next panel shows him handing a banker the keys to a truck full of avocados in the back, saying 'I'm paying off my debt please'", 
-		keywords: ["Student Debt", "Loans", "Millenials"],
-		created_at: "11/02/2021",
-		},
-		image: 'avocado (collab with ThingsInSquares).png',
-	},
-	{ attributes: {
 		title: "NPCs",
 		description: "Republicans' reaction to any police killing involving black people",
 		transcript: "Breaking News, police killed an unarmed black man.
@@ -36,16 +27,6 @@ strips = [
 		created_at: "14/04/2021",
 		},
 		image: 'NPCs.jpg',
-	},
-	{ attributes: {
-		title: "Relatable",
-		description: "My reaction when someone says they relate to my comics",
-		transcript: "Yellow wug says 'I relate so much to your comics'.
-		Pink wug replies: damn I'm sorry to hear that", 
-		keywords: [ "Non-political"],
-		created_at: "29/04/2021",
-		},
-		image: 'Relatable.jpg',
 	},
 	{ attributes: {
 		title: "Why nurses are superheroes",
