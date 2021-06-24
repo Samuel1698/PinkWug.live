@@ -7,7 +7,10 @@ class StripsController < ApplicationController
 		@title       = @strip.title
 		@keywords    = @strip.keywords.push("Pink Wug", "Comics")
 		@id          = @strip.id
-
+		if (@strip == Strip.last)
+			@keywords = @strip.keywords.push("latest")
+			@last = "last"
+		end
 		@first_strip    = Strip.first
 		@last_strip     = Strip.last
 		@previous_strip = Strip.where(["id < ?", @id]).order('id').last || @first_strip
