@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root controller: :strips, action: :show, id: Strip.last.id
+  root controller: :strips, action: :show, id: -1
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'about' => 'strips#about'

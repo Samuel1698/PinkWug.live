@@ -25,7 +25,11 @@ class StripsController < ApplicationController
 	end
 	private
 		def set_strip
-			@strip = Strip.find(params[:id])
+			if (params[:id] == -1)
+				@strip = Strip.last 
+			else
+				@strip = Strip.find(params[:id])
+			end
 		end
 		def query_params
 			query_params = params[:query]

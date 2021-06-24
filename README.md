@@ -32,8 +32,8 @@ I started working on this project with the permission of PinkWug to practice wha
   - [x] WhiteSpace.js not displaying properly on search
 - [ ] Author Comments/Announcements
 - [ ] Comic navigation doesnt use turbolinks
-- [ ] Cannot read property 'remove' of null in comicNav.js when using archive links
 - [ ] Turbolinks history nav opens menu bar
+- [ ] Root path doesnt update after Strip.last.id changes
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
