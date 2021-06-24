@@ -43,3 +43,4 @@ strips.each do |strip|
 	  puts "Created #{s.title}"
 	end
 end
+AdminUser.create!(email: 'admin_test@example.com', password: 'password', password_confirmation: 'password') if Rails.env.test?
