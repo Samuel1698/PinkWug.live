@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "admin creates, edits and deletes new strip", type: :feature do
+RSpec.feature "admin CRUD", type: :feature do
   before do 
     # User can visit admin_root_path 
     visit admin_root_path
@@ -8,8 +8,6 @@ RSpec.feature "admin creates, edits and deletes new strip", type: :feature do
     fill_in "Email", with: "admin_test@example.com"
     fill_in "Password", with: "password"
     click_on "Login"
-  end
-  scenario "successfully" do 
     # User creates new strip 
     visit new_admin_strip_path
 
@@ -22,14 +20,17 @@ RSpec.feature "admin creates, edits and deletes new strip", type: :feature do
     fill_in "Created in", with: "29/04/2021"
 
     click_on "Create Strip"
+  end
+  it "creates new strip" do 
     #Validate that strip was created
     within('table') do 
       expect(page).to have_text("Relatable")
       expect(page).to have_css('img')
     end
     # Puts message to show that test was successful
-    puts 'Strip Relatable created successfully'
-
+    puts 'Strip "Relatable" created successfully'
+  end
+  it "edits new strip" do
     # Click on Edit Strip
     click_on("Edit Strip")
     # Edit everything 
@@ -51,6 +52,17 @@ RSpec.feature "admin creates, edits and deletes new strip", type: :feature do
       expect(page).to have_text("Feb-11-2021")
     end
     # Puts message to show that test was successful
-    puts 'Strip edited successfully to Avocado (Collab with ThingsInSquares)'
+    puts 'Strip "Relatable" edited successfully to "Avocado"'
+  end
+  it "deletes new strip" do 
+    # Click on Delete Strip button
+    click_on("Delete Strip")
+    # Validate that strip was deleted
+    expect(page).to have_text("Strip was successfully destroyed.")
+    within('table') do 
+      expect(page).to_not have_text("Relatable")
+    end
+    # Puts message to show that test was successful
+    puts 'Strip "Relatable" was successfully destroyed'
   end
 end
