@@ -37,8 +37,9 @@ https://user-images.githubusercontent.com/43931665/122866855-a52e6100-d2f6-11eb-
 - [x] Admin CRUD
 - [ ] Views
   - [x] Show
-  - [ ] Index
   - [x] comic navigation
+  - [ ] Index
+  - [ ] Whitespace?
 ### Front End
 - [x] Archive
   - [x] Date format
