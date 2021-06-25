@@ -35,11 +35,17 @@ https://user-images.githubusercontent.com/43931665/122866855-a52e6100-d2f6-11eb-
 - [x] Models 
   - [x] validates presence of title, image, transcript
 - [x] Admin CRUD
-- [ ] Views
+  - [x] Create
+  - [ ] Read
+  - [x] Edit/Update
+  - [ ] Destroy
+- [x] Views
   - [x] Show
   - [x] comic navigation
-  - [ ] Index
-  - [ ] Whitespace?
+  - [x] Archive
+    - [x] Default view
+    - [x] View toggle
+    - [x] Title & Date toggle
 ### Front End
 - [x] Archive
   - [x] Date format
@@ -63,7 +69,6 @@ https://user-images.githubusercontent.com/43931665/122866855-a52e6100-d2f6-11eb-
 - [ ] carts
 - [ ] orders
 - [ ] line_items
-- [ ] reviews
 - [ ] Search
 
 ### Later Consideration
