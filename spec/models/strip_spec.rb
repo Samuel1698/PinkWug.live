@@ -18,7 +18,7 @@ RSpec.describe Strip, type: :model do
     expect(subject).to_not be_valid
   end
   it "is not valid without keywords" do 
-    subject.keywords = nil
+    subject.keywords_raw = []
     expect(subject).to_not be_valid
   end
 end

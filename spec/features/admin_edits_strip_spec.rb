@@ -29,5 +29,7 @@ RSpec.feature "admin edits a strip", type: :feature do
     expect(page).to have_css 'td', text: "Student Debt, Loans, Millenials"
     expect(page).to have_css 'td', text: "Pink Wug reading a headline from his laptop reading: How to pay off student loans... 'eat less avocado' highlighted among the text of the newspaper. Next panel is pink wug calculating, the phrase '12654 fewer avocados' appears among different equations. Next panel shows him vomiting an avocado and counting, saying 'that makes 31...' Next panel shows him handing a banker the keys to a truck full of avocados in the back, saying 'I'm paying off my debt please'"
     expect(page).to have_css 'td', text: "Feb-11-2021"
+    # Puts message to show that test was successful
+    puts 'Strip edited successfully to Avocado (Collab with ThingsInSquares)'
   end
 end
