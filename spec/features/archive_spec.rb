@@ -2,23 +2,24 @@ require 'rails_helper'
 
 RSpec.feature "archive", type: :feature, js: true do
   before do 
+    # Visit archive
     visit strips_path
-  end
-  it "should display gallery view" do 
-    # Check if div table has gallery class
-    expect(page).to have_css('.table.gallery')
+    # Click on Toggle
+    find('.toggle').click
   end
   it "should display table view" do 
-    # Find toggle button (wait for it to load), then click on it
-    find('.toggle').click
     # Expect div to have line class
     expect(page).to have_css('.line')
     # Expect page to NOT have gallery
     expect(page).to_not have_css('.table.gallery')
   end
-  it "should toggle title & date order" do 
-    # Click on toggle button
+  it "should display gallery view" do 
+    # Click on Toggle again
     find('.toggle').click
+    # Check if div table has gallery class
+    expect(page).to have_css('.table.gallery')
+  end
+  it "should toggle title & date order" do 
     # Click on Title
     find('.title', match: :first).click 
     # Within second Row, check the title's content
