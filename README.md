@@ -33,7 +33,7 @@ I started working on this project with the permission of PinkWug to practice wha
 - [ ] Author Comments/Announcements
 - [ ] Comic navigation doesnt use turbolinks
 - [ ] Turbolinks history nav opens menu bar
-- [ ] Root path doesnt update after Strip.last.id changes
+- [x] Root path doesnt update after Strip.last.id changes
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
@@ -41,7 +41,7 @@ I started working on this project with the permission of PinkWug to practice wha
 - [ ] Views
   - [x] Show
   - [ ] Index
-  - [ ] comic navigation
+  - [x] comic navigation
 ### Front End
 - [x] Archive
   - [x] Date format
