@@ -36,9 +36,9 @@ https://user-images.githubusercontent.com/43931665/122866855-a52e6100-d2f6-11eb-
   - [x] validates presence of title, image, transcript
 - [x] Admin CRUD
   - [x] Create
-  - [ ] Read
+  - [x] Read
   - [x] Edit/Update
-  - [ ] Destroy
+  - [x] Destroy
 - [x] Views
   - [x] Show
   - [x] comic navigation
