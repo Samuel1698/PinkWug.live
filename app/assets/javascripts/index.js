@@ -21,6 +21,7 @@ toggle.addEventListener("click", function(){
 		}
 	}
 });
+toggle.addEventListener("click", addWhiteSpace("click"));
 
 // Sorts the array based on the array key "property"
 function dynamicSort(property, state){

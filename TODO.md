@@ -55,3 +55,6 @@
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
 - [ ] Twitter Card meta_tag
+
+### Deployment
+- [ ] WhiteSpace comments
