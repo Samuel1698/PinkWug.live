@@ -34,9 +34,14 @@
     - [x] Date Descending
   - [x] Different icon for ascending and descending order
   - [x] Remove title/date class when the other is clicked
-  - [x] Whitespace.js doesn't trigger when loading from archive
 - [ ] View
+  - [x] Header
+  - [x] Comic navigation
+  - [x] Title sizes for different screens 
+  - [x] Image sizes for different screens
   - [ ] Author Comments
+  - [x] White Space
+  - [x] Footer
 
 ### e-commerce
 - [ ] costumers
