@@ -6,11 +6,7 @@
   - [ ] Sitemap
 - [x] Search
   - [x] Search by title, description, keywords or transcript
-  - [x] WhiteSpace.js not displaying properly on search
 - [ ] Author Comments/Announcements
-- [ ] Comic navigation doesnt use turbolinks
-- [ ] Turbolinks history nav opens menu bar
-- [x] Root path doesnt update after Strip.last.id changes
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
@@ -41,7 +37,6 @@
   - [x] Whitespace.js doesn't trigger when loading from archive
 - [ ] View
   - [ ] Author Comments
-  - [x] Fix Patreon logo not displaying properly on small screens
 
 ### e-commerce
 - [ ] costumers
