@@ -42,6 +42,9 @@
   - [ ] Author Comments
   - [x] White Space
   - [x] Footer
+- [ ] Search
+ - [ ] Specific page for shared view of products and comics
+ - [ ] Better matching system
 
 ### e-commerce
 - [ ] costumers
