@@ -22,6 +22,12 @@
     - [x] Default view
     - [x] View toggle
     - [x] Title & Date toggle
+- [ ] Search
+  - [ ] One word comic search
+  - [ ] Multiple word comic search
+  - [ ] Product search
+  - [ ] Product category search
+
 ### Front End
 - [x] Archive
   - [x] Date format
@@ -60,4 +66,5 @@
 - [ ] Twitter Card meta_tag
 
 ### Deployment
+- [ ] Switch to PostgreSQL
 - [ ] WhiteSpace comments
