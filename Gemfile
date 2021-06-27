@@ -38,9 +38,16 @@ gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+#to allow us to easily make requests to Shopify's REST API
+gem 'rest-client'
+#to make cross-origin AJAX possible
+gem 'rack-cors'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # use dotenv to store Shopify API tokens
+  gem 'dotenv-rails'
 end
 
 group :development do
