@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+# use dotenv to store Shopify API tokens
+gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.7'
 # Use sqlite3 as the database for Active Record
@@ -37,17 +39,12 @@ gem 'meta-tags'
 gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
-#to allow us to easily make requests to Shopify's REST API
-gem 'rest-client'
-#to make cross-origin AJAX possible
-gem 'rack-cors'
+# Use shopify_app gem to integrate store
+gem "shopify_app", "~> 18.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # use dotenv to store Shopify API tokens
-  gem 'dotenv-rails'
 end
 
 group :development do
