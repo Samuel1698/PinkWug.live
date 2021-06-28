@@ -53,11 +53,7 @@
  - [ ] Better matching system
 
 ### e-commerce
-- [ ] costumers
-- [ ] products
-- [ ] carts
-- [ ] orders
-- [ ] line_items
+- [ ] Shopify Integration
 - [ ] Search
 
 ### Later Consideration
