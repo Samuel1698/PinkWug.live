@@ -54,7 +54,7 @@
  - [ ] Better matching system
 - [ ] Store Archive
   - [x] Collections API
-  - [ ] Table/Row view
+  - [x] Table/Row view
   - [ ] Toggle to hide collection
 
 ### Later Consideration
