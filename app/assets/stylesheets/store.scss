@@ -1,12 +1,26 @@
-// Place all the styles related to the store controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 @import "variables";
 
+button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 6px 10px;
+	appearance: none;
+	cursor: pointer;
+	border: 0 none white;
+	background: url("icons8-sort-down.svg") 100% 46%/24px no-repeat;
+	&.asc {
+		background: url("icons8-sort-up.svg") 100% 46%/24px no-repeat;
+	}
+}
 .collection {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	flex-wrap: wrap;
+	&.inactive {
+		display: none;
+	}
 }
 .product {
 	display: flex;
@@ -23,64 +37,6 @@
 		color: grey;
 	}
 	.cell {
-		width: 200px;
+		width: 300px;
 	}
 }
-
-// .table.gallery {
-// 	max-width: 1200px;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	flex-direction: row;
-// 	flex-wrap: wrap;
-// 	justify-content: center;
-// }
-// .row.gallery {
-// 	flex-direction: column;
-// 	justify-content: flex-start;
-// 	// &:first-child {
-// 	// 	display: none;
-// 	// }
-// 	.cell {
-// 		min-width: 200px;
-// 	 	max-width: 300px;
-// 	 	&:first-child {
-// 	 		min-width: 300px;
-// 	 	}
-// 	}
-// }
-// .line {
-// 	margin-right: auto;
-// 	margin-left: auto;
-// }
-// @media (max-width: 700px) {
-// 	.row {
-// 		flex-direction: column;
-// 		justify-content: flex-start;
-// 		&:first-child {
-// 			display: none;
-// 		}
-// 		p {
-// 			margin: 2px 0px 10px;
-// 			padding: 0 10px;
-// 			font-size: 0.7rem;
-// 			font-weight: 300;
-// 			color: grey;
-// 			&:last-child {
-// 				display: none;
-// 			}
-// 		}
-// 	}
-// 	@media (min-width: 520px) {
-// 		.table {
-// 			flex-direction: row;
-// 			flex-wrap: wrap;
-// 			justify-content: center;
-// 		}
-// 	}
-// }
-// @media (min-width: $medium){
-// 	.line {
-// 		max-width: 75vw;
-// 	}
-// }

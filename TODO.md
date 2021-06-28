@@ -7,6 +7,9 @@
 - [x] Search
   - [x] Search by title, description, keywords or transcript
 - [ ] Author Comments/Announcements
+- [ ] Image processing for screen optimized crop
+- [ ] OpenGraph 
+- [ ] Twitter Card meta_tag
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
@@ -22,6 +25,9 @@
     - [x] Default view
     - [x] View toggle
     - [x] Title & Date toggle
+  - [ ] Store
+    - [ ] Products available
+    - [ ] Collection Toggle
 - [ ] Search
   - [ ] One word comic search
   - [ ] Multiple word comic search
@@ -50,17 +56,11 @@
   - [x] White Space
   - [x] Footer
 - [ ] Search
- - [ ] Specific page for shared view of products and comics
- - [ ] Better matching system
+ - [ ] Better matching query
 - [ ] Store Archive
   - [x] Collections API
   - [x] Table/Row view
   - [ ] Toggle to hide collection
-
-### Later Consideration
-- [ ] Image processing for screen optimized crop
-- [ ] OpenGraph 
-- [ ] Twitter Card meta_tag
 
 ### Deployment
 - [ ] Switch to PostgreSQL
