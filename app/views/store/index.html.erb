@@ -3,43 +3,62 @@
 	<%= display_meta_tags description: 'Now with more wugs' %>
 	<%= display_meta_tags keywords: 'Hoodies, shirts, sweaters, mugs, prints' %>
 <% end %>
-<h2>Mugs</h2>
-<div class="collection">
-	<% @mugs.each do |p| %>
-		<div class="product">
-			<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
-			<p class="cell"><%= p["title"] %></p>
-			<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
-		</div>
-	<% end %>
-</div>
-<h2>Clothes</h2>
-<div class="collection">
-<% @clothes.each do |p| %>
-	<div class="product">
-		<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
-		<p class="cell"><%= p["title"] %></p>
-		<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
+<div> 
+	<button id="mugs">
+		<h2>Mugs</h2>
+	</button>
+	<div class="collection">
+		<% @mugs.each do |p| %>
+			<div class="product">
+				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+				<p class="cell"><%= p["title"] %></p>
+				<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
+			</div>
+		<% end %>
 	</div>
+</div>
+<div>
+	<button id="clothes">
+		<h2>Clothes</h2>
+	</button>
+	<div class="collection">
+	<% @clothes.each do |p| %>
+		<div class="product">
+			<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+			<p class="cell"><%= p["title"] %></p>
+			<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
+		</div>
+	<% end %>
+	</div>
+</div>
+<div>
+	<button id="stickers">
+		<h2>Stickers</h2>
+	</button>
+	<div class="collection">
+		<% @stickers.each do |p| %>
+			<div class="product">
+				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+				<p class="cell"><%= p["title"] %></p>
+				<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
+			</div>
+		<% end %>
+	</div>
+</div>
+<div>
+	<button id="prints">
+		<h2>Prints</h2>
+	</button>
+	<div class="collection">
+		<% @prints.each do |p| %>
+			<div class="product">
+				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+				<p class="cell"><%= p["title"] %></p>
+				<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
+			</div>
+		<% end %>
+	</div>
+</div>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "store.js", "data-turbolinks-track" => true %>
 <% end %>
-</div>
-<h2>Stickers</h2>
-<div class="collection">
-	<% @stickers.each do |p| %>
-		<div class="product">
-			<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
-			<p class="cell"><%= p["title"] %></p>
-			<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
-		</div>
-	<% end %>
-</div>
-<h2>Prints</h2>
-<div class="collection">
-	<% @prints.each do |p| %>
-		<div class="product">
-			<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
-			<p class="cell"><%= p["title"] %></p>
-			<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
-		</div>
-	<% end %>
-</div>
