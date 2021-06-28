@@ -29,7 +29,7 @@
   - [ ] Product category search
 
 ### Front End
-- [x] Archive
+- [x] Comic Archive
   - [x] Date format
   - [x] Mobile Responsive
   - [x] Toggle gallery/details button
@@ -40,21 +40,22 @@
     - [x] Date Descending
   - [x] Different icon for ascending and descending order
   - [x] Remove title/date class when the other is clicked
-- [ ] View
+- [ ] Comic View
   - [x] Header
   - [x] Comic navigation
   - [x] Title sizes for different screens 
   - [x] Image sizes for different screens
+  - [ ] Share link
   - [ ] Author Comments
   - [x] White Space
   - [x] Footer
 - [ ] Search
  - [ ] Specific page for shared view of products and comics
  - [ ] Better matching system
-
-### e-commerce
-- [ ] Shopify Integration
-- [ ] Search
+- [ ] Store Archive
+  - [x] Collections API
+  - [ ] Table/Row view
+  - [ ] Toggle to hide collection
 
 ### Later Consideration
 - [ ] Image processing for screen optimized crop
