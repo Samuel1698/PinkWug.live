@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_28_020803) do
+ActiveRecord::Schema.define(version: 2021_06_28_195506) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -99,6 +99,11 @@ ActiveRecord::Schema.define(version: 2021_06_28_020803) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "access_scopes"
     t.index ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "strips", force: :cascade do |t|

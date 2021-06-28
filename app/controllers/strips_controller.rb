@@ -23,10 +23,6 @@ class StripsController < ApplicationController
 		@next_strip     = strip_path(@next_strip)
 		@random_strip   = strip_path(@random_strip)
 	end
-	def store
-		@products = HTTParty.get("https://#{ENV['SHOPIFY_API_KEY']}:#{ENV['SHOPIFY_API_SECRET']}@#{ENV['SHOPIFY_API_LINK']}/admin/api/2021-04/products.json")
-    # render(json: { products: @products })
-	end
 	private
 		def set_strip
 			if (params[:id] == -1)

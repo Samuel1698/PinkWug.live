@@ -1,0 +1,87 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "variables";
+
+.table {
+	display: flex;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	min-height: 2rem;
+	align-items: center;
+	text-align: center;
+	justify-content: space-between;
+	.cell {
+		width: 200px;
+	}
+}
+
+.table.gallery {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.row.gallery {
+	flex-direction: column;
+	justify-content: flex-start;
+	// &:first-child {
+	// 	display: none;
+	// }
+	.cell {
+		min-width: 200px;
+	 	max-width: 300px;
+	 	&:first-child {
+	 		min-width: 300px;
+	 	}
+	}
+	p {
+		margin: 2px 0px 10px;
+		padding: 0 10px;
+		font-size: 0.7rem;
+		font-weight: 300;
+		color: grey;
+		// &:last-child {
+		// 	display: none;
+		// }
+	}
+}
+.line {
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (max-width: 700px) {
+	.row {
+		flex-direction: column;
+		justify-content: flex-start;
+		&:first-child {
+			display: none;
+		}
+		p {
+			margin: 2px 0px 10px;
+			padding: 0 10px;
+			font-size: 0.7rem;
+			font-weight: 300;
+			color: grey;
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+	@media (min-width: 520px) {
+		.table {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
+@media (min-width: $medium){
+	.line {
+		max-width: 75vw;
+	}
+}
