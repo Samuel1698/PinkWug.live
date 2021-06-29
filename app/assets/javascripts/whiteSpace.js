@@ -9,9 +9,9 @@ function addWhiteSpace(content) {
     console.log("---------------------------------");
     console.log(content);
     var viewPort      = window.innerHeight;
-    var headerHeight  = document.querySelector(".header").offsetHeight;
-    var contentHeight = document.querySelector(".main").offsetHeight;
-    var footerHeight  = document.querySelector(".footer").offsetHeight;
+    var headerHeight  = document.querySelector("header").offsetHeight;
+    var contentHeight = document.querySelector("main").offsetHeight;
+    var footerHeight  = document.querySelector("footer").offsetHeight;
 
     var whiteSpace    = document.querySelector(".white_space").offsetHeight;
     var difference    = viewPort - (headerHeight + contentHeight + footerHeight + 25);

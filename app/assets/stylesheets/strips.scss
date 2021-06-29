@@ -84,87 +84,152 @@ header {
 	a {
 	color: white;
 	}
-}
-nav { //Menu
-	button {
-  position: absolute;
-  cursor: pointer;
-  right: 1rem;
-  top: 1rem;
-  font-size: 0;
-  width: 58px;
-  height: 23px;
-  background: url("icons8-menu.svg") center/20px no-repeat;
-  border: 0;
+	.header_wrapper { // Both top and bottom wrappers are affected by this
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 1rem;
+	  background-color: $dark-brown;
+		// --------------------------------------------------------------------	
+	  // Top header
+		// --------------------------------------------------------------------	
+		.header_logo {
+		  font-weight: bold;
+		  font-size: 1.2em;
+		  width: 85px;
+		  color: white;
+		}
+		.header_buttons { 
+			button {
+				box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+				line-height: 32px;
+				display: inline-block;
+				padding: 2px 10px 2px 36px;
+				border-radius: 7px;
+				cursor: pointer;
+				border: 0 none white;
+				text-decoration: none;
+				text-shadow: none;
+				font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
+				font-weight: 700;
+				font-size: 14px;
+				margin-left: 8px;
+				&.patreon {
+					background: url("icons8-patreon-white.svg") 6% 50%/16px no-repeat,
+											linear-gradient($fiery-coral,$fiery-coral);
+				}
+				&.kofi {
+					background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+											linear-gradient($kofi,$kofi);
+				}
+				span {
+					letter-spacing: -0.15px;
+					padding: 0;
+					text-decoration: none;
+					text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+					color: white;
+				}
+			}
+		}
 	}
-	ul {
-		margin: 0;
-		padding: 0;
-		li {
-		  &:not(:last-child) {
-		    margin-right: 1.5rem;
+	// --------------------------------------------------------------------	
+	.header_Border {
+		border-bottom: 1px solid black;
+	}
+	// --------------------------------------------------------------------	
+	// Header navigation bar
+	// --------------------------------------------------------------------	
+	.header_wrapper{
+		&.bottom {
+			position: relative;
+		}
+		nav { //Menu
+			button {
+				position: relative;
+			  cursor: pointer;
+			  font-size: 0;
+			  width: 58px;
+			  height: 34px;
+			  background: url("icons8-menu.svg") center/20px no-repeat;
+			  border: 0;
+			  svg {
+			  	width: 22px;
+			  	height: 22px;
+			  }
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+				  &:not(:last-child) {
+				    margin-right: 1.5rem;
+				  }
+				  a {
+				  	font-size: 0.8rem;
+				    display: block;
+				    padding-top: .5rem;
+				    padding-bottom: .5rem;
+				  }
+				  svg {
+				    display: inline-block;
+				    vertical-align: middle;
+				    width: 28px;
+				    height: 28px;
+				    margin-right: 1rem;
+				  }
+				  &.active a {
+				    border-left-color: $highlight-color;
+				  }
+				}
+			}
+		}
+		// --------------------------------------------------------------------	
+		.search {
+		  display: flex;
+		  button { //Search button
+			  appearance: none;
+			  order: 1;
+			  font-size: 0;
+			  width: 22px;
+			  height: 22px;
+			  cursor: pointer;
+			  background: url("icons8-search.svg") center/22px no-repeat;
+			  border: 0;
+			  &.active {
+			    background: url("icons8-macos-close.svg") center/22px no-repeat;
+			  }
 		  }
-		  a {
-		  	font-size: 0.8rem;
-		    display: block;
-		    padding-top: .5rem;
-		    padding-bottom: .5rem;
-		  }
-		  svg {
-		    display: inline-block;
-		    vertical-align: middle;
-		    width: 28px;
-		    height: 28px;
-		    margin-right: 1rem;
-		  }
-		  &.active a {
-		    border-left-color: $highlight-color;
+		  form { // Search form
+			  display: none;
+			  &.active {
+			    display: block;
+			  	margin-right: 8px;
+			  }
+			  input {
+			    min-width: 250px;
+			    appearance: none;
+			    border: 0;
+			    background-color: #fff;
+			    border-radius: 0;
+			    font-size: 0.8rem;
+			    padding: 0.5rem;
+			  }
 		  }
 		}
 	}
 }
-.logo {
-  font-weight: bold;
-  font-size: 1.2em;
-  width: 85px;
-  color: white;
+
+// =============================================================================
+// Main css
+// =============================================================================
+main {
+	margin: 0 auto 25px;
+	min-width: 350px;
 }
-.header_top {
-  background-color: $dark-brown;
-  ul {
-    display: flex;
-	  li:not(:last-child) {
-	    margin-right: 1.5rem;
-	  }
-  }
-  .header_start {
-    display: none;
-  }
-}
-.header_bottom {
-  position: relative;
-  background-color: $dark-brown;
-}
-.header_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-.header_end {
-  display: flex;
-  align-items: center;
-  &.top > * + * {
-  	margin-left: 1rem;
-  }
-  &.bottom{
-  	svg {
-  	  width: 22px;
-  	  height: 22px;
-  	}
-  }
-}
-.header_buttons, .support_buttons {
+.support_buttons { 
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
 	button {
 		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 		line-height: 32px;
@@ -178,34 +243,6 @@ nav { //Menu
 		font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
 		font-weight: 700;
 		font-size: 14px;
-		span {
-			letter-spacing: -0.15px;
-			padding: 0;
-			text-decoration: none;
-			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
-		}
-	}
-}
-.header_buttons {
-	button {
-		&.patreon {
-			background: url("icons8-patreon-white.svg") 6% 50%/16px no-repeat,
-									linear-gradient($fiery-coral,$fiery-coral);
-		}
-		&.kofi {
-			background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
-									linear-gradient($kofi,$kofi);
-		}
-	}
-	span {
-		color: white;
-	} //Patreon and Kofi buttons
-}
-.support_buttons {  //Buttons for About Me page
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	button {
 		&.patreon {
 			background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
 									linear-gradient($fiery-coral,$fiery-coral);
@@ -214,9 +251,13 @@ nav { //Menu
 			background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
 									linear-gradient($kofi,$kofi);
 		}
-	}
-	span {
-		color: white;
+		span {
+			color: white;
+			letter-spacing: -0.15px;
+			padding: 0;
+			text-decoration: none;
+			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+		}
 	}
 }
 .discord_logo {
@@ -229,48 +270,6 @@ nav { //Menu
 	margin-left: auto;
 	background-color: $blurple;
 	height: 32px;
-}
-.header_Border {
-	background-color: $dark-brown;
-	border-bottom: 1px solid black;
-}
-.search {
-  display: flex;
-  button {
-	  appearance: none;
-	  order: 1;
-	  font-size: 0;
-	  width: 22px;
-	  height: 22px;
-	  cursor: pointer;
-	  background: url("icons8-search.svg") center/22px no-repeat;
-	  border: 0;
-	  &.active {
-	    background: url("icons8-macos-close.svg") center/22px no-repeat;
-	  }
-  }
-  form {
-	  display: none;
-	  &.active {
-	    display: block;
-	  }
-	  input {
-	    min-width: 250px;
-	    appearance: none;
-	    border: 0;
-	    background-color: #fff;
-	    border-radius: 0;
-	    font-size: 0.8rem;
-	    padding: 0.5rem;
-	  }
-  }
-}
-// =============================================================================
-// Main css
-// =============================================================================
-main {
-	margin: 0 auto 25px;
-	min-width: 350px;
 }
 .comic_Nav {
 	display: grid;
@@ -328,7 +327,6 @@ footer {
 		margin-bottom: 0px;
 	}
 }
- 
 .footer_Border {
 	padding: 40px;
 	background-color: $dark-brown;

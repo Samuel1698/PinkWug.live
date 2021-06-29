@@ -1,6 +1,6 @@
 var navToggle = document.querySelector(".nav_toggle");
 var navWrapper = document.querySelector(".nav_ul");
-var main = document.querySelector(".main");
+var main = document.querySelector("main");
 var searchToggle = document.querySelector(".search_toggle");
 var searchForm = document.querySelector(".search_form");
 

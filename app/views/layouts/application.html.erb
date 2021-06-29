@@ -19,55 +19,46 @@
   <body>
     <div class="container">
       <div id="skip"><a href="#content">Skip to Main Content</a></div> 
-      <header class="header">
-        <div class="header_top">
-          <div class="wrapper header_wrapper">
-            <div class="header_middle">
-              <%= link_to image_tag("wugSLEEP.png", class: "logo"),root_path %>
-              <a href="/" class="logo"><br>Pink&nbsp;Wug</a>
-            </div>
-            <div class="header_end header_buttons top">
-              <a href="https://ko-fi.com/L3L42AQKS" target="_blank">
-                <button class="kofi">
-                  <span>Support me on Ko-Fi</span>
-                </button>
-              </a>
-              <a href="https://www.patreon.com/pinkwug" target="_blank">
-                <button class="patreon">
-                  <span>Support me on Patron</span>
-                </button>
-              </a>
-            </div>
+      <header>
+        <div class="header_wrapper">
+          <div class="header_logo"> 
+            <%= link_to image_tag("wugSLEEP.png"),root_path %>
+            <a href="/">Pink&nbsp;Wug</a>
+          </div>
+          <div class="header_buttons">
+            <a href="https://ko-fi.com/L3L42AQKS" target="_blank">
+              <button class="kofi">
+                <span>Support me on Ko-Fi</span>
+              </button>
+            </a>
+            <a href="https://www.patreon.com/pinkwug" target="_blank">
+              <button class="patreon">
+                <span>Support me on Patron</span>
+              </button>
+            </a>
           </div>
         </div>
         <div class="header_Border"></div>
-        <div class="header_bottom">
-          <div class="wrapper header_wrapper">
-            <div class="header_start">
-              <nav>
-                <button class="nav_toggle" aria-expanded="false" type="button">
-                  Menu
-                </button>
-                <ul class="nav_ul">
-                  <li><a href="../archive">Archive</a></li>
-                  <li><a href="../store">Store</a></li>
-                  <li><a href="https://discord.gg/pinkwug" target="_blank">Discord</a></li>
-                  <li><a href="/about">About Me</a></li>
-                </ul>
-              </nav>
-            </div>
-
-            <div class="header_end bottom">
-              <div class="search">
-                  <button class="search_toggle" giaria-label="Open search">
-                    Search
-                  </button>
-                <%= form_for :query, url: strips_path, method: :get, html: {class: 'search_form'} do |form|  %>
-                  <%= form.label 'Search', class: 'sr-only' %>
-                  <%= form.text_field :text, placeholder: 'Search comics or store', value: params.dig('query', 'text'), autocomplete: 'off' %>
-                <% end %>
-              </div>
-            </div>
+        <div class="header_wrapper bottom">
+          <nav>
+            <button class="nav_toggle" aria-expanded="false" type="button">
+              Menu
+            </button>
+            <ul class="nav_ul">
+              <li><a href="../archive">Archive</a></li>
+              <li><a href="../store">Store</a></li>
+              <li><a href="https://discord.gg/pinkwug" target="_blank">Discord</a></li>
+              <li><a href="/about">About Me</a></li>
+            </ul>
+          </nav>
+          <div class="search">
+              <button class="search_toggle" giaria-label="Open search">
+                Search
+              </button>
+            <%= form_for :query, url: strips_path, method: :get, html: {class: 'search_form'} do |form|  %>
+              <%= form.label 'Search', class: 'sr-only' %>
+              <%= form.text_field :text, placeholder: 'Search comics', value: params.dig('query', 'text'), autocomplete: 'off' %>
+            <% end %>
           </div>
         </div>
       </header>
@@ -75,7 +66,7 @@
         <%= yield %>
       </main>
       <div class="white_space"></div>
-      <footer class="footer">
+      <footer>
         <div class="footer_Border"></div>
         <div class="socialMediaLinks">
           <%= link_to image_tag("facebook.svg", alt: "Facebook Logo", class: "bottom_Logo"), "https://www.facebook.com/PinkWug", target: "_blank" %>
