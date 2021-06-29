@@ -3,13 +3,13 @@
 										keywords: 'Pink Wug, About, Business, Discord' %>
 	<%= stylesheet_link_tag "about" %>
 <% end %>
-<div class="content 2">
-	<div class="about">
+<div class="content_about">
+	<div class="about me">
 		<h1><%= title 'About Me' %></h1>	
 		<p>i make comics on social and economic justice with relatable, fun, and sinister revelations mixed in</p>
 	</div>
 
-	<div class="about">
+	<div class="about support">
 		<h2>Want to support me?</h2>
 		<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
 		<div class="support_buttons">
@@ -25,12 +25,12 @@
 			</a>
 		</div>
 	</div>
-	<div class="about">
+	<div class="about discord">
 		<h2>Join my Discord</h2>
 		<p>review comic drafts, give suggestions, or vote on comic topics!</p>
 		<%= link_to image_tag("Discord-Logo+Wordmark-White.svg", class: "discord_logo"), "https://discord.gg/pinkwug", target: "_blank" %>
 	</div>
-	<div class="about">
+	<div class="about business">
 		<h2>For business Inquiries:</h2>
 		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mjvjorpo" method="post">
 	    <label for="full-name">Name:</label>
