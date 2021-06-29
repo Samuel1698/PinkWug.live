@@ -6,7 +6,7 @@ document.addEventListener('turbolinks:load', addWhiteSpace("Turbolinks: load"));
 function addWhiteSpace(content) {
   return function(){
     // Uncomment console.logs for debugging
-    console.log("-------------------------------");
+    console.log("---------------------------------");
     console.log(content);
     var viewPort      = window.innerHeight;
     var headerHeight  = document.querySelector(".header").offsetHeight;

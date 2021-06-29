@@ -57,10 +57,10 @@
   - [x] Footer
 - [ ] Search
  - [ ] Better matching query
-- [ ] Store Archive
+- [x] Store Archive
   - [x] Collections API
   - [x] Table/Row view
-  - [ ] Toggle to hide collection
+  - [x] Toggle to hide collection
 
 ### Deployment
 - [ ] Switch to PostgreSQL
