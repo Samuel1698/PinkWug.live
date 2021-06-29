@@ -140,11 +140,11 @@ header {
 	// Header navigation bar
 	// --------------------------------------------------------------------	
 	.header_wrapper{
-		&.bottom {
+		&.bottom { // Important for the position of the nav bar
 			position: relative;
 		}
-		nav { //Menu
-			button {
+		nav { // Navigation
+			button { // Menu button
 				position: relative;
 			  cursor: pointer;
 			  font-size: 0;
@@ -157,7 +157,7 @@ header {
 			  	height: 22px;
 			  }
 			}
-			ul {
+			ul { // Navigation items. This is the default view, for mobile.
 				margin: 0;
 				padding: 0;
 				li {
@@ -186,7 +186,7 @@ header {
 		// --------------------------------------------------------------------	
 		.search {
 		  display: flex;
-		  button { //Search button
+		  button { // Open & Close button
 			  appearance: none;
 			  order: 1;
 			  font-size: 0;
