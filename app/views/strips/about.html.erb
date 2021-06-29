@@ -1,28 +1,46 @@
 <% content_for :head do  %>
 	<% set_meta_tags description: 'Suggestions, business inquiries, and who is Pink Wug.',
 										keywords: 'Pink Wug, About, Business, Discord' %>
+	<%= stylesheet_link_tag "about" %>
 <% end %>
-<div class="content">
-	<h1><%= title 'About Me' %></h1>	
-	<p>i make comics on social and economic justice with relatable, fun, and sinister revelations mixed in</p>
-
-	<h2>Want to support me?</h2>
-	<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
-	<div class="support_buttons">
-		<a href="https://ko-fi.com/L3L42AQKS" target="_blank">
-		  <button class="kofi">
-		    <span>Buy me a coffee</span>
-		  </button>
-		</a>
-		<a href="https://www.patreon.com/pinkwug" target="_blank">
-		  <button class="patreon">
-		    <span>Become a Patron</span>
-		  </button>
-		</a>
+<div class="content 2">
+	<div class="about">
+		<h1><%= title 'About Me' %></h1>	
+		<p>i make comics on social and economic justice with relatable, fun, and sinister revelations mixed in</p>
 	</div>
-	<h2>Join my Discord</h2>
-	<p>review comic drafts, give suggestions, or vote on comic topics!</p>
-	<%= link_to image_tag("Discord-Logo+Wordmark-White.svg", class: "discord_logo"), "https://discord.gg/pinkwug", target: "_blank" %>
-	<h2>For business Inquiries:</h2>
-	<p>PinkWug@gmail.com</p>
+
+	<div class="about">
+		<h2>Want to support me?</h2>
+		<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
+		<div class="support_buttons">
+			<a href="https://ko-fi.com/L3L42AQKS" target="_blank">
+			  <button class="kofi">
+			    <span>Buy me a coffee</span>
+			  </button>
+			</a>
+			<a href="https://www.patreon.com/pinkwug" target="_blank">
+			  <button class="patreon">
+			    <span>Become a Patron</span>
+			  </button>
+			</a>
+		</div>
+	</div>
+	<div class="about">
+		<h2>Join my Discord</h2>
+		<p>review comic drafts, give suggestions, or vote on comic topics!</p>
+		<%= link_to image_tag("Discord-Logo+Wordmark-White.svg", class: "discord_logo"), "https://discord.gg/pinkwug", target: "_blank" %>
+	</div>
+	<div class="about">
+		<h2>For business Inquiries:</h2>
+		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mjvjorpo" method="post">
+	    <label for="full-name">Name:</label>
+	    <input type="text" name="name" id="full-name" placeholder="" required="">
+	    <label for="email-address">Email Address:</label>
+	    <input type="email" name="from" id="email-address" placeholder="" required="">
+	    <label for="message">Message:</label>
+	    <textarea rows="5" name="message" id="message" placeholder="" required=""></textarea>
+	    <input type="hidden" name="_subject" id="email-subject" value="Business Inquiry from PinkWug.live">
+	 	 	<input type="submit" value="Send">
+	</form>
+	</div>
 </div>
