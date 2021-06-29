@@ -1,4 +1,8 @@
 @import "variables";
+.content_about {
+	margin-left: 10px;
+	margin-right: 10px;
+}
 .about {
 	background-color: $about;
 	padding: 4px 12px;
@@ -6,13 +10,16 @@
 	margin-top: 12px;
 	padding-bottom: 8px;
 	h1, h2 {
-		margin-top: 4px;
+		margin-top: 8px;
 	}
 	p {
-		margin-bottom: 0;
+		margin: 0;
 	}
 	.support_buttons, .discord_logo {
 		margin: 4px auto 0;
+	}
+	.support_buttons button {
+		margin-top: 4px;
 	}
 	form {
 		font-size: 0.9em;
@@ -36,6 +43,41 @@
 			cursor: pointer;
 			text-decoration: none;
 			text-shadow: none;
+		}
+	}
+}
+@media (min-width: $small) {
+	$min-width: 250px;
+	$max-width: 440px;
+	.content_about {
+		max-width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
+		display: grid;
+		grid-template-areas: "title   business"
+												 "support business"
+												 "discord discord";
+		justify-content: center;
+		.me {
+			grid-area: title;
+			min-width: $min-width;
+			max-width: $max-width;
+		}
+		.support {
+			grid-area: support;
+			min-width: $min-width;
+			max-width: $max-width;
+		}
+		.discord {
+			grid-area: discord;
+			min-width: 2 * $min-width;
+			max-width: 2 * $max-width;
+		}
+		.business {
+			grid-area: business;
+			min-width: $min-width;
+			max-width: $max-width;
+			margin-left: 12px;
 		}
 	}
 }
