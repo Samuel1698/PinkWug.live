@@ -10,6 +10,7 @@
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
 - [ ] Twitter Card meta_tag
+- [ ] Custom 404 and other error views
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
