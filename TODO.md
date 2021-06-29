@@ -64,6 +64,7 @@
   - [x] Collections API
   - [x] Table/Row view
   - [x] Toggle to hide collection
+- [ ] :hover color
 
 ### Deployment
 - [ ] Switch to PostgreSQL

@@ -1,0 +1,41 @@
+@import "variables";
+.about {
+	background-color: $about;
+	padding: 4px 12px;
+	border-radius: 12px;
+	margin-top: 12px;
+	padding-bottom: 8px;
+	h1, h2 {
+		margin-top: 4px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	.support_buttons, .discord_logo {
+		margin: 4px auto 0;
+	}
+	form {
+		font-size: 0.9em;
+		label {
+			display: block;
+			// margin-top: 6px;
+			margin-top: 6px;
+		}
+		input:not(:last-child), textarea {
+			width: 100%;
+			display: block;
+			margin-top: 6px;
+		}
+		input:last-child {
+			margin-top: 6px;	
+			background-color: rgba(0,0,0,0.1);
+			border: 1px solid black;
+			line-height: 1.5rem;
+			padding: 2px 10px;
+			border-radius: 5px;
+			cursor: pointer;
+			text-decoration: none;
+			text-shadow: none;
+		}
+	}
+}
