@@ -17,21 +17,26 @@
 	}
 	.support_buttons, .discord_logo {
 		margin: 4px auto 0;
-	}
-	.support_buttons button {
-		margin-top: 4px;
+		button {
+			margin-top: 4px;
+		}
 	}
 	form {
 		font-size: 0.9em;
 		label {
 			display: block;
-			// margin-top: 6px;
-			margin-top: 6px;
+			margin-top: 12px;
 		}
 		input:not(:last-child), textarea {
 			width: 100%;
 			display: block;
 			margin-top: 6px;
+		}
+		.warning {
+			margin-top: 6px;
+			font-size: 0.7rem;
+			font-weight: 300;
+			color: grey;
 		}
 		input:last-child {
 			margin-top: 6px;	
@@ -39,7 +44,7 @@
 			border: 1px solid black;
 			line-height: 1.5rem;
 			padding: 2px 10px;
-			border-radius: 5px;
+			border-radius: 7px;
 			cursor: pointer;
 			text-decoration: none;
 			text-shadow: none;
