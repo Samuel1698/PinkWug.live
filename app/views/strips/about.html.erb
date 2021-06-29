@@ -33,13 +33,14 @@
 	<div class="about business">
 		<h2>For business Inquiries:</h2>
 		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mjvjorpo" method="post">
-	    <label for="full-name">Name:</label>
-	    <input type="text" name="name" id="full-name" placeholder="" required="">
-	    <label for="email-address">Email Address:</label>
-	    <input type="email" name="from" id="email-address" placeholder="" required="">
-	    <label for="message">Message:</label>
-	    <textarea rows="5" name="message" id="message" placeholder="" required=""></textarea>
+	    <label for="full-name">Name/Company:*</label>
+	    <input type="text" name="name" id="full-name" placeholder="" required="true">
+	    <label for="email-address">Email Address:*</label>
+	    <input type="email" name="from" id="email-address" placeholder="" required="true">
+	    <label for="message">Message:*</label>
+	    <textarea rows="5" name="message" id="message" placeholder="" required="true"></textarea>
 	    <input type="hidden" name="_subject" id="email-subject" value="Business Inquiry from PinkWug.live">
+	 	 	<p class="warning">*fields required</p>
 	 	 	<input type="submit" value="Send">
 	</form>
 	</div>
