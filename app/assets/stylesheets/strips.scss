@@ -17,58 +17,58 @@ img { max-width: 100%; vertical-align: middle; border: 0; }
     font-style: normal;
 }
 html {
-	font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 body {
-	font-family: 'jollygood_sansbasic', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	margin: 0;
-	padding: 0;
+  font-family: 'jollygood_sansbasic', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 main {
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 h1, h2 {
-	text-align: center; 
-	font-weight: normal;
+  text-align: center; 
+  font-weight: normal;
 }
 a {
-	text-decoration: none;
-	color: black;
-	:hover, :focus, :active {
-		color: currentColor;
-	}
+  text-decoration: none;
+  color: black;
+  :hover, :focus, :active {
+    color: currentColor;
+  }
 }
 
 // Hiding the text inside the buttons
 .visually-hidden { //https://accessibility.18f.gov/hidden-content/
     border: 0;
-	  clip: rect(0 0 0 0);
-	  height: 1px;
-	  margin: -1px;
-	  overflow: hidden;
-	  padding: 0;
-	  position: absolute;
-	  width: 1px;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 // Skip all navigation and jump to content
 #skip a {
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
-	a:focus {
-		position:static;
-		width:auto;
-		height:auto;
-	}
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  a:focus {
+    position:static;
+    width:auto;
+    height:auto;
+  }
 }
 .container {
-	min-width: 350px;
+  min-width: 350px;
 }
 
 body:hover .visually-hidden a, 
@@ -80,260 +80,260 @@ body:hover .visually-hidden button { display: none}
 // =============================================================================
 
 header {
-	font-size: 1em;
-	a {
-	color: white;
-	}
-	.header_wrapper { // Both top and bottom wrappers are affected by this
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  padding: 1rem;
-	  background-color: $dark-brown;
-		// --------------------------------------------------------------------	
-	  // Top header
-		// --------------------------------------------------------------------	
-		.header_logo {
-		  font-weight: bold;
-		  font-size: 1.2em;
-		  width: 85px;
-		  color: white;
-		}
-		.header_buttons { 
-			button {
-				box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-				line-height: 32px;
-				display: inline-block;
-				padding: 2px 10px 2px 36px;
-				border-radius: 7px;
-				cursor: pointer;
-				border: 0 none white;
-				text-decoration: none;
-				text-shadow: none;
-				font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
-				font-weight: 700;
-				font-size: 14px;
-				margin-left: 8px;
-				&.patreon {
-					background: url("icons8-patreon-white.svg") 6% 50%/16px no-repeat,
-											linear-gradient($fiery-coral,$fiery-coral);
-				}
-				&.kofi {
-					background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
-											linear-gradient($kofi,$kofi);
-				}
-				span {
-					letter-spacing: -0.15px;
-					padding: 0;
-					text-decoration: none;
-					text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
-					color: white;
-				}
-			}
-		}
-	}
-	// --------------------------------------------------------------------	
-	.header_Border {
-		border-bottom: 1px solid black;
-	}
-	// --------------------------------------------------------------------	
-	// Header navigation bar
-	// --------------------------------------------------------------------	
-	.header_wrapper{
-		&.bottom { // Important for the position of the nav bar
-			position: relative;
-		}
-		nav { // Navigation
-			button { // Menu button
-				position: relative;
-			  cursor: pointer;
-			  font-size: 0;
-			  width: 58px;
-			  height: 34px;
-			  background: url("icons8-menu.svg") center/20px no-repeat;
-			  border: 0;
-			  svg {
-			  	width: 22px;
-			  	height: 22px;
-			  }
-			}
-			ul { // Navigation items. This is the default view, for mobile.
-				margin: 0;
-				padding: 0;
-				li {
-				  &:not(:last-child) {
-				    margin-right: 1.5rem;
-				  }
-				  a {
-				  	font-size: 0.8rem;
-				    display: block;
-				    padding-top: .5rem;
-				    padding-bottom: .5rem;
-				  }
-				  svg {
-				    display: inline-block;
-				    vertical-align: middle;
-				    width: 28px;
-				    height: 28px;
-				    margin-right: 1rem;
-				  }
-				  &.active a {
-				    border-left-color: $highlight-color;
-				  }
-				}
-			}
-		}
-		// --------------------------------------------------------------------	
-		.search {
-		  display: flex;
-		  button { // Open & Close button
-			  appearance: none;
-			  order: 1;
-			  font-size: 0;
-			  width: 22px;
-			  height: 22px;
-			  cursor: pointer;
-			  background: url("icons8-search.svg") center/22px no-repeat;
-			  border: 0;
-			  &.active {
-			    background: url("icons8-macos-close.svg") center/22px no-repeat;
-			  }
-		  }
-		  form { // Search form
-			  display: none;
-			  &.active {
-			    display: block;
-			  	margin-right: 8px;
-			  }
-			  input {
-			    min-width: 250px;
-			    appearance: none;
-			    border: 0;
-			    background-color: #fff;
-			    border-radius: 0;
-			    font-size: 0.8rem;
-			    padding: 0.5rem;
-			  }
-		  }
-		}
-	}
+  font-size: 1em;
+  a {
+  color: white;
+  }
+  .header_wrapper { // Both top and bottom wrappers are affected by this
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $dark-brown;
+    // -------------------------------------------------------------------- 
+    // Top header
+    // -------------------------------------------------------------------- 
+    .header_logo {
+      font-weight: bold;
+      font-size: 1.2em;
+      width: 85px;
+      color: white;
+    }
+    .header_buttons { 
+      button {
+        box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+        line-height: 32px;
+        display: inline-block;
+        padding: 2px 10px 2px 36px;
+        border-radius: 7px;
+        cursor: pointer;
+        border: 0 none white;
+        text-decoration: none;
+        text-shadow: none;
+        font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
+        font-weight: 700;
+        font-size: 14px;
+        margin-left: 8px;
+        &.patreon {
+          background: url("icons8-patreon-white.svg") 6% 50%/16px no-repeat,
+                      linear-gradient($fiery-coral,$fiery-coral);
+        }
+        &.kofi {
+          background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+                      linear-gradient($kofi,$kofi);
+        }
+        span {
+          letter-spacing: -0.15px;
+          padding: 0;
+          text-decoration: none;
+          text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+          color: white;
+        }
+      }
+    }
+  }
+  // -------------------------------------------------------------------- 
+  .header_Border {
+    border-bottom: 1px solid black;
+  }
+  // -------------------------------------------------------------------- 
+  // Header navigation bar
+  // -------------------------------------------------------------------- 
+  .header_wrapper{
+    &.bottom { // Important for the position of the nav bar
+      position: relative;
+    }
+    nav { // Navigation
+      button { // Menu button
+        position: relative;
+        cursor: pointer;
+        font-size: 0;
+        width: 58px;
+        height: 34px;
+        background: url("icons8-menu.svg") center/20px no-repeat;
+        border: 0;
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+      ul { // Navigation items. This is the default view, for mobile.
+        margin: 0;
+        padding: 0;
+        li {
+          &:not(:last-child) {
+            margin-right: 1.5rem;
+          }
+          a {
+            font-size: 0.8rem;
+            display: block;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+          }
+          svg {
+            display: inline-block;
+            vertical-align: middle;
+            width: 28px;
+            height: 28px;
+            margin-right: 1rem;
+          }
+          &.active a {
+            border-left-color: $highlight-color;
+          }
+        }
+      }
+    }
+    // -------------------------------------------------------------------- 
+    .search {
+      display: flex;
+      button { // Open & Close button
+        appearance: none;
+        order: 1;
+        font-size: 0;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        background: url("icons8-search.svg") center/22px no-repeat;
+        border: 0;
+        &.active {
+          background: url("icons8-macos-close.svg") center/22px no-repeat;
+        }
+      }
+      form { // Search form
+        display: none;
+        &.active {
+          display: block;
+          margin-right: 8px;
+        }
+        input {
+          min-width: 250px;
+          appearance: none;
+          border: 0;
+          background-color: #fff;
+          border-radius: 0;
+          font-size: 0.8rem;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
 }
 
 // =============================================================================
 // Main css
 // =============================================================================
 main {
-	margin: 0 auto 25px;
-	min-width: 350px;
+  margin: 0 auto 25px;
+  min-width: 350px;
 }
 .support_buttons { 
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	button {
-		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-		line-height: 32px;
-		display: inline-block;
-		padding: 2px 10px 2px 36px;
-		border-radius: 7px;
-		cursor: pointer;
-		border: 0 none white;
-		text-decoration: none;
-		text-shadow: none;
-		font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
-		font-weight: 700;
-		font-size: 14px;
-		&.patreon {
-			background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
-									linear-gradient($fiery-coral,$fiery-coral);
-		}
-		&.kofi {
-			background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
-									linear-gradient($kofi,$kofi);
-		}
-		span {
-			color: white;
-			letter-spacing: -0.15px;
-			padding: 0;
-			text-decoration: none;
-			text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
-		}
-	}
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  button {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    line-height: 32px;
+    display: inline-block;
+    padding: 2px 10px 2px 36px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 0 none white;
+    text-decoration: none;
+    text-shadow: none;
+    font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
+    font-weight: 700;
+    font-size: 14px;
+    &.patreon {
+      background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
+                  linear-gradient($fiery-coral,$fiery-coral);
+    }
+    &.kofi {
+      background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+                  linear-gradient($kofi,$kofi);
+    }
+    span {
+      color: white;
+      letter-spacing: -0.15px;
+      padding: 0;
+      text-decoration: none;
+      text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+    }
+  }
 }
 .discord_logo {
-	border-radius: 7px;
-	border: 0 none white;
-	padding: 4px 10px;
-	display: block;
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: $blurple;
-	height: 32px;
+  border-radius: 7px;
+  border: 0 none white;
+  padding: 4px 10px;
+  display: block;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $blurple;
+  height: 32px;
 }
 .comic_Nav {
-	display: grid;
-	grid-template-areas:
-	  "first  previous random next recent";
-	font-size: 24px;
-	a {
-		background-color: white;
-		border: none;
-		text-align: center;
-		padding: 6px;
-		cursor: pointer;
-		&:not(:last-child){
-			margin-right: 20px;
-		}
-		&.disabled {
-			pointer-events: none;
-			color: grey;
-		}
-	}
-	.fa-angle-double-left {
-		grid-area: first;
-	}
-	.fa-angle-left {
-		grid-area: previous;
-	}
-	.fa-rotate-right {
-		grid-area: random;	
-	}
-	.fa-angle-right {
-		grid-area: next;
-	}
-	.fa-angle-double-right{
-		grid-area: recent;
-	}
+  display: grid;
+  grid-template-areas:
+    "first  previous random next recent";
+  font-size: 24px;
+  a {
+    background-color: white;
+    border: none;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+    &.disabled {
+      pointer-events: none;
+      color: grey;
+    }
+  }
+  .fa-angle-double-left {
+    grid-area: first;
+  }
+  .fa-angle-left {
+    grid-area: previous;
+  }
+  .fa-rotate-right {
+    grid-area: random;  
+  }
+  .fa-angle-right {
+    grid-area: next;
+  }
+  .fa-angle-double-right{
+    grid-area: recent;
+  }
 }
 .bottom_Logo {
-	width: 32px;
+  width: 32px;
 }
 // =============================================================================
 // footer
 // =============================================================================
 
 footer {
-	text-align: center;
-	color: white;
-	background-color: $dark-brown;
-	a {
-	margin: 0px 6px;
-	padding: 7px 2px 12px;
-	}
-	p {
-		font-size: 13px;
-		padding-bottom: 40px;
-		margin-bottom: 0px;
-	}
+  text-align: center;
+  color: white;
+  background-color: $dark-brown;
+  a {
+  margin: 0px 6px;
+  padding: 7px 2px 12px;
+  }
+  p {
+    font-size: 13px;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+  }
 }
 .footer_Border {
-	padding: 40px;
-	background-color: $dark-brown;
-	border-bottom: 1px solid black;
+  padding: 40px;
+  background-color: $dark-brown;
+  border-bottom: 1px solid black;
 }
 .socialMediaLinks {
-	margin-top: 30px;
-	margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 @import "mediaQueries"
