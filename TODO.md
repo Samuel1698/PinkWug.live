@@ -48,8 +48,8 @@
   - [x] Remove title/date class when the other is clicked
 - [ ] Comic View
   - [x] Header
-   - [ ] Search bar on tablets
-   - [ ] Dry code after removal of cart and user
+   - [x] Search bar on tablets
+   - [x] Dry code after removal of cart and user
   - [x] Comic navigation
   - [x] Title sizes for different screens 
   - [x] Image sizes for different screens

@@ -14,6 +14,7 @@
 	}
 	p {
 		margin: 0;
+		text-align: center;
 	}
 	.support_buttons, .discord_logo {
 		margin: 4px auto 0;
@@ -33,7 +34,10 @@
 			margin-top: 6px;
 		}
 		.warning {
-			margin-top: 6px;
+			position: relative;
+			float: right;
+			top: 0.1rem;
+			margin-top: 8px;
 			font-size: 0.7rem;
 			font-weight: 300;
 			color: grey;
@@ -53,7 +57,7 @@
 }
 @media (min-width: $small) {
 	$min-width: 250px;
-	$max-width: 440px;
+	$max-width: 270px;
 	.content_about {
 		max-width: 80vw;
 		margin-left: auto;
@@ -76,7 +80,7 @@
 		.discord {
 			grid-area: discord;
 			min-width: 2 * $min-width;
-			max-width: 2 * $max-width;
+			max-width: 2 * $max-width + 12;
 		}
 		.business {
 			grid-area: business;
