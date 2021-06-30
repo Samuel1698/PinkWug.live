@@ -69,4 +69,3 @@
 
 ### Deployment
 - [ ] Switch to PostgreSQL
-- [ ] WhiteSpace comments

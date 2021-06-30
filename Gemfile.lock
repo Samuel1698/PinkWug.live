@@ -355,7 +355,7 @@ DEPENDENCIES
   arctic_admin
   bootsnap (>= 1.4.2)
   byebug
-  capybara (~> 3.35, >= 3.35.3)
+  capybara
   database_cleaner (~> 2.0, >= 2.0.1)
   devise (~> 4.8)
   dotenv-rails
@@ -371,6 +371,7 @@ DEPENDENCIES
   randumb
   rspec-rails (~> 5.0, >= 5.0.1)
   sass-rails (>= 6)
+  selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)

@@ -7,7 +7,7 @@
 	<button id="mugs">
 		<h2>Mugs</h2>
 	</button>
-	<div class="collection">
+	<div class="collection mugs">
 		<% @mugs.each do |p| %>
 			<div class="product">
 				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
@@ -21,7 +21,7 @@
 	<button id="clothes">
 		<h2>Clothes</h2>
 	</button>
-	<div class="collection">
+	<div class="collection clothes">
 	<% @clothes.each do |p| %>
 		<div class="product">
 			<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
@@ -35,7 +35,7 @@
 	<button id="stickers">
 		<h2>Stickers</h2>
 	</button>
-	<div class="collection">
+	<div class="collection stickers">
 		<% @stickers.each do |p| %>
 			<div class="product">
 				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
@@ -49,7 +49,7 @@
 	<button id="prints">
 		<h2>Prints</h2>
 	</button>
-	<div class="collection">
+	<div class="collection prints">
 		<% @prints.each do |p| %>
 			<div class="product">
 				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>

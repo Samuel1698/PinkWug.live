@@ -60,8 +60,11 @@ group :test do
   # Use rspect-rails for testing environment
   gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 3.35', '>= 3.35.3'
+  gem 'capybara'
+  # Use phantomJS
   gem 'poltergeist'
+  # Fallback to selenium
+  gem 'selenium-webdriver'
   # Use database_cleaner to wipe and rebuild the test database between the test runs
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
   # Easy installation and use of web drivers to run system tests with browsers
