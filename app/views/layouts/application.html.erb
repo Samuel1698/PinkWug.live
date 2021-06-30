@@ -19,7 +19,7 @@
   <body>
     <div class="container">
       <div id="skip"><a href="#content">Skip to Main Content</a></div> 
-      <header>
+      <header class="header">
         <div class="header_wrapper">
           <div class="header_logo"> 
             <%= link_to image_tag("wugSLEEP.png", style: "width: 85px"),root_path %>
@@ -66,7 +66,7 @@
         <%= yield %>
       </main>
       <div class="white_space"></div>
-      <footer>
+      <footer class="footer">
         <div class="footer_Border"></div>
         <div class="socialMediaLinks">
           <%= link_to image_tag("facebook.svg", alt: "Facebook Logo", class: "bottom_Logo"), "https://www.facebook.com/PinkWug", target: "_blank" %>
