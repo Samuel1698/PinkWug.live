@@ -26,15 +26,13 @@
     - [x] Default view
     - [x] View toggle
     - [x] Title & Date toggle
-  - [ ] Store
+  - [x] Store
     - [x] WebMock Shopify api call
-    - [ ] Products available
-    - [ ] Collection Toggle
+    - [x] Products available
+    - [x] Collection Toggle
 - [ ] Search
   - [ ] One word comic search
   - [ ] Multiple word comic search
-  - [ ] Product search
-  - [ ] Product category search
 
 ### Front End
 - [x] Comic Archive
