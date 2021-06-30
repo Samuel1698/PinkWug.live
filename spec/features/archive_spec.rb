@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.feature "archive", type: :feature, js: true do
   before do 
     # Visit archive

@@ -27,6 +27,7 @@
     - [x] View toggle
     - [x] Title & Date toggle
   - [ ] Store
+    - [x] WebMock Shopify api call
     - [ ] Products available
     - [ ] Collection Toggle
 - [ ] Search

@@ -1,0 +1,89 @@
+{
+  "products": [
+    {
+      "id": 6889466626236,
+      "title": "general strike",
+      "body_html": "apes together strong",
+      "vendor": "PinkWug Dev Store",
+      "product_type": "",
+      "created_at": "2021-06-28T16:44:50-04:00",
+      "handle": "general-strike",
+      "updated_at": "2021-06-28T16:54:26-04:00",
+      "published_at": "2021-06-28T16:54:26-04:00",
+      "template_suffix": "",
+      "status": "active",
+      "published_scope": "web",
+      "tags": "prints",
+      "admin_graphql_api_id": "gid://shopify/Product/6889466626236",
+      "variants": [
+        {
+          "id": 40176125411516,
+          "product_id": 6889466626236,
+          "title": "Default Title",
+          "price": "15.00",
+          "sku": "",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "fulfillment_service": "manual",
+          "inventory_management": null,
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "created_at": "2021-06-28T16:44:50-04:00",
+          "updated_at": "2021-06-28T16:54:26-04:00",
+          "taxable": false,
+          "barcode": "",
+          "grams": 544,
+          "image_id": null,
+          "weight": 1.2,
+          "weight_unit": "lb",
+          "inventory_item_id": 42270621368508,
+          "inventory_quantity": 0,
+          "old_inventory_quantity": 0,
+          "requires_shipping": true,
+          "admin_graphql_api_id": "gid://shopify/ProductVariant/40176125411516"
+        }
+      ],
+      "options": [
+        {
+          "id": 8784990077116,
+          "product_id": 6889466626236,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 29404630712508,
+          "product_id": 6889466626236,
+          "position": 1,
+          "created_at": "2021-06-28T16:44:52-04:00",
+          "updated_at": "2021-06-28T16:44:52-04:00",
+          "alt": null,
+          "width": 1000,
+          "height": 1000,
+          "src": "https://cdn.shopify.com/s/files/1/0579/5623/7500/products/enhanced-matte-paper-poster-_in_-10x10-transparent-6023443cce20d_1024x1024_2x_8cb91b9b-a553-47d3-a834-f5277ee09559.png?v=1624913092",
+          "variant_ids": [],
+          "admin_graphql_api_id": "gid://shopify/ProductImage/29404630712508"
+        }
+      ],
+      "image": {
+        "id": 29404630712508,
+        "product_id": 6889466626236,
+        "position": 1,
+        "created_at": "2021-06-28T16:44:52-04:00",
+        "updated_at": "2021-06-28T16:44:52-04:00",
+        "alt": null,
+        "width": 1000,
+        "height": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0579/5623/7500/products/enhanced-matte-paper-poster-_in_-10x10-transparent-6023443cce20d_1024x1024_2x_8cb91b9b-a553-47d3-a834-f5277ee09559.png?v=1624913092",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid://shopify/ProductImage/29404630712508"
+      }
+    }
+  ]
+}
