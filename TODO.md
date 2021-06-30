@@ -6,6 +6,7 @@
   - [ ] Sitemap
 - [x] Search
   - [x] Search by title, description, keywords or transcript
+  - [ ] Better matching query
 - [ ] Author Comments/Announcements
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
@@ -57,8 +58,6 @@
   - [ ] Author Comments
   - [x] White Space
   - [x] Footer
-- [ ] Search
- - [ ] Better matching query
 - [x] Store Index
   - [x] Collections API
   - [x] Table/Row view

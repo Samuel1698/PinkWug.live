@@ -26,9 +26,9 @@ function addWhiteSpace(content) {
       // console.log("Success " + whiteSpace);
       // console.log("=================================")
     }
-    else {
-      console.log("No change. \nwhiteSpace: " + whiteSpace + "\nDifference: " + difference);
-      // console.log("=================================")
-    }
+    // else {
+    //   console.log("No change. \nwhiteSpace: " + whiteSpace + "\nDifference: " + difference);
+    //   console.log("=================================")
+    // }
   } 
 }
