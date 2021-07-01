@@ -7,6 +7,7 @@
 - [x] Search
   - [x] Search by title, description, keywords or transcript
   - [x] Multiple word search (REGEXP instead of LIKE)
+  - [ ] Ignore articles (the, and, or, to) in searches
 - [ ] Author Comments/Announcements
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
@@ -31,9 +32,9 @@
     - [x] WebMock Shopify api call
     - [x] Products available
     - [x] Collection Toggle
-- [ ] Search
+- [x] Search
   - [x] One word comic search
-  - [ ] Multiple word comic search
+  - [x] Multiple word comic search
 
 ### Front End
 - [x] Comic Archive
@@ -51,6 +52,7 @@
   - [x] Header
    - [x] Search bar on tablets
    - [x] Dry code after removal of cart and user
+   - [ ] Submit search button
   - [x] Comic navigation
   - [x] Title sizes for different screens 
   - [x] Image sizes for different screens
