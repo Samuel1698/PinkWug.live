@@ -3,24 +3,31 @@ var line   = document.querySelector(".div");
 var table  = document.querySelector(".table");
 var rows   = document.querySelectorAll(".row");
 
-toggle.addEventListener("click", function(){
-	if (table.classList.contains("gallery")){ //If gallery view is on, toggle off
-	  line.classList.add("line");
-	  toggle.classList.remove("gallery");
-		table.classList.remove("gallery");
-		for (let i = 0; i < rows.length; i++){
-			rows[i].classList.remove("gallery");
+function galleryToggle(state){
+	return function(){
+		if (table.classList.contains("gallery") && !state){ //If gallery view is on, toggle off
+		  line.classList.add("line");
+		  toggle.classList.remove("gallery");
+			table.classList.remove("gallery");
+			for (let i = 0; i < rows.length; i++){
+				rows[i].classList.remove("gallery");
+			}
+		}
+		// If gallery view is off, turn on
+		// if state is declared AND viewWidth <= 700px, OR table doesnt contain "gallery" and State is not declared
+		else if ((!table.classList.contains("gallery") && !state) || (state == true && window.innerWidth <= 700)) {
+			line.classList.remove("line");
+			table.classList.add("gallery");
+			toggle.classList.add("gallery");
+			for (let i = 0; i < rows.length; i++){
+				rows[i].classList.add("gallery");
+			}
 		}
 	}
-	else { //If gallery view is off, toggle on
-		line.classList.remove("line");
-		table.classList.add("gallery");
-		toggle.classList.add("gallery");
-		for (let i = 0; i < rows.length; i++){
-			rows[i].classList.add("gallery");
-		}
-	}
-});
+}
+toggle.addEventListener("click", galleryToggle());
+window.addEventListener('resize', galleryToggle(true));
+document.addEventListener('turbolinks:load', galleryToggle(true));
 toggle.addEventListener("click", addWhiteSpace("click"));
 
 // Sorts the array based on the array key "property"

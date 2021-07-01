@@ -19,5 +19,5 @@ RSpec.feature "user searches comics", type: :feature, js: true do
       expect(page).to have_css('.row', count: 3)
     end
   end
-  it "should display 4 union LTV results on one word search"
+  it "should display 4 union LTV results on more than one word search"
 end
