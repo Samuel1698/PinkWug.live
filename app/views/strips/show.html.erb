@@ -9,7 +9,7 @@
 	<%= image_tag(url_for(@strip.image), alt: @strip.transcript, class: "#{@last} comic") %>
 	<%= render 'comicNav' %>
 	<div class="share">
-		<button class="tooltip" onclick="updateClipboard('https://pinkwug.live<%= strip_url(@strip) %>')">
+		<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
 			<span>copy link</span>
 		</button>
 		<p>share this comic!</p>
@@ -18,5 +18,7 @@
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "comicNav.js", "data-turbolinks-track" => true %>
-  <script>document.querySelector(".comic").addEventListener('load', addWhiteSpace("load"));</script>
+  <script>
+  	document.querySelector(".comic").addEventListener('load', addWhiteSpace("load"));
+	</script>
 <% end %>

@@ -178,6 +178,12 @@ header {
             height: 28px;
             margin-right: 1rem;
           }
+          &:active a, &:hover a, &:active a{
+            background-color: $light-brown;
+          }
+        }
+        &.active li {
+          margin-right: 0;
         }
       }
     }
