@@ -5,7 +5,9 @@ class Strip::Filter
 		# end
 		# scope
 		if query_params[:text].present?
-			words = query_params[:text].downcase.strip.split.uniq
+			list = File.read("#{::Rails.root}/app/models/strip/stop-words.txt").split.join('|')
+			stopWords = /\b(?:#{list})\b/i
+			words = query_params[:text].downcase.strip.gsub(stopWords, '').split.uniq
 			scope = scope.where("title REGEXP :text OR description REGEXP :text OR keywords REGEXP :text OR transcript REGEXP :text", text: words.join('|'))
 		end
 		scope
