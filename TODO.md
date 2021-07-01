@@ -7,7 +7,7 @@
 - [x] Search
   - [x] Search by title, description, keywords or transcript
   - [x] Multiple word search (REGEXP instead of LIKE)
-  - [ ] Ignore articles (the, and, or, to) in searches
+  - [x] Ignore articles (the, and, or, to) in searches
 - [ ] Author Comments/Announcements
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
@@ -35,6 +35,7 @@
 - [x] Search
   - [x] One word comic search
   - [x] Multiple word comic search
+  - [x] StopWord search
 
 ### Front End
 - [x] Comic Archive
