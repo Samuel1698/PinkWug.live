@@ -9,11 +9,11 @@
 	<%= image_tag(url_for(@strip.image), alt: @strip.transcript, class: "#{@last} comic") %>
 	<%= render 'comicNav' %>
 	<div class="share">
-		<button class="tooltip" onclick="updateClipboard('https://pinkwug.live<%= strip_path(@strip) %>')">
+		<button class="tooltip" onclick="updateClipboard('https://pinkwug.live<%= strip_url(@strip) %>')">
 			<span>copy link</span>
 		</button>
 		<p>share this comic!</p>
-		<p>https://pinkwug.live<%= strip_path(@strip) %></p>
+		<p><%= strip_url(@strip) %></p>
 	</div>
 </div>
 <% content_for :javascripts do %>

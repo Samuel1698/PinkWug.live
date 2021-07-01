@@ -334,10 +334,10 @@ main {
       bottom: 100%;
       left: 50%;
       margin-left: -60px;
-      background-color: black;
-      color: #fff;
+      background-color: $dark-brown;
+      color: white;
       text-align: center;
-      padding: 5px 0;
+      padding: 6px 0 4px;
       border-radius: 6px;
       margin-bottom: 6px;
       &::after { // Down arrow
@@ -348,7 +348,7 @@ main {
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: black transparent transparent transparent;
+        border-color: $dark-brown transparent transparent transparent;
       }
     }
     &:hover {
