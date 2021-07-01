@@ -57,7 +57,7 @@
   - [x] Comic navigation
   - [x] Title sizes for different screens 
   - [x] Image sizes for different screens
-  - [ ] Share link
+  - [x] Share link
   - [ ] Author Comments
   - [x] White Space
   - [x] Footer

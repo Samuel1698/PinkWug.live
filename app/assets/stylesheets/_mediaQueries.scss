@@ -24,9 +24,6 @@
 		margin-right: 16px;
 		margin-left: 16px;
 	}
-	li.active a{
-		border-bottom-color: $highlight-color; 
-	}
 	header {
 		.header_wrapper {
 			.search {
@@ -39,7 +36,6 @@
 					left: 0;
 					right: 0;
 					top: 100%;
-					background-color: $highlight-color;
 					input {
 					  width: 100%;
 					  border-bottom: 1px solid #979797;

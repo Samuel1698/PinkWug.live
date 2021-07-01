@@ -178,9 +178,6 @@ header {
             height: 28px;
             margin-right: 1rem;
           }
-          &.active a {
-            border-left-color: $highlight-color;
-          }
         }
       }
     }
@@ -309,6 +306,58 @@ main {
 }
 .bottom_Logo {
   width: 32px;
+}
+.share {
+  background-color: $light-grey;
+  padding: 8px 12px;
+  margin: 8px 14px;
+  border-radius: 12px;
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+    &:last-child {
+      font-size: 0.7rem;
+    }
+  }
+  button { // Tooltip 
+    float: right;
+    position: relative;
+    background: url("icons8-copy") no-repeat;
+    height: 24px;
+    width: 24px;
+    top: 3px;
+    span { // Tooltip text
+      position: absolute;
+      z-index: -1;
+      visibility: hidden;
+      width: 120px;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -60px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      &::after { // Down arrow
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+    }
+    &:hover {
+      span {
+        visibility: visible;
+        z-index: 0;
+      }
+    }
+  }
 }
 // =============================================================================
 // footer
