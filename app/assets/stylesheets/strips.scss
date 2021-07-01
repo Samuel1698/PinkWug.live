@@ -69,6 +69,7 @@ a {
 }
 .container {
   min-width: 350px;
+  background-color: white;
 }
 
 body:hover .visually-hidden a, 
@@ -81,6 +82,7 @@ body:hover .visually-hidden button { display: none}
 
 header {
   font-size: 1em;
+  background-color: $dark-brown;
   a {
   color: white;
   }
@@ -89,7 +91,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: $dark-brown;
     // -------------------------------------------------------------------- 
     // Top header
     // -------------------------------------------------------------------- 
@@ -329,7 +330,6 @@ footer {
 }
 .footer_Border {
   padding: 40px;
-  background-color: $dark-brown;
   border-bottom: 1px solid black;
 }
 .socialMediaLinks {

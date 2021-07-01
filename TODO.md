@@ -69,6 +69,7 @@
   - [x] Collections API
   - [x] Table/Row view
   - [x] Toggle to hide collection
+- [x] Explicitly declare background color of container
 - [ ] :hover color
 
 ### Deployment
