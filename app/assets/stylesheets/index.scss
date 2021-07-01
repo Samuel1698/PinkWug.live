@@ -99,8 +99,7 @@
 }
 @media (max-width: 700px) {
 	.img_container {
-		position: absolute;
-		left: -10000px;
+		display: none;
 	}
 	.row {
 		flex-direction: column;
