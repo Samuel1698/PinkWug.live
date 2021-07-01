@@ -6,7 +6,7 @@
   - [ ] Sitemap
 - [x] Search
   - [x] Search by title, description, keywords or transcript
-  - [ ] Better matching query
+  - [x] Multiple word search (REGEXP instead of LIKE)
 - [ ] Author Comments/Announcements
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
@@ -32,7 +32,7 @@
     - [x] Products available
     - [x] Collection Toggle
 - [ ] Search
-  - [ ] One word comic search
+  - [x] One word comic search
   - [ ] Multiple word comic search
 
 ### Front End
@@ -58,6 +58,10 @@
   - [ ] Author Comments
   - [x] White Space
   - [x] Footer
+- [x] About Me
+  - [x] Div elements styled like comics
+  - [x] Email form
+  - [ ] Prevent textfield from expanding past div container
 - [x] Store Index
   - [x] Collections API
   - [x] Table/Row view

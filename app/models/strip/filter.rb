@@ -5,9 +5,8 @@ class Strip::Filter
 		# end
 		# scope
 		if query_params[:text].present?
-			# Do first word only for now
-			arr = query_params[:text].split(" ")
-			scope = scope.where("title LIKE :text OR description LIKE :text OR keywords LIKE :text OR transcript LIKE :text", text: "%#{arr[0]}%")
+			words = query_params[:text].downcase.strip.split.uniq
+			scope = scope.where("title REGEXP :text OR description REGEXP :text OR keywords REGEXP :text OR transcript REGEXP :text", text: words.join('|'))
 		end
 		scope
 	end
