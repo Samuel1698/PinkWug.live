@@ -19,7 +19,15 @@ RSpec.feature "user searches comics", type: :feature, js: true do
       expect(page).to have_css('.row', count: 3)
     end
   end
-  it "should display 4 union LTV results on more than one word search" do 
+  it "should display 4 results on 'Union LTV' search" do 
+    # Fill in the search form with 'union LTV'
+    fill_in('query_text', with: 'Union LTV').native.send_keys(:return)
+    # Check that there are 4 rows
+    within find('.table') do 
+      expect(page).to have_css('.row', count: 4)
+    end
+  end
+  it "should display 4 results on 'Union and LTV search" do 
     # Fill in the search form with 'union LTV'
     fill_in('query_text', with: 'Union LTV').native.send_keys(:return)
     # Check that there are 4 rows
