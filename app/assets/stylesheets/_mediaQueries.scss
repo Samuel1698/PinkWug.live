@@ -127,6 +127,14 @@
 			}
 		}
 	}
+	.share button {
+		span {
+			left: 50%;
+			&::after {
+				left: 50%;
+			}
+		}
+	}
 	.content {
 		max-width: 65vw;
 		margin-left: auto;
