@@ -36,6 +36,7 @@
   - [x] One word comic search
   - [x] Multiple word comic search
   - [x] StopWord search
+  - [ ] Use submit button instead of pressing Enter
 
 ### Front End
 - [x] Comic Archive
@@ -53,12 +54,13 @@
   - [x] Header
    - [x] Search bar on tablets
    - [x] Dry code after removal of cart and user
-   - [ ] Submit search button
+   - [x] Submit search button | needs mobile
   - [x] Comic navigation
   - [x] Title sizes for different screens 
   - [x] Image sizes for different screens
+  - [ ] Div navigation in comic itself
   - [x] Share link
-  - [ ] Author Comments
+  - [ ] Author Comments?
   - [x] White Space
   - [x] Footer
 - [x] About Me
