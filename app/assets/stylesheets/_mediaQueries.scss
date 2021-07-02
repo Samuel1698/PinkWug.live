@@ -99,7 +99,7 @@
 	}
 }
 // ---------------------------------------------------
-// Between 541 and 940 pixels
+// Between 541 and biggest screen size
 // ---------------------------------------------------
 @media (min-width: $small +1) {
 	h1, h2 {
@@ -110,11 +110,20 @@
 	p {
 		font-size: 1rem;
 	}
-	.search {
+	header .header_wrapper .search{
 		button {
 			&.active{
 				position: relative;
 				top: 6px;
+			}
+		}
+		form {
+			input:not(:last-child) {
+				border: 0;
+			}
+			.submit_button {
+				right: 50px;
+				top: 14px;
 			}
 		}
 	}
@@ -126,7 +135,7 @@
 }
 
 // ---------------------------------------------------
-// From 940 pixels to 1080
+// From 940 pixels upwards
 // ---------------------------------------------------
 @media (min-width: $medium){
 	h1{
