@@ -355,8 +355,8 @@ main {
       visibility: hidden;
       width: 120px;
       bottom: 100%;
-      left: 50%;
-      margin-left: -60px;
+      left: -80%; //50% for center
+      margin-left: -60px; //Has to be half of the width
       background-color: $dark-brown;
       color: white;
       text-align: center;
@@ -367,7 +367,7 @@ main {
         content: " ";
         position: absolute;
         top: 100%; /* At the bottom of the tooltip */
-        left: 50%;
+        left: 75%; // 50% for center
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
