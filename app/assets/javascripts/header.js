@@ -65,12 +65,19 @@ window.addEventListener('turbolinks:load', changeButtons);
 window.addEventListener('load', changeButtons);
 
 function changeButtons(){
+  kofi    = document.querySelector(".kofi");
+  patreon = document.querySelector(".patreon");
   if (window.innerWidth < 555){
-    document.querySelector(".kofi").getElementsByTagName("span")[0].innerHTML = "Ko-fi";
-    document.querySelector(".patreon").getElementsByTagName("span")[0].innerHTML = "Patreon";
+    kofi.getElementsByTagName("span")[0].innerHTML = "Ko-fi";
+    patreon.getElementsByTagName("span")[0].innerHTML = "Patreon";
+    kofi.classList.add('small');
+    patreon.classList.add('small');
+
   }
   else {
-    document.querySelector(".kofi").getElementsByTagName("span")[0].innerHTML = "Support me on Ko-fi";
-    document.querySelector(".patreon").getElementsByTagName("span")[0].innerHTML = "Support me on Patreon"
+    kofi.getElementsByTagName("span")[0].innerHTML = "Support me on Ko-fi";
+    patreon.getElementsByTagName("span")[0].innerHTML = "Support me on Patreon";
+    kofi.classList.remove('small');
+    patreon.classList.remove('small');
   }
 }
