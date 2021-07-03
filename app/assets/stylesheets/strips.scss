@@ -38,7 +38,7 @@ a {
   text-decoration: none;
   color: black;
 }
-a, button {
+a, button{
   // For browsers that support it
   outline-offset: 2px;
   &:focus-visible {
@@ -53,6 +53,14 @@ a, button {
       outline: 5px auto Highlight;
       outline: 5px auto -webkit-focus-ring-color; 
     }
+  }
+}
+input[type="submit"] {
+  outline-offset: 2px;
+  &:focus-visible {
+    content: '';
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color; 
   }
 }
 
