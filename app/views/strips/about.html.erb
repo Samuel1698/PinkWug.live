@@ -13,13 +13,13 @@
 		<h2>Want to support me?</h2>
 		<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
 		<div class="support_buttons">
-			<a href="https://ko-fi.com/L3L42AQKS" target="_blank">
-			  <button class="kofi" tabindex="-1">
+			<a href="https://ko-fi.com/L3L42AQKS" target="_blank" tabindex="-1">
+			  <button class="kofi">
 			    <span>Buy me a coffee</span>
 			  </button>
-			</a>
-			<a href="https://www.patreon.com/pinkwug" target="_blank">
-			  <button class="patreon" tabindex="-1">
+			</a><br>
+			<a href="https://www.patreon.com/pinkwug" target="_blank" tabindex="-1">
+			  <button class="patreon">
 			    <span>Become a Patron</span>
 			  </button>
 			</a>
@@ -28,7 +28,13 @@
 	<div class="about discord">
 		<h2>Join my Discord</h2>
 		<p>review comic drafts, give suggestions, or vote on comic topics!</p>
-		<p class="discord_logo"><%= link_to image_tag("Discord-Logo+Wordmark-White.svg"), "https://discord.gg/pinkwug", target: "_blank" %></p>
+		<p class="discord_logo">
+			<%= link_to "https://discord.gg/pinkwug", target: "_blank", tabindex: "-1" do %>
+				<button>
+					<%= image_tag("Discord-Logo+Wordmark-White.svg") %> 
+				</button>
+			<% end %>
+		</p>
 	</div>
 	<div class="about business">
 		<h2>For business Inquiries:</h2>
