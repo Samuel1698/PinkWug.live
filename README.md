@@ -12,7 +12,7 @@ To get this application running you need:
 I started working on this project with the permission of PinkWug to practice what I learned in Noble Desktop. 
 
 ## Previews:
-### Desktop:
+### Front End:
 https://user-images.githubusercontent.com/43931665/124368643-ff9dba80-dc30-11eb-9a56-02c72303a9d5.mp4
 
 ### Admin Dashboard:
