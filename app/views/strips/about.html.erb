@@ -14,12 +14,12 @@
 		<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
 		<div class="support_buttons">
 			<a href="https://ko-fi.com/L3L42AQKS" target="_blank">
-			  <button class="kofi">
+			  <button class="kofi" tabindex="-1">
 			    <span>Buy me a coffee</span>
 			  </button>
 			</a>
 			<a href="https://www.patreon.com/pinkwug" target="_blank">
-			  <button class="patreon">
+			  <button class="patreon" tabindex="-1">
 			    <span>Become a Patron</span>
 			  </button>
 			</a>
@@ -28,7 +28,7 @@
 	<div class="about discord">
 		<h2>Join my Discord</h2>
 		<p>review comic drafts, give suggestions, or vote on comic topics!</p>
-		<%= link_to image_tag("Discord-Logo+Wordmark-White.svg", class: "discord_logo"), "https://discord.gg/pinkwug", target: "_blank" %>
+		<p class="discord_logo"><%= link_to image_tag("Discord-Logo+Wordmark-White.svg"), "https://discord.gg/pinkwug", target: "_blank" %></p>
 	</div>
 	<div class="about business">
 		<h2>For business Inquiries:</h2>
@@ -38,7 +38,7 @@
 	    <label for="email-address">Email Address:*</label>
 	    <input type="email" name="from" id="email-address" placeholder="" required="true">
 	    <label for="message">Message:*</label>
-	    <textarea rows="5" name="message" id="message" placeholder="" required="true"></textarea>
+	    <textarea name="message" id="message" placeholder="" required="true"></textarea>
 	    <input type="hidden" name="_subject" id="email-subject" value="Business Inquiry from PinkWug.live">
 	 	 	<p class="warning">*fields required</p>
 	 	 	<input type="submit" value="Send">
