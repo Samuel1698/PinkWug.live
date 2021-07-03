@@ -74,6 +74,8 @@ GEM
       activeadmin (>= 1.1.0, < 3.0)
       font-awesome-sass (~> 5.0)
       jquery-rails
+    autoprefixer-rails (10.2.5.1)
+      execjs (> 0)
     bcrypt (3.1.16)
     bcrypt (3.1.16-java)
     bindex (0.8.1)
@@ -113,6 +115,7 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
+    execjs (2.8.1)
     ffi (1.15.3)
     ffi (1.15.3-java)
     ffi (1.15.3-x64-mingw32)
@@ -353,6 +356,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin (~> 2.2)
   arctic_admin
+  autoprefixer-rails
   bootsnap (>= 1.4.2)
   byebug
   capybara

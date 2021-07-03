@@ -41,6 +41,8 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 # Use HTTParty to handle remote API calls
 gem 'httparty'
+# Use autoprefixer for browser compatibility
+gem "autoprefixer-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
