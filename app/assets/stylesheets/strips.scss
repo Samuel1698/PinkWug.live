@@ -37,8 +37,19 @@ h1, h2 {
 a {
   text-decoration: none;
   color: black;
-  :hover, :focus, :active {
-    color: currentColor;
+  // For browsers that support it
+  outline-offset: 1px;
+  &:focus {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
   }
 }
 
@@ -95,10 +106,12 @@ header {
     // Top header
     // -------------------------------------------------------------------- 
     .header_logo {
-      font-weight: bold;
-      font-size: 1.2em;
-      width: 85px;
-      color: white;
+      img, p {
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 0;
+      }
     }
     .header_buttons { 
       button {
@@ -178,7 +191,7 @@ header {
             height: 28px;
             margin-right: 1rem;
           }
-          &:active a, &:hover a, &:active a{
+          &:focus a, &:hover a, &:active a{
             background-color: $light-brown;
           }
         }

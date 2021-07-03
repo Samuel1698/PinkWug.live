@@ -21,17 +21,17 @@
       <div id="skip"><a href="#content">Skip to Main Content</a></div> 
       <header class="header">
         <div class="header_wrapper">
-          <div class="header_logo"> 
-            <%= link_to image_tag("wugSLEEP.png", style: "width: 85px"),root_path %>
-            <a href="/">Pink&nbsp;Wug</a>
-          </div>
+          <%= link_to root_path, class: "header_logo" do %>
+            <%= image_tag("wugSLEEP.png", style: "width: 85px") %> 
+            <p>Pink&nbsp;Wug</p>
+          <% end %>
           <div class="header_buttons">
-            <a href="https://ko-fi.com/L3L42AQKS" target="_blank">
+            <a href="https://ko-fi.com/L3L42AQKS" target="_blank" tabindex="-1">
               <button class="kofi">
                 <span>Support me on Ko-Fi</span>
               </button>
             </a>
-            <a href="https://www.patreon.com/pinkwug" target="_blank">
+            <a href="https://www.patreon.com/pinkwug" target="_blank" tabindex="-1">
               <button class="patreon">
                 <span>Support me on Patron</span>
               </button>
