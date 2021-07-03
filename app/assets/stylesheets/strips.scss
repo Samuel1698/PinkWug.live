@@ -51,7 +51,7 @@ a, button {
       right: -2px;
       bottom: -2px;
       outline: 5px auto Highlight;
-      outline: 5px auto focus-ring-color; 
+      outline: 5px auto -webkit-focus-ring-color; 
     }
   }
 }
@@ -122,8 +122,6 @@ header {
         margin: 0;
         padding: 1.3rem 0px 0.75rem;
         margin-left: 8px;
-        border: 0 none white;
-        border-radius: 7px;
       }
       button {
         box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
@@ -310,17 +308,6 @@ main {
       text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
     }
   }
-}
-.discord_logo {
-  border-radius: 7px;
-  border: 0 none white;
-  padding: 4px 10px;
-  display: block;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: $blurple;
-  height: 32px;
 }
 .comic_Nav {
   display: grid;
