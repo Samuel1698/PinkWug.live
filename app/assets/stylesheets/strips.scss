@@ -114,6 +114,14 @@ header {
       }
     }
     .header_buttons { 
+      font-size: 0; //To get rid of generated whitespace
+      a {
+        margin: 0;
+        padding: 1.3rem 0px 0.75rem;
+        margin-left: 8px;
+        border: 0 none white;
+        border-radius: 7px;
+      }
       button {
         box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
         line-height: 32px;
@@ -127,7 +135,6 @@ header {
         font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
         font-weight: 700;
         font-size: 14px;
-        margin-left: 8px;
         &.patreon {
           background: url("icons8-patreon-white.svg") 6% 50%/16px no-repeat,
                       linear-gradient($fiery-coral,$fiery-coral);
