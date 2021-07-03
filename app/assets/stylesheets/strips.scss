@@ -350,9 +350,6 @@ main {
     grid-area: recent;
   }
 }
-.bottom_Logo {
-  width: 32px;
-}
 .share {
   background-color: $light-grey;
   padding: 8px 12px;
@@ -430,5 +427,13 @@ footer {
 .socialMediaLinks {
   margin-top: 30px;
   margin-bottom: 10px;
+}
+.bottom_Logo {
+  &:not(:last-child){
+    width: 32px;
+  }
+  &:last-child {
+    width: 28px;
+  }
 }
 @import "mediaQueries"
