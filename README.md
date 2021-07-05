@@ -6,6 +6,8 @@ To get this application running you need:
 * Ruby 2.6.3
 
 * Rails 6.0.3.7
+* Webpack precompile assets
+* [Image Magick](https://imagemagick.org/script/download.php)
 
 
 ## A work in progress
