@@ -1,6 +1,6 @@
 ActiveAdmin.register Strip do
 
-  permit_params :title, :description, :image, :keywords, :transcript, :created_at, :updated_at
+  permit_params :title, :description, :image, :keywords, :transcript, :created_at, :updated_at, :comment
 
   filter :title
   filter :description
@@ -27,6 +27,7 @@ ActiveAdmin.register Strip do
       row :title
       row :description
       row :keywords
+      row :comment
       row :image do |strip|
         image_tag url_for(strip.image.variant(resize_to_fit:[700,10000]))
       end
@@ -40,7 +41,8 @@ ActiveAdmin.register Strip do
     f.inputs "Comic Details" do
       f.input :title
       f.input :description, placeholder: "Short description. Only visible on search results"
-      f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Don't repeat title", placeholder: "Example: dashboard, admin, form", required: true
+      f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Don't repeat title", placeholder: "Example: General Strike, Capitalism, Unions, Amazon", required: true
+      f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements", :input_html => { :rows => 2 }
       f.input :image, as: :file if !f.object.image.attached?
       f.input :image, hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
       f.input :transcript, hint: "Not required. Good for accessibility and searchability.", :input_html => { :rows => 5 }

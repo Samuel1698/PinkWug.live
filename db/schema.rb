@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_28_195506) do
+ActiveRecord::Schema.define(version: 2021_07_06_220314) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 2021_06_28_195506) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
     t.text "keywords", default: "--- []\n"
+    t.text "comment"
     t.index ["slug"], name: "index_strips_on_slug", unique: true
   end
 

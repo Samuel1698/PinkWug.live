@@ -60,13 +60,13 @@
   - [x] Image sizes for different screens
   - [ ] Div navigation in comic itself
   - [x] Share link
-  - [ ] Author Comments?
+  - [ ] Author Comments
   - [x] White Space
   - [x] Footer
 - [x] About Me
   - [x] Div elements styled like comics
   - [x] Email form
-  - [ ] Prevent textfield from expanding past div container
+  - [x] Prevent textfield from expanding past div container
 - [x] Store Index
   - [x] Collections API
   - [x] Table/Row view
