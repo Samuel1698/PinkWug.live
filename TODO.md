@@ -13,6 +13,9 @@
 - [ ] OpenGraph 
 - [ ] Twitter Card meta_tag
 - [ ] Custom 404 and other error views
+- [ ] WhiteSpace turbolinks fix
+  - [ ] onClick event triggers on HTML
+  - [ ] Timer on turbolinks:load as failsafe?
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
