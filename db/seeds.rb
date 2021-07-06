@@ -81,6 +81,7 @@ strips = [
 		transcript: "5 billion dollar corporation + 5 billion dollar corporation = 13 billion dollar corporation (+3: monopoly bonus).
 		worker + worker = both fired (but not because of unionization or anything)", 
 		keywords: [ "Workers", "Job", "Monopoly", "Corporations", "Unions"],
+		comment: "Latest Comic! I'll be gone for a while, got some school work to get through!",
 		created_at: "07/05/2021",
 		},
 		image: 'Union for me, but not for thee.jpg',

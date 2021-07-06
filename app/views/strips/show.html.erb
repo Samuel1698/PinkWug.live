@@ -15,6 +15,11 @@
 		<p>share this comic!</p>
 		<p><%= strip_url(@strip) %></p>
 	</div>
+	<% if(!@strip.comment.blank?) %>
+		<div class="comment">
+			<p><%= @strip.comment %></p>	
+		</div>
+	<% end  %>
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "comicNav.js", "data-turbolinks-track" => true %>

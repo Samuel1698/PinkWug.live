@@ -1,13 +1,14 @@
 # Comic & Store web application for PinkWug
 
 
-To get this application running you need:
-
-* Ruby 2.6.3
-
-* Rails 6.0.3.7
-* Webpack precompile assets
+Dependencies:
 * [Image Magick](https://imagemagick.org/script/download.php)
+* [PhantomJS](https://phantomjs.org/download.html) (For tests)
+
+To run this application you need
+* Ruby 2.6.3
+* Rails 6.0.3.7
+* Webpacker
 
 
 ## A work in progress
