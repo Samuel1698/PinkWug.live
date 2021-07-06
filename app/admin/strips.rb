@@ -25,13 +25,13 @@ ActiveAdmin.register Strip do
   show do 
     attributes_table do 
       row :title
-      row :description
+      row :description unless strip.description.blank?
       row :keywords
-      row :comment
+      row :comment unless strip.comment.blank?
       row :image do |strip|
         image_tag url_for(strip.image.variant(resize_to_fit:[700,10000]))
       end
-      row :transcript
+      row :transcript unless strip.transcript.blank?
       row :created_at
       row :updated_at
     end
