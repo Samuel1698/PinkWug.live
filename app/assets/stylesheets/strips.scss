@@ -74,6 +74,7 @@ input[type="submit"], img {
     padding: 0;
     position: absolute;
     width: 1px;
+    display: inline-block;
 }
 // Skip all navigation and jump to content
 #skip a {
@@ -366,14 +367,23 @@ main {
     margin-right: 8px;
   }
   p {
+    font-size: 0.9rem;
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
     &:first-of-type {
       font-size: 0.8rem;
       // Pixel amount is based on image size +2 for bottom margin/padding
-      padding-top:    calc( 18px - (0.8rem / 2));
-      padding-bottom: calc( 14px - (0.8rem / 2));
+      margin-top:    calc( 18px - (0.8rem / 2));
+      margin-bottom: calc( 14px - (0.8rem / 2));
     }
-    font-size: 0.9rem;
-    margin: 0;
+    a {
+      color: darkseagreen; 
+      &:hover {
+        color: limegreen;
+      }
+    }
   }
 }
 .share {
@@ -398,7 +408,7 @@ main {
     span { // Tooltip text
       position: absolute;
       z-index: -1;
-      visibility: hidden;
+      // visibility: hidden;
       width: 120px;
       bottom: 100%;
       left: -80%; //50% for center
