@@ -5,7 +5,7 @@ var searchToggle = document.querySelector(".search_toggle");
 var searchForm = document.querySelector(".search_form");
 
 // Reset the Menu and Search
-  // Menu
+// Menu
 navToggle.setAttribute("aria-expanded", "false");
 navToggle.setAttribute("aria-label", "menu");
 navWrapper.classList.remove("active");
@@ -15,7 +15,6 @@ searchToggle.classList.remove("active");
 searchToggle.setAttribute("aria-label", "Open search"); //Label for search button
 // Margin
 main.classList.remove("search_margin", "menu_margin");
-
 
 // Navigation Menu
 navToggle.addEventListener("click", function () {
@@ -29,7 +28,7 @@ navToggle.addEventListener("click", function () {
     main.classList.add("menu_margin");
     this.setAttribute("aria-label", "close menu");
     this.setAttribute("aria-expanded", "true");
-    // Close Search only if sccreen size allows
+    // Close Search only if screen size allows
     if (window.innerWidth <= 540){
       searchForm.classList.remove("active");
       searchToggle.classList.remove("active");
@@ -64,17 +63,24 @@ window.addEventListener('resize', changeButtons);
 window.addEventListener('turbolinks:load', changeButtons);
 window.addEventListener('load', changeButtons);
 
+// Use this to also reset the nav toggle
 function changeButtons(){
   kofi    = document.querySelector(".kofi");
   patreon = document.querySelector(".patreon");
-  if (window.innerWidth < 555){
+  if (window.innerWidth >= 940) {
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "menu");
+    navWrapper.classList.remove("active");
+    main.classList.remove("search_margin", "menu_margin");
+  }
+  if (window.innerWidth <= 555){
     kofi.getElementsByTagName("span")[0].innerHTML = "Ko-fi";
     patreon.getElementsByTagName("span")[0].innerHTML = "Patreon";
     kofi.classList.add('small');
     patreon.classList.add('small');
 
   }
-  else {
+  else if (window.innerWidth > 555){
     kofi.getElementsByTagName("span")[0].innerHTML = "Support me on Ko-fi";
     patreon.getElementsByTagName("span")[0].innerHTML = "Support me on Patreon";
     kofi.classList.remove('small');
