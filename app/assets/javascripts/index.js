@@ -17,7 +17,9 @@ function galleryToggle(state){
 		// If gallery view is off, turn on
 		// if state is declared AND viewWidth <= 700px, OR table doesnt contain "gallery" and State is not declared
 		else if ((!table.classList.contains("gallery") && !state) || (state == true && window.innerWidth <= 700)) {
-			console.log("Resize, load or turbolinksload: " + state);
+			if (state) {
+				console.log("Resize, load or turbolinksload: " + state);
+			}
 			line.classList.remove("line");
 			table.classList.add("gallery");
 			toggle.classList.add("gallery");

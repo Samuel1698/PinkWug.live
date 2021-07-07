@@ -8,13 +8,11 @@
   - [x] Search by title, description, keywords or transcript
   - [x] Multiple word search (REGEXP instead of LIKE)
   - [x] Ignore articles (the, and, or, to) in searches
-- [ ] Author Comments/Announcements
+- [x] Author Comments/Announcements
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
 - [ ] Twitter Card meta_tag
 - [ ] Custom 404 and other error views
-- [ ] WhiteSpace turbolinks fix
-  - [ ] Timer on turbolinks:load as failsafe?
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
