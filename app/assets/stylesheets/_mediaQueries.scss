@@ -24,6 +24,12 @@
 		margin-right: 16px;
 		margin-left: 16px;
 	}
+	button {
+		h2 {
+			margin-right: 16px;
+			margin-left: 16px;
+		}
+	}
 	header {
 		.header_wrapper {
 			.search {
@@ -93,7 +99,7 @@
 // ---------------------------------------------------
 // From 541 to biggest screen size
 // ---------------------------------------------------
-@media (min-width: $small +1) {
+@media (min-width: $small) {
 	h1, h2 {
 		font-size: 1.1rem;
 		margin-right: 16px;
