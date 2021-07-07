@@ -14,7 +14,6 @@
 - [ ] Twitter Card meta_tag
 - [ ] Custom 404 and other error views
 - [ ] WhiteSpace turbolinks fix
-  - [ ] onClick event triggers on HTML
   - [ ] Timer on turbolinks:load as failsafe?
 ### Tests
 - [x] Models 
@@ -39,7 +38,7 @@
   - [x] One word comic search
   - [x] Multiple word comic search
   - [x] StopWord search
-  - [ ] Use submit button instead of pressing Enter
+  - [x] Use submit button instead of pressing Enter
 
 ### Front End
 - [x] Comic Archive
@@ -63,8 +62,8 @@
   - [x] Image sizes for different screens
   - [ ] Div navigation in comic itself
   - [x] Share link
-   - [ ] Font Size for smaller screens
-  - [ ] Author Comments
+   - [x] Font Size for smaller screens
+  - [x] Author Comments
   - [x] White Space
   - [x] Footer
 - [x] About Me
