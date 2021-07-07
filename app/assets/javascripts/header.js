@@ -1,20 +1,20 @@
 var navToggle = document.querySelector(".nav_toggle");
 var navWrapper = document.querySelector(".nav_ul");
-var main = document.querySelector("main");
+var main = document.getElementById("main");
 var searchToggle = document.querySelector(".search_toggle");
 var searchForm = document.querySelector(".search_form");
 
 // Reset the Menu and Search
   // Menu
-  navToggle.setAttribute("aria-expanded", "false");
-  navToggle.setAttribute("aria-label", "menu");
-  navWrapper.classList.remove("active");
-  // Search
-  searchForm.classList.remove("active");
-  searchToggle.classList.remove("active");
-  searchToggle.setAttribute("aria-label", "Open search"); //Label for search button
-  // Margin
-  main.classList.remove("search_margin", "menu_margin");
+navToggle.setAttribute("aria-expanded", "false");
+navToggle.setAttribute("aria-label", "menu");
+navWrapper.classList.remove("active");
+// Search
+searchForm.classList.remove("active");
+searchToggle.classList.remove("active");
+searchToggle.setAttribute("aria-label", "Open search"); //Label for search button
+// Margin
+main.classList.remove("search_margin", "menu_margin");
 
 
 // Navigation Menu
