@@ -26,6 +26,12 @@ for (i = 0; i < 2; i++){
     last_strip[i].classList.add("disabled");
   }
 }
+function hitEnter(){
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.querySelector('.tooltip').click();
+  }
+}
 
 function updateClipboard(newClip) {
   navigator.clipboard.writeText(newClip).then(function() {
