@@ -6,7 +6,7 @@
 <div class="content">
 	<h1><%= title @title %></h1>
 	<%= render 'comicNav' %>
-	<%= image_tag(url_for(@strip.image), alt: @strip.transcript, class: "#{@last} comic") %>
+	<%= image_tag(url_for(@strip.image), alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
 	<%= render 'comicNav' %>
 	<div class="comment">
 		<%= image_tag("wugART@3x.png", style: "width: 32px") %>

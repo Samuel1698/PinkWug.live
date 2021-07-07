@@ -58,7 +58,7 @@
             <%= form_for :query, url: strips_path, method: :get, html: {class: 'search_form'} do |form|  %>
               <%= form.label 'Search', class: 'sr-only' %>
               <%= form.text_field :text, placeholder: 'Search comics', value: params.dig('query', 'text'), autocomplete: 'off' %>
-              <%= form.submit '',class: 'submit_button' %>
+              <%= form.submit '',class: 'submit_button', title: 'submit search' %>
             <% end %>
           </div>
         </div>

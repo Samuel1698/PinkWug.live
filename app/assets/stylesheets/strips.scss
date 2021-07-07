@@ -38,7 +38,7 @@ a {
   text-decoration: none;
   color: black;
 }
-a, button{
+a, button {
   // For browsers that support it
   outline-offset: 2px;
   &:focus-visible {
@@ -55,7 +55,7 @@ a, button{
     }
   }
 }
-input[type="submit"] {
+input[type="submit"], img {
   outline-offset: 2px;
   &:focus-visible {
     content: '';
@@ -351,6 +351,9 @@ main {
   .fa-angle-double-right{
     grid-area: recent;
   }
+}
+.comic {
+  margin-bottom: 6px;
 }
 .comment {
   background-color: $dark-grey;
