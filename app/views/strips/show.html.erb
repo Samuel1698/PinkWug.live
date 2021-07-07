@@ -8,6 +8,11 @@
 	<%= render 'comicNav' %>
 	<%= image_tag(url_for(@strip.image), alt: @strip.transcript, class: "#{@last} comic") %>
 	<%= render 'comicNav' %>
+	<div class="comment">
+		<%= image_tag("wugART@3x.png", style: "width: 32px") %>
+		<p>Published in <%= @strip.created_at.strftime("%b %-d, %Y") %> </p>	
+		<p><%= @strip.comment unless @strip.comment.blank? %></p>	
+	</div>
 	<div class="share">
 		<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
 			<span>copy link</span>
@@ -15,11 +20,6 @@
 		<p>share this comic!</p>
 		<p><%= strip_url(@strip) %></p>
 	</div>
-	<% if(!@strip.comment.blank?) %>
-		<div class="comment">
-			<p><%= @strip.comment %></p>	
-		</div>
-	<% end  %>
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "comicNav.js", "data-turbolinks-track" => true %>

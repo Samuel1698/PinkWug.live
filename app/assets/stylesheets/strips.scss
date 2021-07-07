@@ -352,6 +352,25 @@ main {
     grid-area: recent;
   }
 }
+.comment {
+  background-color: $about;
+  padding: 8px 12px;
+  margin: 8px 14px;
+  border-radius: 12px;
+  img {
+    float: left;
+    margin-right: 8px;
+  }
+  p {
+    &:first-of-type {
+      font-size: 0.8rem;
+      margin-top:    calc( 16px - (0.8rem / 2));
+      margin-bottom: calc( 14px - (0.8rem / 2));
+    }
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
 .share {
   background-color: $light-grey;
   padding: 8px 12px;
@@ -402,16 +421,6 @@ main {
         z-index: 0;
       }
     }
-  }
-}
-.comment {
-  background-color: $light-grey;
-  padding: 8px 12px;
-  margin: 8px 14px;
-  border-radius: 12px;
-  p {
-    font-size: 0.9rem;
-    margin: 0;
   }
 }
 // =============================================================================
