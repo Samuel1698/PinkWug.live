@@ -77,7 +77,6 @@
   - [x] Toggle to hide collection
 - [x] Explicitly declare background color of container
 - [x] :hover color
-  - [ ] Nav ul :hover not displaying properly
 
 ### Deployment
 - [ ] Switch to PostgreSQL
