@@ -8,13 +8,13 @@
 	<%= render 'comicNav' %>
 	<%= image_tag(url_for(@strip.image), alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
 	<%= render 'comicNav' %>
-	<div class="comment">
+	<div class="comment", tabindex="0">
 		<%= image_tag("wugART@3x.png", style: "width: 32px") %>
 		<p>Published in <%= @strip.created_at.strftime("%b %-d, %Y") %> </p>	
-		<p><%= h(@strip.comment).gsub(/\n/, '<br>').html_safe unless @strip.comment.blank? %></p>	
+		<%= Rinku.auto_link(simple_format(@strip.comment), :all, 'target="_blank"').html_safe unless @strip.comment.blank? %>
 	</div>
-	<div class="share">
-		<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
+	<div class="share", tabindex="0">
+		<button class="tooltip" onkeyup="hitEnter()" onclick="updateClipboard('<%= strip_url(@strip) %>')">
 			<span>copy link</span>
 		</button>
 		<p>share this comic!</p>
