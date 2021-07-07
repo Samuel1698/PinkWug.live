@@ -370,13 +370,16 @@ main {
     font-size: 0.9rem;
     margin: 0;
     &:not(:last-child) {
-      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     &:first-of-type {
       font-size: 0.8rem;
       // Pixel amount is based on image size +2 for bottom margin/padding
       margin-top:    calc( 18px - (0.8rem / 2));
       margin-bottom: calc( 14px - (0.8rem / 2)); //20px
+    }
+    &:nth-child(3){
+      margin-top: 0.7rem;
     }
     a {
       color: darkseagreen; 
