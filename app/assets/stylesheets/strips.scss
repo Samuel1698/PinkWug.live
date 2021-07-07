@@ -370,13 +370,13 @@ main {
     font-size: 0.9rem;
     margin: 0;
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
     &:first-of-type {
       font-size: 0.8rem;
       // Pixel amount is based on image size +2 for bottom margin/padding
       margin-top:    calc( 18px - (0.8rem / 2));
-      margin-bottom: calc( 14px - (0.8rem / 2));
+      margin-bottom: calc( 14px - (0.8rem / 2)); //20px
     }
     a {
       color: darkseagreen; 
@@ -404,11 +404,11 @@ main {
     background: url("icons8-copy") no-repeat;
     height: 24px;
     width: 24px;
-    top: 3px;
+    bottom: 0.5rem;
+    margin-left: 8px;
     span { // Tooltip text
       position: absolute;
       z-index: -1;
-      // visibility: hidden;
       width: 120px;
       bottom: 100%;
       left: -80%; //50% for center

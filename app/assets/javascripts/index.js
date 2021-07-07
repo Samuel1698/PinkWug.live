@@ -8,6 +8,7 @@ function galleryToggle(state){
 		if (table.classList.contains("gallery") && !state){ //If gallery view is on, toggle off
 		  line.classList.add("line");
 		  toggle.classList.remove("gallery");
+		  toggle.firstElementChild.innerHTML = 'Toggle Gallery View';
 			table.classList.remove("gallery");
 			for (let i = 0; i < rows.length; i++){
 				rows[i].classList.remove("gallery");
@@ -20,6 +21,7 @@ function galleryToggle(state){
 			line.classList.remove("line");
 			table.classList.add("gallery");
 			toggle.classList.add("gallery");
+			toggle.firstElementChild.innerHTML = 'Toggle Line View';
 			for (let i = 0; i < rows.length; i++){
 				rows[i].classList.add("gallery");
 			}
