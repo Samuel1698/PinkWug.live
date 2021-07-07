@@ -6,8 +6,8 @@
 
 <div class="div">
   <div class="img_container">
-    <button class="toggle gallery ">
-      <span>Toggle</span>
+    <button class="toggle gallery">
+      <span class="visually-hidden">Toggle Line View</span>
     </button>
   </div>
   <h1><%= title 'Comic Archive' %></h1>
@@ -23,7 +23,7 @@
     </div>
   <% @strips.each do |strip| %>
     <div class="row gallery">
-      <%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[400,400])), class: 'cell'), strip %>
+      <%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[400,400])), class: 'cell', alt: strip.title), strip %>
       <p class="cell"><%= strip.title %></p>
       <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
     </div>
