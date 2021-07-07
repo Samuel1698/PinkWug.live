@@ -353,9 +353,10 @@ main {
   }
 }
 .comment {
-  background-color: $about;
+  background-color: $dark-grey;
+  color: white;
   padding: 8px 12px;
-  margin: 8px 14px;
+  margin: 8px 16px;
   border-radius: 12px;
   img {
     float: left;
@@ -364,8 +365,9 @@ main {
   p {
     &:first-of-type {
       font-size: 0.8rem;
-      margin-top:    calc( 16px - (0.8rem / 2));
-      margin-bottom: calc( 14px - (0.8rem / 2));
+      // Pixel amount is based on image size +2 for bottom margin/padding
+      padding-top:    calc( 18px - (0.8rem / 2));
+      padding-bottom: calc( 14px - (0.8rem / 2));
     }
     font-size: 0.9rem;
     margin: 0;
@@ -374,7 +376,7 @@ main {
 .share {
   background-color: $light-grey;
   padding: 8px 12px;
-  margin: 8px 14px;
+  margin: 8px 16px;
   border-radius: 12px;
   p {
     font-size: 0.8rem;

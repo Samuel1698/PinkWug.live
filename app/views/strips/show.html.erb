@@ -11,7 +11,7 @@
 	<div class="comment">
 		<%= image_tag("wugART@3x.png", style: "width: 32px") %>
 		<p>Published in <%= @strip.created_at.strftime("%b %-d, %Y") %> </p>	
-		<p><%= @strip.comment unless @strip.comment.blank? %></p>	
+		<p><%= h(@strip.comment).gsub(/\n/, '<br>').html_safe unless @strip.comment.blank? %></p>	
 	</div>
 	<div class="share">
 		<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
