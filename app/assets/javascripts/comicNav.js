@@ -26,6 +26,9 @@ for (i = 0; i < 2; i++){
     last_strip[i].classList.add("disabled");
   }
 }
+var tooltip = document.querySelector('.tooltip');
+tooltip.addEventListener("keyup", hitEnter);
+
 function hitEnter(){
   if (event.keyCode === 13) {
     event.preventDefault();
@@ -36,12 +39,12 @@ function hitEnter(){
 function updateClipboard(newClip) {
   navigator.clipboard.writeText(newClip).then(function() {
     /* clipboard successfully set */
-    document.querySelector('.tooltip').firstElementChild.innerHTML = 'link copied';    
+    tooltip.firstElementChild.innerHTML = 'link copied';    
   }, function() {
     /* clipboard write failed */
-    document.querySelector('.tooltip').firstElementChild.innerHTML =  'copy failed';   
+    tooltip.firstElementChild.innerHTML =  'copy failed';   
   });
   setTimeout(function(){
-    document.querySelector('.tooltip').firstElementChild.innerHTML = 'copy link';
+    tooltip.firstElementChild.innerHTML = 'copy link';
   }, 2000);
 }

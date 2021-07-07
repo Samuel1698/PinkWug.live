@@ -15,7 +15,7 @@
 	</div>
 	<div class="share", tabindex="0">
 		<p>share this comic!</p>
-		<button class="tooltip" onkeyup="hitEnter()" onclick="updateClipboard('<%= strip_url(@strip) %>')">
+		<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
 			<span>copy link</span>
 		</button>
 		<p><%= strip_url(@strip) %></p>
