@@ -43,7 +43,7 @@
 			}
 		}
 	}
-	.main {
+	#main {
 		&.search_margin{
 			margin-top: 2.5rem;
 			transition: margin-top 0.1s ease-out, 0.1s ease-out;
@@ -54,10 +54,6 @@
 // Between 350 and 939 pixels
 // ---------------------------------------------------
 @media (max-width: $medium - 1) {
-	// .header_end {
-	// 	order: -1;
-	// 	height: 24px;
-	// }
 	header {
 		.header_wrapper {
 			padding-top: 0.7rem;
@@ -87,7 +83,7 @@
 			}
 		}
 	}
-	.main { 
+	#main { 
 		&.menu_margin {
 			margin-top: 12.5rem; //4em for each extra menu item
 			transition: margin-top 0.3s ease-out, 0.3s ease-out;
