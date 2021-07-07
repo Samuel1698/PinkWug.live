@@ -9,7 +9,8 @@ class StripsController < ApplicationController
 		@id          = @strip.id
 		if (@strip == Strip.last)
 			@keywords = @strip.keywords.push("latest")
-			@last = "last"
+			# This is here so that this class gets added only to the latest comic, since all other ones don't define @last
+			@last = "last" 
 		end
 		@first_strip    = Strip.first
 		@last_strip     = Strip.last
