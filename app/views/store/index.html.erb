@@ -10,7 +10,7 @@
 	<div class="collection mugs">
 		<% @mugs.each do |p| %>
 			<div class="product">
-				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+				<%= link_to image_tag(p["image"]["src"], alt: "Buy #{p['title']}", class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
 				<p class="cell"><%= p["title"] %></p>
 				<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
 			</div>
@@ -24,7 +24,7 @@
 	<div class="collection clothes">
 	<% @clothes.each do |p| %>
 		<div class="product">
-			<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+			<%= link_to image_tag(p["image"]["src"], alt: "Buy #{p['title']}", class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
 			<p class="cell"><%= p["title"] %></p>
 			<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
 		</div>
@@ -38,7 +38,7 @@
 	<div class="collection stickers">
 		<% @stickers.each do |p| %>
 			<div class="product">
-				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+				<%= link_to image_tag(p["image"]["src"], alt: "Buy #{p['title']}", class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
 				<p class="cell"><%= p["title"] %></p>
 				<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
 			</div>
@@ -52,7 +52,7 @@
 	<div class="collection prints">
 		<% @prints.each do |p| %>
 			<div class="product">
-				<%= link_to image_tag(p["image"]["src"], class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
+				<%= link_to image_tag(p["image"]["src"], alt: "Buy #{p['title']}", class: 'cell'), "https://#{ENV["SHOPIFY_API_LINK"]}/products/#{p["handle"]}", target: "_blank" %>
 				<p class="cell"><%= p["title"] %></p>
 				<p class="cell">Price: <%= number_to_currency(p["variants"][0]["price"].to_f, precision: 0) %></p>
 			</div>
