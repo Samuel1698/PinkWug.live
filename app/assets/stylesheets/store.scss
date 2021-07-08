@@ -1,4 +1,7 @@
 @import "variables";
+h1.disabled {
+	display: none;
+}
 button {
 	display: block;
 	margin-left: auto;
