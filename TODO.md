@@ -58,7 +58,7 @@
   - [x] Comic navigation
   - [x] Title sizes for different screens 
   - [x] Image sizes for different screens
-  - [ ] Div navigation in comic itself
+  - [x] Div navigation in comic itself
   - [x] Share link
    - [x] Font Size for smaller screens
   - [x] Author Comments
