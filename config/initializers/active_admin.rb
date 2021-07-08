@@ -28,7 +28,7 @@ ActiveAdmin.setup do |config|
   # will be added to.
   #
   # eg:
-  #   config.default_namespace = :hello_world
+  config.default_namespace = :comics_admin
   #
   # This will create resources in the HelloWorld module and
   # will namespace routes to /hello_world/*
