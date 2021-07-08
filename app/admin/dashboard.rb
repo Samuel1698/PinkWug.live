@@ -32,10 +32,8 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
       column do
-        panel "Contact the Developer" do
-          div do
-            render("/admin/sidebar_links", model: "dashboard")
-          end
+        panel "Contact the Developer", class: "developer" do
+          render("/admin/sidebar_links", model: "dashboard")
         end
       end
     end

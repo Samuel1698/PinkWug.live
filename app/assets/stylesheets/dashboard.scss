@@ -1,0 +1,18 @@
+.developer {
+	a {
+		color: limegreen;
+		&:hover {
+			color: darkseagreen;
+		}
+	}
+}
+body .index {
+	th.sortable.col {
+		a {
+			margin-left: 1.5rem;
+		}
+		&::after {
+			right: 95%;
+		}
+	}
+}
