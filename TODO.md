@@ -4,6 +4,7 @@
   - [x] Meta tags
   - [ ] Breadcrumb
   - [ ] Sitemap
+  - [x] Custom 404, 422 and 500 errors 
 - [x] Search
   - [x] Search by title, description, keywords or transcript
   - [x] Multiple word search (REGEXP instead of LIKE)
@@ -12,7 +13,6 @@
 - [ ] Image processing for screen optimized crop
 - [ ] OpenGraph 
 - [ ] Twitter Card meta_tag
-- [ ] Custom 404 and other error views
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript

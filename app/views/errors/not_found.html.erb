@@ -1,0 +1,18 @@
+<% content_for :head do  %>
+	<% set_meta_tags description: 'Suggestions, business inquiries, and who is Pink Wug.',
+										keywords: 'Pink Wug, About, Business, Discord' %>
+	<% stylesheet_link_tag "errors" %>
+<% end %>
+<div class="content">
+	<div class="error">
+		<h1>Page Not Found (404)</h1>
+		<h2>the page you were looking for does not exists.</h2>
+		<p>you might have mistyped the address or the page may have moved.</p>
+		<p>perhaps you were trying to</p>
+		<ul>
+			<li><%= link_to("get in touch with me", "/about") %></li>
+			<li><%= link_to("get All Comics in one place", "/archive") %></li>
+			<li><%= link_to("shop for merch", "/store") %></li>
+		</ul>
+	</div>
+</div>
