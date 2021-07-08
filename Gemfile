@@ -45,6 +45,8 @@ gem 'httparty'
 gem "autoprefixer-rails"
 # Use rinku to bring back auto_link functionality to rails
 gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'
+# Use newrelic for statistics about page response time
+gem 'newrelic_rpm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

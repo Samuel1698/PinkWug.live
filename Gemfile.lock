@@ -186,6 +186,7 @@ GEM
     msgpack (1.4.2)
     msgpack (1.4.2-java)
     multi_xml (0.6.0)
+    newrelic_rpm (7.2.0)
     nio4r (2.5.7)
     nio4r (2.5.7-java)
     nokogiri (1.11.7)
@@ -370,6 +371,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   meta-tags
+  newrelic_rpm
   poltergeist
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
