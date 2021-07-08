@@ -1,32 +1,48 @@
+document.addEventListener('turbolinks:before-render', () => {
+	var toggle = null;
+	var line   = null;
+	var table  = null;
+	var rows   = null;
+});
 var toggle = document.querySelector(".toggle");
 var line   = document.querySelector(".div");
 var table  = document.querySelector(".table");
 var rows   = document.querySelectorAll(".row");
 
+line.classList.remove("line");
+table.classList.add("gallery");
+toggle.classList.add("gallery");
+toggle.firstElementChild.innerHTML = 'Toggle Line View';
+for (let i = 0; i < rows.length; i++){
+	rows[i].classList.add("gallery");
+}
+
+function toggleOn(){
+	line.classList.remove("line");
+	table.classList.add("gallery");
+	toggle.classList.add("gallery");
+	toggle.firstElementChild.innerHTML = 'Toggle Line View';
+	for (let i = 0; i < rows.length; i++){
+		rows[i].classList.add("gallery");
+	}
+}
+function toggleOff(){
+  line.classList.add("line");
+  toggle.classList.remove("gallery");
+  toggle.firstElementChild.innerHTML = 'Toggle Gallery View';
+	table.classList.remove("gallery");
+	for (let i = 0; i < rows.length; i++){
+		rows[i].classList.remove("gallery");
+	}
+}
+
 function galleryToggle(state){
 	return function(){
-		if (table.classList.contains("gallery") && !state){ //If gallery view is on, toggle off
-		  line.classList.add("line");
-		  toggle.classList.remove("gallery");
-		  toggle.firstElementChild.innerHTML = 'Toggle Gallery View';
-			table.classList.remove("gallery");
-			for (let i = 0; i < rows.length; i++){
-				rows[i].classList.remove("gallery");
-			}
+		if (table.classList.contains("gallery") && !state){ 
+			toggleOff();
 		}
-		// If gallery view is off, turn on
-		// if state is declared AND viewWidth <= 700px, OR table doesnt contain "gallery" and State is not declared
 		else if ((!table.classList.contains("gallery") && !state) || (state == true && window.innerWidth <= 700)) {
-			if (state) {
-				console.log("Resize, load or turbolinksload: " + state);
-			}
-			line.classList.remove("line");
-			table.classList.add("gallery");
-			toggle.classList.add("gallery");
-			toggle.firstElementChild.innerHTML = 'Toggle Line View';
-			for (let i = 0; i < rows.length; i++){
-				rows[i].classList.add("gallery");
-			}
+			toggleOn();
 		}
 	}
 }
