@@ -23,15 +23,15 @@ button {
 	&.inactive {
 		display: none;
 	}
+}
+.product {
 	background-color: $light-grey;
 	padding: 4px 12px;
 	border-radius: 12px;
 	margin-top: 12px;
 	padding-bottom: 8px;
-	margin-left: 30px;
-	margin-right: 30px;
-}
-.product {
+	margin-left: 10px;
+	margin-right: 10px;
 	display: flex;
 	min-height: 2rem;
 	flex-direction: column;
