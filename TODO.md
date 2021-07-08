@@ -3,7 +3,7 @@
 - [ ] SEO
   - [x] Meta tags
   - [ ] Breadcrumb
-  - [ ] Sitemap
+  - [x] Sitemap
   - [x] Custom 404, 422 and 500 errors 
 - [x] Search
   - [x] Search by title, description, keywords or transcript
