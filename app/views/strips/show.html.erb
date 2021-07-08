@@ -10,10 +10,10 @@
 		<%= image_tag(url_for(@strip.image), alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
 		<%= link_to @previous_strip, tabindex: "-1" do %>
 			<div class="backwards" tabindex="-1"></div>
-		<% end  %>
+		<% end %>
 		<%= link_to @next_strip, tabindex: "-1" do %>
 			<div class="forward" tabindex="-1"></div>
-		<% end  %>
+		<% end %>
 	</div>
 	<%= render 'comicNav' %>
 	<div class="comment", tabindex="0">
