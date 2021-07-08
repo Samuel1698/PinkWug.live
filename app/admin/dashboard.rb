@@ -5,15 +5,15 @@ ActiveAdmin.register_page "Dashboard" do
     columns do 
       column do
         # Memory Usage
-        text_node %{<iframe src="https://chart-embed.service.newrelic.com/herald/89fad722-cb39-4528-861e-6464d95db9ed?height=300px&timepicker=false" width="330" height="330" scrolling="no" frameborder="no"></iframe>}.html_safe 
+        text_node %{<iframe src="https://chart-embed.service.newrelic.com/herald/89fad722-cb39-4528-861e-6464d95db9ed?height=300px&timepicker=false" width="330" height="330" minwidth="330" scrolling="no" frameborder="no"></iframe>}.html_safe 
       end
       column do
         # Threads
-        text_node %{<iframe src="https://chart-embed.service.newrelic.com/herald/0e8fd7cc-4f7f-49d7-b5cc-155664809252?height=300px&timepicker=false" width="330" height="330" scrolling="no" frameborder="no"></iframe>}.html_safe 
+        text_node %{<iframe src="https://chart-embed.service.newrelic.com/herald/0e8fd7cc-4f7f-49d7-b5cc-155664809252?height=300px&timepicker=false" width="330" height="330" minwidth="330" scrolling="no" frameborder="no"></iframe>}.html_safe 
       end
       column do 
         # First Input Delay
-        text_node %{<iframe src="https://chart-embed.service.newrelic.com/herald/8ff22f4a-4406-43c1-ac05-c31a8779d569?height=300px&timepicker=false" width="330" height="330" scrolling="no" frameborder="no"></iframe>}.html_safe 
+        text_node %{<iframe src="https://chart-embed.service.newrelic.com/herald/8ff22f4a-4406-43c1-ac05-c31a8779d569?height=300px&timepicker=false" width="330" height="330" minwidth="330" scrolling="no" frameborder="no"></iframe>}.html_safe 
       end
     end
     columns do 
@@ -32,7 +32,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
       column do
-        panel "Contact the Developer", class: "developer" do
+        panel "Contact the Developer", class: "developer_info" do
           render("/admin/sidebar_links", model: "dashboard")
         end
       end
