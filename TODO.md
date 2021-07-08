@@ -1,8 +1,7 @@
 ## To-Do:
 ### Back End
-- [ ] SEO
+- [x] SEO
   - [x] Meta tags
-  - [ ] Breadcrumb
   - [x] Sitemap
   - [x] Custom 404, 422 and 500 errors 
   - [x] www to non-www redirection
