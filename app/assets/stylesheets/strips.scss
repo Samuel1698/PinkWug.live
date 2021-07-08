@@ -355,6 +355,26 @@ main {
 }
 .comic {
   margin-bottom: 6px;
+  margin-top: 6px;
+}
+.parent {
+  position: relative;
+  a div {
+    position: absolute;
+    top: 18px;
+    bottom: 22px;
+  }
+  .backwards {
+    right: 55%;
+    left: 16px;
+  }
+  .forward {
+    right: 16px;
+    left: 55%;
+  }
+  .disabled {
+    display: none;
+  }
 }
 .comment {
   background-color: $dark-grey;
