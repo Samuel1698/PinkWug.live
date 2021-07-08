@@ -1,11 +1,9 @@
 <% content_for :head do  %>
-	<% set_meta_tags description: 'Suggestions, business inquiries, and who is Pink Wug.',
-										keywords: 'Pink Wug, About, Business, Discord' %>
 	<% stylesheet_link_tag "errors" %>
 <% end %>
 <div class="content">
 	<div class="error">
-		<h1>Unacceptable Request (422)</h1>
+		<h1><%= title 'Unacceptable Request (422)' %></h1>
 		<h2>the change you wanted was rejected.</h2>
 		<p>maybe you tried to change something you didn't have access to.</p>
 		<p>if you are the application owner check the logs for more information.</p>
