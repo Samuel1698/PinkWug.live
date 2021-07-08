@@ -1,4 +1,10 @@
-.developer {
+.columns {
+	overflow: hidden;
+	.column {
+		overflow-x: auto;
+	}
+}
+.developer_info {
 	a {
 		color: limegreen;
 		&:hover {
