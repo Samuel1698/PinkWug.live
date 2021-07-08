@@ -50,7 +50,7 @@
     - [x] Date Descending
   - [x] Different icon for ascending and descending order
   - [x] Remove title/date class when the other is clicked
-- [ ] Comic View
+- [x] Comic View
   - [x] Header
    - [x] Search bar on tablets
    - [x] Dry code after removal of cart and user
