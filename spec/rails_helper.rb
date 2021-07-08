@@ -77,9 +77,9 @@ RSpec.configure do |config|
         'User-Agent'=>'Ruby'
          }).to_return(status: 200, body: prints, headers: {'Content-Type'=>'application/json'})
   end
+  config.include RSpec::Rails::RequestExampleGroup, type: :feature
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
