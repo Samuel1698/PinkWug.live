@@ -6,8 +6,8 @@
   - [x] Custom 404, 422 and 500 errors 
   - [x] www to non-www redirection
   - [x] Compression
-  - [ ] OpenGraph
-  - [ ] Twitter Card
+  - [x] OpenGraph
+  - [x] Twitter Card
 - [x] Search
   - [x] Search by title, description, keywords or transcript
   - [x] Multiple word search (REGEXP instead of LIKE)

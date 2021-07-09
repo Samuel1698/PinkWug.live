@@ -1,7 +1,23 @@
 <% content_for :head do  %>
-  <% set_meta_tags description: 'Archive of Pink Wug previous comics',
+  <% set_meta_tags description: 'Archive of all Pink Wug comics',
                       keywords: 'Pink Wug, all comics, past, previous, archive' %>
-  <% stylesheet_link_tag "index" %>
+  <%= display_meta_tags og: {
+    title: :title,
+    type: 'website',
+    url: strip_url(@strips.last),
+    image: url_for(@strips.last.image),
+    description: :description,
+    site_name: 'Pink Wug' 
+  } %>
+  <%= display_meta_tags twitter: {
+    card: 'summary_large_image',
+    site: '@pinkwug',
+    title: :title,
+    description: :description,
+    creator: '@pinkwug',
+    image: url_for(@strips.last.image)
+  } %>
+  <%= stylesheet_link_tag "index" %>
 <% end %>
 
 <div class="div">
