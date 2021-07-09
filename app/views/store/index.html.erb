@@ -2,6 +2,22 @@
 	<%= display_meta_tags title: 'Store' %>
 	<%= display_meta_tags description: 'Now with more wugs' %>
 	<%= display_meta_tags keywords: 'Hoodies, shirts, sweaters, mugs, prints' %>
+	<%= display_meta_tags og: {
+	  title: :title,
+	  type: 'website',
+	  url: store_index_url,
+	  image: @mugs.first["image"]["src"],
+	  description: :description,
+	  site_name: 'Pink Wug Store' 
+	} %>
+	<%= display_meta_tags twitter: {
+	  card: 'summary_large_image',
+	  site: '@pinkwug',
+	  title: :title,
+	  description: :description,
+	  creator: '@pinkwug',
+	  image: @mugs.first["image"]["src"]
+	} %>
 <% end %>
 <div>
 	<h1 class="disabled"><%= title 'Store' %></h1> 
