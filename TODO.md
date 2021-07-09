@@ -13,7 +13,6 @@
   - [x] Multiple word search (REGEXP instead of LIKE)
   - [x] Ignore articles (the, and, or, to) in searches
 - [x] Author Comments/Announcements
-- [ ] Image processing for screen optimized crop
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
@@ -77,4 +76,4 @@
 - [x] :hover color
 
 ### Deployment
-- [ ] Switch to PostgreSQL
+- [x] Switch to PostgreSQL
