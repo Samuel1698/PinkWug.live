@@ -1,5 +1,5 @@
 class StripsController < ApplicationController
-	before_action :set_strip, only: [:show]
+	before_action :set_strip, only: [:show, :index]
 	def index
 		@strips = Strip.filtered(query_params).reverse
 	end
@@ -26,7 +26,7 @@ class StripsController < ApplicationController
 	end
 	private
 		def set_strip
-			if (params[:id] == -1)
+			if (params[:id] == -1 || params[:id] == nil)
 				@strip = Strip.last 
 			else
 				@strip = Strip.find(params[:id])

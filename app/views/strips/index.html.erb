@@ -4,8 +4,8 @@
   <%= display_meta_tags og: {
     title: :title,
     type: 'website',
-    url: strip_url(@strips.last),
-    image: url_for(@strips.last.image),
+    url: strip_url(@strip),
+    image: url_for(@strip.image),
     description: :description,
     site_name: 'Pink Wug' 
   } %>
@@ -15,7 +15,7 @@
     title: :title,
     description: :description,
     creator: '@pinkwug',
-    image: url_for(@strips.last.image)
+    image: url_for(@strip.image)
   } %>
   <%= stylesheet_link_tag "index" %>
 <% end %>

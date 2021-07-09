@@ -47,6 +47,8 @@ gem "autoprefixer-rails"
 gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'
 # Use newrelic for statistics about page response time
 gem 'newrelic_rpm'
+# Use aws-sdk-s3 to configure Rails to use Amazon Web Services
+gem 'aws-sdk-s3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
