@@ -95,15 +95,15 @@
 		justify-content: center;
 		display: grid;
 		grid-template-columns: $min-width $max-width;
-		grid-template-areas: "title   business"
-												 "support business"
+		grid-template-areas: "wrapper business"
 												 "discord discord";
+		.grid {
+			grid-area: wrapper;
+		}
 		.me {
-			grid-area: title;
 			max-height: 8rem;
 		}
 		.support {
-			grid-area: support;
 			max-height: 12.5rem;
 		}
 		.discord {

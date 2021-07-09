@@ -18,25 +18,27 @@
 	<%= stylesheet_link_tag "about" %>
 <% end %>
 <div class="content_about">
-	<div class="about me" tabindex="0">
-		<h1><%= title 'About Me' %></h1>	
-		<p>i make comics on social and economic justice with relatable, fun, and sinister revelations mixed in</p>
-	</div>
-
-	<div class="about support" tabindex="0">
-		<h2>Want to support me?</h2>
-		<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
-		<div class="support_buttons">
-			<a href="https://ko-fi.com/L3L42AQKS" target="_blank" tabindex="-1">
-			  <button class="kofi">
-			    <span>Buy me a coffee</span>
-			  </button>
-			</a><br>
-			<a href="https://www.patreon.com/pinkwug" target="_blank" tabindex="-1">
-			  <button class="patreon">
-			    <span>Become a Patron</span>
-			  </button>
-			</a>
+	<div class="grid">
+		<div class="about me" tabindex="0">
+			<h1><%= title 'About Me' %></h1>	
+			<p>i make comics on social and economic justice with relatable, fun, and sinister revelations mixed in</p>
+		</div>
+		
+		<div class="about support" tabindex="0">
+			<h2>Want to support me?</h2>
+			<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
+			<div class="support_buttons">
+				<a href="https://ko-fi.com/L3L42AQKS" target="_blank" tabindex="-1">
+				  <button class="kofi">
+				    <span>Buy me a coffee</span>
+				  </button>
+				</a><br>
+				<a href="https://www.patreon.com/pinkwug" target="_blank" tabindex="-1">
+				  <button class="patreon">
+				    <span>Become a Patron</span>
+				  </button>
+				</a>
+			</div>
 		</div>
 	</div>
 	<div class="about discord" tabindex="0">
@@ -51,7 +53,7 @@
 		</p>
 	</div>
 	<div class="about business" tabindex="0">
-		<h2>For business Inquiries:</h2>
+		<h2>For business inquiries:</h2>
 		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mjvjorpo" method="post">
 	    <label for="full-name">Name/Company:</label>
 	    <input type="text" name="name" id="full-name" required="true">
