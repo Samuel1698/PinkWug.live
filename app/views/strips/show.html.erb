@@ -1,7 +1,22 @@
 <% content_for :head do %>
-	<%= display_meta_tags title: @title %>
 	<%= display_meta_tags description: @strip.description %>
 	<%= display_meta_tags keywords: @keywords %>
+	<%= display_meta_tags og: {
+	  title: :title,
+	  type: 'website',
+	  url: strip_url(@strip),
+	  image: url_for(@strip.image),
+	  description: :description,
+	  site_name: 'Pink Wug' 
+	} %>
+	<%= display_meta_tags twitter: {
+	  card: 'summary_large_image',
+	  site: '@pinkwug',
+	  title: :title,
+	  description: :description,
+	  creator: '@pinkwug',
+	  image: url_for(@strip.image)
+	} %>
 <% end %>
 <div class="content">
 	<h1><%= title @title %></h1>
