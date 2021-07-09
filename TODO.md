@@ -6,14 +6,14 @@
   - [x] Custom 404, 422 and 500 errors 
   - [x] www to non-www redirection
   - [x] Compression
+  - [ ] OpenGraph
+  - [ ] Twitter Card
 - [x] Search
   - [x] Search by title, description, keywords or transcript
   - [x] Multiple word search (REGEXP instead of LIKE)
   - [x] Ignore articles (the, and, or, to) in searches
 - [x] Author Comments/Announcements
 - [ ] Image processing for screen optimized crop
-- [ ] OpenGraph 
-- [ ] Twitter Card meta_tag
 ### Tests
 - [x] Models 
   - [x] validates presence of title, image, transcript
