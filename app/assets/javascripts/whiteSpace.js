@@ -1,15 +1,13 @@
 //Event for window resize
 window.addEventListener('resize', addWhiteSpace("resize")); 
-// Load
-document.addEventListener('load', addWhiteSpace("load")); 
 //Turbolinks navigation
-document.addEventListener('turbolinks:load', addWhiteSpace("Turbolinks: load")); 
+document.addEventListener('DOMContentLoaded', addWhiteSpace("DOMContentLoaded")); 
 
 function addWhiteSpace(content) {
   return function(){
     // Uncomment console.logs for debugging
-    // console.log("---------------------------------");
-    // console.log(content);
+    console.log("---------------------------------");
+    console.log(content);
     var viewPort      = window.innerHeight;
     var headerHeight  = document.querySelector(".header").offsetHeight;
     var contentHeight = document.querySelector("main").offsetHeight;
@@ -18,21 +16,17 @@ function addWhiteSpace(content) {
     var whiteSpace    = document.querySelector(".white_space").offsetHeight;
     var difference    = viewPort - (headerHeight + contentHeight + footerHeight + 25);
     difference = difference > 0 ? difference: 0;
-    // if the whitespace div is a different height than the calculated difference
-    // Then assign difference to whiteSpace
-    // Fires once when page initially loads, and again if the page contains a comic
-    // This way it can fill while comic loads
     if (whiteSpace != difference){
       whiteSpace = difference + "px";
       document.querySelector(".white_space").style.minHeight = whiteSpace;
-      // console.log("Success " + whiteSpace);
-      // console.log("=================================")
       // Makes a loop by calling itself as long as there is a difference
       setTimeout(addWhiteSpace("Time Out"), 200);
+      console.log("Success " + whiteSpace);
+      console.log("=================================")
     }
-    // else {
-    //   console.log("No change. \nwhiteSpace: " + whiteSpace + "\nDifference: " + difference);
-    //   console.log("=================================")
-    // }
+    else {
+      console.log("No change. \nwhiteSpace: " + whiteSpace + "\nDifference: " + difference);
+      console.log("=================================")
+    }
   } 
 }
