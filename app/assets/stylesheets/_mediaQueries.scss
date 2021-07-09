@@ -138,6 +138,9 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.img_container {
+		transform: translate(2%, -24%);
+	}
 }
 
 // ---------------------------------------------------
@@ -152,6 +155,9 @@
 	}
 	p {
 		font-size: 1rem;
+	}
+	.img_container {
+		transform: translate(1%, -22%);
 	}
 	header {
 		.header_wrapper {
@@ -195,6 +201,9 @@
 	}
 	.content {
 		max-width: 33vw;
+	}
+	.img_container {
+		transform: translate(0%, -20%);
 	}
 }
 // -----------------------------------------
