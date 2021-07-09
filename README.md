@@ -6,7 +6,7 @@ Dependencies:
 * [PhantomJS](https://phantomjs.org/download.html) (For tests)
 
 To run this application you need
-* Ruby 2.6.3
+* Ruby 3.0.2
 * Rails 6.0.3.7
 * Webpacker
 
