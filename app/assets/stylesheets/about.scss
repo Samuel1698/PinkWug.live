@@ -95,23 +95,21 @@
 		justify-content: center;
 		display: grid;
 		grid-template-columns: $min-width $max-width;
-		grid-template-areas: "wrapper business"
-												 "discord discord";
+		grid-template-areas: "wrapper business";
 		.grid {
 			grid-area: wrapper;
 		}
 		.me {
+			grid-area: me;
 			max-height: 8rem;
 		}
 		.support {
+			grid-area: support;
 			max-height: 12.5rem;
 		}
 		.discord {
 			grid-area: discord;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			max-height: 7.5rem;
+			max-height: 10rem;
 		}
 		.business {
 			grid-area: business;
@@ -124,6 +122,6 @@
 		grid-template-columns: 250px 450px;
 	}
 	.about form textarea{
-		height: 8em;
+		height: 18.5em;
 	}
 }
