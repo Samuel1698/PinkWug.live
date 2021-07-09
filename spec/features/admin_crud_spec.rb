@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.feature "admin CRUD", type: :feature do
   before do 
     # User can visit admin_root_path 
-    visit comics_admin_root_path
+    visit admin_root_path
     # User can log in to admin dashboard
     fill_in "Email", with: "admin_test@example.com"
     fill_in "Password", with: "password"
     click_on "Login"
     # User creates new strip 
-    visit new_comics_admin_strip_path
+    visit new_admin_strip_path
 
     fill_in "Title", with: "Relatable"
     fill_in "Description", with: "My reaction when someone says they relate to my comics"
