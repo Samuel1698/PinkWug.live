@@ -1,5 +1,7 @@
 //Event for window resize
 window.addEventListener('resize', addWhiteSpace("resize")); 
+// Load
+document.addEventListener('load', addWhiteSpace("load")); 
 //Turbolinks navigation
 document.addEventListener('turbolinks:load', addWhiteSpace("Turbolinks: load")); 
 
