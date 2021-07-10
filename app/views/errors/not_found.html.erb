@@ -1,18 +1,21 @@
 <% content_for :head do  %>
-	<% set_meta_tags description: 'Error page for PinkWug.live',
+	<% set_meta_tags  title: '404',
+										description: 'Error page for PinkWug.live',
 										keywords: 'Not Found, 404' %>
 	<% stylesheet_link_tag "errors" %>
 <% end %>
 <div class="content">
-	<div class="error">
-		<h1><%= title 'Page Not Found (404)' %></h1>
-		<h2>the page you were looking for does not exists.</h2>
-		<p>you might have mistyped the address or the page may have moved.</p>
-		<p>perhaps you were trying to</p>
+	<div class="error box">
+		<h1>Page Not Found (404)</h1>
+		<h2>the page you were looking for does not exists</h2>
+		<p>you might have mistyped the address or the page may have moved</p>
+	</div>
+	<div class="link box">
+		<h2>perhaps you were looking for</h2>
 		<ul>
-			<li><%= link_to("get in touch with me", "/about") %></li>
-			<li><%= link_to("get all comics in one place", "/archive") %></li>
-			<li><%= link_to("shop for merch", "/store") %></li>
+			<li><button><%= link_to("homepage", "/") %></button></li>
+			<li><button><%= link_to("archive", "/archive") %></button></li>
+			<li><button><%= link_to("shop", "/store") %></button></li>
 		</ul>
 	</div>
 </div>
