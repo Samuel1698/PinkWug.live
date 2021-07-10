@@ -58,32 +58,15 @@ searchToggle.addEventListener("click", function() {
   }
 });
 
-// This needs some optimization
-window.addEventListener('resize', changeButtons);
-window.addEventListener('turbolinks:load', changeButtons);
-window.addEventListener('load', changeButtons);
+window.addEventListener('resize', resetNav);
+document.addEventListener('DOMContentLoaded', resetNav);
+window.addEventListener('load', resetNav);
 
-// Use this to also reset the nav toggle
-function changeButtons(){
-  kofi    = document.querySelector(".kofi");
-  patreon = document.querySelector(".patreon");
+function resetNav(){
   if (window.innerWidth >= 940) {
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "menu");
     navWrapper.classList.remove("active");
     main.classList.remove("search_margin", "menu_margin");
-  }
-  if (window.innerWidth <= 555){
-    kofi.getElementsByTagName("span")[0].innerHTML = "Ko-fi";
-    patreon.getElementsByTagName("span")[0].innerHTML = "Patreon";
-    kofi.classList.add('small');
-    patreon.classList.add('small');
-
-  }
-  else if (window.innerWidth > 555){
-    kofi.getElementsByTagName("span")[0].innerHTML = "Support me on Ko-fi";
-    patreon.getElementsByTagName("span")[0].innerHTML = "Support me on Patreon";
-    kofi.classList.remove('small');
-    patreon.classList.remove('small');
   }
 }

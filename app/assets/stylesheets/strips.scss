@@ -136,7 +136,6 @@ header {
         box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
         line-height: 32px;
         display: inline-block;
-        padding: 2px 10px 2px 36px;
         border-radius: 7px;
         cursor: pointer;
         border: 0 none white;
@@ -146,19 +145,14 @@ header {
         font-weight: 700;
         font-size: 14px;
         &.patreon {
-          background: url("icons8-patreon-white.svg") 6% 50%/18px no-repeat,
+          padding: 2px 10px 2px 30px;
+          background: url("icons8-patreon-white.svg") 10% 50%/18px no-repeat,
                       linear-gradient($fiery-coral,$fiery-coral);
-          &.small {
-            padding: 2px 10px 2px 30px;
-            background-position: 10% 50%;
-          }
         }
         &.kofi {
-          background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+          padding: 2px 10px 2px 36px;
+          background: url("Ko-fi_Icon_RGBforDarkBg.png") 10% 50%/28px no-repeat,
                       linear-gradient($kofi,$kofi);
-          &.small {
-            background-position: 10% 50%;
-          }
         }
         span {
           letter-spacing: -0.15px;
