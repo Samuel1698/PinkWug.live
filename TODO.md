@@ -80,4 +80,7 @@
 - [x] Find bold version of font
 - [ ] Caching/Preloading nav images
 - [ ] Archive group by months
- 
+- [ ] Logo
+- [ ] Replace navigation links
+- [ ] Shop icon on H1 of store
+- [ ] 
