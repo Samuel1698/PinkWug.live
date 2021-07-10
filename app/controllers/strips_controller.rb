@@ -18,11 +18,11 @@ class StripsController < ApplicationController
 		@next_strip     = Strip.where(["id > ?", @id]).order('id').first || @last_strip
 		@random_strip   = Strip.where(["id != ?", @id]).order_by_rand.first
 
-		@first_strip    = strip_path(@first_strip, anchor: "main") 
-		@last_strip     = strip_path(@last_strip, anchor: "main") 
-		@previous_strip = strip_path(@previous_strip, anchor: "main") 
-		@next_strip     = strip_path(@next_strip, anchor: "main") 
-		@random_strip   = strip_path(@random_strip, anchor: "main")
+		@first_strip    = strip_path(@first_strip) 
+		@last_strip     = strip_path(@last_strip) 
+		@previous_strip = strip_path(@previous_strip) 
+		@next_strip     = strip_path(@next_strip) 
+		@random_strip   = strip_path(@random_strip)
 	end
 	private
 		def set_strip
