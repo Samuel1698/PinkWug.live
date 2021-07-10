@@ -20,9 +20,12 @@
 	} %>
 <% end %>
 <div>
-	<h1 class="disabled"><%= title 'Store' %></h1> 
+	<h1 class="store">
+		<%= image_tag("Shop.png", tabindex: '-1') %>
+		<span class="visually-hidden"><%= title 'Store' %></span>
+	</h1> 
 	<button id="mugs">
-		<h2>Mugs</h2>
+		<h2>mugs</h2>
 	</button>
 	<div class="collection mugs">
 		<% @mugs.each do |p| %>
@@ -36,7 +39,7 @@
 </div>
 <div>
 	<button id="clothes">
-		<h2>Clothes</h2>
+		<h2>clothes</h2>
 	</button>
 	<div class="collection clothes">
 	<% @clothes.each do |p| %>
@@ -50,7 +53,7 @@
 </div>
 <div>
 	<button id="stickers">
-		<h2>Stickers</h2>
+		<h2>stickers</h2>
 	</button>
 	<div class="collection stickers">
 		<% @stickers.each do |p| %>
@@ -64,7 +67,7 @@
 </div>
 <div>
 	<button id="prints">
-		<h2>Prints</h2>
+		<h2>prints</h2>
 	</button>
 	<div class="collection prints">
 		<% @prints.each do |p| %>

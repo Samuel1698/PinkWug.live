@@ -127,10 +127,8 @@ header {
     // Top header
     // -------------------------------------------------------------------- 
     .header_logo {
-      img, p {
+      img {
         color: white;
-        font-weight: bold;
-        font-size: 1.2em;
         margin: 0;
       }
     }
@@ -193,6 +191,7 @@ header {
         height: 34px;
         background: url("icons8-menu.svg") center/20px no-repeat;
         border: 0;
+        left: -5px;
         svg {
           width: 22px;
           height: 22px;
