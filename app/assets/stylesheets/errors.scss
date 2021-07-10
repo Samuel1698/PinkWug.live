@@ -3,30 +3,40 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'variables';
 
-.error {
-	background-color: $red;
-	color: white;
+.box {
 	padding: 4px 12px;
 	border-radius: 12px;
-	margin-top: 2rem;
 	text-align: center;
 	h1 {
 		font-size: 2rem;
 		margin: 1rem;
 	}
 	p {
-		margin-bottom: 6px;
+		margin-bottom: 12px;
 	}
+}
+.error {
+	margin-top: 2rem;
+	background-color: $red;
+	color: white;
+}
+.link {
+	margin-top: 1.5rem;
+	background-color: $about;
+	color: black;
 	ul {
 		margin-top: 0;
-		margin-bottom: 6px;
+		margin-bottom: 12px;
 		list-style: none;
 		padding-left: 0;
-		a {
-			color: $dark-brown;
-			&:hover {
-				color: $light-grey;
-			}
+		li {
+			display: inline-block;
+		}
+		button {
+			background: none;
+			padding: 6px 10px;
+			border-radius: 7px;
+			background-color: darkseagreen;
 		}
 	}
 }

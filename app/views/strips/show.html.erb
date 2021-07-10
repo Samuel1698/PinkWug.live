@@ -23,10 +23,10 @@
 	<%= render 'comicNav' %>
 	<div class="parent">
 		<%= image_tag(url_for(@strip.image), 
-			srcset: {   url_for(@strip.image.variant(resize_to_limit:[375, nil], compress: 'none', quality:[100])) => "375w",
-									url_for(@strip.image.variant(resize_to_limit:[600, nil], compress: 'none',  quality:[100])) => "600w",
-									url_for(@strip.image.variant(resize_to_limit:[786, nil], compress: 'none',  quality:[100])) => "786w",
-									url_for(@strip.image.variant(resize_to_limit:[1080, nil], compress: 'none',  quality:[100])) => "1080w",
+			srcset: {   url_for(@strip.image.variant(resize_to_limit:[375, nil],            compress: 'none', quality:[100])) => "375w",
+									url_for(@strip.image.variant(resize_to_limit:[600, nil], compress: 'none', quality:[100])) => "600w",
+									url_for(@strip.image.variant(resize_to_limit:[786, nil], compress: 'none', quality:[100])) => "786w",
+									url_for(@strip.image.variant(resize_to_limit:[1080, nil], compress: 'none', quality:[100])) => "1080w",
 								  url_for(@strip.image.variant(resize_to_limit:[1600, nil], compress: 'none', quality:[100])) => "1600w",
 								  url_for(@strip.image.variant(resize_to_limit:[1780, nil], compress: 'none', quality:[100])) => "1780w",
 							}, 
