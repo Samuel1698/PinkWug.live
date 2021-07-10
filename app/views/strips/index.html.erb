@@ -39,10 +39,10 @@
     </div>
 
   <% @strips_months.each do |month, strips| %>
-    <button>
+    <!-- <button>
       <span><%= month.strftime('%b %Y') %></span>
     </button>
-    <div class="big_row">
+    <div class="big_row"> -->
       <% for strip in strips %>
         <div class="row gallery">
           <%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[400,400])), class: 'cell', alt: strip.title), strip %>
@@ -50,7 +50,7 @@
           <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
         </div>
       <% end %>      
-    </div>
+    <!-- </div> -->
   <% end %>
   </div>
 </div>
