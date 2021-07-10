@@ -51,11 +51,11 @@
 		<%= Rinku.auto_link(simple_format(@strip.comment), :all, 'target="_blank"').html_safe unless @strip.comment.blank? %>
 	</div>
 	<div class="share", tabindex="0">
-		<p><strong>share this comic!</strong></p>
+		<p>share this comic!</p>
 		<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
 			<span>copy link</span>
 		</button>
-		<p><strong><%= strip_url(@strip) %></strong></p>
+		<p><%= strip_url(@strip) %></p>
 	</div>
 </div>
 <% content_for :javascripts do %>

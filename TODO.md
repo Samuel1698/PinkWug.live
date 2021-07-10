@@ -77,7 +77,7 @@
 
 ### Deployment
 - [x] Switch to PostgreSQL
-- [ ] Find bold version of font
+- [x] Find bold version of font
 - [ ] Caching/Preloading nav images
 - [ ] Archive group by months
  
