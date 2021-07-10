@@ -96,6 +96,39 @@
 		}
 	}
 }
+
+// ---------------------------------------------------
+// For header buttons only. Big version
+// ---------------------------------------------------
+@media (min-width: 560px) {
+	header .header_wrapper .header_buttons {
+ 	  button {
+ 	  	padding: 2px 10px 2px 36px;
+ 	  	&.patreon {
+				background-position: 4% 50%;
+ 	  	}
+ 	  	&.kofi {
+ 	  		background-position: 4% 50%;
+ 	  	}
+			&.patreon::after {
+				content: 'Support me on Patreon'
+			}
+			&.kofi::after {
+				content: 'Support me on Ko-fi';
+			}
+			span {
+				display: none;
+			}
+			&::after {
+				letter-spacing: -0.15px;
+				padding: 0;
+				text-decoration: none;
+				text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+				color: white;
+			}
+		}
+	}
+}
 // ---------------------------------------------------
 // From 541 to biggest screen size
 // ---------------------------------------------------
@@ -108,20 +141,23 @@
 	p {
 		font-size: 1rem;
 	}
-	header .header_wrapper .search{
-		button {
-			&.active{
-				position: relative;
-				top: 6px;
+
+	header .header_wrapper {
+		.search{
+			button {
+				&.active{
+					position: relative;
+					top: 6px;
+				}
 			}
-		}
-		form {
-			input:not(:last-child) {
-				border: 0;
-			}
-			.submit_button {
-				right: 50px;
-				top: 14px;
+			form {
+				input:not(:last-child) {
+					border: 0;
+				}
+				.submit_button {
+					right: 50px;
+					top: 14px;
+				}
 			}
 		}
 	}

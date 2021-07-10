@@ -1,17 +1,17 @@
 <div class="comic_Nav">
-	<%= link_to @first_strip, {class: 'fa fa-angle-double-left', method: :get} do %>
+	<%= link_to @first_strip, {class: 'fa fa-angle-double-left', data: { turbolinks_action: 'replace'}} do %>
 		<span class="visually-hidden">First Comic</span>
 	<% end %>
-	<%= link_to @previous_strip, {class: 'fa fa-angle-left' , method: :get} do %>
+	<%= link_to @previous_strip, {class: 'fa fa-angle-left', data: { turbolinks_action: 'replace'}} do %>
 		<span class="visually-hidden">Previous</span>
 	<% end %>
-  <%= link_to @random_strip, {class: 'fa fa-rotate-right' , method: :get} do %>
+  <%= link_to @random_strip, {class: 'fa fa-rotate-right', data: { turbolinks_action: 'replace'}} do %>
 		<span class="visually-hidden">Random</span>
 	<% end %>
-	<%= link_to @next_strip, {class: 'fa fa-angle-right' , method: :get} do %>
+	<%= link_to @next_strip, {class: 'fa fa-angle-right', data: { turbolinks_action: 'replace'}} do %>
 		<span class="visually-hidden">Next</span>
 	<% end %>
-	<%= link_to @last_strip, {class: 'fa fa-angle-double-right' , method: :get} do %>
+	<%= link_to @last_strip, {class: 'fa fa-angle-double-right', data: { turbolinks_action: 'replace'}} do %>
 		<span class="visually-hidden">Most Recent</span>
 	<% end %>  
 </div>
