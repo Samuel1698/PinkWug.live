@@ -414,22 +414,26 @@ main {
   padding: 8px 12px;
   margin: 8px 16px;
   border-radius: 12px;
+  position: relative;
   p {
     // font-weight: 700;
     font-size: 0.8rem;
     margin: 0;
     &:last-child {
+      margin-right: 22px;
       font-size: 0.7rem;
     }
   }
   button { // Tooltip 
-    float: right;
-    position: relative;
+    position: absolute;
     background: url("icons8-copy") no-repeat;
     height: 24px;
     width: 24px;
-    bottom: 0.5rem;
-    margin-left: 8px;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     span { // Tooltip text
       position: absolute;
       z-index: -1;
