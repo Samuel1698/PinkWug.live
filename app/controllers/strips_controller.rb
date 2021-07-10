@@ -2,6 +2,7 @@ class StripsController < ApplicationController
 	before_action :set_strip, only: [:show, :index]
 	def index
 		@strips = Strip.filtered(query_params).reverse
+		@strips_months = @strips.group_by { |s| s.created_at.beginning_of_month }
 	end
 	def show
 		@title       = @strip.title
@@ -18,11 +19,11 @@ class StripsController < ApplicationController
 		@next_strip     = Strip.where(["id > ?", @id]).order('id').first || @last_strip
 		@random_strip   = Strip.where(["id != ?", @id]).order_by_rand.first
 
-		@first_strip    = strip_path(@first_strip) 
-		@last_strip     = strip_path(@last_strip) 
-		@previous_strip = strip_path(@previous_strip) 
-		@next_strip     = strip_path(@next_strip) 
-		@random_strip   = strip_path(@random_strip)
+		@first_strip    = strip_url(@first_strip) 
+		@last_strip     = strip_url(@last_strip) 
+		@previous_strip = strip_url(@previous_strip) 
+		@next_strip     = strip_url(@next_strip) 
+		@random_strip   = strip_url(@random_strip)
 	end
 	private
 		def set_strip
