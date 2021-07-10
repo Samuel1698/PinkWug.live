@@ -200,12 +200,13 @@
 				}
 				ul {
 					display: flex;
-					li svg {
-						display: block;
-						margin: 0 auto 0.5rem;
+					li a {
+						padding: 0.5rem;
 					}
 					li:focus a, li:hover a{
-						background-color: $dark-brown;
+						border-radius: 6px;
+						color: $dark-brown;
+						background-color: white;
 					}
 				}
 			}
