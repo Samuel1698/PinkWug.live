@@ -10,17 +10,26 @@ img { max-width: 100%; vertical-align: middle; border: 0; }
 // Base tags
 // =============================================================================
 @font-face {
-    font-family: 'jollygood_sansbasic';
-    src: url('../fonts/pixilate_-_jollygood_sans_basic-webfont.woff2') format('woff2'),
-         url('../fonts/pixilate_-_jollygood_sans_basic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'JollyGood Sans Basic';
+  src: url('../fonts/JollyGoodSansBasic.woff2') format('woff2'),
+       url('../fonts/JollyGoodSansBasic.woff') format('woff'),
+       url('../fonts/JollyGoodSansBasic.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JollyGood Sans Bold';
+  src: url('../fonts/JollyGoodSansBold.woff2') format('woff2'),
+       url('../fonts/JollyGoodSansBold.woff') format('woff'),
+       url('../fonts/JollyGoodSansBold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
 }
 html {
   font-size: 1.125rem;
 }
 body {
-  font-family: 'jollygood_sansbasic', sans-serif;
+  font-family: 'JollyGood Sans Basic', sans-serif;
   font-weight: normal;
   font-style: normal;
   margin: 0;
@@ -141,7 +150,7 @@ header {
         border: 0 none white;
         text-decoration: none;
         text-shadow: none;
-        font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
+        font-family: 'Quicksand', 'JollyGood Sans Basic', sans-serif ;
         font-weight: 700;
         font-size: 14px;
         &.patreon {
@@ -292,7 +301,7 @@ main {
     border: 0 none white;
     text-decoration: none;
     text-shadow: none;
-    font-family: 'Quicksand', 'jollygood_sansbasic', sans-serif ;
+    font-family: 'Quicksand', 'JollyGood Sans Basic', sans-serif ;
     font-weight: 700;
     font-size: 14px;
     &.patreon {
@@ -404,6 +413,8 @@ main {
   }
 }
 .share {
+  font-family: 'JollyGood Sans Bold', 'JollyGood Sans Basic', sans-serif;
+  font-weight: bold;
   background-color: $light-grey;
   padding: 8px 12px;
   margin: 8px 16px;
