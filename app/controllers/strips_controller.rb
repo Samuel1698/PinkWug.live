@@ -1,23 +1,22 @@
 class StripsController < ApplicationController
 	before_action :set_strip, only: [:show, :index]
 	def index
-		@strips = Strip.filtered(query_params).reverse
+		@strips = Strip.filtered(query_params).order("created_at ASC").reverse
 		@strips_months = @strips.group_by { |s| s.created_at.beginning_of_month }
 	end
 	def show
 		@title       = @strip.title
 		@keywords    = @strip.keywords.push("Pink Wug", "Comics")
-		@id          = @strip.id
+		@ca          = @strip.created_at
 		if (@strip == Strip.last)
 			@keywords = @strip.keywords.push("latest")
-			# This is here so that this class gets added only to the latest comic, since all other ones don't define @last
 			@last = "last" 
 		end
-		@first_strip    = Strip.first
-		@last_strip     = Strip.last
-		@previous_strip = Strip.where(["id < ?", @id]).order('id').last || @first_strip
-		@next_strip     = Strip.where(["id > ?", @id]).order('id').first || @last_strip
-		@random_strip   = Strip.where(["id != ?", @id]).order_by_rand.first
+		@first_strip    = Strip.order("created_at ASC").first
+		@last_strip     = Strip.order("created_at ASC").last
+		@previous_strip = Strip.where(["created_at < ?", @ca]).order('created_at').last || @first_strip
+		@next_strip     = Strip.where(["created_at > ?", @ca]).order('created_at').first || @last_strip
+		@random_strip   = Strip.where(["id != ?", @strip.id]).order_by_rand.first
 
 		@first_strip    = strip_url(@first_strip) 
 		@last_strip     = strip_url(@last_strip) 
@@ -28,9 +27,9 @@ class StripsController < ApplicationController
 	private
 		def set_strip
 			if (params[:id] == -1 || params[:id] == nil)
-				@strip = Strip.last 
+				@strip = Strip.order("created_at ASC").last 
 			else
-				@strip = Strip.find(params[:id])
+				@strip = Strip.order("created_at ASC").find(params[:id])
 			end
 		end
 		def query_params
