@@ -21,10 +21,7 @@
       <div id="skip"><a href="#main" data-turbolinks="false">Skip to Main Content</a></div> 
       <header class="header">
         <div class="header_wrapper">
-          <%= link_to root_path, class: "header_logo" do %>
-            <%= image_tag("wugSLEEP@2x.png", style: "width: 85px") %> 
-            <p>Pink&nbsp;Wug</p>
-          <% end %>
+          <%= link_to image_tag("Profile.png", width: "50px"), root_path, class: "header_logo" %>
           <div class="header_buttons">
             <a href="https://ko-fi.com/L3L42AQKS" target="_blank">
               <button class="kofi" tabindex="-1">
@@ -70,11 +67,11 @@
       <footer class="footer">
         <div class="footer_Border"></div>
         <div class="socialMediaLinks">
-          <%= link_to image_tag("facebook.svg", alt: "Facebook Link", class: "bottom_Logo"), "https://www.facebook.com/PinkWug", target: "_blank" %>
-          <%= link_to image_tag("twitter.svg", alt: "Twitter Link", class: "bottom_Logo"), "https://twitter.com/pinkwug", target: "_blank"%>
-          <%= link_to image_tag("instagram.svg", alt: "Instagram Link", class: "bottom_Logo"), "https://www.instagram.com/pinkwug/", target: "_blank"  %>
-          <%= link_to image_tag("reddit.svg", alt: "Reddit Link", class: "bottom_Logo"), "https://www.reddit.com/r/PinkWug/", target: "_blank"  %>
-          <%= link_to image_tag("tumblr.svg", alt: "Tumblr Link", class: "bottom_Logo"), "https://pinkwug.tumblr.com/", target: "_blank"  %>
+          <%= link_to image_tag("twitter_logo_400x400.png", alt: "Twitter Link", class: "bottom_Logo"), "https://twitter.com/pinkwug", target: "_blank"%>
+          <%= link_to image_tag("instagram_logo_400x400.png", alt: "Instagram Link", class: "bottom_Logo"), "https://www.instagram.com/pinkwug/", target: "_blank"  %>
+          <%= link_to image_tag("facebook_logo_400x400.png", alt: "Facebook Link", class: "bottom_Logo"), "https://www.facebook.com/PinkWug", target: "_blank" %>
+          <%= link_to image_tag("reddit_logo_400x400.png", alt: "Reddit Link", class: "bottom_Logo"), "https://www.reddit.com/r/PinkWug/", target: "_blank"  %>
+          <%= link_to image_tag("tumblr_logo_400x400.png", alt: "Tumblr Link", class: "bottom_Logo"), "https://pinkwug.tumblr.com/", target: "_blank"  %>
         </div>
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>
