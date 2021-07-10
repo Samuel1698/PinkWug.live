@@ -23,11 +23,20 @@
 	<%= render 'comicNav' %>
 	<div class="parent">
 		<%= image_tag(url_for(@strip.image), 
-			srcset: {   url_for(@strip.image.variant(resize_to_limit:[445, nil], compress: 'none',            quality:[100])) => "445w",
-									url_for(@strip.image.variant(resize_to_limit:[890, nil], compress: 'none',           quality:[100])) => "890w",
-								  url_for(@strip.image.variant(resize_to_limit:[1335, nil], compress: 'none',    quality:[100])) => "1335w",
-								  url_for(@strip.image.variant(resize_to_limit:[1780, nil], compress: 'none',     quality:[100])) => "1780w",
-							}, views: "100vw", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
+			srcset: {   url_for(@strip.image.variant(resize_to_limit:[375, nil], compress: 'none', quality:[100])) => "375w",
+									url_for(@strip.image.variant(resize_to_limit:[600, nil], compress: 'none',  quality:[100])) => "600w",
+									url_for(@strip.image.variant(resize_to_limit:[786, nil], compress: 'none',  quality:[100])) => "786w",
+									url_for(@strip.image.variant(resize_to_limit:[1080, nil], compress: 'none',  quality:[100])) => "1080w",
+								  url_for(@strip.image.variant(resize_to_limit:[1600, nil], compress: 'none', quality:[100])) => "1600w",
+								  url_for(@strip.image.variant(resize_to_limit:[1780, nil], compress: 'none', quality:[100])) => "1780w",
+							}, 
+			sizes: "100vw,
+							(min-width: 375px) 100vw,
+			        (min-width: 600px) 65vw,
+			        (min-width: 786px) 65vw,
+			        (min-width: 1080px) 50vw,
+			        (min-width: 1600px) 33vw,
+			        (min-width: 1780px) 36vw", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
 		<%= link_to @previous_strip, tabindex: "-1" do %>
 			<div class="backwards" tabindex="-1"></div>
 		<% end %>
