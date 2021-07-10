@@ -78,14 +78,15 @@
 			text-shadow: none;
 		}
 		textarea {
-			resize: vertical;	
-			height: 10em;
+			resize: none;	
+			height: 16em;
+			overflow-y: auto;
 		}
 	}
 }
 @media (min-width: $small){
 	$min-width: 250px;
-	$max-width: 270px;
+	$max-width: 290px;
 	.about {
 		h1, h2 {
 			font-size: 1.1rem;
@@ -123,7 +124,7 @@
 		}
 	}
 	.about form textarea{
-		height: 15em;
+		height: 16em;
 	}
 }
 @media (min-width: $medium) {
