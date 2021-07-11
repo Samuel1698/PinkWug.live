@@ -18,8 +18,7 @@
 	  image: url_for(@strip.image)
 	} %>
 <% end %>
-<div class="content">
-	<h1><%= title @title %></h1>
+	<h1 class="visually-hidden"><%= title @title %></h1>
 	<div class="parent">
 		<%= image_tag(url_for(@strip.image), 
 			srcset: {   url_for(@strip.image.variant(resize_to_limit:[375, nil],            compress: 'none', quality:[100])) => "375w",
@@ -28,14 +27,8 @@
 									url_for(@strip.image.variant(resize_to_limit:[1080, nil], compress: 'none', quality:[100])) => "1080w",
 								  url_for(@strip.image.variant(resize_to_limit:[1600, nil], compress: 'none', quality:[100])) => "1600w",
 								  url_for(@strip.image.variant(resize_to_limit:[1780, nil], compress: 'none', quality:[100])) => "1780w",
-							}, 
-			sizes: "100vw,
-							(min-width: 375px) 100vw,
-			        (min-width: 600px) 72vw,
-			        (min-width: 786px) 52vw,
-			        (min-width: 1080px) 44vw,
-			        (min-width: 1600px) 36vw,
-			        (min-width: 1780px) 33vw", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
+							},
+			sizes: "70vh", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
 		<%= link_to @previous_strip, tabindex: "-1" do %>
 			<div class="backwards" tabindex="-1"></div>
 		<% end %>
@@ -43,6 +36,7 @@
 			<div class="forward" tabindex="-1"></div>
 		<% end %>
 	</div>
+<div class="content">
 	<%= render 'comicNav' %>
 	<div class="comment", tabindex="0">
 		<%= image_tag("wugART@3x.png", style: "width: 32px", alt: "") %>
