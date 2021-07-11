@@ -11,17 +11,17 @@ img { max-width: 100%; vertical-align: middle; border: 0; }
 // =============================================================================
 @font-face {
   font-family: 'JollyGood Sans Basic';
-  src: url('../fonts/JollyGoodSansBasic.woff2') format('woff2'),
-       url('../fonts/JollyGoodSansBasic.woff') format('woff'),
-       url('../fonts/JollyGoodSansBasic.otf') format('otf');
+  src: image-url('../fonts/JollyGoodSansBasic.woff2') format('woff2'),
+       image-url('../fonts/JollyGoodSansBasic.woff') format('woff'),
+       image-url('../fonts/JollyGoodSansBasic.otf') format('otf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'JollyGood Sans Bold';
-  src: url('../fonts/JollyGoodSansBold.woff2') format('woff2'),
-       url('../fonts/JollyGoodSansBold.woff') format('woff'),
-       url('../fonts/JollyGoodSansBold.otf') format('otf');
+  src: image-url('../fonts/JollyGoodSansBold.woff2') format('woff2'),
+       image-url('../fonts/JollyGoodSansBold.woff') format('woff'),
+       image-url('../fonts/JollyGoodSansBold.otf') format('otf');
   font-weight: bold;
   font-style: normal;
 }
@@ -153,12 +153,12 @@ header {
         font-size: 14px;
         &.patreon {
           padding: 2px 10px 2px 30px;
-          background: url("icons8-patreon-white.svg") 10% 50%/18px no-repeat,
+          background: image-url("icons8-patreon-white.svg") 10% 50%/18px no-repeat,
                       linear-gradient($fiery-coral,$fiery-coral);
         }
         &.kofi {
           padding: 2px 10px 2px 36px;
-          background: url("Ko-fi_Icon_RGBforDarkBg.png") 10% 50%/28px no-repeat,
+          background: image-url("Ko-fi_Icon_RGBforDarkBg.png") 10% 50%/28px no-repeat,
                       linear-gradient($kofi,$kofi);
         }
         span {
@@ -190,7 +190,7 @@ header {
         font-size: 0;
         width: 58px;
         height: 34px;
-        background: url("icons8-menu.svg") center/20px no-repeat;
+        background: image-url("icons8-menu.svg") center/20px no-repeat;
         border: 0;
         left: 5px;
         svg {
@@ -237,10 +237,10 @@ header {
         width: 22px;
         height: 22px;
         cursor: pointer;
-        background: url("icons8-search.svg") center/22px no-repeat;
+        background: image-url("icons8-search.svg") center/22px no-repeat;
         border: 0;
         &.active {
-          background: url("icons8-macos-close.svg") center/22px no-repeat;
+          background: image-url("icons8-macos-close.svg") center/22px no-repeat;
         }
       }
       form { // Search form
@@ -273,7 +273,7 @@ header {
           top: 0px;
           width: 32px;
           height: 32px;
-          background: url("icons8-search-database.svg") center no-repeat;
+          background: image-url("icons8-search-database.svg") center no-repeat;
         }
       }
     }
@@ -305,11 +305,11 @@ main {
     font-weight: 700;
     font-size: 14px;
     &.patreon {
-      background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
+      background: image-url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
                   linear-gradient($fiery-coral,$fiery-coral);
     }
     &.kofi {
-      background: url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
+      background: image-url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
                   linear-gradient($kofi,$kofi);
     }
     span {
@@ -431,7 +431,7 @@ main {
   }
   button { // Tooltip 
     position: absolute;
-    background: url("icons8-copy") no-repeat;
+    background: image-url("icons8-copy") no-repeat;
     height: 24px;
     width: 24px;
     right: 10px;

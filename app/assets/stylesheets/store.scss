@@ -12,9 +12,9 @@ button {
 	appearance: none;
 	cursor: pointer;
 	border: 0 none white;
-	background: url("icons8-sort-down.svg") 100% 100%/24px no-repeat;
+	background: image-url("icons8-sort-down.svg") 100% 100%/24px no-repeat;
 	&.asc {
-		background: url("icons8-sort-up.svg") 100% 90%/24px no-repeat;
+		background: image-url("icons8-sort-up.svg") 100% 90%/24px no-repeat;
 	}
 	h2 {
 		margin-bottom: 0;
