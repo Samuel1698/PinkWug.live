@@ -335,6 +335,7 @@ main {
 }
 .comic {
   margin: 6px 0;
+  width: 100%;
 }
 .parent {
   position: relative;
@@ -364,7 +365,7 @@ main {
   }
   div {
     max-width: 93%;
-    margin: 8px auto;
+    margin: 0 auto 8px;
   }
 }
 .comic_Nav {
