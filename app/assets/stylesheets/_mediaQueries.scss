@@ -199,28 +199,14 @@
 					display: none;
 				}
 				ul {
+					margin-bottom: 0px;
 					display: flex;
-					li {
-						&:focus a , &:hover a, &:focus-visible a, &:active a {
-							border-radius: 6px;
-							color: $dark-brown;
-							background-color: white;
-						}
-						a {
-							padding: 0.5rem;
-							&:focus, &:hover, &:focus-visible, &:active {
-								border-radius: 6px;
-								color: $dark-brown;
-								background-color: white;
-							}
-						}
-					}
 				}
 			}
 		}
 	}
 	.content {
-		max-width: 50vw;
+		max-width: 48vw;
 		margin-left: auto;
 		margin-right: auto;
 	}

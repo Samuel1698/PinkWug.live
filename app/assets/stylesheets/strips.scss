@@ -200,7 +200,7 @@ header {
       }
       ul { // Navigation items. This is the default view, for mobile.
         margin: 0;
-        padding: 0;
+        padding: 0 0 2px;
         li {
           &:not(:last-child) {
             margin-right: 1rem;
@@ -211,16 +211,29 @@ header {
             padding-top: .5rem;
             padding-bottom: .5rem;
           }
-          svg {
+          svg { // Menu Icon
             display: inline-block;
             vertical-align: middle;
             width: 28px;
             height: 28px;
             margin-right: 1rem;
           }
-          &:focus a, &:hover a{
-            background-color: $light-brown;
+          &:focus a, &:hover a, &:focus-visible a, &:active a {
+            border-radius: 6px;
+            color: $dark-brown;
+            background-color: white;
           }
+          a {
+            padding: 0.5rem;
+            &:focus, &:hover, &:focus-visible, &:active {
+              border-radius: 6px;
+              color: $dark-brown;
+              background-color: white;
+            }
+          }
+          // &:focus a, &:hover a{
+          //   background-color: $light-brown;
+          // }
         }
         &.active li {
           margin-right: 0;
