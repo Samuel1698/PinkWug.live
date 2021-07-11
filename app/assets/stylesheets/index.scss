@@ -14,10 +14,10 @@
 	  width: 32px;
 	  height: 32px;
 	  cursor: pointer;
-	  background: url("icons8-image-gallery.svg") center/32px no-repeat;
+	  background: image-url("icons8-image-gallery.svg") center/32px no-repeat;
 	  border: 0;
 	  &.gallery {
-	    background: url("icons8-list.svg") center/32px no-repeat;
+	    background: image-url("icons8-list.svg") center/32px no-repeat;
 	  }
 	  &.hidden {
 	  	display: none;
@@ -45,12 +45,12 @@
 			appearance: none;
 			cursor: pointer;
 			border: 0 none white;
-			background: url("icons8-sort.svg") 80% 25%/24px no-repeat;
+			background: image-url("icons8-sort.svg") 80% 25%/24px no-repeat;
 			&.desc {
-				background: url("icons8-sort-down.svg") 80% 70%/24px no-repeat;
+				background: image-url("icons8-sort-down.svg") 80% 70%/24px no-repeat;
 			}
 			&.asc {
-		    background: url("icons8-sort-up.svg") 80% -20%/24px no-repeat;
+		    background: image-url("icons8-sort-up.svg") 80% -20%/24px no-repeat;
 			}
 		}
 	}

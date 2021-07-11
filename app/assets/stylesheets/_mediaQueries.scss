@@ -4,7 +4,7 @@
 	.header_buttons button {
 		&.patreon {
 			padding: 2px 10px 2px 26px;
-			background: url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
+			background: image-url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
 									linear-gradient($fiery-coral,$fiery-coral);
 		}
 	}
