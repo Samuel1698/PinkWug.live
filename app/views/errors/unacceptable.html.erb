@@ -2,10 +2,11 @@
 	<% stylesheet_link_tag "errors" %>
 <% end %>
 <div class="content">
-	<div class="error">
-		<h1><%= title 'Unacceptable Request (422)' %></h1>
-		<h2>the change you wanted was rejected.</h2>
-		<p>maybe you tried to change something you didn't have access to.</p>
-		<p>if you are the application owner check the logs for more information.</p>
+	<div class="error box">
+		<h1><%= title 'Unable to Accept Request (422)' %></h1>
+		<h2>the change you wanted was rejected</h2>
+		<p>maybe you tried to change something you didn't have access to</p>
+		<p>if you are pink wug, ask sam to check the logs</p>
 	</div>
+	<%= render 'linkbox'  %>
 </div>

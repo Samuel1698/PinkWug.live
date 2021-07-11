@@ -7,15 +7,9 @@
 <div class="content">
 	<div class="error box">
 		<h1>Page Not Found (404)</h1>
+		<%= image_tag("deadWug1.png") %><%= image_tag("deadWug2.png") %>
 		<h2>the page you were looking for does not exists</h2>
 		<p>you might have mistyped the address or the page may have moved</p>
 	</div>
-	<div class="link box">
-		<h2>perhaps you were looking for</h2>
-		<ul>
-			<li><button><%= link_to("homepage", "/") %></button></li>
-			<li><button><%= link_to("archive", "/archive") %></button></li>
-			<li><button><%= link_to("shop", "/store") %></button></li>
-		</ul>
-	</div>
+	<%= render 'linkbox'  %>
 </div>
