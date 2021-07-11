@@ -83,4 +83,4 @@
 - [x] Logo
 - [x] Replace Social Media links
 - [x] Shop icon on H1 of store
-- [ ] 404 page emote
+- [x] 404 page emote

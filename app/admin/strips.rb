@@ -11,11 +11,14 @@ ActiveAdmin.register Strip do
     config.localize_format = :long
   end
 
+  # Sort order for index
+  config.sort_order = 'created_at_desc'
+
   index download_links: false do |f|
-    f.selectable_column
+    f.selectable_column 
     f.column :image do |strip|
-      image_tag url_for(strip.image.variant(resize_to_limit:[200,10000]))
-    end
+        image_tag url_for(strip.image.variant(resize_to_limit:[200,10000]))
+      end
     f.column :title
     f.column :keywords
     f.column :created_at
