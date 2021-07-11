@@ -78,8 +78,8 @@
 ### Deployment
 - [x] Switch to PostgreSQL
 - [x] Find bold version of font
-- [ ] Caching/Preloading nav images
+- [ ] Caching/Preloading comics
 - [ ] Archive group by months
 - [x] Logo
 - [x] Replace Social Media links
-- [ ] Shop icon on H1 of store
+- [x] Shop icon on H1 of store
