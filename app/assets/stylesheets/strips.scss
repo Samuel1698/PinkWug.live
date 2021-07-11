@@ -39,6 +39,9 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+h1 {
+  margin-bottom: 0;
+}
 h1, h2 {
   text-align: center; 
   font-weight: normal;
@@ -371,7 +374,6 @@ main {
 }
 .comic {
   margin-bottom: 6px;
-  margin-top: 6px;
 }
 .parent {
   position: relative;
