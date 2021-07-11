@@ -9,46 +9,9 @@
 		}
 	}
 }
-//-----------------------------------------------
-// For content sizes independent of header/nav
-// ----------------------------------------------
-@media (min-width: 375px){
-	.content {
-		max-width: 100vw;
-	}
-}
-@media (min-width: 600px){
-	.content {
-		max-width: 72vw;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-@media (min-width: 786px){
-	.content {
-		max-width: 52vw;
-	}
-}
-@media (min-width: 1080px){
-	.content {
-		max-width: 44vw;
-	}
-}
-@media (min-width: 1600px){
-	.content {
-		max-width: 36vw;
-	}
-}
-@media (min-width: 1780px){
-	.content {
-		max-width: 33vw;
-	}
-}
-
-
 
 //-----------------------------------------------
-// From 350 to 540 pixels
+// From 320 to 540 pixels
 // ----------------------------------------------
 @media (max-width: $small){
 	main {
