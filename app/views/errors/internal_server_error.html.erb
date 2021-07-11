@@ -4,9 +4,11 @@
 	<% stylesheet_link_tag "errors" %>
 <% end %>
 <div class="content">
-	<div class="error">
+	<div class="error box">
 		<h1><%= title 'Internal Server Error (500)' %></h1>
-		<h2>we're sorry, but something went wrong.</h2>
-		<p>if you are the application owner check the logs for more information.</p>
+		<%= image_tag("wugSLEEP.png") %>
+		<h2>we're sorry, but something went wrong</h2>
+		<p>if you are the application owner check the logs for more information</p>
 	</div>
+	<%= render 'linkbox' %>
 </div>

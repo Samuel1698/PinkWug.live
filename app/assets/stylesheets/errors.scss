@@ -3,40 +3,49 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'variables';
 
-.box {
-	padding: 4px 12px;
-	border-radius: 12px;
-	text-align: center;
-	h1 {
-		font-size: 2rem;
-		margin: 1rem;
-	}
-	p {
-		margin-bottom: 12px;
-	}
-}
-.error {
-	margin-top: 2rem;
-	background-color: $red;
-	color: white;
-}
-.link {
-	margin-top: 1.5rem;
-	background-color: $about;
-	color: black;
-	ul {
-		margin-top: 0;
-		margin-bottom: 12px;
-		list-style: none;
-		padding-left: 0;
-		li {
-			display: inline-block;
+.content {
+	.box {
+		padding: 4px 12px;
+		border-radius: 12px;
+		text-align: center;
+		h1 {
+			font-size: 2rem;
+			margin: 1rem 1rem 0;
 		}
-		button {
-			background: none;
-			padding: 6px 10px;
-			border-radius: 7px;
-			background-color: darkseagreen;
+		p {
+			margin-bottom: 12px;
+		}
+	}
+	.error {
+		margin-top: 2rem;
+		img {
+			width: 64px;
+		}
+	}
+	.link {
+		margin-top: 1.5rem;
+		ul {
+			margin-top: 0;
+			margin-bottom: 12px;
+			list-style: none;
+			padding-left: 0;
+			li {
+				display: inline-block;
+			}
+			a {
+				padding: 8px 10px;
+			}
+			button {
+				background: none;
+				margin: 2px;
+				padding: 8px 10px;
+				border-radius: 7px;
+				background-color: $pink;
+				border: 2px solid black;
+				&:focus, &:hover, &:focus-visible, &:active {
+					background-color: white;
+				}
+			}
 		}
 	}
 }
