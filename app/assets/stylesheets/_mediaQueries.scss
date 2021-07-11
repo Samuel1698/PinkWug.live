@@ -200,12 +200,16 @@
 				}
 				ul {
 					display: flex;
-					li a {
-						padding: 0.5rem;
-						&:focus, &:hover, &:focus-visible {
-							border-radius: 6px;
-							color: $dark-brown;
-							background-color: white;
+					li {
+						a {
+							padding: 0.5rem;
+						}
+						&:focus, &:hover, &:focus-visible, &:active {
+							a {
+								border-radius: 6px;
+								color: $dark-brown;
+								background-color: white;
+							}
 						}
 					}
 				}
