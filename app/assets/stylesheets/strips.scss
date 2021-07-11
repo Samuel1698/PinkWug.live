@@ -498,8 +498,8 @@ footer {
   a {
     vertical-align: center;
     font-size: 16px;
-    margin: 0px 4px;
-    padding: 4px 0px 8px;
+    margin: 0px 10px;
+    padding: 15px 0px 16px;
   }
   p {
     font-size: 13px;
@@ -516,11 +516,6 @@ footer {
   margin-bottom: 10px;
 }
 .bottom_Logo {
-  &:not(:last-child){
-    width: 32px;
-  }
-  &:last-child {
-    width: 28px;
-  }
+  width: 50px;
 }
 @import "mediaQueries"
