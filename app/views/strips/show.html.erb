@@ -31,11 +31,11 @@
 							}, 
 			sizes: "100vw,
 							(min-width: 375px) 100vw,
-			        (min-width: 600px) 65vw,
-			        (min-width: 786px) 65vw,
-			        (min-width: 1080px) 50vw,
-			        (min-width: 1600px) 33vw,
-			        (min-width: 1780px) 36vw", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
+			        (min-width: 600px) 72vw,
+			        (min-width: 786px) 52vw,
+			        (min-width: 1080px) 44vw,
+			        (min-width: 1600px) 36vw,
+			        (min-width: 1780px) 33vw", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
 		<%= link_to @previous_strip, tabindex: "-1" do %>
 			<div class="backwards" tabindex="-1"></div>
 		<% end %>
