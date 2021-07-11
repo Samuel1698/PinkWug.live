@@ -18,6 +18,7 @@
 	  image: url_for(@strip.image)
 	} %>
 <% end %>
+<div class="content">
 	<h1 class="visually-hidden"><%= title @title %></h1>
 	<div class="parent">
 		<%= image_tag(url_for(@strip.image), 
@@ -36,7 +37,6 @@
 			<div class="forward" tabindex="-1"></div>
 		<% end %>
 	</div>
-<div class="content">
 	<%= render 'comicNav' %>
 	<div class="comment", tabindex="0">
 		<%= image_tag("wugART@3x.png", style: "width: 32px", alt: "") %>

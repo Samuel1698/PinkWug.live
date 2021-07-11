@@ -333,6 +333,40 @@ main {
     }
   }
 }
+.comic {
+  margin: 6px 0;
+}
+.parent {
+  position: relative;
+  text-align: center;
+  a div {
+    position: absolute;
+    top: 18px;
+    bottom: 22px;
+  }
+  .backwards {
+    right: 55%;
+    left: 16px;
+  }
+  .forward {
+    right: 16px;
+    left: 55%;
+  }
+  .disabled {
+    display: none;
+  }
+}
+.content {
+  margin: 0 auto;
+  max-width: 70vh;
+  .parent {
+    max-width: 100%;
+  }
+  div {
+    max-width: 93%;
+    margin: 8px auto;
+  }
+}
 .comic_Nav {
   display: grid;
   grid-template-areas:
@@ -366,40 +400,6 @@ main {
   }
   .fa-angle-double-right{
     grid-area: recent;
-  }
-}
-.comic {
-  margin-bottom: 6px;
-}
-.parent {
-  position: relative;
-  text-align: center;
-  .comic {
-    max-height: 70vh;
-  }
-  a div {
-    position: absolute;
-    top: 18px;
-    bottom: 22px;
-  }
-  .backwards {
-    right: 55%;
-    left: 16px;
-  }
-  .forward {
-    right: 16px;
-    left: 55%;
-  }
-  .disabled {
-    display: none;
-  }
-}
-.content {
-  margin: 0 auto;
-  max-width: 70vh;
-  div {
-    max-width: 93%;
-    margin: 8px auto;
   }
 }
 .comment {
