@@ -202,11 +202,11 @@
 					display: flex;
 					li a {
 						padding: 0.5rem;
-					}
-					li:focus a, li:hover a{
-						border-radius: 6px;
-						color: $dark-brown;
-						background-color: white;
+						&:focus, &:hover, &:focus-visible {
+							border-radius: 6px;
+							color: $dark-brown;
+							background-color: white;
+						}
 					}
 				}
 			}
