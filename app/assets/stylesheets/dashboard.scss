@@ -1,3 +1,9 @@
+@font-face {
+	font-family: 'FF Meta';
+	src: image-url('../fonts/meta-normal.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
 .columns {
 	overflow: hidden;
 	margin-bottom: 10px;
@@ -7,25 +13,38 @@
 	flex-wrap: nowrap;
 	.loading {
 		position: absolute;
-		top: 50%;
+		bottom: 41%;
 		left: 50%;
-		padding: 60px;
+		padding-top: 62px;
 		background: image-url("spinner.gif")50% 0/60px no-repeat;
 	}
 	.column {
 		overflow-x: auto;
 	}
-	.FID {
+	#FID {
+		min-width: 330px;
+		max-width: 330px;
+		font-family: 'FF Meta';
 		overflow-x: auto;
 		position: relative;
+		.ms {
+			position: absolute;
+			bottom: 39%;
+			left: 66%;
+			font-size: 48px;
+			color: #616161;
+			font-weight: normal;
+		}
 		.figcaption {
 			position: absolute;
 			bottom: 24px;
+			margin-right: 14px;
 			display: grid;
 			grid-template-areas: "good average bad";
 			div {
-				font-size: 0.7rem;
-				color: #C1C4C4;
+				font-size: 10px;
+				color: #9DA2A2;
+				font-weight: bold;
 				display: flex;
 				flex-direction: column;
 			  align-items: center;

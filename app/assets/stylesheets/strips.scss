@@ -501,6 +501,9 @@ footer {
   color: white;
   background-color: $dark-brown;
   font-size: 0; //To get rid of generated whitespace
+  // background: image-url("TempFooter.png") no-repeat;
+  // background-position: 100% 100%;
+  // background-size: 700px;
   a {
     vertical-align: center;
     font-size: 16px;
