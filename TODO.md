@@ -78,9 +78,10 @@
 ### Deployment
 - [x] Switch to PostgreSQL
 - [x] Find bold version of font
-- [ ] Caching/Preloading comics
-- [ ] Archive group by months
 - [x] Logo
 - [x] Replace Social Media links
 - [x] Shop icon on H1 of store
 - [x] 404 page emote
+- [ ] Caching/Preloading comics
+- [ ] Archive group by months
+- [ ] Move logic of comic navigation link disabling to controller (?)
