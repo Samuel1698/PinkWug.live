@@ -13,14 +13,14 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+  config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "logo.png"
+  config.site_title_image = "Profile.png"
 
   # == Default Namespace
   #
@@ -122,6 +122,7 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   # config.root_to = 'dashboard#index'
+  config.root_to = 'strips#index'
 
   # == Admin Comments
   #
@@ -176,7 +177,7 @@ ActiveAdmin.setup do |config|
 
   # == Setting a Favicon
   #
-  # config.favicon = 'favicon.ico'
+  config.favicon = 'Profile.png'
 
   # == Meta Tags
   #
@@ -218,7 +219,7 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
   #
   # To load a javascript file:
-  # config.register_javascript 'my_javascript.js'
+  config.register_javascript 'graphs.js'
 
   # == CSV options
   #

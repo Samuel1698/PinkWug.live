@@ -1,7 +1,55 @@
 .columns {
 	overflow: hidden;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid darkslategrey;
+	position: relative;
+	flex-wrap: nowrap;
+	.loading {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		padding: 60px;
+		background: image-url("spinner.gif")50% 0/60px no-repeat;
+	}
 	.column {
 		overflow-x: auto;
+	}
+	.FID {
+		overflow-x: auto;
+		position: relative;
+		.figcaption {
+			position: absolute;
+			bottom: 24px;
+			display: grid;
+			grid-template-areas: "good average bad";
+			div {
+				font-size: 0.7rem;
+				color: #C1C4C4;
+				display: flex;
+				flex-direction: column;
+			  align-items: center;
+			  margin-right: 40px;
+			}
+			.good {
+				grid-area: good;
+				span:last-child {
+					color: green;
+				}
+			}
+			.average {
+				grid-area: average;
+				span:last-child {
+					color: #eed202;
+				}
+			}
+			.bad {
+				grid-area: bad;
+				span:last-child {
+					color: red;
+				}
+			}
+		}
 	}
 }
 .developer_info {
@@ -21,4 +69,7 @@ body .index {
 			right: 95%;
 		}
 	}
+}
+.disabled {
+	display: none !important;
 }
