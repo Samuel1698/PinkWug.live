@@ -84,4 +84,3 @@
 - [x] 404 page emote
 - [ ] Caching/Preloading comics
 - [ ] Archive group by months
-- [ ] Move logic of comic navigation link disabling to controller (?)
