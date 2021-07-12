@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	var iframeMemory = document.createElement("iframe");
 	iframeMemory.src = "https://chart-embed.service.newrelic.com/herald/3aa18aba-87c3-45dc-ad6b-5584a2ecad29?height=300px&timepicker=true";
-	iframeMemory.style.width = '330px';
+	iframeMemory.style.width = '100%';
 	iframeMemory.style.minWidth = '330px';
 	iframeMemory.style.height = '330px';
 	iframeMemory.scrolling = 'no';
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	var iframeThreads = document.createElement("iframe");
 	iframeThreads.src = "https://chart-embed.service.newrelic.com/herald/4cdf8f76-c88a-4352-a4cf-fa635d04fed1?height=300px&timepicker=true";
-	iframeThreads.style.width = '330px';
+	iframeThreads.style.width = '100%';
 	iframeThreads.style.minWidth = '330px';
 	iframeThreads.style.height = '330px';
 	iframeThreads.scrolling = 'no';
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	var iframeGraph = document.createElement("iframe");
 	iframeGraph.src = "https://chart-embed.service.newrelic.com/herald/ffa81e86-5425-4f3b-83d5-259ea15cd8bb?height=400px&timepicker=true";
-	iframeGraph.style.width = '990px';
+	iframeGraph.style.width = '100%';
 	iframeGraph.style.minWidth = '990px';
 	iframeGraph.style.height = '430px';
 	iframeGraph.scrolling = 'no';
