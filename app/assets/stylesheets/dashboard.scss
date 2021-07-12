@@ -10,26 +10,24 @@
 	padding-bottom: 5px;
 	border-bottom: 1px solid darkslategrey;
 	position: relative;
-	flex-wrap: nowrap;
 	.loading {
 		position: absolute;
-		bottom: 41%;
-		left: 50%;
+		bottom: 40%;
+		left: 44%;
 		padding-top: 62px;
 		background: image-url("spinner.gif")50% 0/60px no-repeat;
 	}
-	.column {
+	#graph {
 		overflow-x: auto;
 	}
 	#FID {
 		min-width: 330px;
 		max-width: 330px;
 		font-family: 'FF Meta';
-		overflow-x: auto;
 		position: relative;
 		.ms {
 			position: absolute;
-			bottom: 39%;
+			top: 44%;
 			left: 66%;
 			font-size: 48px;
 			color: #616161;
