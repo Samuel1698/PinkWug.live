@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 			document.querySelector(".figcaption").classList.remove("disabled");
 			document.querySelector(".ms").classList.remove("disabled");
-		}, 100);
+		}, 2600);
 	}
 
 	if (iframeFID.addEventListener){
