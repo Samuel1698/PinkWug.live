@@ -9,6 +9,6 @@ RSpec.feature "user visits admin page", type: :feature do
     fill_in "Password", with: "password"
     click_on "Login"
     # Message should be 'signed in successfully'
-    expect(page).to have_css 'h2', text: "Dashboard"
+    expect(page).to have_css 'h2', text: "Strips"
   end
 end
