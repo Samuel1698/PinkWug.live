@@ -36,7 +36,6 @@ ActiveAdmin.register Strip do
       end
       row :transcript unless strip.transcript.blank?
       row :created_at
-      row :updated_at
     end
   end
 

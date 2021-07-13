@@ -84,3 +84,4 @@
 - [x] 404 page emote
 - [ ] Caching/Preloading comics
 - [ ] Archive group by months
+- [ ] Height of graphs 270px to avoid Custom timeframe selector
