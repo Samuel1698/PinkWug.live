@@ -28,15 +28,6 @@
 		  top: 49%;
 		  right: 14.5%;
 		  .tooltiptext {
-		  	p {
-		  		margin: 0;
-		  	}
-		  	a {
-		  		color: white;
-		  		&:hover {
-		  			color: #21A793;
-		  		}
-		  	}
 		    visibility: hidden;
 		    width: 280px;
 		    background-color: #616161;
@@ -47,7 +38,7 @@
 		   	// Tooltip position
 		    position: absolute;
 		    z-index: 1;
-		    top: 120%;
+		    top: 100%;
         right: -30%; 
         margin-left: -140px;
         &::after {
@@ -60,9 +51,26 @@
       	  border-style: solid;
       	  border-color: transparent transparent #616161 transparent;
         }
+		  	p {
+		  		margin: 0;
+		  	}
+		  	a {
+		  		color: white;
+		  		&:hover {
+		  			color: #21A793;
+		  		}
+		  	}
 		  }
-		  &:hover .tooltiptext {
-		    visibility: visible;
+		  &:hover {
+		  	background-size: 25px;
+		  }
+		  &.active {
+		    background: image-url("icons8-info-lock.svg")50% 50%/30px no-repeat;
+		  }
+		  &:hover, &.active {
+		    .tooltiptext {
+		    	visibility: visible;
+		    }
 		  }
 		}
 	}
@@ -74,18 +82,13 @@
 		max-width: 330px;
 		font-family: 'FF Meta';
 		position: relative;
-		.ms, .sec {
+		.unit {
 			position: absolute;
 			color: #616161;
 			font-weight: normal;
 			top: 46%;
-			font-size: 40px;
-		}
-		.ms {
 			left: 48%;
-		}
-		.sec {
-			left: 42%;
+			font-size: 40px;
 		}
 		.figcaption {
 			position: absolute;
