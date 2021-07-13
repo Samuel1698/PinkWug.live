@@ -10,8 +10,22 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "arctic_admin/base";
-@import "dashboard"
+@import "dashboard";
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+body.index {
+	th.sortable.col {
+		a {
+			margin-left: 1.5rem;
+		}
+		&::after {
+			right: 95%;
+		}
+	}
+	#sidebar:before {
+		box-shadow: -1px 0 3px 0 #272822;
+	}
+}
