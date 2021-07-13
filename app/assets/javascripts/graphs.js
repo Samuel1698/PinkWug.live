@@ -42,11 +42,8 @@ document.addEventListener("DOMContentLoaded", function(){
 			if (loading.parentElement.getElementsByTagName('div')[1].classList.contains("figcaption")){
 				loading.parentElement.querySelector(".figcaption").classList.remove("disabled");
 			}
-			if (ID == "FID"){
-				loading.parentElement.querySelector(".ms").classList.remove("disabled");
-			}
-			if (ID == "LCP"){
-				loading.parentElement.querySelector(".sec").classList.remove("disabled");
+			if (ID == "FID" || ID == "LCP"){
+				loading.parentElement.querySelector(".unit").classList.remove("disabled");
 			}
 		}, 4000);
 	}
@@ -59,4 +56,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 		document.getElementById(IDs[i]).appendChild(eval(IDs[i]));
 	}
+	document.querySelector('.first').addEventListener("click", function(){
+		event.target.classList.toggle("active");
+	});
 });

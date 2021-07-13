@@ -2,7 +2,7 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 
   content title: proc { I18n.t("active_admin.dashboard") } do
-    columns do 
+    columns class: "first columns" do 
       column id: "FID" do 
         div class: "loading" do
          span "&nbsp;Loading...&nbsp;".html_safe
@@ -21,7 +21,7 @@ ActiveAdmin.register_page "Dashboard" do
             span "Bad"
           end
         end
-        div "ms", class: "ms disabled"
+        div "ms", class: "unit disabled"
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
             para "FID measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction."
@@ -73,7 +73,7 @@ ActiveAdmin.register_page "Dashboard" do
             span "Bad"
           end
         end
-        div "sec", class: "sec disabled"
+        div "sec", class: "unit disabled"
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
             para "The Largest Contentful Paint (LCP) metric reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading."
