@@ -20,8 +20,8 @@ ActiveAdmin.register Strip do
         image_tag url_for(strip.image.variant(resize_to_limit:[200,10000]))
       end
     f.column :title
-    f.column :keywords
     f.column :created_at
+    f.column :updated_at
     f.actions
   end
   
