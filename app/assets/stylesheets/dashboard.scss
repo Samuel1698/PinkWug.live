@@ -5,7 +5,6 @@
 	font-style: normal;
 }
 .columns {
-	overflow: hidden;
 	margin-bottom: 10px;
 	padding-bottom: 5px;
 	border-bottom: 1px solid darkslategrey;
@@ -21,9 +20,54 @@
 			color: grey;
 			background: image-url("greyspinner.gif")50% 50%/150px no-repeat;
 		}
+		.tooltip {
+			position: absolute;
+			padding: 15px;
+		  display: inline-block;
+		  background: image-url("icons8-info.svg")50% 50%/30px no-repeat;
+		  top: 49%;
+		  right: 14.5%;
+		  .tooltiptext {
+		  	p {
+		  		margin: 0;
+		  	}
+		  	a {
+		  		color: white;
+		  		&:hover {
+		  			color: #21A793;
+		  		}
+		  	}
+		    visibility: hidden;
+		    width: 280px;
+		    background-color: #616161;
+		    color: #fff;
+		    text-align: center;
+		    padding: 10px;
+		    border-radius: 6px;
+		   	// Tooltip position
+		    position: absolute;
+		    z-index: 1;
+		    top: 120%;
+        right: -30%; 
+        margin-left: -140px;
+        &::after {
+      	  content: " ";
+      	  position: absolute;
+      	  right: 7%;
+      	  bottom: 100%; /* To the top of the tooltip */
+      	  margin-top: -5px;
+      	  border-width: 5px;
+      	  border-style: solid;
+      	  border-color: transparent transparent #616161 transparent;
+        }
+		  }
+		  &:hover .tooltiptext {
+		    visibility: visible;
+		  }
+		}
 	}
-	#graph {
-		overflow-x: auto;
+	#Graph {
+		overflow: auto;
 	}
 	#FID, #CLS, #LCP {
 		min-width: 330px;
@@ -61,19 +105,19 @@
 			.good {
 				grid-area: good;
 				span:last-child {
-					color: green;
+					color: #0CCE6B;
 				}
 			}
 			.average {
 				grid-area: average;
 				span:last-child {
-					color: #eed202;
+					color: #FFA400;
 				}
 			}
 			.bad {
 				grid-area: bad;
 				span:last-child {
-					color: red;
+					color: #FF4E42;
 				}
 			}
 		}
