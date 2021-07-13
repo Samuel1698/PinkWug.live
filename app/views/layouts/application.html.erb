@@ -43,11 +43,11 @@
               Menu
             </button>
             <ul class="nav_ul">
-              <li><a href="/">Home</a></li>
-              <li><a href="../archive">Archive</a></li>
-              <li><a href="../store">Shop</a></li>
+              <li><%= link_to "Home",root_path %></li>   
+              <li><%= link_to "Archive",strips_path %></li>
+              <li><%= link_to "Shop",store_index_path %></li>
               <li><a href="https://discord.gg/pinkwug" target="_blank">Discord</a></li>
-              <li><a href="/about">About</a></li>
+              <li><%= link_to "About",about_path %></li>
             </ul>
           </nav>
           <div class="search">

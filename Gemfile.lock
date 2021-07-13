@@ -151,6 +151,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphql (1.12.13)
     has_scope (0.8.0)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
@@ -361,6 +362,7 @@ DEPENDENCIES
   devise (~> 4.8)
   dotenv-rails
   friendly_id (~> 5.4.0)
+  graphql (~> 1.12, >= 1.12.13)
   httparty
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
