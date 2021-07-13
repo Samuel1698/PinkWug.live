@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 	var FID = document.createElement("iframe");
 	FID.src = "https://chart-embed.service.newrelic.com/herald/a3f53eff-e6a7-40e2-9be5-6760347a9a3d?height=300px&timepicker=true";
-	FID.style.width = '300px';
+	FID.style.width = '320px';
 	FID.style.height = '350px';
 	FID.style.zIndex = '0';
 	FID.style.position = 'relative';
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	var CLS = document.createElement("iframe");
 	CLS.src = "https://chart-embed.service.newrelic.com/herald/9fcd8620-495d-4ab0-9b4c-adaa7ab27fc9?height=300px&timepicker=true";
-	CLS.style.width = '300px';
+	CLS.style.width = '320px';
 	CLS.style.height = '350px';
 	CLS.style.zIndex = '0';
 	CLS.style.position = 'relative';
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	var LCP = document.createElement("iframe");
 	LCP.src = "https://chart-embed.service.newrelic.com/herald/f8389095-dd0c-435b-a80d-540645b96641?height=300px&timepicker=true";
-	LCP.style.width = '300px';
+	LCP.style.width = '320px';
 	LCP.style.height = '350px';
 	LCP.style.zIndex = '0';
 	LCP.style.position = 'relative';
