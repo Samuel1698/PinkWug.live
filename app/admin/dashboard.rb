@@ -22,6 +22,12 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
         div "ms", class: "ms disabled"
+        div class: "tooltip disabled" do 
+          span class: "tooltiptext" do
+            para "FID measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction."
+            a "Read More", href: "https://web.dev/fid/", target: "_blank"
+          end
+        end
       end
       column id: "CLS" do
         div class: "loading" do
@@ -39,6 +45,13 @@ ActiveAdmin.register_page "Dashboard" do
           div class: "bad" do
             span ">0.250".html_safe
             span "Bad"
+          end
+        end
+        div class: "tooltip disabled" do 
+          span class: "tooltiptext" do
+            para "CLS is a measure of the largest burst of layout shift scores for every unexpected layout shift that occurs during the entire lifespan of a page."
+            para "A layout shift occurs any time a visible element changes its position from one rendered frame to the next."
+            a "Read More", href: "https://web.dev/cls/", target: "_blank"
           end
         end
       end
@@ -61,6 +74,12 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
         div "sec", class: "sec disabled"
+        div class: "tooltip disabled" do 
+          span class: "tooltiptext" do
+            para "The Largest Contentful Paint (LCP) metric reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading."
+            a "Read More", href: "https://web.dev/lcp/", target: "_blank"
+          end
+        end
       end
     end
     columns do 

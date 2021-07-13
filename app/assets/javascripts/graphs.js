@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		var loading = document.getElementById(ID).querySelector(".loading");
 		setTimeout(function(){
 			loading.classList.add("disabled");
+			loading.parentElement.querySelector(".tooltip").classList.remove("disabled");
 			if (loading.parentElement.getElementsByTagName('div')[1].classList.contains("figcaption")){
 				loading.parentElement.querySelector(".figcaption").classList.remove("disabled");
 			}
