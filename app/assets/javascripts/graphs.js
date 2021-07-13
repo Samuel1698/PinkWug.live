@@ -1,57 +1,61 @@
 document.addEventListener("DOMContentLoaded", function(){
-	var iframeFID = document.createElement("iframe");
-	iframeFID.src = "https://chart-embed.service.newrelic.com/herald/302267e8-0d10-4427-96cb-62b4bce2d559?height=300px&timepicker=true";
-	iframeFID.style.width = '330px';
-	iframeFID.style.minWidth = '330px';
-	iframeFID.style.height = '330px';
-	iframeFID.scrolling = 'no';
-	iframeFID.style.border = 'none';
+	var FID = document.createElement("iframe");
+	FID.src = "https://chart-embed.service.newrelic.com/herald/9879c337-03f7-49d6-9085-cad9431d31cd?height=300px&timepicker=true";
+	FID.style.width = '330px';
+	FID.style.minWidth = '330px';
+	FID.style.height = '330px';
+	FID.scrolling = 'no';
+	FID.style.border = 'none';
 
-	var iframeMemory = document.createElement("iframe");
-	iframeMemory.src = "https://chart-embed.service.newrelic.com/herald/3aa18aba-87c3-45dc-ad6b-5584a2ecad29?height=300px&timepicker=true";
-	iframeMemory.style.width = '100%';
-	iframeMemory.style.minWidth = '330px';
-	iframeMemory.style.height = '330px';
-	iframeMemory.scrolling = 'no';
-	iframeMemory.style.border = 'none';
+	var CLS = document.createElement("iframe");
+	CLS.src = "https://chart-embed.service.newrelic.com/herald/5c054812-6512-4a62-8e34-acfd694f4d3a?height=300px&timepicker=true";
+	CLS.style.width = '330px';
+	CLS.style.minWidth = '330px';
+	CLS.style.height = '330px';
+	CLS.scrolling = 'no';
+	CLS.style.border = 'none';
 
-	var iframeThreads = document.createElement("iframe");
-	iframeThreads.src = "https://chart-embed.service.newrelic.com/herald/4cdf8f76-c88a-4352-a4cf-fa635d04fed1?height=300px&timepicker=true";
-	iframeThreads.style.width = '100%';
-	iframeThreads.style.minWidth = '330px';
-	iframeThreads.style.height = '330px';
-	iframeThreads.scrolling = 'no';
-	iframeThreads.style.border = 'none';
+	var LCP = document.createElement("iframe");
+	LCP.src = "https://chart-embed.service.newrelic.com/herald/93dcf229-8057-4226-a7c7-6bfa96159fe1?height=300px&timepicker=true";
+	LCP.style.width = '100%';
+	LCP.style.minWidth = '330px';
+	LCP.style.height = '330px';
+	LCP.scrolling = 'no';
+	LCP.style.border = 'none';
 
 
-	var iframeGraph = document.createElement("iframe");
-	iframeGraph.src = "https://chart-embed.service.newrelic.com/herald/ffa81e86-5425-4f3b-83d5-259ea15cd8bb?height=400px&timepicker=true";
-	iframeGraph.style.width = '100%';
-	iframeGraph.style.minWidth = '990px';
-	iframeGraph.style.height = '430px';
-	iframeGraph.scrolling = 'no';
-	iframeGraph.style.border = 'none';
+	var Graph = document.createElement("iframe");
+	Graph.src = "https://chart-embed.service.newrelic.com/herald/531ac35c-9a01-4f14-8476-34293f2fdce7?height=400px&timepicker=true";
+	Graph.style.width = '100%';
+	Graph.style.minWidth = '990px';
+	Graph.style.height = '430px';
+	Graph.scrolling = 'no';
+	Graph.style.border = 'none';
 
-	var loading = document.querySelectorAll(".loading");
+	var IDs = ["FID", "CLS", "LCP", "Graph"];
 
-	function disableElements(){
+	function disableElements(ID){
+		var loading = document.getElementById(ID).querySelector(".loading");
 		setTimeout(function(){
-			for (let i=0; i < loading.length;i++){
-				loading[i].classList.add("disabled");
+			loading.classList.add("disabled");
+			if (loading.parentElement.getElementsByTagName('div')[1].classList.contains("figcaption")){
+				loading.parentElement.querySelector(".figcaption").classList.remove("disabled");
 			}
-			document.querySelector(".figcaption").classList.remove("disabled");
-			document.querySelector(".ms").classList.remove("disabled");
-		}, 2600);
+			if (ID == "FID"){
+				loading.parentElement.querySelector(".ms").classList.remove("disabled");
+			}
+			if (ID == "LCP"){
+				loading.parentElement.querySelector(".sec").classList.remove("disabled");
+			}
+		}, 2700);
 	}
-
-	if (iframeFID.addEventListener){
-		iframeFID.addEventListener("load", disableElements());
-	} 
-	else {
-	  iframeFID.load = disableElements();
+	for (var i=0; i < IDs.length; i++){
+		if (IDs[i].addEventListener){
+			IDs[i].addEventListener("DOMContentLoaded", disableElements(IDs[i]));
+		} 
+		else {
+		  IDs[i].DOMContentLoaded = disableElements(IDs[i]);
+		}
+		document.getElementById(IDs[i]).appendChild(eval(IDs[i]));
 	}
-	document.getElementById("memory").appendChild(iframeMemory);
-	document.getElementById("threads").appendChild(iframeThreads);
-	document.getElementById("FID").appendChild(iframeFID);
-	document.getElementById("graph").appendChild(iframeGraph);
 });

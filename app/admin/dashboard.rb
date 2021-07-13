@@ -3,8 +3,10 @@ ActiveAdmin.register_page "Dashboard" do
 
   content title: proc { I18n.t("active_admin.dashboard") } do
     columns do 
-      div "Loading Graphs", class: "loading"
-      column id: "FID", class: "column" do 
+      column id: "FID" do 
+        div class: "loading" do
+         span "&nbsp;Loading...&nbsp;".html_safe
+        end
         div class: "figcaption disabled" do
           div class: "good" do   
             span "<100ms".html_safe
@@ -21,25 +23,55 @@ ActiveAdmin.register_page "Dashboard" do
         end
         div "ms", class: "ms disabled"
       end
-      column id: "memory" do
-      end
-      column id: "threads" do
-      end
-    end
-    columns do 
-      div "Loading Graphs", class: "loading"
-      column id: "graph" do
-      end
-    end
-    columns do
-      column do 
-        panel "Recent Comics" do 
-          table_for Strip.all.order("created_at desc").limit(3) do 
-            column("Title") { |strip| strip.title }
-            column("Created in") { |strip| strip.created_at }
+      column id: "CLS" do
+        div class: "loading" do
+         span "&nbsp;Loading...&nbsp;".html_safe
+        end
+        div class: "figcaption disabled" do
+          div class: "good" do   
+            span "<0.100".html_safe
+            span "Good"
+          end
+          div class: "average" do 
+            span "0.200&nbsp;-&nbsp;0.250".html_safe
+            span "Needs&nbsp;Work".html_safe
+          end
+          div class: "bad" do
+            span ">0.250".html_safe
+            span "Bad"
           end
         end
       end
+      column id: "LCP" do
+        div class: "loading" do
+         span "&nbsp;Loading...&nbsp;".html_safe
+        end
+        div class: "figcaption disabled" do
+          div class: "good" do   
+            span "<2.5&nbsp;sec".html_safe
+            span "Good"
+          end
+          div class: "average" do 
+            span "2.6&nbsp;sec&nbsp;-&nbsp;4.0&nbsp;sec".html_safe
+            span "Needs&nbsp;Work".html_safe
+          end
+          div class: "bad" do
+            span ">4.0sec".html_safe
+            span "Bad"
+          end
+        end
+        div "sec", class: "sec disabled"
+      end
+    end
+    columns do 
+      column id: "Graph" do
+        div class: "loading" do
+         span "&nbsp;Loading...&nbsp;".html_safe 
+        end
+        div
+      end
+    end
+    columns do
       column do
         panel "Contact the Developer", class: "developer_info" do
           render("/admin/sidebar_links", model: "dashboard")
