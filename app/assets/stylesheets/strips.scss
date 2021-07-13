@@ -333,24 +333,24 @@ main {
     }
   }
 }
-.comic {
-  margin: 6px 0;
-  width: 100%;
-}
 .parent {
   position: relative;
   text-align: center;
+  .comic {
+    margin: 0;
+    width: 100%;
+  }
   a div {
     position: absolute;
-    top: 18px;
-    bottom: 22px;
+    top: 3.5%;
+    bottom: 3.5%;
   }
   .backwards {
     right: 55%;
-    left: 16px;
+    left: 3.5%;
   }
   .forward {
-    right: 16px;
+    right: 3.5%;
     left: 55%;
   }
   .disabled {
@@ -361,9 +361,9 @@ main {
   margin: 0 auto;
   max-width: 70vh;
   .parent {
-    max-width: 100%;
+    width: 100%;
   }
-  div {
+  div:not(:first-of-type) {
     max-width: 93%;
     margin: 0 auto 8px;
   }

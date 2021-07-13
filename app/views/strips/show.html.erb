@@ -20,7 +20,7 @@
 <% end %>
 <div class="content">
 	<h1 class="visually-hidden"><%= title @title %></h1>
-	<div class="parent">
+	<div class="parent" style="min-height: 70vh;">
 		<%= image_tag(url_for(@strip.image), 
 			srcset: {   url_for(@strip.image.variant(resize_to_limit:[375, nil],            compress: 'none', quality:[100])) => "375w",
 									url_for(@strip.image.variant(resize_to_limit:[600, nil], compress: 'none', quality:[100])) => "600w",
@@ -55,5 +55,8 @@
   <%= javascript_include_tag "comicNav.js", "data-turbolinks-track" => true %>
   <script>
   	document.querySelector(".comic").addEventListener('load', addWhiteSpace("load"));
+  	document.querySelector(".comic").addEventListener('load', function(){
+  		this.parentNode.style.minHeight = 0;
+  	});
 	</script>
 <% end %>

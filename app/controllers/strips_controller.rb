@@ -24,6 +24,7 @@ class StripsController < ApplicationController
 		@next_strip     = strip_url(@next_strip) 
 		@random_strip   = strip_url(@random_strip)
 	end
+	
 	private
 		def set_strip
 			if (params[:id] == -1 || params[:id] == nil)

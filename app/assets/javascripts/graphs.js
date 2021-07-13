@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			if (ID == "LCP"){
 				loading.parentElement.querySelector(".sec").classList.remove("disabled");
 			}
-		}, 2700);
+		}, 4000);
 	}
 	for (var i=0; i < IDs.length; i++){
 		if (IDs[i].addEventListener){
