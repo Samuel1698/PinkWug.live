@@ -151,14 +151,10 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    graphql (1.12.13)
     has_scope (0.8.0)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
     hashdiff (1.0.1)
-    httparty (0.18.1)
-      mime-types (~> 3.0)
-      multi_xml (>= 0.5.2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
@@ -200,14 +196,10 @@ GEM
     meta-tags (2.14.0)
       actionpack (>= 3.2.0, < 6.2)
     method_source (1.0.0)
-    mime-types (3.3.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.0704)
     mini_magick (4.11.0)
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
-    multi_xml (0.6.0)
     newrelic_rpm (7.2.0)
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-linux)
@@ -325,6 +317,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    vcr (6.0.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -362,8 +355,6 @@ DEPENDENCIES
   devise (~> 4.8)
   dotenv-rails
   friendly_id (~> 5.4.0)
-  graphql (~> 1.12, >= 1.12.13)
-  httparty
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.2)
@@ -382,6 +373,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5.2.0)
   tzinfo-data
+  vcr
   web-console (>= 3.3.0)
   webdrivers
   webmock
