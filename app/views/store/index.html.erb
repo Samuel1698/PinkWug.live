@@ -19,12 +19,12 @@
 	  image: @shopify[0]["node"]["products"]["edges"][0]["node"]["featuredImage"]["originalSrc"]
 	} %>
 <% end %>
-<div>
 	<h1 class="store">
 		<%= image_tag("Shop.png", tabindex: '0') %>
 		<span class="visually-hidden"><%= title 'Store' %></span>
 	</h1> 
 	<% @shopify.each do |collection| %>
+	<div>
 		<button class="collection_button">
 			<h2><%= collection["node"]["title"] %></h2>
 		</button>
@@ -38,6 +38,7 @@
 		<% end %>
 		</div>
 	<% end %>
+	</div>
 
 <% content_for :javascripts do %>
   <%= javascript_include_tag "store.js", "data-turbolinks-track" => true %>
