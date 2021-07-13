@@ -6,6 +6,7 @@ require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'webmock/rspec'
+require 'vcr_setup'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -34,48 +35,6 @@ end
 RSpec.configure do |config|
   config.before(:each) do 
     WebMock.disable_net_connect!(allow_localhost: true)
-    mug_collection     = 271098577084
-    clothes_collection = 271099494588
-    sticker_collection = 271099560124
-    print_collection   = 271099527356
-    
-    mugs     = File.open("#{::Rails.root}/spec/fixtures/mugs.json") 
-    clothes  = File.open("#{::Rails.root}/spec/fixtures/clothes.json")
-    stickers = File.open("#{::Rails.root}/spec/fixtures/stickers.json")
-    prints   = File.open("#{::Rails.root}/spec/fixtures/prints.json")
-  
-    stub_request(:get, "https://pinkwug-dev-store.myshopify.com/admin/api/2021-04/products.json?collection_id=#{mug_collection}").
-       with(
-         headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'Authorization'=>'Basic ZTU1OTE0MmQ1MGE4YWE1YTNjNDA1ZGE5NThiNjZkMzM6c2hwcGFfZDY5NTBiOWM4YjE1YjUyOThiOTIxMjk3MTY2OThiYjI=',
-        'User-Agent'=>'Ruby'
-         }).to_return(status: 200, body: mugs, headers: {'Content-Type'=>'application/json'})
-    stub_request(:get, "https://pinkwug-dev-store.myshopify.com/admin/api/2021-04/products.json?collection_id=#{clothes_collection}").
-       with(
-         headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'Authorization'=>'Basic ZTU1OTE0MmQ1MGE4YWE1YTNjNDA1ZGE5NThiNjZkMzM6c2hwcGFfZDY5NTBiOWM4YjE1YjUyOThiOTIxMjk3MTY2OThiYjI=',
-        'User-Agent'=>'Ruby'
-         }).to_return(status: 200, body: clothes, headers: {'Content-Type'=>'application/json'})
-    stub_request(:get, "https://pinkwug-dev-store.myshopify.com/admin/api/2021-04/products.json?collection_id=#{sticker_collection}").
-       with(
-         headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'Authorization'=>'Basic ZTU1OTE0MmQ1MGE4YWE1YTNjNDA1ZGE5NThiNjZkMzM6c2hwcGFfZDY5NTBiOWM4YjE1YjUyOThiOTIxMjk3MTY2OThiYjI=',
-        'User-Agent'=>'Ruby'
-         }).to_return(status: 200, body: stickers, headers: {'Content-Type'=>'application/json'})
-    stub_request(:get, "https://pinkwug-dev-store.myshopify.com/admin/api/2021-04/products.json?collection_id=#{print_collection}").
-       with(
-         headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'Authorization'=>'Basic ZTU1OTE0MmQ1MGE4YWE1YTNjNDA1ZGE5NThiNjZkMzM6c2hwcGFfZDY5NTBiOWM4YjE1YjUyOThiOTIxMjk3MTY2OThiYjI=',
-        'User-Agent'=>'Ruby'
-         }).to_return(status: 200, body: prints, headers: {'Content-Type'=>'application/json'})
   end
   config.include RSpec::Rails::RequestExampleGroup, type: :feature
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

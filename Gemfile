@@ -35,8 +35,6 @@ gem 'meta-tags'
 gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-# Use HTTParty to handle remote API calls
-gem 'httparty'
 # Use autoprefixer for browser compatibility
 gem "autoprefixer-rails"
 # Use rinku to bring back auto_link functionality to rails
@@ -77,6 +75,8 @@ group :test do
   gem 'webdrivers'
   # Use webmock for stubbing and setting HTTP request expectations
   gem "webmock"
+  # Use VCR to get API call during test
+  gem "vcr"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
