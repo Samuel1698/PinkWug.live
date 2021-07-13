@@ -23,7 +23,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
-            para "FID measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction."
+            para "<strong>First Input Delay</strong> measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing events in response to that interaction.".html_safe
             a "Click Here to Read More", href: "https://web.dev/fid/", target: "_blank"
           end
         end
@@ -48,7 +48,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
-            para "CLS is the unexpected shifting of web page elements while the page is still loading. The kinds of elements that tend to cause shift are fonts, images, videos, contact forms, buttons and other kinds of content."
+            para "<strong>Comulative Layout Shift</strong> measures the largest burst of <em>Layout Shift Scores (LSS)</em> for every sudden layout jump that occurs during the lifespan of a page. In other words, CLS is the unexpected shifting of web page elements while the page is still loading.".html_safe
             a "Click Here to Read More", href: "https://web.dev/cls/", target: "_blank"
           end
         end
@@ -73,7 +73,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
-            para "The Largest Contentful Paint (LCP) metric reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading."
+            para "<strong>Largest Contentful Paint</strong> reports the render time of the largest image (or text block) visible, relative to when the page first started loading.".html_safe
             a "Click Here to Read More", href: "https://web.dev/lcp/", target: "_blank"
           end
         end
