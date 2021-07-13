@@ -1,12 +1,8 @@
-var mugs     = document.getElementById('mugs');
-var clothes  = document.getElementById('clothes');
-var stickers = document.getElementById('stickers');
-var prints   = document.getElementById('prints');
+var buttons = document.querySelectorAll(".collection_button");
 
-mugs.addEventListener("click", dropDown());
-clothes.addEventListener("click", dropDown());
-stickers.addEventListener("click", dropDown());
-prints.addEventListener("click", dropDown());
+for (var i=0;i < buttons.length;i++){
+	buttons[i].addEventListener("click", dropDown());
+}
 
 function dropDown(){
 	return function(){
