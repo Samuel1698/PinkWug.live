@@ -1,15 +1,22 @@
 @font-face {
 	font-family: 'FF Meta';
-	src: image-url('../fonts/meta-normal.ttf') format('ttf');
+	src: font-url('../fonts/meta-normal.ttf') format('ttf');
 	font-weight: normal;
 	font-style: normal;
+}
+#main_content.mine {
+	background-color: transparent;
+	padding: 0;
 }
 .columns {
 	margin-bottom: 10px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid darkslategrey;
+	background-color: white;
+	border-radius: 5px;
 	.column {
 		position: relative;
+		padding: 20px;
+		margin-bottom: 10px;
 		.loading {
 			font-family: "LatoWeb", Arial, sans-serif;
 			position: absolute;
@@ -24,9 +31,10 @@
 			position: absolute;
 			padding: 15px;
 		  display: inline-block;
-		  background: image-url("icons8-info.svg")50% 50%/30px no-repeat;
-		  top: 49%;
-		  right: 14.5%;
+		  background: image-url("resized-info.gif")50% 50%/20px no-repeat;
+		  top: 8%;
+		  left: 92.5%;
+		  z-index: 1;
 		  .tooltiptext {
 		    visibility: hidden;
 		    width: 280px;
@@ -44,7 +52,7 @@
         &::after {
       	  content: " ";
       	  position: absolute;
-      	  right: 7%;
+      	  right: 6.7%;
       	  bottom: 100%; /* To the top of the tooltip */
       	  margin-top: -5px;
       	  border-width: 5px;
@@ -55,17 +63,17 @@
 		  		margin: 0;
 		  	}
 		  	a {
-		  		color: white;
+		  		color: skyblue;
 		  		&:hover {
 		  			color: #21A793;
 		  		}
 		  	}
 		  }
 		  &:hover {
-		  	background-size: 25px;
+		  	background-size: 15px;
 		  }
 		  &.active {
-		    background: image-url("icons8-info-lock.svg")50% 50%/30px no-repeat;
+		    background: image-url("icons8-info-lock.svg")50% 50%/20px no-repeat;
 		  }
 		  &:hover, &.active {
 		    .tooltiptext {
@@ -78,26 +86,19 @@
 		overflow: auto;
 	}
 	#FID, #CLS, #LCP {
-		min-width: 330px;
-		max-width: 330px;
+		min-width: 350px;
+		max-width: 350px;
 		font-family: 'FF Meta';
 		position: relative;
-		.unit {
-			position: absolute;
-			color: #616161;
-			font-weight: normal;
-			top: 46%;
-			left: 48%;
-			font-size: 40px;
-		}
 		.figcaption {
 			position: absolute;
-			bottom: 24px;
+			bottom: 0;
+			z-index: 0;
 			margin-left: 16px;
 			display: grid;
 			grid-template-areas: "good average bad";
 			div {
-				font-size: 10px;
+				font-size: 0.7rem;
 				color: #9DA2A2;
 				font-weight: bold;
 				display: flex;
@@ -128,19 +129,9 @@
 }
 .developer_info {
 	a {
-		color: limegreen;
+		color: #21A793;
 		&:hover {
-			color: darkseagreen;
-		}
-	}
-}
-body .index {
-	th.sortable.col {
-		a {
-			margin-left: 1.5rem;
-		}
-		&::after {
-			right: 95%;
+			color: skyblue;
 		}
 	}
 }

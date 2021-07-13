@@ -21,11 +21,10 @@ ActiveAdmin.register_page "Dashboard" do
             span "Bad"
           end
         end
-        div "ms", class: "unit disabled"
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
             para "FID measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction."
-            a "Read More", href: "https://web.dev/fid/", target: "_blank"
+            a "Click Here to Read More", href: "https://web.dev/fid/", target: "_blank"
           end
         end
       end
@@ -35,23 +34,22 @@ ActiveAdmin.register_page "Dashboard" do
         end
         div class: "figcaption disabled" do
           div class: "good" do   
-            span "<0.100".html_safe
+            span "<0.1".html_safe
             span "Good"
           end
           div class: "average" do 
-            span "0.200&nbsp;-&nbsp;0.250".html_safe
+            span "0.2&nbsp;-&nbsp;0.25".html_safe
             span "Needs&nbsp;Work".html_safe
           end
           div class: "bad" do
-            span ">0.250".html_safe
+            span ">0.25".html_safe
             span "Bad"
           end
         end
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
-            para "CLS is a measure of the largest burst of layout shift scores for every unexpected layout shift that occurs during the entire lifespan of a page."
-            para "A layout shift occurs any time a visible element changes its position from one rendered frame to the next."
-            a "Read More", href: "https://web.dev/cls/", target: "_blank"
+            para "CLS is the unexpected shifting of web page elements while the page is still loading. The kinds of elements that tend to cause shift are fonts, images, videos, contact forms, buttons and other kinds of content."
+            a "Click Here to Read More", href: "https://web.dev/cls/", target: "_blank"
           end
         end
       end
@@ -73,16 +71,15 @@ ActiveAdmin.register_page "Dashboard" do
             span "Bad"
           end
         end
-        div "sec", class: "unit disabled"
         div class: "tooltip disabled" do 
           span class: "tooltiptext" do
             para "The Largest Contentful Paint (LCP) metric reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading."
-            a "Read More", href: "https://web.dev/lcp/", target: "_blank"
+            a "Click Here to Read More", href: "https://web.dev/lcp/", target: "_blank"
           end
         end
       end
     end
-    columns do 
+    columns do
       column id: "Graph" do
         div class: "loading" do
          span "&nbsp;Loading...&nbsp;".html_safe 
@@ -90,7 +87,7 @@ ActiveAdmin.register_page "Dashboard" do
         div
       end
     end
-    columns do
+    columns do 
       column do
         panel "Contact the Developer", class: "developer_info" do
           render("/admin/sidebar_links", model: "dashboard")
