@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	FID.style.border = 'none';
 
 	var CLS = document.createElement("iframe");
-	CLS.src = "https://chart-embed.service.newrelic.com/herald/a7d5c912-36ca-4021-9b4e-c903c995a493?height=300px&timepicker=true";
+	CLS.src = "https://chart-embed.service.newrelic.com/herald/9fcd8620-495d-4ab0-9b4c-adaa7ab27fc9?height=300px&timepicker=true";
 	CLS.style.width = '300px';
 	CLS.style.height = '350px';
 	CLS.style.zIndex = '0';
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			if (loading.parentElement.getElementsByTagName('div')[1].classList.contains("figcaption")){
 				loading.parentElement.querySelector(".figcaption").classList.remove("disabled");
 			}
-		}, 4000);
+		}, 3000);
 	}
 	for (var i=0; i < IDs.length; i++){
 		if (IDs[i].addEventListener){
