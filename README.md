@@ -8,7 +8,7 @@ This web app is currently in deployment, subject to many changes as I work close
 
 
 ## Dependencies:
-* [Image Magick](https://imagemagick.org/script/download.php)
+* [Imagemagick VIPS](https://github.com/janko/image_processing)
 * [PhantomJS](https://phantomjs.org/download.html) (For tests)
 
 ## To run this application you need
@@ -25,6 +25,7 @@ This web app is currently in deployment, subject to many changes as I work close
   * CREATE DATABASE pinkwug;
   * CREATE DATABASE pinkwug_test;
 * ### Webpacker
+  * bundle install
   * yarn upgrade
   * bundle exec rails webpacker:install (Make sure the parent folder doesnt have a space, this causes webpacker error)
 
