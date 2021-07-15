@@ -23,6 +23,7 @@ This web app is currently in deployment, subject to many changes as I work close
   * In terminal type psql postgres -U pinkwug
   * Back in the postgres prompt
   * CREATE DATABASE pinkwug;
+  * CREATE DATABASE pinkwug_test;
 * ### Webpacker
   * yarn upgrade
   * bundle exec rails webpacker:install (Make sure the parent folder doesnt have a space, this causes webpacker error)
