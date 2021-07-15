@@ -10,6 +10,16 @@
 	}
 }
 //-----------------------------------------------
+// For laptops with touchpads
+//-----------------------------------------------
+@media (hover: hover) and (pointer: fine) {
+	.header_wrapper nav ul li a:hover {
+		border-radius: 6px;
+		color: $dark-brown;
+		background-color: white;
+	}
+}
+//-----------------------------------------------
 // For the footer icons
 // ----------------------------------------------
 @media (max-width: 400px){
