@@ -1,30 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://127.0.0.1:36505/__identify__
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Length:
-      - '5'
-    body:
-      encoding: UTF-8
-      string: '73020'
-  recorded_at: Tue, 13 Jul 2021 21:26:49 GMT
-- request:
     method: post
     uri: https://pinkwug-dev-store.myshopify.com/admin/api/2021-07/graphql.json
     body:
@@ -50,14 +26,14 @@ http_interactions:
       Content-Type:
       - application/graphql
       X-Shopify-Access-Token:
-      - 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
+      - "<SHOPIFY_API_SECRET>"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 13 Jul 2021 21:26:49 GMT
+      - Fri, 16 Jul 2021 18:39:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -105,7 +81,7 @@ http_interactions:
         https://c.paypal.com https://maps.googleapis.com https://www.google-analytics.com
         https://v.shopify.com https://widget.intercom.io https://js.intercomcdn.com
         ''self'' ''unsafe-inline'' ''unsafe-eval''; upgrade-insecure-requests; report-uri
-        /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=5c3c40ed-b062-4153-87a2-51a72ef78db4'
+        /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=036aaf2b-d824-4762-bac7-e2cc38789527'
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -113,7 +89,7 @@ http_interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Xss-Protection:
-      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=5c3c40ed-b062-4153-87a2-51a72ef78db4
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=036aaf2b-d824-4762-bac7-e2cc38789527
       X-Dc:
       - gcp-us-east1,gcp-us-east1,gcp-us-east1
       Nel:
@@ -123,7 +99,7 @@ http_interactions:
       - '{"group":"network-errors","max_age":2592000,"endpoints":[{"url":"https://monorail-edge.shopifysvc.com/v1/reports/nel/20190325/shopify"}]}'
       - '{"group":"network-errors","max_age":2592000,"endpoints":[{"url":"https://monorail-edge.shopifysvc.com/v1/reports/nel/20190325/shopify"}]}'
       X-Request-Id:
-      - 5c3c40ed-b062-4153-87a2-51a72ef78db4
+      - 036aaf2b-d824-4762-bac7-e2cc38789527
       Cf-Cache-Status:
       - DYNAMIC
       Expect-Ct:
@@ -131,7 +107,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 66e5977e39441cd6-EWR
+      - 66fd5ab3383432c7-EWR
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443";
         ma=86400
@@ -144,5 +120,5 @@ http_interactions:
         pinkest sweatshirt","handle":"the-pinkest-sweatshirt","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/unisex-crew-neck-sweatshirt-indigo-blue-front-6022514bda4aa_1024x1024_2x_d9285d4f-f042-4c86-9f45-c77b7205ae6d.png?v=1624912904"},"variants":{"edges":[{"node":{"price":"30.00"}}]}}}]}}},{"node":{"title":"prints","id":"gid:\/\/shopify\/Collection\/271099527356","products":{"edges":[{"node":{"id":"gid:\/\/shopify\/Product\/6889466626236","title":"general
         strike","handle":"general-strike","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/enhanced-matte-paper-poster-_in_-10x10-transparent-6023443cce20d_1024x1024_2x_8cb91b9b-a553-47d3-a834-f5277ee09559.png?v=1624913092"},"variants":{"edges":[{"node":{"price":"15.00"}}]}}}]}}},{"node":{"title":"stickers","id":"gid:\/\/shopify\/Collection\/271099560124","products":{"edges":[{"node":{"id":"gid:\/\/shopify\/Product\/6889468854460","title":"the
         baron","handle":"the-baron","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/kiss-cut-stickers-3x3-default-602252e270d09_1024x1024_2x_e48e0d34-cc57-4ef8-83b6-455a20212560.png?v=1624913183"},"variants":{"edges":[{"node":{"price":"5.00"}}]}}}]}}}]}},"extensions":{"cost":{"requestedQueryCost":632,"actualQueryCost":44,"throttleStatus":{"maximumAvailable":1000.0,"currentlyAvailable":956,"restoreRate":50.0}}}}'
-  recorded_at: Tue, 13 Jul 2021 21:26:49 GMT
+  recorded_at: Fri, 16 Jul 2021 18:39:37 GMT
 recorded_with: VCR 6.0.0

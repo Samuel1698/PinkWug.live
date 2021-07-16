@@ -7,5 +7,4 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 
   c.filter_sensitive_data('<SHOPIFY_API_SECRET>') {"#{ENV['SHOPIFY_API_SECRET']}"}
-  c.filter_sensitive_data('<SHOPIFY_API_LINK>') {"#{ENV['SHOPIFY_API_LINK']}"}
 end
