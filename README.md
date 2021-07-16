@@ -1,3 +1,4 @@
+[![Ruby](https://github.com/Samuel1698/PinkWug.live/actions/workflows/ruby.yml/badge.svg?branch=main)](https://github.com/Samuel1698/PinkWug.live/actions/workflows/ruby.yml)
 # Comic & Store web application for PinkWug
 
 ## A work in progress
