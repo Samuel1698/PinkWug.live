@@ -72,17 +72,6 @@
 		  		}
 		  	}
 		  }
-		  &:hover {
-		  	background-size: 15px;
-		  }
-		  &.active {
-		    background: image-url("icons8-info-lock.svg")50% 50%/20px no-repeat;
-		  }
-		  &:hover, &.active {
-		    .tooltiptext {
-		    	visibility: visible;
-		    }
-		  }
 		}
 	}
 	#Graph {
@@ -140,4 +129,30 @@
 }
 .disabled {
 	display: none !important;
+}
+@media (any-hover: hover) {
+	.columns .column .tooltip {
+		&:hover {
+			background-size: 15px;
+		}
+		&.active {
+			background: image-url("icons8-info-lock.svg")50% 50%/20px no-repeat;
+		}
+		&:hover, &.active {
+			.tooltiptext {
+				visibility: visible;
+			}
+		}
+	}
+}
+@media (hover: none) {
+	.columns .column .tooltip {
+		&:hover {
+			background: image-url("icons8-info-lock.svg")50% 50%/20px no-repeat;
+	  	background-size: 20px;
+	  	.tooltiptext {
+	  		visibility: visible;
+	  	}
+	  }
+	}
 }
