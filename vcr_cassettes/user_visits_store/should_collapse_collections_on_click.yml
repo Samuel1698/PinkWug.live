@@ -5,15 +5,15 @@ http_interactions:
     uri: https://pinkwug-dev-store.myshopify.com/admin/api/2021-07/graphql.json
     body:
       encoding: UTF-8
-      string: "\n\t\t  {\n\t\t\t  collections(first: 10) {\n\t\t\t    edges {\n\t\t\t
-        \     node {\n\t\t\t      \ttitle\n\t\t\t        id\n\t\t\t        products(first:
-        12) {\n\t\t\t          edges {\n\t\t\t            node {\n\t\t\t              id\n\t\t\t
-        \             title\n\t\t\t              handle\n\t\t\t              featuredImage
-        {\n\t\t\t                originalSrc\n\t\t\t              }\n\t\t\t              variants(first:
-        1) {\n\t\t\t                edges {\n\t\t\t                  node {\n\t\t\t
-        \                   price\n\t\t\t                  }\n\t\t\t                }\n\t\t\t
-        \             }\n\t\t\t            }\n\t\t\t          }\n\t\t\t        }\n\t\t\t
-        \     }\n\t\t\t    }\n\t\t\t  }\n\t\t\t}\n\t\t  "
+      string: "\n\t\t    {\n\t\t      collections(first: 10) {\n\t\t        edges
+        {\n\t\t          node {\n\t\t            title\n\t\t            id\n\t\t            products(first:
+        12) {\n\t\t              edges {\n\t\t                node {\n\t\t                  id\n\t\t
+        \                 title\n\t\t                  handle\n\t\t                  featuredImage
+        {\n\t\t                    originalSrc\n\t\t                  }\n\t\t                  variants(first:
+        1) {\n\t\t                    edges {\n\t\t                      node {\n\t\t
+        \                       price\n\t\t                      }\n\t\t                    }\n\t\t
+        \                 }\n\t\t                }\n\t\t              }\n\t\t            }\n\t\t
+        \         }\n\t\t        }\n\t\t      }\n\t\t    }\n\t\t    "
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -33,7 +33,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 16 Jul 2021 18:39:38 GMT
+      - Fri, 16 Jul 2021 19:50:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -81,7 +81,7 @@ http_interactions:
         https://c.paypal.com https://maps.googleapis.com https://www.google-analytics.com
         https://v.shopify.com https://widget.intercom.io https://js.intercomcdn.com
         ''self'' ''unsafe-inline'' ''unsafe-eval''; upgrade-insecure-requests; report-uri
-        /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=517eee9a-24fc-49ed-bf2e-e013c0e4ba95'
+        /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=9c9c53e7-16a0-4fcf-9df5-f0ee0551026e'
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -89,7 +89,7 @@ http_interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Xss-Protection:
-      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=517eee9a-24fc-49ed-bf2e-e013c0e4ba95
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=9c9c53e7-16a0-4fcf-9df5-f0ee0551026e
       X-Dc:
       - gcp-us-east1,gcp-us-east1,gcp-us-east1
       Nel:
@@ -99,7 +99,7 @@ http_interactions:
       - '{"group":"network-errors","max_age":2592000,"endpoints":[{"url":"https://monorail-edge.shopifysvc.com/v1/reports/nel/20190325/shopify"}]}'
       - '{"group":"network-errors","max_age":2592000,"endpoints":[{"url":"https://monorail-edge.shopifysvc.com/v1/reports/nel/20190325/shopify"}]}'
       X-Request-Id:
-      - 517eee9a-24fc-49ed-bf2e-e013c0e4ba95
+      - 9c9c53e7-16a0-4fcf-9df5-f0ee0551026e
       Cf-Cache-Status:
       - DYNAMIC
       Expect-Ct:
@@ -107,7 +107,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 66fd5ab6dc0117e9-EWR
+      - 66fdc2609da01841-EWR
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443";
         ma=86400
@@ -119,6 +119,6 @@ http_interactions:
         pinkest hoodie","handle":"the-pinkest-hoodie","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/unisex-heavy-blend-hoodie-light-blue-front-60224fcec9112_1024x1024_2x_b85679c8-397c-437b-a063-53883ca07f83.png?v=1624912859"},"variants":{"edges":[{"node":{"price":"30.00"}}]}}},{"node":{"id":"gid:\/\/shopify\/Product\/6886004129980","title":"the
         pinkest sweatshirt","handle":"the-pinkest-sweatshirt","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/unisex-crew-neck-sweatshirt-indigo-blue-front-6022514bda4aa_1024x1024_2x_d9285d4f-f042-4c86-9f45-c77b7205ae6d.png?v=1624912904"},"variants":{"edges":[{"node":{"price":"30.00"}}]}}}]}}},{"node":{"title":"prints","id":"gid:\/\/shopify\/Collection\/271099527356","products":{"edges":[{"node":{"id":"gid:\/\/shopify\/Product\/6889466626236","title":"general
         strike","handle":"general-strike","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/enhanced-matte-paper-poster-_in_-10x10-transparent-6023443cce20d_1024x1024_2x_8cb91b9b-a553-47d3-a834-f5277ee09559.png?v=1624913092"},"variants":{"edges":[{"node":{"price":"15.00"}}]}}}]}}},{"node":{"title":"stickers","id":"gid:\/\/shopify\/Collection\/271099560124","products":{"edges":[{"node":{"id":"gid:\/\/shopify\/Product\/6889468854460","title":"the
-        baron","handle":"the-baron","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/kiss-cut-stickers-3x3-default-602252e270d09_1024x1024_2x_e48e0d34-cc57-4ef8-83b6-455a20212560.png?v=1624913183"},"variants":{"edges":[{"node":{"price":"5.00"}}]}}}]}}}]}},"extensions":{"cost":{"requestedQueryCost":632,"actualQueryCost":44,"throttleStatus":{"maximumAvailable":1000.0,"currentlyAvailable":940,"restoreRate":50.0}}}}'
-  recorded_at: Fri, 16 Jul 2021 18:39:38 GMT
+        baron","handle":"the-baron","featuredImage":{"originalSrc":"https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/5623\/7500\/products\/kiss-cut-stickers-3x3-default-602252e270d09_1024x1024_2x_e48e0d34-cc57-4ef8-83b6-455a20212560.png?v=1624913183"},"variants":{"edges":[{"node":{"price":"5.00"}}]}}}]}}}]}},"extensions":{"cost":{"requestedQueryCost":632,"actualQueryCost":44,"throttleStatus":{"maximumAvailable":1000.0,"currentlyAvailable":942,"restoreRate":50.0}}}}'
+  recorded_at: Fri, 16 Jul 2021 19:50:24 GMT
 recorded_with: VCR 6.0.0
