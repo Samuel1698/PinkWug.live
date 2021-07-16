@@ -202,6 +202,8 @@ GEM
     msgpack (1.4.2)
     newrelic_rpm (7.2.0)
     nio4r (2.5.7)
+    nokogiri (1.11.7-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -262,7 +264,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
-    rinku (1.2.2)
+    rinku (2.0.6)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -341,6 +343,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  x86_64-darwin-20
   x86_64-linux
 
 DEPENDENCIES
@@ -365,7 +368,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
   randumb
-  rinku (~> 1.2.2)
+  rinku (~> 2.0, >= 2.0.6)
   rspec-rails (~> 5.0, >= 5.0.1)
   sass-rails (>= 6)
   selenium-webdriver
