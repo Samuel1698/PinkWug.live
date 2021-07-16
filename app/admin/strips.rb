@@ -21,7 +21,6 @@ ActiveAdmin.register Strip do
       end
     f.column :title
     f.column :created_at
-    f.column :updated_at
     f.actions
   end
   

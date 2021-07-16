@@ -84,4 +84,5 @@
 - [x] 404 page emote
 - [ ] Caching/Preloading comics
 - [ ] Archive group by months
-- [ ] Height of graphs 270px to avoid Custom timeframe selector
+- [ ] Tooltip about custom dates not displaying properly
+- [ ] Hover state for touch devices

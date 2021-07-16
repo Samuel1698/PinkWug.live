@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use autoprefixer for browser compatibility
 gem "autoprefixer-rails"
 # Use rinku to bring back auto_link functionality to rails
-gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'
+gem 'rinku', '~> 2.0', '>= 2.0.6'
 # Use newrelic for statistics about page response time
 gem 'newrelic_rpm'
 # Use aws-sdk-s3 to configure Rails to use Amazon Web Services
