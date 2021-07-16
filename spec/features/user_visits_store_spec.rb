@@ -1,4 +1,5 @@
 require 'rails_helper'
+Capybara.javascript_driver = :selenium_chrome_headless
 
 RSpec.feature "user visits store", type: :feature, js: true do
   before do

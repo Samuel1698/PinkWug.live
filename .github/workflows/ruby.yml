@@ -54,11 +54,11 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: webpacker
-      run: | 
+      run: |
         yarn upgrade
         bundle exec rails webpacker:install
     - name: Create DB
       run: |
           bin/rails db:prepare
     - name: Run tests
-      run: bundle exec rake
+      run: rspec
