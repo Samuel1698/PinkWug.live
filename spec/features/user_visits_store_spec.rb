@@ -4,10 +4,9 @@ Capybara.javascript_driver = :selenium_chrome_headless
 RSpec.feature "user visits store", type: :feature, js: true do
   before do
     VCR.use_cassette('shopify') do 
-      uri = URI.parse("https://#{ENV['SHOPIFY_API_LINK']}/admin/api/2021-07/graphql.json")
+      uri = URI.parse("https://pinkwug-dev-store.myshopify.com/admin/api/2021-07/graphql.json")
       request = Net::HTTP::Post.new(uri)
       request.content_type = "application/graphql"
-      request["X-Shopify-Access-Token"] = "#{ENV['SHOPIFY_API_SECRET']}"
       request.body = "
         {
           collections(first: 10) {
