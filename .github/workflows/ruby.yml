@@ -42,6 +42,7 @@ jobs:
       GEMFILE_RUBY_VERSION: 3.0.0
       PGHOST: localhost
       PGUSER: pinkwug
+      PGPASSWORD: 465469
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
