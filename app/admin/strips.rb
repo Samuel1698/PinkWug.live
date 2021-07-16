@@ -41,12 +41,13 @@ ActiveAdmin.register Strip do
   form do |f|
     f.inputs "Comic Details" do
       f.input :title
-      f.input :description, placeholder: "Short description. Only visible on search results"
-      f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Don't repeat title", placeholder: "Example: General Strike, Capitalism, Unions, Amazon", required: true
+      f.input :description, hint: "Short description. Only visible on search results"
+      f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon", required: true
       f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
       f.input :image, as: :file if !f.object.image.attached?
-      f.input :image, hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
-      f.input :transcript, hint: "Not required. Good for accessibility and searchability.", :input_html => { :rows => 5 }
+      f.input :image, label: "Comic Image", hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
+      f.input :transcript, hint: "Good for accessibility and searchability. Describe every pannel on the comic.", :input_html => { :rows => 5 }
+      a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
       f.input :created_at, as: :date_picker, label: "Created in"
     end
     f.actions 

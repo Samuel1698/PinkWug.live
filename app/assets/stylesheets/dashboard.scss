@@ -130,6 +130,48 @@
 .disabled {
 	display: none !important;
 }
+.formtastic.strip {
+	ol {
+		input, textarea {
+			border-radius: 7px;
+		}
+		p {
+			color: grey;
+			width: 50%;
+		}
+	}
+	#strip_description {
+		min-height: 4em;
+	}
+	#strip_image_input {
+		#strip_image {
+			padding-top: 5px;
+		}
+		img {
+			display: block;
+			margin-left: 22.5%;
+			margin-right: auto;
+			width: 54%;
+		}
+	}
+	#strip_transcript_input {
+		margin-bottom: 0px;
+		p {
+			margin-bottom: 0px;
+		}
+	}
+	.transcript_link {
+		display: block;
+		padding-bottom: 10px;
+		margin: 5px 0 5px 25%;
+		font-size: 14px;
+		font-style: italic;
+		color: #21A793;
+		&:hover {
+			color: skyblue;
+		}
+	}
+}
 @media (any-hover: hover) {
 	.columns .column .tooltip {
 		&:hover {
@@ -154,5 +196,19 @@
 	  		visibility: visible;
 	  	}
 	  }
+	}
+}
+@media (max-width: 575px){
+	#active_admin_content .formtastic.strip {
+		ol p {
+		width: 100%;
+		margin: 0;
+		}
+		#strip_image_input {
+			img {
+				margin-left: auto;
+				width: 100%;
+			}
+		}
 	}
 }
