@@ -1,6 +1,4 @@
 require 'rails_helper'
-require 'capybara/poltergeist'
-Capybara.javascript_driver = :poltergeist
 
 RSpec.feature "archive", type: :feature, js: true do
   before do 
