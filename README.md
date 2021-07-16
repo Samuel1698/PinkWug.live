@@ -9,7 +9,6 @@ This web app is currently in deployment, subject to many changes as I work close
 
 ## Dependencies:
 * [Imagemagick VIPS](https://github.com/janko/image_processing)
-* [PhantomJS](https://phantomjs.org/download.html) (For tests)
 
 ## To run this application you need
 * Ruby 3.0.0

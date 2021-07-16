@@ -117,7 +117,6 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     childprocess (3.0.0)
-    cliver (0.3.2)
     concurrent-ruby (1.1.9)
     crack (0.4.5)
       rexml
@@ -208,10 +207,6 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
-    poltergeist (1.18.1)
-      capybara (>= 2.1, < 4)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     public_suffix (4.0.6)
     puma (4.3.8)
       nio4r (~> 2.0)
@@ -364,7 +359,6 @@ DEPENDENCIES
   meta-tags
   newrelic_rpm
   pg
-  poltergeist
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
   randumb
