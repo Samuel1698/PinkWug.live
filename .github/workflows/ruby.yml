@@ -25,7 +25,7 @@ jobs:
         image: postgres:13.3
         env:
           POSTGRES_USER: pinkwug
-          POSTGRES_PASSWORD: "465469"
+          POSTGRES_PASSWORD: ""
           POSTGRES_DB: pinkwug
         ports:
           - 5432:5432
@@ -42,7 +42,6 @@ jobs:
       GEMFILE_RUBY_VERSION: 3.0.0
       PGHOST: localhost
       PGUSER: pinkwug
-      PGPASSWORD: 465469
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
@@ -53,6 +52,10 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: webpacker
+      run: | 
+        yarn upgrade
+        bundle exec rails webpacker:install
     - name: Create DB
       run: |
           bin/rails db:prepare
