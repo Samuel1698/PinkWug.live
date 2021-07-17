@@ -87,4 +87,3 @@
 - [ ] Tooltip about custom dates not displaying properly
 - [ ] Hover state for touch devices (Meida queries for all types of hover?)
 - [ ] Detect if mobile phone is on landscape mode
-- [ ] Author comment links go beyond parent
