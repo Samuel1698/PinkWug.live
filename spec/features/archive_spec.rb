@@ -50,6 +50,9 @@ RSpec.feature "archive", type: :feature, js: true do
     end
   end
   it "should not have broken images" do
+    within page.all('.row').last do 
+      find('.cell')
+    end
     all_images = page.all('img')
     all_images.each do |img|
       get img[:src]
