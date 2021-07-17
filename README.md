@@ -28,4 +28,5 @@ This web app is currently in deployment, subject to many changes as I work close
   * bundle install
   * yarn upgrade
   * bundle exec rails webpacker:install (Make sure the parent folder doesnt have a space, this causes webpacker error)
+* rails db:reset
 
