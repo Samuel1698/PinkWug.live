@@ -16,7 +16,7 @@ This web app is currently in deployment, subject to many changes as I work close
 * Rails 6.0.3.7
 
 * ### PostgresQL database named 'pinkwug'
-  * CREATE ROLE pinkwug WITH LOGIN PASSWORD '<any password>';
+  * CREATE ROLE pinkwug WITH LOGIN PASSWORD \'\<any password\>\';
   * ALTER ROLE pinkwug CREATEDB;
   * Type \du to see your new user
   * Quit the postgres console with \q
