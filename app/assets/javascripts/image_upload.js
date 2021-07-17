@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", function(){
     var img = document.querySelector(".image-element");
 
     if (img.classList.contains("edit")){
-      dropRegion.classList.add("preview")
+      dropRegion.classList.add("preview");
+    }
+    else {
+      imagePreviewRegion.classList.add("hidden");
     }
 
     dropRegion.addEventListener('click', function() {
@@ -70,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function(){
       return true;
     }
     function previewAnduploadImage(image) {
-      // Select the image element 
+      // remove the hidden attribute of the img div
+      imagePreviewRegion.classList.remove("hidden");
       // read the image...
       var reader = new FileReader();
       reader.onload = function(e) {
