@@ -423,6 +423,7 @@ main {
   border-radius: 12px;
   position: relative;
   p {
+    word-wrap: break-word;
     font-size: 0.8rem;
     margin: 0;
     &:last-child {
