@@ -15,7 +15,7 @@
 //-----------------------------------------------
 // For desktops & Devices that dont support hover
 //-----------------------------------------------
-@media (hover: none) {
+@media (hover: none) and (pointer: coarse) {
 	header .header_wrapper nav ul li {
 		a:active {
 			border-radius: 6px;
@@ -26,6 +26,12 @@
 	.comment {
 		a:active {
 			color: limegreen;
+		}
+	}
+	.share button:active {
+		span {
+			visibility: visible;
+			z-index: 0;
 		}
 	}
 }
