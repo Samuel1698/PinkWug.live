@@ -42,10 +42,14 @@
 				border-radius: 7px;
 				background-color: $pink;
 				border: 2px solid black;
-				&:focus, &:hover, &:focus-visible, &:active {
-					background-color: white;
-				}
 			}
+		}
+	}
+}
+@media (hover: hover) and (pointer: fine) {
+	.content .link button {
+		&:focus, &:hover, &:focus-visible, &:active {
+			background-color: white;
 		}
 	}
 }

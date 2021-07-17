@@ -1,5 +1,8 @@
 @import "variables";
-// Only for kofi-patreon logo
+
+//-----------------------------------------------
+// Only for patreon logo
+//-----------------------------------------------
 @media (max-width: 554px){
 	.header_buttons button {
 		&.patreon {
@@ -10,13 +13,38 @@
 	}
 }
 //-----------------------------------------------
-// For laptops with touchpads
+// For desktops & Devices that dont support hover
 //-----------------------------------------------
-@media (hover: hover) and (pointer: fine) {
-	.header_wrapper nav ul li a:hover {
-		border-radius: 6px;
-		color: $dark-brown;
-		background-color: white;
+@media (hover: none) {
+	header .header_wrapper nav ul li {
+		a:active {
+			border-radius: 6px;
+		  color: $dark-brown;
+		  background-color: white;
+		}
+	}
+}
+//-----------------------------------------------
+// For desktops & Devices that support hover
+//-----------------------------------------------
+@media (hover: hover) {
+	header .header_wrapper nav ul li {
+		a:hover, a:focus-visible {
+		  border-radius: 6px;
+		  color: $dark-brown;
+		  background-color: white;
+		}
+	}
+	.comment {
+		a:hover {
+			color: limegreen;
+		}
+	}
+	.share button:hover{
+		span {
+			visibility: visible;
+			z-index: 0;
+		}
 	}
 }
 //-----------------------------------------------
