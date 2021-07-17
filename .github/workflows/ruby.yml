@@ -61,6 +61,6 @@ jobs:
       run: |
           bin/rails db:prepare
     - name: Compile assets
-      run: rails assets:precompile
+      run: rake assets:precompile
     - name: Run tests
       run: bundle exec rake
