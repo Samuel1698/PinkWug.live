@@ -130,7 +130,7 @@
 .disabled {
 	display: none !important;
 }
-@media (any-hover: hover) {
+@media (hover: hover) {
 	.columns .column .tooltip {
 		&:hover {
 			background-size: 15px;
