@@ -62,5 +62,5 @@ jobs:
           bin/rails db:prepare
     - name: Run tests
       run: |
-        bundle exec RAILS_ENV=test rake assets:precompile
+        RAILS_ENV=test bundle exec rake assets:precompile
         bundle exec rake
