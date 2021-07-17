@@ -38,7 +38,7 @@ ActiveAdmin.register_page "Dashboard" do
             span "Good"
           end
           div class: "average" do 
-            span "0.2&nbsp;-&nbsp;0.25".html_safe
+            span "0.1&nbsp;-&nbsp;0.25".html_safe
             span "Needs&nbsp;Work".html_safe
           end
           div class: "bad" do
