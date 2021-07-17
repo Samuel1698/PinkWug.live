@@ -45,7 +45,9 @@ jobs:
       PGPASSWORD: "4"
     steps:
     - name: Install imagemagick vips
-      run:  brew install imagemagick vips
+      run:  |
+        brew install --build-from-source vips
+        brew install imagemagick
     - uses: actions/checkout@v2
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
