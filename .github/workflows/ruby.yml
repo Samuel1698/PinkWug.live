@@ -44,8 +44,6 @@ jobs:
       PGUSER: pinkwug
       PGPASSWORD: "4"
     steps:
-    - name: Install imagemagick
-      run:  sudo apt install imagemagick
     - uses: actions/checkout@v2
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
@@ -62,5 +60,7 @@ jobs:
     - name: Create DB
       run: |
           bin/rails db:prepare
+    - name: Compile assets
+      run: rails assets:precompile
     - name: Run tests
       run: bundle exec rake
