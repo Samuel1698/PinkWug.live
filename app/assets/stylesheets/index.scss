@@ -14,10 +14,10 @@
 	  width: 32px;
 	  height: 32px;
 	  cursor: pointer;
-	  background: image-url("icons8-image-gallery.svg") center/32px no-repeat;
+	  background: image-url("layout-grid.svg") center/32px no-repeat;
 	  border: 0;
 	  &.gallery {
-	    background: image-url("icons8-list.svg") center/32px no-repeat;
+	    background: image-url("layout-list.svg") center/32px no-repeat;
 	  }
 	  &.hidden {
 	  	display: none;

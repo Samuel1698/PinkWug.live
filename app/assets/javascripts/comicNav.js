@@ -45,12 +45,14 @@ function hitEnter(){
 function updateClipboard(newClip) {
   navigator.clipboard.writeText(newClip).then(function() {
     /* clipboard successfully set */
-    tooltip.firstElementChild.innerHTML = 'link copied';    
+    tooltip.firstElementChild.innerHTML = 'link copied';
+    tooltip.classList.add("active");    
   }, function() {
     /* clipboard write failed */
     tooltip.firstElementChild.innerHTML =  'copy failed';   
   });
   setTimeout(function(){
     tooltip.firstElementChild.innerHTML = 'copy link';
-  }, 2000);
+    tooltip.classList.remove("active");
+  }, 2500);
 }

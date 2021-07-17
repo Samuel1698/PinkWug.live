@@ -449,7 +449,7 @@ main {
   }
   button { // Tooltip 
     position: absolute;
-    background: image-url("icons8-copy") no-repeat;
+    background: image-url("copy.svg") no-repeat;
     height: 24px;
     width: 24px;
     right: 10px;
@@ -480,6 +480,11 @@ main {
         border-style: solid;
         border-color: $dark-brown transparent transparent transparent;
       }
+    }
+    &.active {
+      background: image-url("clipboard-check.svg") no-repeat;
+      visibility: visible;
+      z-index: 0;
     }
     &:hover {
       span {
