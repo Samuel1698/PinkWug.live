@@ -1,4 +1,5 @@
 [![Ruby](https://github.com/Samuel1698/PinkWug.live/actions/workflows/ruby.yml/badge.svg?branch=main)](https://github.com/Samuel1698/PinkWug.live/actions/workflows/ruby.yml)
+[![CodeQL](https://github.com/Samuel1698/PinkWug.live/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Samuel1698/PinkWug.live/actions/workflows/codeql-analysis.yml)
 ## Dependencies:
 * [Imagemagick VIPS](https://github.com/janko/image_processing)
 
