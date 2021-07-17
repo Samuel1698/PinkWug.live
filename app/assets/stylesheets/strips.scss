@@ -207,8 +207,7 @@ header {
           a {
             font-size: 0.8rem;
             display: block;
-            padding-top: .5rem;
-            padding-bottom: .5rem;
+            padding: 0.5rem;
           }
           svg { // Menu Icon
             display: inline-block;
@@ -221,14 +220,6 @@ header {
             border-radius: 6px;
             color: $dark-brown;
             background-color: white;
-          }
-          a {
-            padding: 0.5rem;
-            &:focus, &:hover, &:focus-visible, &:active {
-              border-radius: 6px;
-              color: $dark-brown;
-              background-color: white;
-            }
           }
         }
         &.active li {
