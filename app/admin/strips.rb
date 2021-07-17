@@ -39,14 +39,25 @@ ActiveAdmin.register Strip do
   end
 
   form do |f|
+    f.semantic_errors *f.object.errors.keys
     f.inputs "Comic Details" do
       f.input :title
       f.input :description, hint: "Short description. Only visible on search results"
       f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon", required: true
       f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
-      f.input :image, as: :file if !f.object.image.attached?
-      f.input :image, label: "Comic Image", hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
-      f.input :transcript, hint: "Good for accessibility and searchability. Describe every pannel on the comic.", :input_html => { :rows => 5 }
+      span "Image*", id: "image-label"
+      div id: "drop-region" do
+        f.input :image, as: :file
+        div "Drag & Drop Image or click to upload", class: "drop-message"
+        div id: "image-preview" do
+          img class: "image-element" unless strip.image.attached?
+          img src: url_for(strip.image), class: "image-element edit" if strip.image.attached?
+          div class: "overlay" 
+        end
+      end
+      # unless f.object.image.attached?
+      # f.input :image, label: "Comic Image", hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
+      f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
       a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
       f.input :created_at, as: :date_picker, label: "Created in"
     end
