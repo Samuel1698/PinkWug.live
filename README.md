@@ -16,7 +16,7 @@ This web app is currently in deployment, subject to many changes as I work close
 * Rails 6.0.3.7
 
 * ### PostgresQL database named 'pinkwug'
-  * CREATE ROLE pinkwug WITH LOGIN PASSWORD '<any password>';
+  * CREATE ROLE pinkwug WITH LOGIN PASSWORD \'\<any password\>\';
   * ALTER ROLE pinkwug CREATEDB;
   * Type \du to see your new user
   * Quit the postgres console with \q
@@ -28,4 +28,5 @@ This web app is currently in deployment, subject to many changes as I work close
   * bundle install
   * yarn upgrade
   * bundle exec rails webpacker:install (Make sure the parent folder doesnt have a space, this causes webpacker error)
+* rails db:reset
 
