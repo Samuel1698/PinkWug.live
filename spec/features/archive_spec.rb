@@ -5,22 +5,25 @@ RSpec.feature "archive", type: :feature, js: true do
   before do 
     # Visit archive
     visit strips_path
-    # Click on Toggle
+  end
+  it "should display gallery view" do 
+    # Click on Toggle Twice
     find('.toggle').click
+    find('.toggle').click
+    # Check if div table has gallery class
+    expect(page).to have_css('.table.gallery')
   end
   it "should display table view" do 
+    # Click on Toggle
+    find('.toggle').click
     # Expect div to have line class
     expect(page).to have_css('.line')
     # Expect page to NOT have gallery
     expect(page).to_not have_css('.table.gallery')
   end
-  it "should display gallery view" do 
-    # Click on Toggle again
-    find('.toggle').click
-    # Check if div table has gallery class
-    expect(page).to have_css('.table.gallery')
-  end
   it "should toggle title & date order" do 
+    # Click on Toggle
+    find('.toggle').click
     # Click on Title
     find('.title', match: :first).click 
     # Within second Row, check the title's content
@@ -46,4 +49,11 @@ RSpec.feature "archive", type: :feature, js: true do
       expect(page).to have_text("05/07/2021")
     end
   end
+  it "should not have broken images" do
+    all_images = page.all('img')
+    all_images.each do |img|
+      get img[:src]
+      expect(response).to be_successful
+    end
+  end  
 end
