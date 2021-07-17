@@ -13,7 +13,7 @@
 	}
 }
 //-----------------------------------------------
-// For desktops & Devices that dont support hover
+// For iPads & Devices that dont support hover
 //-----------------------------------------------
 @media (hover: none) and (pointer: coarse) {
 	header .header_wrapper nav ul li {
@@ -38,9 +38,9 @@
 //-----------------------------------------------
 // For desktops & Devices that support hover
 //-----------------------------------------------
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) {
 	header .header_wrapper nav ul li {
-		a:hover, a:focus-visible {
+		a:hover, a:focus-visible, &:hover a {
 		  border-radius: 6px;
 		  color: $dark-brown;
 		  background-color: white;
