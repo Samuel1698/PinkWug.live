@@ -49,14 +49,4 @@ RSpec.feature "archive", type: :feature, js: true do
       expect(page).to have_text("05/07/2021")
     end
   end
-  it "should not have broken images" do
-    within page.all('.row').last do 
-      find('.cell')
-    end
-    all_images = page.all('img')
-    all_images.each do |img|
-      get img[:src]
-      expect(response).to be_successful
-    end
-  end  
 end

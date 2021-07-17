@@ -60,7 +60,6 @@ jobs:
     - name: Create DB
       run: |
           bin/rails db:prepare
-    - name: Run tests
+    - name: Run Tests
       run: |
-        RAILS_ENV=test bundle exec rake assets:precompile
         bundle exec rake
