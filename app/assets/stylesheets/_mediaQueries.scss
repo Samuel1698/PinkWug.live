@@ -39,9 +39,14 @@
 // For desktops & Devices that support hover
 //-----------------------------------------------
 @media (hover: hover) and (pointer: fine) {
-	header .header_wrapper nav ul li {
-		a:hover, a:focus-visible {
+	.header_wrapper nav ul li {
+		a:hover {
 		  border-radius: 6px;
+		  color: $dark-brown;
+		  background-color: white;
+		}
+		a:focus-visible {
+			border-radius: 6px;
 		  color: $dark-brown;
 		  background-color: white;
 		}
