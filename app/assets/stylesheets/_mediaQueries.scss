@@ -23,11 +23,16 @@
 		  background-color: white;
 		}
 	}
+	.comment {
+		a:active {
+			color: limegreen;
+		}
+	}
 }
 //-----------------------------------------------
 // For desktops & Devices that support hover
 //-----------------------------------------------
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
 	header .header_wrapper nav ul li {
 		a:hover, a:focus-visible {
 		  border-radius: 6px;
