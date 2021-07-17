@@ -55,8 +55,6 @@ ActiveAdmin.register Strip do
           div class: "overlay" 
         end
       end
-      # unless f.object.image.attached?
-      # f.input :image, label: "Comic Image", hint: "If you change image file, it wont show up here until you click Update!", image_preview: :true if f.object.image.attached?
       f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
       a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
       f.input :created_at, as: :date_picker, label: "Created in"

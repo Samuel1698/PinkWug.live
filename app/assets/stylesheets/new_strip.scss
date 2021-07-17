@@ -85,6 +85,9 @@
   #image-preview {
     display: inline-block;
     position:relative;
+    &.hidden {
+      display: none;
+    }
     img {
       width: 100%
     }
