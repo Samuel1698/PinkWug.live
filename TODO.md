@@ -85,4 +85,5 @@
 - [ ] Caching/Preloading comics
 - [ ] Archive group by months
 - [ ] Tooltip about custom dates not displaying properly
-- [ ] Hover state for touch devices
+- [ ] Hover state for touch devices (Meida queries for all types of hover?)
+- [ ] Detect if mobile phone is on landscape mode
