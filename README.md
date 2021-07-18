@@ -105,12 +105,10 @@ ALTER ROLE <username> CREATEDB;
 ```shell
 psql postgres -U <username>
 ```
-
+  Then
 ```shell
 CREATE DATABASE pinkwug;
-```
 
-```shell
 CREATE DATABASE pinkwug_test;
 ```
 
