@@ -28,6 +28,7 @@ gem 'devise', '~> 4.8'
 gem 'friendly_id', '~> 5.4.0'
 # Use Active Admin for content management
 gem 'activeadmin', '~> 2.2'
+# Use artic admin to override how aa looks
 gem 'arctic_admin'
 # Use meta-tags for SEO
 gem 'meta-tags'
