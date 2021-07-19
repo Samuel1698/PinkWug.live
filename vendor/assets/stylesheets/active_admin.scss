@@ -7,6 +7,7 @@
 // For example, to change the sidebar width:
 // $sidebar-width: 242px;
 
+$primary-color: #21A793;
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "arctic_admin/base";
@@ -16,7 +17,6 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
-
 body.index {
 	th.sortable.col {
 		a {

@@ -17,7 +17,7 @@ ActiveAdmin.register Strip do
   index download_links: false do |f|
     f.selectable_column 
     f.column :image do |strip|
-        image_tag url_for(strip.image), width: "200px"
+        image_tag url_for(strip.image.variant(resize_to_limit:[200,nil]))
       end
     f.column :title
     f.column :created_at
@@ -31,7 +31,7 @@ ActiveAdmin.register Strip do
       row :keywords
       row :comment unless strip.comment.blank?
       row :image do |strip|
-        image_tag url_for(strip.image), width: "700px"
+        image_tag url_for(strip.image.variant(resize_to_fit:[700,nil]))
       end
       row :transcript unless strip.transcript.blank?
       row :created_at
@@ -57,18 +57,20 @@ ActiveAdmin.register Strip do
       end
       f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
       a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
-      f.input :created_at, as: :date_picker, label: "Created In", hint: "If blank will default to Today", date_picker_options: { max_time: "+0D" }
+      f.input :created_at, as: :datepicker, label: "Created In", hint: "If blank will default to Today",input_html: { value: strip.created_at.try(:strftime, '%B %d %Y')}, datepicker_options: { max_date: "+0D", dateFormat: "MM dd yy" }
     end
     f.actions 
   end
 
   before_save do |strip|
     strip.keywords_raw = params[:strip][:keywords_raw].split(", ") unless params[:strip].nil? or params[:strip][:keywords_raw].nil?
-    hour   = Time.new().strftime('%H').to_i * 3600
-    minute = Time.new().strftime('%M').to_i * 60
-    second = Time.new().strftime('%S').to_i
-    strip.created_at = strip.created_at + hour + minute + second unless strip.created_at.nil?
-    strip.created_at = Time.new() if strip.created_at.nil?
+    strip.created_at = Time.new().utc if strip.created_at.nil?
+    if ((strip.created_at.strftime('%H') == "00") && (strip.created_at.strftime('%M') == "00") && (strip.created_at.strftime('%S') == "00"))  
+      hour   = Time.new().utc.strftime('%H').to_i * 60 * 60
+      minute = Time.new().utc.strftime('%M').to_i * 60
+      second = Time.new().utc.strftime('%S').to_i
+      strip.created_at = strip.created_at + hour + minute + second
+    end
   end
   controller do 
     def find_resource

@@ -1,7 +1,14 @@
+$primary-color: #21A793;
 .formtastic.strip {
   ol {
     input, textarea, #drop-region {
       border-radius: 7px;
+      transition: border 0.25s linear;
+      &:hover {
+        border-color: $primary-color;
+        appearance: none;
+        transition: border 0.25s linear;
+      }
     }
     p, #drop-region {
       color: grey;
@@ -65,7 +72,6 @@
   }
   #drop-region {
     background-color: #fff;
-    border-radius: 20px;
     border: 1px solid #e4eaec;
     width: 500px;
     padding: 60px 40px;
@@ -73,6 +79,7 @@
     cursor:pointer;
     transition:.3s;
     margin-bottom: 20px;
+    transition: border 0.25s linear;
     li {
       border: 0;
       clip: rect(0 0 0 0);
