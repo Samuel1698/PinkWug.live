@@ -40,7 +40,7 @@
 	<%= render 'comicNav' %>
 	<div class="comment", tabindex="0">
 		<%= image_tag("wugART@3x.png", style: "width: 32px", alt: "") %>
-		<p>published in <%= @strip.created_at.strftime("%b %-d, %Y") %> </p>	
+		<p>published in <%= @strip.created_at.strftime("%B %-d, %Y") %> </p>	
 		<%= Rinku.auto_link(simple_format(@strip.comment), :all, 'target="_blank"').html_safe unless @strip.comment.blank? %>
 	</div>
 	<div class="share", tabindex="0">
