@@ -57,7 +57,7 @@ ActiveAdmin.register Strip do
       end
       f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
       a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
-      f.input :created_at, as: :date_picker, label: "Created In", hint: "If blank will default to Today"
+      f.input :created_at, as: :date_picker, label: "Created In", hint: "If blank will default to Today", date_picker_options: { max_time: "+0D" }
     end
     f.actions 
   end
