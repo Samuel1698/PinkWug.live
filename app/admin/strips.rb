@@ -42,7 +42,7 @@ ActiveAdmin.register Strip do
     f.semantic_errors *f.object.errors.keys
     f.inputs "Comic Details" do
       f.input :title
-      f.input :description, hint: "Short description. Only visible on search results & link embeds"
+      f.input :description, as: :text, hint: "Short description. Only visible on search results & link embeds", :input_html => { :rows => 2 }
       f.input :keywords_raw, as: :string, label: "Tags", hint: "What is this comic about? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon", required: true
       f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
       span "Image*", id: "image-label"
