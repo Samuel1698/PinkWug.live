@@ -24,12 +24,15 @@
   }
   #strip_transcript_input {
     margin-bottom: 0px;
+    textarea {
+      resize: vertical;
+    }
     p {
       margin-bottom: 0px;
     }
   }
   .transcript_link {
-    display: block;
+    display: inline-block;
     padding-bottom: 10px;
     margin: 5px 0 5px 25%;
     font-size: 14px;
@@ -38,6 +41,9 @@
     &:hover {
       color: skyblue;
     }
+  }
+  #strip_created_at {
+    width: 20%;
   }
 }
 .formtastic.strip {

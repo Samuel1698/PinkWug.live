@@ -8,7 +8,7 @@ ActiveAdmin.register Strip do
   filter :created_at
 
   ActiveAdmin.setup do |config|
-    config.localize_format = :long
+    config.localize_format = :short
   end
 
   # Sort order for index
@@ -17,7 +17,7 @@ ActiveAdmin.register Strip do
   index download_links: false do |f|
     f.selectable_column 
     f.column :image do |strip|
-        image_tag url_for(strip.image.variant(resize_to_limit:[200,10000]))
+        image_tag url_for(strip.image), width: "200px"
       end
     f.column :title
     f.column :created_at
@@ -31,7 +31,7 @@ ActiveAdmin.register Strip do
       row :keywords
       row :comment unless strip.comment.blank?
       row :image do |strip|
-        image_tag url_for(strip.image.variant(resize_to_fit:[700,10000]))
+        image_tag url_for(strip.image), width: "700px"
       end
       row :transcript unless strip.transcript.blank?
       row :created_at
@@ -42,7 +42,7 @@ ActiveAdmin.register Strip do
     f.semantic_errors *f.object.errors.keys
     f.inputs "Comic Details" do
       f.input :title
-      f.input :description, hint: "Short description. Only visible on search results"
+      f.input :description, hint: "Short description. Only visible on search results & link embeds"
       f.input :keywords_raw, as: :string, label: "Keywords", hint: "What search terms would bring this comic? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon", required: true
       f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
       span "Image*", id: "image-label"
@@ -57,13 +57,18 @@ ActiveAdmin.register Strip do
       end
       f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
       a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
-      f.input :created_at, as: :date_picker, label: "Created in"
+      f.input :created_at, as: :date_picker, label: "Created In", hint: "If blank will default to Today"
     end
     f.actions 
   end
 
   before_save do |strip|
     strip.keywords_raw = params[:strip][:keywords_raw].split(", ") unless params[:strip].nil? or params[:strip][:keywords_raw].nil?
+    hour   = Time.new().strftime('%H').to_i * 3600
+    minute = Time.new().strftime('%M').to_i * 60
+    second = Time.new().strftime('%S').to_i
+    strip.created_at = strip.created_at + hour + minute + second unless strip.created_at.nil?
+    strip.created_at = Time.new() if strip.created_at.nil?
   end
   controller do 
     def find_resource

@@ -1,17 +1,22 @@
 <div class="comic_Nav">
-	<%= link_to @first_strip, {class: 'fa fa-angle-double-left'} do %>
+	<%= link_to strip_url(@first_strip), {class: 'fa fa-angle-double-left'} do %>
 		<span class="visually-hidden">First Comic</span>
+		<%= image_tag(url_for(@first_strip.image), alt: "", width: "1", height: "1", loading: "lazy") %>
 	<% end %>
-	<%= link_to @previous_strip, {class: 'fa fa-angle-left'} do %>
+	<%= link_to strip_url(@previous_strip), {class: 'fa fa-angle-left'} do %>
 		<span class="visually-hidden">Previous</span>
+		<%= image_tag(url_for(@previous_strip.image), alt: "", width: "1", height: "1", loading: "lazy") %>
 	<% end %>
-  <%= link_to @random_strip, {class: 'fa fa-rotate-right'} do %>
+  <%= link_to strip_url(@random_strip), {class: 'fa fa-rotate-right'} do %>
 		<span class="visually-hidden">Random</span>
+		<%= image_tag(url_for(@random_strip.image), alt: "", width: "1", height: "1", loading: "lazy") %>
 	<% end %>
-	<%= link_to @next_strip, {class: 'fa fa-angle-right'} do %>
+	<%= link_to strip_url(@next_strip), {class: 'fa fa-angle-right'} do %>
 		<span class="visually-hidden">Next</span>
+		<%= image_tag(url_for(@next_strip.image), alt: "", width: "1", height: "1", loading: "lazy") %>
 	<% end %>
-	<%= link_to @last_strip, {class: 'fa fa-angle-double-right'} do %>
+	<%= link_to strip_url(@last_strip), {class: 'fa fa-angle-double-right'} do %>
 		<span class="visually-hidden">Most Recent</span>
+		<%= image_tag(url_for(@last_strip.image), alt: "", width: "1", height: "1", loading: "lazy") %>
 	<% end %>  
 </div>
