@@ -82,7 +82,6 @@
 - [x] Replace Social Media links
 - [x] Shop icon on H1 of store
 - [x] 404 page emote
-- [ ] Caching/Preloading comics
 - [ ] Archive group by months
 - [ ] Tooltip about custom dates not displaying properly
 - [x] Hover state for touch devices
