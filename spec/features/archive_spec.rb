@@ -17,7 +17,7 @@ RSpec.feature "archive", type: :feature, js: true do
     # Click on Toggle
     find('.toggle').click
     # Expect div to have line class
-    expect(page).to have_css('.line')
+    expect(page).to have_css('.index.line')
     # Expect page to NOT have gallery
     expect(page).to_not have_css('.table.gallery')
   end
