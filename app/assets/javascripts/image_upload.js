@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // ActiveAdmin's input form
     var realInput = document.getElementById("strip_image");
     // Entire form page
-    var mainContent = document.getElementById("main_content");
+    var mainContent = document.querySelector("body");
 
     var img = document.querySelector(".image-element");
 

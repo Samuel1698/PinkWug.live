@@ -47,7 +47,7 @@ $primary-color: #21A793;
     }
   }
   #strip_created_at {
-    width: 25%;
+    width: 165px;
   }
 }
 .formtastic.strip {
@@ -71,7 +71,7 @@ $primary-color: #21A793;
     background-color: #fff;
     border: 1px solid #e4eaec;
     width: 500px;
-    padding: 60px 40px;
+    padding: 100px 40px;
     text-align: center;
     cursor:pointer;
     transition:.3s;
@@ -117,15 +117,33 @@ $primary-color: #21A793;
 }
 @media (max-width: 575px){
   #active_admin_content .formtastic.strip {
-    ol p {
-    width: 100%;
-    margin: 0;
+    ol { 
+      p, #drop-region {
+      width: 100%;
+      margin: 0;
+      }
     }
     #strip_image_input {
       img {
         margin-left: auto;
         width: 100%;
       }
+    }
+    .transcript_link {
+      margin-left: 0;
+    }
+    #image-label {
+      padding-bottom: 5px;
+      text-align: left;
+      margin: auto 0;
+      padding-top: 8px;
+      text-align: right;
+      font-size: 14px;
+      display: inline-block;
+      height: 30px;
+      width: 0;
+      float: none;
+      padding-right: 0;
     }
   }
 }
