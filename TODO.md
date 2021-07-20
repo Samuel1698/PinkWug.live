@@ -88,3 +88,4 @@
 - [x] Hover state for touch devices
 - [ ] Detect if mobile phone is on landscape mode
 - [x] Author comment links go beyond parent
+- [ ] Drag & Drop default not prevented on bigger box. Also drag & dropping dont save the image at all

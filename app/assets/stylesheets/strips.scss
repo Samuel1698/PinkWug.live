@@ -102,7 +102,14 @@ input[type="submit"], img {
   min-width: 320px;
   background-color: white;
 }
-
+.cache {
+  position: absolute;
+  z-index: -1000;
+  opacity: 0;
+  image {
+    position: absolute;
+  }
+}
 body:hover .visually-hidden a, 
 body:hover .visually-hidden input, 
 body:hover .visually-hidden button { display: none}

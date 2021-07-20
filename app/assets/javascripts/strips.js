@@ -32,6 +32,10 @@ if (last_strip.pathname == current_strip || location.pathname == "/") {
   last_strip.classList.add("disabled");
 }
 
+// --------------------------------------------------
+// Tooltip
+// --------------------------------------------------
+
 var tooltip = document.querySelector('.tooltip');
 tooltip.addEventListener("keyup", hitEnter);
 
@@ -55,4 +59,10 @@ function updateClipboard(newClip) {
     tooltip.firstElementChild.innerHTML = 'copy link';
     tooltip.classList.remove("active");
   }, 2500);
+}
+// --------------------------------------------------
+// Height of parent
+// --------------------------------------------------
+function resetHeight() {
+  document.querySelector('.parent').style.minHeight = 0;
 }
