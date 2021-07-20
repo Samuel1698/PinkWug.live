@@ -5,7 +5,7 @@
     title: :title,
     type: 'website',
     url: strip_url(@strip),
-    image: url_for(@strip.image),
+    image: strip_variant(@strip, "786"),
     description: :description,
     site_name: 'Pink Wug' 
   } %>
@@ -15,7 +15,7 @@
     title: :title,
     description: :description,
     creator: '@pinkwug',
-    image: url_for(@strip.image)
+    image: strip_variant(@strip, "786")
   } %>
   <%= stylesheet_link_tag "index" %>
 <% end %>
@@ -45,7 +45,11 @@
     <div class="big_row"> -->
       <% for strip in strips %>
         <div class="row gallery">
-          <%= link_to image_tag(url_for(strip.image.variant(resize_to_limit:[400,400])), class: 'cell', alt: strip.title, loading: 'lazy'), strip %>
+          <%= link_to image_tag(strip_variant(strip, "900"), 
+                      srcset: { strip_variant(strip, "300") => "1x",
+                                strip_variant(strip, "600") => "2x",
+                                strip_variant(strip, "900") => "3x",
+                              }, sizes: "300px", class: 'cell', alt: strip.title, loading: 'lazy'), strip %>
           <p class="cell"><%= strip.title %></p>
           <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
         </div>
