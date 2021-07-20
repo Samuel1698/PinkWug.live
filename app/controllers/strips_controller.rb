@@ -1,5 +1,6 @@
 class StripsController < ApplicationController
 	before_action :set_strip, only: [:show, :index]
+	helper StripsHelper
 	def index
 		@strips = Strip.filtered(query_params).order("created_at DESC")
 		@strips_months = @strips.group_by { |s| s.created_at.beginning_of_month }
@@ -17,7 +18,6 @@ class StripsController < ApplicationController
 		@previous_strip = Strip.where(["created_at < ?", @ca]).order('created_at').last || @first_strip
 		@next_strip     = Strip.where(["created_at > ?", @ca]).order('created_at').first || @last_strip
 		@random_strip   = Strip.where(["id != ?", @strip.id]).order_by_rand.first
-
 	end
 	
 	private
