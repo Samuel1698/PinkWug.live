@@ -33,38 +33,31 @@ if (last_strip.pathname == current_strip || location.pathname == "/") {
 }
 
 // --------------------------------------------------
-// Tooltip
+// Tooltip & Clipboard
 // --------------------------------------------------
-
 var tooltip = document.querySelector('.tooltip');
 tooltip.addEventListener("keyup", hitEnter);
-
 function hitEnter(){
   if (event.keyCode === 13) {
     event.preventDefault();
     document.querySelector('.tooltip').click();
   }
 }
-
 function updateClipboard(newClip) {
   window.Clipboard = (function(window, document, navigator) {
     var textArea,
       copy;
-
     function isOS() {
       return navigator.userAgent.match(/ipad|iphone/i);
     }
-
     function createTextArea(text) {
       textArea = document.createElement('textArea');
       textArea.value = text;
       document.body.appendChild(textArea);
     }
-
     function selectText() {
       var range,
           selection;
-
       if (isOS()) {
         range = document.createRange();
         range.selectNodeContents(textArea);
@@ -76,12 +69,10 @@ function updateClipboard(newClip) {
         textArea.select();
       }
     }
-
     function copyToClipboard() {        
       document.execCommand('copy');
       document.body.removeChild(textArea);
     }
-
     copy = function(text) {
       createTextArea(text);
       selectText();
@@ -93,14 +84,6 @@ function updateClipboard(newClip) {
       copy: copy
     };
   })(window, document, navigator);
-  // navigator.clipboard.writeText(newClip).then(function() {
-  //   /* clipboard successfully set */
-  //   tooltip.firstElementChild.innerHTML = 'link copied';
-  //   tooltip.classList.add("active");    
-  // }, function() {
-  //   /* clipboard write failed */
-  //   tooltip.firstElementChild.innerHTML =  'copy failed';   
-  // });
   Clipboard.copy(newClip);
   setTimeout(function(){
     tooltip.firstElementChild.innerHTML = 'copy link';
