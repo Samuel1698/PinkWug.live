@@ -20,7 +20,7 @@
   <%= stylesheet_link_tag "index" %>
 <% end %>
 
-<div class="div">
+<div class="index">
   <div class="img_container">
     <button class="toggle gallery">
       <span class="visually-hidden">Toggle Line View</span>
@@ -28,7 +28,7 @@
   </div>
   <h1><%= title 'Comic Archive' %></h1>
   <div class="table gallery">
-    <div class="row gallery">
+    <div class="row gallery titles">
       <div class="cell">Comic</div>
       <button class="cell title">
         <span>Title</span>
@@ -37,12 +37,11 @@
         <span>Date</span>
       </button>
     </div>
-
   <% @strips_months.each do |month, strips| %>
-    <!-- <button>
+    <button class="button gallery">
       <span><%= month.strftime('%b %Y') %></span>
     </button>
-    <div class="big_row"> -->
+    <div class="big_row gallery">
       <% for strip in strips %>
         <div class="row gallery">
           <%= link_to image_tag(strip_variant(strip, "900"), 
@@ -54,7 +53,7 @@
           <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
         </div>
       <% end %>      
-    <!-- </div> -->
+    </div>
   <% end %>
   </div>
 </div>
