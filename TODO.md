@@ -82,7 +82,8 @@
 - [x] Replace Social Media links
 - [x] Shop icon on H1 of store
 - [x] 404 page emote
-- [ ] Archive group by months
+- [x] Archive group by months
+  - [ ] Modify specs to adjust to new layout
 - [ ] Tooltip about custom dates not displaying properly
 - [x] Hover state for touch devices
 - [ ] Detect if mobile phone is on landscape mode
