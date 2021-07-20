@@ -10,6 +10,8 @@ var table  = document.querySelector(".table");
 var rows   = document.querySelectorAll(".row");
 var bigrow = document.querySelectorAll(".big_row");
 var button = document.querySelectorAll(".button.gallery");
+var title = document.querySelector(".title");
+var date  = document.querySelector(".date");
 
 line.classList.remove("line");
 table.classList.add("gallery");
@@ -57,13 +59,15 @@ function galleryToggle(state){
 		}
 		else if ((!table.classList.contains("gallery") && !state) || (state == true && window.innerWidth <= 700)) {
 			toggleOn();
+			switchRows("stDate", "desc", button[0])();
 		}
 	}
 }
 toggle.addEventListener("click", galleryToggle());
-toggle.addEventListener("click", switchRows("stDate", "desc"));
+toggle.addEventListener("click", switchRows("stDate", "desc", button[0]));
 window.addEventListener('resize', galleryToggle(true));
 document.addEventListener('turbolinks:load', galleryToggle(true));
+document.addEventListener('turbolinks:load', switchRows("stDate", "desc", button[0]));
 toggle.addEventListener("click", addWhiteSpace("click"));
 
 // Sorts the array based on the array key "property"
@@ -90,12 +94,10 @@ function sortExceptF(list, property, state){
 	return 0;
 }
 
-var title = document.querySelector(".title");
-var date  = document.querySelector(".date");
-title.addEventListener("click", switchRows("stTitle")); 
-date.addEventListener("click", switchRows("stDate")); 
+title.addEventListener("click", switchRows("stTitle", null, title)); 
+date.addEventListener("click", switchRows("stDate", null, date)); 
 
-function switchRows(property, state){
+function switchRows(property, state, origin){
 	return function(){
 		//First elements are the table head, ignored from the sorting
 		var cell = [{stImage: "none",stSrcset: "none",stTitle: "none",stDate: "none"}]; 
@@ -110,19 +112,19 @@ function switchRows(property, state){
 		// If the title/date doesnt contain ASCending, do that order
 		// Default title doesnt contain either ASC nor DESC
 		// As the default order is by DESC Date
-		if     ((!this.classList.contains("asc") && !state) || state == "asc"){ 
+		if     ((!origin.classList.contains("asc") && !state) || state == "asc"){ 
 			let state = "asc";
 			title.classList.remove("desc"); 
-			date.classList.remove("desc"); 
-			this.classList.add("asc");
+			date.classList.remove("desc");
+			origin.classList.add("asc");
 			sortExceptF(cell, property, state);
 		}
 		// If the title doesnt contain DESCending, do that order
-		else if ((!this.classList.contains("desc") && !state) || state == "desc"){
+		else if ((!origin.classList.contains("desc") && !state) || state == "desc"){
 			let state = "desc"; 
 			title.classList.remove("asc");
-			date.classList.remove("asc"); 
-			this.classList.add("desc");
+			date.classList.remove("asc");
+			origin.classList.add("desc");
 			sortExceptF(cell, property, state);
 		}
 		// Change the values of all key:value pairs according to new order
