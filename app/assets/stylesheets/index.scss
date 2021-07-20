@@ -111,6 +111,21 @@
 		}
 	}
 }
+@media (min-width: 600px){
+	.index {
+		max-width: 600px;
+	}
+}
+@media (min-width: 900px){
+	.index {
+		max-width: 900px;
+	}
+}
+@media (min-width: 1200px){
+	.index {
+		max-width: 80vw;
+	}
+}
 @media (max-width: 700px) {
 	.img_container {
 		display: none;
@@ -146,9 +161,6 @@
 	}
 }
 @media (min-width: 825px){
-	.button.gallery {
-		
-	}
 	.table.gallery {
 		align-items: flex-start;
 	}
