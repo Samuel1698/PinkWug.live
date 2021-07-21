@@ -11,6 +11,9 @@ ActiveAdmin.register Strip do
   ActiveAdmin.setup do |config|
     config.localize_format = :short
   end
+  ActiveAdmin.register Strip do
+    config.per_page = 10
+  end
 
   # Sort order for index
   config.sort_order = 'created_at_desc'
