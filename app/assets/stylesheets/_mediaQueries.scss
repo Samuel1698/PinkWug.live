@@ -15,7 +15,7 @@
 //-----------------------------------------------
 // target only landscape mobile users 
 //-----------------------------------------------
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 900px) {
+@media (orientation: landscape) and (pointer: coarse) and (max-width: 900px) {
 	.content {
 		max-width: 125vh;
 	}
