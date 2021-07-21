@@ -26,7 +26,23 @@ body.index {
 			left: 0;
 		}
 	}
-	#sidebar:before {
-		box-shadow: -1px 0 3px 0 #272822;
+	#sidebar {
+		.sidebar_section.panel {
+			border: 1px solid #e4eaec;
+		}
+		&:before {
+			border-left: 1px solid #e4eaec;
+			border-bottom: 1px solid #e4eaec;
+			border-top: 1px solid #e4eaec;
+		}
+	}
+}
+@media screen and (min-width: 992px){
+	#title_bar {
+		border-radius: 7px;
+		margin-right: 45px; 
+	}
+	#active_admin_content.with_sidebar #main_content_wrapper #main_content {
+		border-radius: 7px;
 	}
 }
