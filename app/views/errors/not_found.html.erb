@@ -1,7 +1,6 @@
 <% content_for :head do  %>
-	<% set_meta_tags  title: '404',
-										description: 'Error page for PinkWug.live',
-										keywords: 'Not Found, 404' %>
+	<%= display_meta_tags title: '404' %>
+	<%= display_meta_tags	description: 'Error page for PinkWug.live' %>
 	<% stylesheet_link_tag "errors" %>
 <% end %>
 <div class="content">

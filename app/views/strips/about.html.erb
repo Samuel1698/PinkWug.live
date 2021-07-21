@@ -5,7 +5,7 @@
     title: :title,
     type: 'website',
     url: about_url,
-    image: url_for("Profile.png"),
+    image: url_for(asset_path("Profile.png")),
     description: :description,
     site_name: 'Pink Wug' 
   } %>
@@ -13,7 +13,7 @@
     card: 'summary_large_image',
     site: '@pinkwug',
     title: :title,
-    image: url_for("Profile.png"),
+    image: url_for(asset_path("Profile.png")),
     description: :description,
     creator: '@pinkwug',
   } %>
