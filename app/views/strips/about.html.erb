@@ -1,11 +1,11 @@
 <% content_for :head do  %>
-	<% set_meta_tags description: 'Suggestions, business inquiries, and who is Pink Wug.',
-										keywords: 'Pink Wug, About, Business, Discord' %>
+	<%= display_meta_tags description: 'Suggestions, business inquiries, and who is Pink Wug.' %>
+	<%= display_meta_tags keywords: 'Pink Wug, About, Business, Discord' %>
 	<%= display_meta_tags og: {
     title: :title,
     type: 'website',
     url: about_url,
-    image: :favicon,
+    image: url_for("Profile.png"),
     description: :description,
     site_name: 'Pink Wug' 
   } %>
@@ -13,7 +13,7 @@
     card: 'summary_large_image',
     site: '@pinkwug',
     title: :title,
-    image: :favicon,
+    image: url_for("Profile.png"),
     description: :description,
     creator: '@pinkwug',
   } %>
