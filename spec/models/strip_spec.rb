@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe Strip, type: :model do
   subject {
     described_class.new( title: "Relatable",
-                         image: Rack::Test::UploadedFile.new("#{Rails.root}/spec/images/Relatable.jpg"),
-                         keywords: ["Non-political", "Yellow Wug"])
+                         image: Rack::Test::UploadedFile.new("#{Rails.root}/spec/images/Relatable.jpg"))
   }
   it "is valid with valid attributes" do
     expect(subject).to be_valid
@@ -15,10 +14,6 @@ RSpec.describe Strip, type: :model do
   end
   it "is not valid without an image" do 
     subject.image = nil
-    expect(subject).to_not be_valid
-  end
-  it "is not valid without keywords" do 
-    subject.keywords_raw = []
     expect(subject).to_not be_valid
   end
 end

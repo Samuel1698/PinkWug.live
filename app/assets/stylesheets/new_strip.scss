@@ -1,14 +1,20 @@
 $primary-color: #21A793;
 .formtastic.strip {
+  .errors {
+    margin-bottom: 10px;
+    li {
+      border: 1px solid #dc4747;
+      background-color: rgba(220, 71, 71, 0.1);
+      padding: 6px 12px;
+      display: inline-block;
+      border-radius: 7px;
+      margin-right: 10px;
+    }
+  }
   ol {
     input, textarea, #drop-region {
       border-radius: 7px;
       transition: border 0.25s linear;
-      &:hover {
-        border-color: $primary-color;
-        appearance: none;
-        transition: border 0.25s linear;
-      }
     }
     p, #drop-region {
       color: grey;
@@ -91,6 +97,18 @@ $primary-color: #21A793;
     &.preview {
       padding: 20px 5px 5px;
     }
+    &.error {
+      margin-bottom: 0;
+      border-color: #dc4747;
+      background-color: rgba(220, 71, 71, 0.1);
+    }
+    & + .inline-errors {
+      color: #dc4747;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      padding-left: 25%;
+    }
   }   
   #image-preview {
     display: inline-block;
@@ -144,6 +162,24 @@ $primary-color: #21A793;
       width: 0;
       float: none;
       padding-right: 0;
+    }
+  }
+}
+@media (hover: hover) and (pointer: fine){
+  .formtastic.strip {
+    ol {
+      input, textarea, #drop-region {
+        &:hover {
+          border-color: $primary-color;
+          appearance: none;
+          transition: border 0.25s linear;
+        }
+        &:focus {
+          border-color: $primary-color;
+          appearance: none;
+          transition: border 0.25s linear;
+        }
+      }
     }
   }
 }
