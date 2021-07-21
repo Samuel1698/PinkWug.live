@@ -2,9 +2,9 @@
   <% set_meta_tags description: 'Archive of all Pink Wug comics',
                       keywords: 'Pink Wug, all comics, past, previous, archive' %>
   <%= display_meta_tags og: {
-    title: :title,
+    title: 'Comic Archive',
     type: 'website',
-    url: strip_url(@strip),
+    url: strips_path,
     image: strip_variant(@strip, "786"),
     description: :description,
     site_name: 'Pink Wug' 
@@ -12,7 +12,7 @@
   <%= display_meta_tags twitter: {
     card: 'summary_large_image',
     site: '@pinkwug',
-    title: :title,
+    title: 'Comic Archive',
     description: :description,
     creator: '@pinkwug',
     image: strip_variant(@strip, "786")
