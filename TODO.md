@@ -77,6 +77,8 @@
 
 ### Deployment
 - [x] Switch to PostgreSQL
+
+### Requests/bugs
 - [x] Find bold version of font
 - [x] Logo
 - [x] Replace Social Media links
@@ -88,4 +90,4 @@
 - [x] Drag & Drop default not prevented on bigger box.
 - [x] Tooltip about custom dates not displaying properly
 - [x] Detect if mobile phone is on landscape mode
-- [ ] Resize header+favicon
+- [x] Resize logo+favicon
