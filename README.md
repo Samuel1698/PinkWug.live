@@ -35,7 +35,7 @@ If everything is working, the Terminal will print **Your system is ready to brew
 ### Installing rbenv, Ruby, and Rails
 Visit https://gorails.com/setup/ and follow the instructions for your operating system
 
-Remember to change the Rails version in the dropdown to **6.0.3.7**
+Remember to input Ruby **3.0.0** when typing the command as istructed, and Rails **6.0.3.7**
 
 ### Installing Yarn
 This is required for Rails version 6 to compile the frontend assets.
