@@ -221,6 +221,7 @@ ActiveAdmin.setup do |config|
   # To load a javascript file:
   config.register_javascript 'dashboard.js'
   config.register_javascript 'image_upload.js'
+  config.register_javascript 'admin_index.js'
 
   # == CSV options
   #
