@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function(){
     function handleDrop(e) {
       var dt = e.dataTransfer,
           files = dt.files;
-      handleFiles(files)
+      realInput.files = files;
+      handleFiles(files);
     }
     dropRegion.addEventListener('drop', handleDrop, false);
 

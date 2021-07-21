@@ -85,7 +85,7 @@
 - [x] Archive group by months
 - [x] Hover state for touch devices
 - [x] Author comment links go beyond parent
-- [x] Drag & Drop default not prevented on bigger box. Also drag & dropping dont save the image at all
+- [x] Drag & Drop default not prevented on bigger box.
 - [x] Tooltip about custom dates not displaying properly
 - [ ] Detect if mobile phone is on landscape mode
 - [ ] Resize header+favicon
