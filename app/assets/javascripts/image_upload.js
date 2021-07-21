@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function(){
     var imagePreviewRegion = document.getElementById("image-preview");
     // ActiveAdmin's input form
     var realInput = document.getElementById("strip_image");
-    // Entire form page
-    var mainContent = document.querySelector("body");
 
     var img = document.querySelector(".image-element");
 
@@ -31,16 +29,11 @@ document.addEventListener("DOMContentLoaded", function(){
       e.stopPropagation();
     }
 
-    // Prevent default drag & drop behavior of opening file on window
-    dropRegion.addEventListener('dragenter', preventDefault, false)
-    dropRegion.addEventListener('dragleave', preventDefault, false)
-    dropRegion.addEventListener('dragover', preventDefault, false)
-    dropRegion.addEventListener('drop', preventDefault, false)
-    // Prevent it for the entire screen
-    mainContent.addEventListener('dragenter', preventDefault, false)
-    mainContent.addEventListener('dragleave', preventDefault, false)
-    mainContent.addEventListener('dragover', preventDefault, false)
-    mainContent.addEventListener('drop', preventDefault, false)
+    // Prevent default drag & drop behavior of opening file on window on the entire document
+    document.addEventListener('dragenter', preventDefault, false)
+    document.addEventListener('dragleave', preventDefault, false)
+    document.addEventListener('dragover', preventDefault, false)
+    document.addEventListener('drop', preventDefault, false)
 
     function handleDrop(e) {
       var dt = e.dataTransfer,
