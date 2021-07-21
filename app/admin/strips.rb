@@ -1,6 +1,7 @@
 ActiveAdmin.register Strip do
 
-  permit_params :title, :description, :image, :keywords, :transcript, :created_at, :updated_at, :comment
+  permit_params :title, :description, :image, :keywords, :keywords_raw, :transcript, :created_at, :updated_at, :comment
+
 
   filter :title
   filter :description
@@ -41,18 +42,20 @@ ActiveAdmin.register Strip do
   form do |f|
     f.semantic_errors *f.object.errors.keys
     f.inputs "Comic Details" do
-      f.input :title
+      f.input :title, required: true
       f.input :description, as: :text, hint: "Short description. Only visible on search results & link embeds", :input_html => { :rows => 2 }
-      f.input :keywords_raw, as: :string, label: "Tags", hint: "What is this comic about? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon", required: true
+      f.input :keywords_raw, as: :string, label: "Tags", hint: "What is this comic about? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon"
       f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
-      span "Image*", id: "image-label"
-      div id: "drop-region" do
-        f.input :image, as: :file
-        div "Drag & Drop Image or click to upload", class: "drop-message"
-        div id: "image-preview" do
-          img class: "image-element" unless strip.image.attached?
-          img src: url_for(strip.image), class: "image-element edit" if strip.image.attached?
-          div class: "overlay" 
+      div do 
+        span "Image*", id: "image-label"
+        div id: "drop-region" do
+          f.input :image, as: :file
+          div "Drag & Drop Image or click to upload", class: "drop-message"
+          div id: "image-preview" do
+            img class: "image-element" unless strip.image.attached?
+            img src: url_for(strip.image), class: "image-element edit" if strip.image.attached?
+            div class: "overlay" 
+          end
         end
       end
       f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
