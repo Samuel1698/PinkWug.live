@@ -87,5 +87,5 @@
 - [x] Author comment links go beyond parent
 - [x] Drag & Drop default not prevented on bigger box.
 - [x] Tooltip about custom dates not displaying properly
-- [ ] Detect if mobile phone is on landscape mode
+- [x] Detect if mobile phone is on landscape mode
 - [ ] Resize header+favicon
