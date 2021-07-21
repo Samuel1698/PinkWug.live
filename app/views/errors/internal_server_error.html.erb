@@ -1,6 +1,6 @@
 <% content_for :head do  %>
-	<% set_meta_tags description: 'Error code 500',
-										keywords: 'Server Error' %>
+	<%= display_meta_tags title: '500' %>
+	<%= display_meta_tags description: 'Error code 500' %>
 	<% stylesheet_link_tag "errors" %>
 <% end %>
 <div class="content">
