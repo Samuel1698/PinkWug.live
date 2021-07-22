@@ -2,7 +2,7 @@ class ShopifyApi
 	require 'net/http'
 	require 'uri'
 	def response 
-		uri = URI.parse("https://pinkwug-dev-store.myshopify.com/admin/api/2021-07/graphql.json")
+		uri = URI.parse("https://pinkwug.myshopify.com/admin/api/2021-07/graphql.json")
 		req_options = {
 		  use_ssl: uri.scheme == "https",
 		}
