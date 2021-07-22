@@ -32,7 +32,7 @@ http_interactions:
       message: Unauthorized
     headers:
       Date:
-      - Fri, 16 Jul 2021 19:50:23 GMT
+      - Thu, 22 Jul 2021 17:15:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -54,7 +54,7 @@ http_interactions:
       X-Shopify-Stage:
       - production
       Content-Security-Policy:
-      - frame-ancestors 'none'; report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=b2155fb3-af3e-4f8e-ac0a-fe782b39488f
+      - frame-ancestors 'none'; report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=69903b29-5451-41db-9017-601807b60e2a
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -62,11 +62,11 @@ http_interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Xss-Protection:
-      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=b2155fb3-af3e-4f8e-ac0a-fe782b39488f
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=69903b29-5451-41db-9017-601807b60e2a
       X-Dc:
       - gcp-us-east1,gcp-us-east1,gcp-us-east1
       X-Request-Id:
-      - b2155fb3-af3e-4f8e-ac0a-fe782b39488f
+      - 69903b29-5451-41db-9017-601807b60e2a
       Cf-Cache-Status:
       - DYNAMIC
       Expect-Ct:
@@ -74,7 +74,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 66fdc25b88081977-EWR
+      - 672e4fde1eef1831-EWR
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443";
         ma=86400
@@ -82,5 +82,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"errors":"[API] Invalid API key or access token (unrecognized login
         or wrong password)"}'
-  recorded_at: Fri, 16 Jul 2021 19:50:23 GMT
+  recorded_at: Thu, 22 Jul 2021 17:15:36 GMT
 recorded_with: VCR 6.0.0
