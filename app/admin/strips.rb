@@ -38,7 +38,7 @@ ActiveAdmin.register Strip do
         image_tag url_for(strip.image.variant(resize_to_fit:[700,nil]))
       end
       row :transcript unless strip.transcript.blank?
-      row :has_print unless strip.has_print.blank?
+      row :has_print if strip.has_print?
       row :created_at
     end
   end
