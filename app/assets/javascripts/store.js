@@ -68,6 +68,7 @@ function dropDown(button){
 		    	"afterRender": function(){
 		    		fixCollectionBug();
 		    		addWhiteSpace()();
+		    		setTimeout(fixCollectionBug,500);
 		    	},
 		    },
 		  },
@@ -496,7 +497,6 @@ function fixCollectionBug() {
 				parent = collection[i].querySelector('.shopify-buy__collection-products');
 				parent.appendChild(product);
 				console.log(text + " fixed")
-
 			}
 		}
 	};
