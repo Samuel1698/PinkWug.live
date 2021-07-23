@@ -91,8 +91,11 @@
 - [x] Tooltip about custom dates not displaying properly
 - [x] Detect if mobile phone is on landscape mode
 - [x] Resize logo+favicon
-- [ ] Rework shop
+- [x] Rework shop
   - [x] Use buybutton.js
-  - [ ] Detect if button text corresponds to correct category for each product, if not, move there
-  - [ ] Click event on each product image to trigger click on button
-  - [ ] Hide button
+  - [x] Detect if button text corresponds to correct category for each product, if not, move there
+  - [x] Make image clickable
+  - [x] Hide button
+  - [ ] js to detect url after ? and match with collection to make that active by default
+- [ ] Strip 'has print available' boolean
+- [ ] Whitespace broken again? 2px bug
