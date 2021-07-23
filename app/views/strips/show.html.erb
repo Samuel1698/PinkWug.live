@@ -41,6 +41,9 @@
 		<%= image_tag("wugART@3x.png", style: "width: 32px", alt: "") %>
 		<p>published in <%= @strip.created_at.strftime("%B %-d, %Y") %> </p>	
 		<%= Rinku.auto_link(simple_format(@strip.comment), :all, 'target="_blank"').html_safe unless @strip.comment.blank? %>
+		<% if @strip.has_print? do %>
+			<p>This comic has a print available for purchase in the shop!</p>
+		<% end %>
 	</div>
 	<div class="share", tabindex="0">
 		<p>share this comic!</p>
