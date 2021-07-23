@@ -1,6 +1,6 @@
 ActiveAdmin.register Strip do
 
-  permit_params :title, :description, :image, :keywords, :keywords_raw, :transcript, :created_at, :updated_at, :comment
+  permit_params :title, :description, :image, :keywords, :keywords_raw, :transcript, :created_at, :updated_at, :comment, :has_print
 
 
   filter :title
@@ -38,6 +38,7 @@ ActiveAdmin.register Strip do
         image_tag url_for(strip.image.variant(resize_to_fit:[700,nil]))
       end
       row :transcript unless strip.transcript.blank?
+      row :has_print unless strip.has_print.blank?
       row :created_at
     end
   end
@@ -63,6 +64,7 @@ ActiveAdmin.register Strip do
       end
       f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
       a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
+      f.input :has_print
       f.input :created_at, as: :datepicker, label: "Created In", hint: "If blank will default to Today", input_html: { value: strip.created_at.try(:strftime, '%B %d %Y'), placeholder: Time.now.utc.try(:strftime, '%B %d %Y')}, datepicker_options: { max_date: "+0D", dateFormat: "MM dd yy" }
     end
     f.actions 
