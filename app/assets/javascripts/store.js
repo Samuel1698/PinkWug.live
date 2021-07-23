@@ -496,7 +496,6 @@ function fixCollectionBug() {
 				// Select the collection element that is a parent to the product
 				parent = collection[i].querySelector('.shopify-buy__collection-products');
 				parent.appendChild(product);
-				console.log(text + " fixed")
 			}
 		}
 	};
