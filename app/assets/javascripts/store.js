@@ -3,7 +3,6 @@ var	collection = document.querySelectorAll('.collection')
 
 for (var i=0;i < buttons.length;i++){
 	buttons[i].addEventListener("click", dropDown(buttons[i]));
-	buttons[i].addEventListener("click", fixCollectionBug);
 }
 
 function dropDown(button){
@@ -58,14 +57,16 @@ function dropDown(button){
 		  		}
 		  	},
 		    "buttonDestination": "modal",
-		    "isButton": true,
 		    "contents": {
 		      "options": false,
 		      "button": true,
 		    },
 		    "text": {
 		    	"button": "clothes"
-		    }
+		    },
+		    "events": {
+		    	"afterRender": fixCollectionBug
+		    },
 		  },
 		  "productSet": {
 		  	"iframe": false
@@ -156,7 +157,6 @@ function dropDown(button){
 		  		}
 		  	},
 		    "buttonDestination": "modal",
-		    "isButton": true,
 		    "contents": {
 		      "options": false,
 		      "button": true,
@@ -254,7 +254,6 @@ function dropDown(button){
 		  		}
 		  	},
 		    "buttonDestination": "modal",
-		    "isButton": true,
 		    "contents": {
 		      "options": false,
 		      "button": true,
@@ -352,7 +351,6 @@ function dropDown(button){
 		  		}
 		  	},
 		    "buttonDestination": "modal",
-		    "isButton": true,
 		    "contents": {
 		      "options": false,
 		      "button": true,
@@ -482,20 +480,18 @@ function fixCollectionBug() {
 			text = products[j].querySelector('.shopify-buy__btn').innerText
 			//If the product button text doesnt match the class of the collection
 			if (!collection[i].classList.contains(text)) {
-				// console.log(products[j] + " needs to be in collection " + text);
 				matchProductToCollection(products[j], text);
 			}
 		}
 	}
 	function matchProductToCollection(product, text) {
-		console.log(product + " needs to be in collection " + text);
 		// Check if each collection's class matches the text
 		for (let i = 0; i < collection.length; i++){
 			if (collection[i].classList.contains(text)){
 				// Select the collection element that is a parent to the product
-				let parent = collection[i].querySelector('.shopify-buy__collection-products');
+				parent = collection[i].querySelector('.shopify-buy__collection-products');
 				parent.appendChild(product);
-				console.log(text + " moved to " + collection[i]);
+				console.log(text + " fixed")
 			}
 		}
 	};
