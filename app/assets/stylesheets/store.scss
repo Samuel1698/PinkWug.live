@@ -24,25 +24,25 @@
 		}
 		#clothes {
 			background: image-url("Clothing.png") center/60px no-repeat;
-			&.active, &:focus-visible {
+			&.active, &:focus-visible, &:hover {
 				background-image: image-url("Clothing2.png");	
 			}
 		}
 		#mugs {
 		  background: image-url("Mug.png") center/60px no-repeat;
-		  &.active, &:focus-visible {
+		  &.active, &:focus-visible, &:hover {
 				background-image: image-url("Mug2.png");	
 			}
 		}
 		#stickers {
 			background: image-url("Sticker.png") center/60px no-repeat;
-			&.active, &:focus-visible {
+			&.active, &:focus-visible, &:hover {
 				background-image: image-url("Sticker2.png");	
 			}
 		}
 		#prints {
 			background: image-url("Print.png") center/60px no-repeat;
-			&.active, &:focus-visible {
+			&.active, &:focus-visible, &:hover {
 				background-image: image-url("Print2.png");	
 			}
 		}
@@ -134,19 +134,19 @@
 		}
 	}
 }
-@media (hover: hover) and (pointer: fine) {
-	.store .shop_collections {
-		#clothes:hover {
-			background-image: image-url("Clothing2.png");	
-		}
-		#mugs:hover {
-			background-image: image-url("Mug2.png");
-		}
-		#stickers:hover {
-			background-image: image-url("Sticker2.png");	
-		}
-		#prints:hover {
-			background-image: image-url("Print2.png");	
-		}
-	}
-}
+// @media (hover: hover) and (pointer: fine) {
+// 	.store .shop_collections {
+// 		#clothes:hover {
+// 			background-image: image-url("Clothing2.png");	
+// 		}
+// 		#mugs:hover {
+// 			background-image: image-url("Mug2.png");
+// 		}
+// 		#stickers:hover {
+// 			background-image: image-url("Sticker2.png");	
+// 		}
+// 		#prints:hover {
+// 			background-image: image-url("Print2.png");	
+// 		}
+// 	}
+// }
