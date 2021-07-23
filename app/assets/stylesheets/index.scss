@@ -3,6 +3,9 @@
 	max-width: 80vw;
 	margin-right: auto;
 	margin-left: auto;
+	h1 {
+		margin-bottom: 8px;
+	}
 }
 .img_container {
 	position: absolute;
@@ -14,6 +17,7 @@
 	padding-left: 18px;
 	button {
 	  appearance: none;
+	  border: none;
 	  font-size: 0;
 	  width: 32px;
 	  height: 32px;
@@ -81,6 +85,7 @@
 	display: block;
 	margin: 0;
 	background: none;
+	padding: 8px 10px;
 }
 .big_row.gallery {
 	display: flex;

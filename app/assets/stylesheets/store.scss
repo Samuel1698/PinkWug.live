@@ -1,25 +1,143 @@
 @import "variables";
-h1.store {
-	img {
-		height: 100px;
+.store {
+	h1 {
+		padding-top: 14px;
+		margin-top: 0;
+		img {
+			height: 100px;
+		}
+	}
+	.shop_collections {
+		text-align: center;
+		button {
+			display: inline-block;
+			margin: 8px 8px 0;
+			padding: 28px;
+			appearance: none;
+			cursor: pointer;
+			border: none;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 320px;
+		}
+		#clothes {
+			background: image-url("Clothing.png") center/60px no-repeat;
+			&.active {
+				background-image: url(Clothing2.png);	
+			}
+		}
+		#mugs {
+		  background: image-url("Mug.png") center/60px no-repeat;
+		  &.active {
+				background-image: url(Mug2.png);	
+			}
+		}
+		#stickers {
+			background: image-url("Sticker.png") center/60px no-repeat;
+			&.active {
+				background-image: url(Sticker2.png);	
+			}
+		}
+		#prints {
+			background: image-url("Print.png") center/60px no-repeat;
+			&.active {
+				background-image: url(Print2.png);	
+			}
+		}
+	}
+	.collection {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+	.shopify-buy__collection {
+    overflow: hidden;
+	}
+	.shopify-buy__collection-products {
+    margin-left: -15px;
+    text-align: center;
+	}
+	.shopify-buy__product {
+    min-width: 320px;
+    width: auto;
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+    .shopify-buy__product-img-wrapper {
+      padding-top: calc(75% + 15px);
+      position: relative;
+      height: 0;
+    }
+    .shopify-buy__product__variant-img {
+      height: calc(100% - 15px);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      max-width: 100%;
+      margin: 0 auto 15px auto;
+      transition: opacity 0.3s ease;
+			opacity: 1;
+    }
+    .shopify-buy__product__title {
+      font-size: 18px;
+      line-height: 1.2;
+      color: #4a4a4a;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .shopify-buy__product__price {
+      margin-bottom: 15px;
+      .shopify-buy__product__actual-price {
+				font-size: 14px;
+				color: #4a4a4a;
+				display: inline-block;
+      }
+    }
+	}
+	.shopify-buy__btn--parent {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+	}
+	& + & {
+    margin-top: 15px;
+	}
+	.shopify-buy__collection-pagination-button {
+		display: none;
 	}
 }
-button {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 6px;
-	padding: 8px 10px;
-	appearance: none;
-	cursor: pointer;
-	background-color: $pink;
-	border: 1.5px solid black;
-	border-radius: 7px;
-	// background: image-url("icons8-sort-down.svg") 100% 100%/24px no-repeat;
-	&.asc {
-		background: image-url("icons8-sort-up.svg") 100% 90%/24px no-repeat;
+@media (min-width: 787px){
+	.store {
+		.shopify-buy__product { 
+			max-width: calc(25% - 20px);
+			margin-left: 20px;
+			margin-bottom: 50px;
+			width: calc(25% - 20px);
+			margin-top: 0;
+			& + & {
+				margin-top: 0;
+			}
+		}
 	}
-	h2 {
-		margin: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+	.store .shop_collections {
+		#clothes:hover {
+			background-image: url(Clothing2.png);	
+		}
+		#mugs:hover {
+			background-image: url(Mug2.png);
+		}
+		#stickers:hover {
+			background-image: url(Sticker2.png);	
+		}
+		#prints:hover {
+			background-image: url(Print2.png);	
+		}
 	}
 }

@@ -3,6 +3,7 @@ div {margin:0;padding:0;border:0;}
 ol,ul{list-style:none}
 *, *:before, *:after { box-sizing: inherit; }
 img { max-width: 100%; vertical-align: middle; border: 0; }
+button { border: none;}
 
 @import "variables";
 
@@ -286,8 +287,11 @@ header {
 // Main css
 // =============================================================================
 main {
-  margin: 0 auto 25px;
+  margin: 0 auto;
   min-width: 320px;
+}
+.offset {
+  padding-top: 25px;
 }
 .support_buttons { 
   text-align: center;
