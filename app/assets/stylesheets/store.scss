@@ -24,25 +24,25 @@
 		}
 		#clothes {
 			background: image-url("Clothing.png") center/60px no-repeat;
-			&.active {
+			&.active, &:focus-visible {
 				background-image: url(Clothing2.png);	
 			}
 		}
 		#mugs {
 		  background: image-url("Mug.png") center/60px no-repeat;
-		  &.active {
+		  &.active, &:focus-visible {
 				background-image: url(Mug2.png);	
 			}
 		}
 		#stickers {
 			background: image-url("Sticker.png") center/60px no-repeat;
-			&.active {
+			&.active, &:focus-visible {
 				background-image: url(Sticker2.png);	
 			}
 		}
 		#prints {
 			background: image-url("Print.png") center/60px no-repeat;
-			&.active {
+			&.active, &:focus-visible {
 				background-image: url(Print2.png);	
 			}
 		}
@@ -64,8 +64,10 @@
     min-width: 320px;
     width: auto;
     margin-left: 15px;
+    margin-top: 6px;
     display: inline-block;
     vertical-align: top;
+    position: relative;
     .shopify-buy__product-img-wrapper {
       padding-top: calc(75% + 15px);
       position: relative;
@@ -97,6 +99,17 @@
 				display: inline-block;
       }
     }
+    .shopify-buy__btn {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	margin: 0 auto;
+    	height: calc(100% - 100px);
+    	width: 75%;
+    	background: initial;
+    	text-indent: -99999px;
+    }
 	}
 	.shopify-buy__btn--parent {
     background-color: transparent;
@@ -118,10 +131,6 @@
 			margin-left: 20px;
 			margin-bottom: 50px;
 			width: calc(25% - 20px);
-			margin-top: 0;
-			& + & {
-				margin-top: 0;
-			}
 		}
 	}
 }

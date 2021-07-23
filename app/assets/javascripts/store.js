@@ -65,7 +65,10 @@ function dropDown(button){
 		    	"button": "clothes"
 		    },
 		    "events": {
-		    	"afterRender": fixCollectionBug
+		    	"afterRender": function(){
+		    		fixCollectionBug();
+		    		addWhiteSpace()();
+		    	},
 		    },
 		  },
 		  "productSet": {
@@ -482,6 +485,7 @@ function fixCollectionBug() {
 			if (!collection[i].classList.contains(text)) {
 				matchProductToCollection(products[j], text);
 			}
+			products[j].querySelector('.shopify-buy__btn').innerText = ' ';
 		}
 	}
 	function matchProductToCollection(product, text) {
@@ -492,6 +496,7 @@ function fixCollectionBug() {
 				parent = collection[i].querySelector('.shopify-buy__collection-products');
 				parent.appendChild(product);
 				console.log(text + " fixed")
+
 			}
 		}
 	};
