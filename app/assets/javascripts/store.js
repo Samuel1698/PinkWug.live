@@ -16,6 +16,7 @@ function dropDown(button){
 			//Reset the collection unless the id of the button clicked is the same as the collection class
 			if (collection[i].classList.contains(button.id)){
 				collection[i].classList.add("active");
+				window.history.pushState("", "", '/shop?' + button.id);
 			}
 			else {
 				collection[i].classList.remove("active");
@@ -500,3 +501,19 @@ function fixCollectionBug() {
 		}
 	};
 };
+
+// Detect url query  and make that collection active
+(function detectCollection() {
+	var url = window.location.search.substring(1);
+	// console.log(url);
+	if (url) {
+		for (let i=0; i < collection.length; i++){
+			collection[i].classList.remove("active");
+			buttons[i].classList.remove("active");
+			if (collection[i].classList.contains(url)){
+				collection[i].classList.add("active");
+				buttons[i].classList.add("active");
+			}
+		};
+	}
+})();
