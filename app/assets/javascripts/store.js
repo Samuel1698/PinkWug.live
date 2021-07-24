@@ -516,6 +516,6 @@ function detectCollection(nodeList) {
 		};
 	}
 	else {
-		collection[0].classList.add("active");
+		nodeList[0].classList.add("active");
 	}
 };
