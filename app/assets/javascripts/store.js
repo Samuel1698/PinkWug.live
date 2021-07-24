@@ -490,6 +490,7 @@ function fixCollectionBug() {
 			products[j].querySelector('.shopify-buy__btn').innerText = ' ';
 		}
 	}
+	detectCollection();
 	function matchProductToCollection(product, text) {
 		// Check if each collection's class matches the text
 		for (let i = 0; i < collection.length; i++){
@@ -503,12 +504,11 @@ function fixCollectionBug() {
 };
 
 // Detect url query  and make that collection active
-(function detectCollection() {
+function detectCollection() {
 	var url = window.location.search.substring(1);
 	// console.log(url);
 	if (url) {
 		for (let i=0; i < collection.length; i++){
-			collection[i].classList.remove("active");
 			buttons[i].classList.remove("active");
 			if (collection[i].classList.contains(url)){
 				collection[i].classList.add("active");
@@ -516,4 +516,7 @@ function fixCollectionBug() {
 			}
 		};
 	}
-})();
+	else {
+		collection[0].classList.add("active");
+	}
+};
