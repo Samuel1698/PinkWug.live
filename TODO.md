@@ -96,6 +96,7 @@
   - [x] Detect if button text corresponds to correct category for each product, if not, move there
   - [x] Make image clickable
   - [x] Hide button
-  - [ ] js to detect url after ? and match with collection to make that active by default
-- [ ] Strip 'has print available' boolean
+  - [x] js to detect url after ? and match with collection to make that active by default
+- [x] Strip 'has print available' boolean
 - [ ] Whitespace broken again? 2px bug
+- [ ] new shop rspec
