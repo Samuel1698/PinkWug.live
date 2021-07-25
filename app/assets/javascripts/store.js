@@ -23,7 +23,6 @@ function dropDown(button){
 				collection[i].classList.remove("active");
 			}
 		}
-		addWhiteSpace("Click")();
 	}
 }
 // Products collection
@@ -69,7 +68,6 @@ function dropDown(button){
 		    "events": {
 		    	"afterRender": function(){
 		    		fixCollectionBug();
-		    		addWhiteSpace()();
 		    		setTimeout(fixCollectionBug,500);
 		    	},
 		    },

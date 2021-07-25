@@ -102,6 +102,9 @@ input[type="submit"], img {
 .container {
   min-width: 320px;
   background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .cache {
   position: absolute;
@@ -406,6 +409,7 @@ footer {
   text-align: center;
   color: white;
   background-color: $dark-brown;
+  margin-top: auto;
   font-size: 0; //To get rid of generated whitespace
   // background: image-url("TempFooter.png") no-repeat;
   // background-position: 100% 100%;
