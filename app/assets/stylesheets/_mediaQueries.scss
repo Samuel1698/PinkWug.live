@@ -54,12 +54,9 @@
 //-----------------------------------------------
 // For the footer icons
 // ----------------------------------------------
-@media (max-width: 400px){
-	footer a {
-		margin: 0 10px;
-		img {
-			width: 40px;
-		}
+@media (max-width: 485px){
+	footer .socialMediaLinks 	a {
+		margin: 10px 15px;
 	}
 }
 //-----------------------------------------------

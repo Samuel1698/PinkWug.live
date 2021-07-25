@@ -381,14 +381,11 @@ footer {
   background-color: $dark-brown;
   margin-top: auto;
   font-size: 0; //To get rid of generated whitespace
-  // background: image-url("TempFooter.png") no-repeat;
-  // background-position: 100% 100%;
-  // background-size: 700px;
+
   a {
-    vertical-align: center;
-    font-size: 16px;
     margin: 0px 15px;
-    padding: 15px 0px 16px;
+    height: 50px;
+    display: inline-block;
     img {
       width: 50px;
     }
@@ -404,6 +401,9 @@ footer {
   border-bottom: 1px solid black;
 }
 .socialMediaLinks {
+  div {
+    display: inline-block;
+  }
   margin-top: 30px;
   margin-bottom: 10px;
 }
