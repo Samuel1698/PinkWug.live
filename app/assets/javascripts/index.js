@@ -68,7 +68,6 @@ toggle.addEventListener("click", switchRows("stDate", "desc", button[0]));
 window.addEventListener('resize', galleryToggle(true));
 document.addEventListener('turbolinks:load', galleryToggle(true));
 document.addEventListener('turbolinks:load', switchRows("stDate", "desc", button[0]));
-toggle.addEventListener("click", addWhiteSpace("click"));
 
 // Sorts the array based on the array key "property"
 function dynamicSort(property, state){

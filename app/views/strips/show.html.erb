@@ -60,9 +60,6 @@
   	window.addEventListener('DOMContentLoaded', function(){
   		document.querySelector('.parent').style.minHeight = document.querySelector('.content').clientWidth + 'px';
   	});
-  	document.querySelector(".comic").addEventListener('load', () => {
-  		resetHeight();
-  		addWhiteSpace("load")();
-  	});
+  	document.querySelector(".comic").addEventListener('load', resetHeight);
 	</script>
 <% end %>

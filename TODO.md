@@ -98,7 +98,7 @@
   - [x] Hide button
   - [x] js to detect url after ? and match with collection to make that active by default
 - [x] Strip 'has print available' boolean
-- [ ] Whitespace broken again? 2px bug
+- [x] Use display:flex on container to prevent whitespace instead of javascript
 - [ ] new shop rspec
 - [ ] Fix archive title alignment on 320px devices
  - [ ] The problem is image min width for smaller devices 
