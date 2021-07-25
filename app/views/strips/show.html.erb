@@ -20,7 +20,7 @@
 <% end %>
 <div class="content">
 	<h1 class="visually-hidden"><%= title @title %></h1>
-	<div class="parent" style="min-height: 0;">
+	<div class="parent" style="min-height: 70vh;">
 		<%= image_tag(url_for(@strip.image), 
 		  srcset: { strip_variant(@strip, "375") => "375w",
 								strip_variant(@strip, "600") => "600w",
@@ -51,9 +51,6 @@
 <% content_for :javascripts do %>
   <%= javascript_include_tag "strips.js", "data-turbolinks-track" => true %>
   <script>
-  	window.addEventListener('DOMContentLoaded', function(){
-  		document.querySelector('.parent').style.minHeight = document.querySelector('.content').clientWidth + 'px';
-  	});
   	document.querySelector(".comic").addEventListener('load', resetHeight);
 	</script>
 <% end %>
