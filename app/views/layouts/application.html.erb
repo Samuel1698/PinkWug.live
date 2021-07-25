@@ -45,22 +45,10 @@
             <% end %>
           </li>
         </ul>
-        <div class="header_buttons">
-          <a href="https://discord.gg/pinkwug" target="_blank">
-            <button class="discord" tabindex="-1">
-              <span class="visually-hidden">Discord</span>
-            </button>
-          </a>
-          <a href="https://ko-fi.com/L3L42AQKS" target="_blank">
-            <button class="kofi" tabindex="-1">
-              <span class="visually-hidden">Ko-Fi</span>
-            </button>
-          </a>
-          <a href="https://www.patreon.com/pinkwug" target="_blank" >
-            <button class="patreon" tabindex="-1">
-              <span class="visually-hidden">Patreon</span>
-            </button>
-          </a>
+        <div class="header_links">
+          <%= link_to image_tag("Discord.png", width: "40px", alt: "Discord"), "https://discord.gg/pinkwug", target: "_blank"  %>
+          <%= link_to image_tag("Ko-fi.png", width: "40px", alt: "Discord"), "https://discord.gg/pinkwug", target: "_blank"  %>
+          <%= link_to image_tag("Patreon.png", width: "40px", alt: "Discord"), "https://discord.gg/pinkwug", target: "_blank"  %>
         </div>
       </header>
       <main id="main">

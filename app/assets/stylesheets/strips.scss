@@ -173,40 +173,13 @@ header {
       }
     }
   }
-  .header_buttons {
+  .header_links {
     position: absolute;
     top: 22px;
     right: 0;
     display: inline-block;
-    button {
-      box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-      line-height: 32px;
-      display: inline-block;
-      border-radius: 5px;
-      cursor: pointer;
-      border: 0 none white;
-      text-decoration: none;
-      text-shadow: none;
-      font-family: 'Quicksand', 'JollyGood Sans Basic', sans-serif ;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 20px;
-      margin-right: 4px;
-      &.discord {
-        // padding: 2px 10px 2px 30px;
-        background: image-url("Discord-Logo-White.svg") 50% 50%/24px no-repeat,
-                    linear-gradient($blurple,$blurple);
-      }
-      &.kofi {
-        // padding: 2px 10px 2px 36px;
-        background: image-url("Ko-fi_Icon_RGBforDarkBg.png") 50% 50%/38px no-repeat,
-                    linear-gradient($kofi,$kofi);
-      }
-      &.patreon {
-        // padding: 2px 10px 2px 30px;
-        background: image-url("icons8-patreon-white.svg") 50% 50%/24px no-repeat,
-                    linear-gradient($fiery-coral,$fiery-coral);
-      }
+    a {
+      margin-right: 5px;
     }
   }
 }
