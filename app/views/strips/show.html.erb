@@ -29,12 +29,6 @@
 							  strip_variant(@strip, "1600") => "1600w",
 							  strip_variant(@strip, "1780") => "1780w",
 							}, sizes: "70vh", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0') %>
-		<%= link_to @previous_strip, tabindex: "-1" do %>
-			<div class="backwards" tabindex="-1"></div>
-		<% end %>
-		<%= link_to @next_strip, tabindex: "-1" do %>
-			<div class="forward" tabindex="-1"></div>
-		<% end %>
 	</div>
 	<%= render 'comicNav' %>
 	<div class="comment", tabindex="0">

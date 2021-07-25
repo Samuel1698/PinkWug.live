@@ -3,8 +3,6 @@ var first_strip    = document.querySelector(".fa-angle-double-left");
 var previous_strip = document.querySelector(".fa-angle-left");
 var next_strip     = document.querySelector(".fa-angle-right");
 var last_strip     = document.querySelector(".fa-angle-double-right");
-var backwardsDiv   = document.querySelector(".backwards").parentElement;
-var forwardDiv     = document.querySelector(".forward").parentElement;
 
 
 if (first_strip.pathname == current_strip) {
@@ -16,15 +14,11 @@ if (previous_strip.pathname == current_strip) {
   previous_strip.querySelector(".visually-hidden").remove();
   previous_strip.removeAttribute('href');
   previous_strip.classList.add("disabled");
-  backwardsDiv.removeAttribute('href');
-  backwardsDiv.classList.add("disabled");
 }
 if (next_strip.pathname == current_strip || location.pathname == "/") {
   next_strip.querySelector(".visually-hidden").remove();
   next_strip.removeAttribute('href');
   next_strip.classList.add("disabled");
-  forwardDiv.removeAttribute('href');
-  forwardDiv.classList.add("disabled");
 }
 if (last_strip.pathname == current_strip || location.pathname == "/") {
   last_strip.querySelector(".visually-hidden").remove();
@@ -93,6 +87,21 @@ function updateClipboard(newClip) {
 // --------------------------------------------------
 // Height of parent
 // --------------------------------------------------
+var parent = document.querySelector('.parent');
 function resetHeight() {
-  document.querySelector('.parent').style.minHeight = 0;
+  parent.style.minHeight = 0;
 }
+parent.addEventListener("click", function(event){
+  pos_x = event.offsetX ? (event.offsetX) : event.pageX - this.offsetLeft;
+  pos_y = event.offsetY ? (event.offsetY) : event.pageY - this.offsetTop;
+  middle = (parent.offsetWidth / 2);
+  margin = (parent.offsetWidth * .07) / 2;
+  if (pos_y > margin && pos_y < parent.offsetHeight - margin){
+    if (pos_x > margin && pos_x < middle){
+      previous_strip.click();
+    }
+    if (pos_x > middle && pos_x < parent.offsetWidth - margin){
+      next_strip.click();
+    }
+  }
+});

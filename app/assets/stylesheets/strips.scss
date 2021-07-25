@@ -204,11 +204,8 @@ header {
 // Main css
 // =============================================================================
 main {
-  margin: 0 auto;
+  margin: 0 auto 25px;
   min-width: 320px;
-}
-.offset {
-  padding-top: 25px;
 }
 .support_buttons { 
   text-align: center;
@@ -250,19 +247,6 @@ main {
   .comic {
     margin: 0;
     width: 100%;
-  }
-  a div {
-    position: absolute;
-    top: 3.5%;
-    bottom: 3.5%;
-  }
-  .backwards {
-    right: 55%;
-    left: 3.5%;
-  }
-  .forward {
-    right: 3.5%;
-    left: 55%;
   }
   .disabled {
     display: none;
