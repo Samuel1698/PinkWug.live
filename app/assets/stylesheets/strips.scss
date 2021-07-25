@@ -126,7 +126,7 @@ header {
   position: relative;
   font-size: 18px;
   border-bottom: 1px solid black;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   // background-color: $dark-brown;
   .header_logo {
     margin: 16px;
@@ -140,13 +140,15 @@ header {
     margin: 4px auto;
     padding: 0;
     display: block;
+    height: 52px;
     li {
       // margin-right: 10px;
       display: inline-block;
+      height: 52px;
       a {
         padding: 26px;
         cursor: pointer;
-        margin: 0 15px;
+        margin: 0 10px;
         &.root_path {
           background: image-url("Home.png") center/70px no-repeat;
         }
@@ -164,7 +166,7 @@ header {
   }
   .header_buttons {
     position: absolute;
-    top: 20px;
+    top: 22px;
     right: 0;
     display: inline-block;
     button {
