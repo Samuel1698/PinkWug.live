@@ -102,5 +102,4 @@
 - [ ] new shop rspec
 - [ ] Fix archive title alignment on 320px devices
  - [ ] The problem is image min width for smaller devices 
-- [ ] Move resetHeight to head of document to prevent delay when loading
 - [ ] Search way to prevent horizontal scrolling????? on ipads ????????? tf

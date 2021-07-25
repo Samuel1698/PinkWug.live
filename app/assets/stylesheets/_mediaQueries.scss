@@ -130,15 +130,6 @@
 			}
 		}
 	}
-	header {
-		.header_logo {
-			float: left;
-		}
-		ul {
-			display: inline-block;
-			margin: 15px auto 0;
-		}
-	}
 	.img_container {
 		transform: translate(2%, -24%);
 	}
@@ -148,20 +139,11 @@
 // ---------------------------------------------------
 @media (min-width: 700px) {
 	header {
-		padding: 12px;
-		.header_logo {
-			position: absolute;
-			float: none;
-			left: 0;
-			top: 0;
+		width: 70vh;
+		margin: 0 auto;
+		.header_wrapper {
+			width: 93%;
 		}
-		ul {
-			display: block;
-			margin: 3px 0 0;
-			li a {
-				margin: 0 15px;
-			}
-		} 
 	}
 }
 // ---------------------------------------------------
@@ -176,13 +158,6 @@
 	}
 	p {
 		font-size: 1rem;
-	}
-	header {
-		ul {
-			li a {
-				margin: 0 20px;
-			}
-		}
 	}
 	.img_container {
 		transform: translate(1%, -22%);
