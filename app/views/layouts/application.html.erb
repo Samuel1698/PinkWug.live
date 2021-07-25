@@ -22,33 +22,32 @@
     <div class="container">
       <div id="skip"><a href="#main" data-turbolinks="false">Skip to Main Content</a></div> 
       <header class="header">
-        <%= link_to image_tag("Profile.png", width: "50px"), root_path, class: "header_logo" %>
-        <ul>
-          <li>
-            <%= link_to root_path, class: "root_path" do %>
-              <span class="visually-hidden">Home</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to strips_path, class: "strips_path" do %>
-              <span class="visually-hidden">Archive</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to store_index_path, class: "store_index_path" do %>
-              <span class="visually-hidden">Shop</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to about_path, class: "about_path" do %>
-              <span class="visually-hidden">About</span>
-            <% end %>
-          </li>
-        </ul>
-        <div class="header_links">
-          <%= link_to image_tag("Discord.png", width: "40px", alt: "Discord"), "https://discord.gg/pinkwug", target: "_blank"  %>
-          <%= link_to image_tag("Ko-fi.png", width: "40px", alt: "Discord"), "https://discord.gg/pinkwug", target: "_blank"  %>
-          <%= link_to image_tag("Patreon.png", width: "40px", alt: "Discord"), "https://discord.gg/pinkwug", target: "_blank"  %>
+        <div class="header_wrapper">
+          <%= link_to image_tag("Profile.png", width: "115px"), root_path, class: "header_logo" %>
+          <ul>
+            <li>
+              <%= link_to strips_path, class: "strips_path" do %>
+                <span class="visually-hidden">Archive</span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to store_index_path, class: "store_index_path" do %>
+                <span class="visually-hidden">Shop</span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to about_path, class: "about_path" do %>
+                <span class="visually-hidden">About</span>
+              <% end %>
+            </li>
+            <%= image_tag("Shelf2.png", tabindex: '-1', width: "215px", height: "20px", class: "shelf") %>
+          </ul>
+          <div class="header_links">
+            <%= link_to image_tag("Discord.png", width: "40px", alt: "Discord"), "https://discord.gg/pinkwug", target: "_blank", class: "discord_link"  %>
+            <%= link_to image_tag("Ko-fi.png", width: "40px", alt: "Kofi"), "https://discord.gg/pinkwug", target: "_blank", class: "kofi_link" %>
+            <%= link_to image_tag("Patreon.png", width: "40px", alt: "Patreon"), "https://discord.gg/pinkwug", target: "_blank", class: "patreon_link" %>
+            <%= image_tag("Shelf3.png", tabindex: '-1', width: "178px") %>
+          </div>
         </div>
       </header>
       <main id="main">
@@ -68,7 +67,6 @@
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>
     </div>
-    <%= javascript_include_tag "header.js", "data-turbolinks-track" => true %>
     <%= yield(:javascripts) %>
   </body>
 </html>
