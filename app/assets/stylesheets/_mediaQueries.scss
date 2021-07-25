@@ -141,6 +141,9 @@
 	header {
 		width: 70vh;
 		margin: 0 auto;
+		.header_logo {
+			margin-left: 0;
+		}
 		.header_wrapper {
 			width: 93%;
 		}
