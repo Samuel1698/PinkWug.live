@@ -124,6 +124,7 @@ header {
   }
   .header_logo {
     margin: 12px 12px 0;
+    display: inline-block;
   }
   a {
     display: block;
@@ -139,9 +140,8 @@ header {
     display: block;
     height: 52px;
     li {
-      // margin-right: 10px;
       display: inline-block;
-      height: 52px;
+      height: 42px;
       a {
         padding: 26px;
         cursor: pointer;
@@ -170,7 +170,7 @@ header {
   }
   .header_links {
     position: absolute;
-    top: -12px;
+    top: 0;
     right: 5px;
     display: inline-block;
     a {
