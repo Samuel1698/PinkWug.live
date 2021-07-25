@@ -1,14 +1,6 @@
 @import "variables";
 
 //-----------------------------------------------
-// target only landscape mobile users 
-//-----------------------------------------------
-@media (orientation: landscape) and (pointer: coarse) and (max-width: 900px) {
-	.content {
-		max-width: 125vh;
-	}
-}
-//-----------------------------------------------
 // For iPads & Devices that dont support hover
 //-----------------------------------------------
 @media (hover: none) and (pointer: coarse) {
@@ -140,6 +132,7 @@
 @media (min-width: 700px) {
 	header {
 		width: 70vh;
+		min-width: 320px;
 		margin: 0 auto;
 		.header_logo {
 			margin-left: 0;
@@ -192,5 +185,16 @@
 	}
 	.img_container {
 		transform: translate(0%, -12%);
+	}
+}
+//-----------------------------------------------
+// target only landscape mobile users 
+//-----------------------------------------------
+@media (orientation: landscape) and (pointer: coarse) and (max-width: 900px) {
+	header {
+		width: 125vh;
+	}
+	.content {
+		max-width: 125vh;
 	}
 }
