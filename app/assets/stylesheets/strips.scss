@@ -144,12 +144,9 @@ header {
       // margin-right: 10px;
       display: inline-block;
       a {
-        padding: 16px 2px;
+        padding: 26px;
         cursor: pointer;
-        span {
-          z-index: -10;
-          position: relative;
-        }
+        margin: 0 15px;
         &.root_path {
           background: image-url("Home.png") center/70px no-repeat;
         }
