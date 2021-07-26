@@ -91,6 +91,9 @@ var parent = document.querySelector('.parent');
 function resetHeight() {
   parent.style.minHeight = 0;
 }
+// --------------------------------------------------
+// In-image comic navigation
+// --------------------------------------------------
 parent.addEventListener("click", function(event){
   pos_x = event.offsetX ? (event.offsetX) : event.pageX - this.offsetLeft;
   pos_y = event.offsetY ? (event.offsetY) : event.pageY - this.offsetTop;
