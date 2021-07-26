@@ -116,11 +116,14 @@
 			}
 		}
 		.header_links {
-			.patreon_link:hover ~ .sibling {
-				background: image-url("Dono1.png") center/180px no-repeat;
+			.patreon_link:hover {
+				background: image-url("Dono1.png") center/40px no-repeat;
+				bottom: 43px;
+				right: 95px;
 			}
-			.kofi_link:hover ~ .sibling {
-				background: image-url("Dono2.png") center/180px no-repeat;
+			.kofi_link:hover {
+				background: image-url("Dono2.png") center/40px no-repeat;
+				bottom: 13px;
 			}
 		}
 	}
