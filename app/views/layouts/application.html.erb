@@ -14,6 +14,7 @@
     <%= favicon_link_tag asset_path("Favicon.png") %>  
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "preloader.js", "data-turbolinks-track" => true %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700">
   </head>
@@ -71,37 +72,12 @@
       <img id="preload-03">
       <img id="preload-04">
       <img id="preload-05">
-      <img id="preload-06">
-      <img id="preload-07">
+      <%= yield(:preload) %>
     </div>
-    <%= yield(:javascripts) %>
     <script>
-      // better image preloading @ https://perishablepress.com/press/2009/12/28/3-ways-preload-images-css-javascript-ajax/
-      function preloader() {
-        if (document.getElementById) {
-          document.getElementById("preload-01").style.background = 'url(<%= asset_path("Archive2.png") %>) no-repeat -9999px -9999px';
-          document.getElementById("preload-02").style.background = 'url(<%= asset_path("Shop2.png") %>) no-repeat -9999px -9999px';
-          document.getElementById("preload-03").style.background = 'url(<%= asset_path("About2.png") %>) no-repeat -9999px -9999px';
-          document.getElementById("preload-04").style.background = 'url(<%= asset_path("Menu.png") %>) no-repeat -9999px -9999px';
-          document.getElementById("preload-05").style.background = 'url(<%= asset_path("Profile2.png") %>) no-repeat -9999px -9999px';
-          document.getElementById("preload-06").style.background = 'url(<%= asset_path("Dono1.png") %>) no-repeat -9999px -9999px';
-          document.getElementById("preload-07").style.background = 'url(<%= asset_path("Dono2.png") %>) no-repeat -9999px -9999px';
-        }
-      }
-      function addLoadEvent(func) {
-        var oldonload = window.onload;
-        if (typeof window.onload != 'function') {
-          window.onload = func;
-        } else {
-          window.onload = function() {
-            if (oldonload) {
-              oldonload();
-            }
-            func();
-          }
-        }
-      }
-      addLoadEvent(preloader);
+      var assets = ["<%= asset_path("Archive2.png") %>","<%= asset_path("Shop2.png") %>","<%= asset_path("About2.png") %>","<%= asset_path("Menu.png") %>","<%= asset_path("Profile2.png") %>"];
+      preloadImages(assets, Number(1));
     </script>
+    <%= yield(:javascripts) %>
   </body>
 </html>
