@@ -135,7 +135,9 @@ header {
     margin: 0 auto;
     position: relative;
     z-index: 0;
-    top: -30.8px
+    top: -30.8px;
+    height: 40.7px;
+    background: image-url("Menu.png") center/350px no-repeat;
   }
   nav ul {
     text-align: center;
