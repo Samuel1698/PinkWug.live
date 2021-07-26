@@ -103,3 +103,4 @@
 - [ ] Fix archive title alignment on 320px devices
  - [ ] The problem is image min width for smaller devices 
 - [ ] Search way to prevent horizontal scrolling????? on ipads ????????? tf
+- [ ] Search in archive
