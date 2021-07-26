@@ -17,6 +17,9 @@ class StripsController < ApplicationController
 		@previous_strip = Strip.where(["created_at < ?", @strip.created_at]).order('created_at').last || @first_strip
 		@next_strip     = Strip.where(["created_at > ?", @strip.created_at]).order('created_at').first || @last_strip
 		@random_strip   = Strip.where(["id != ?", @strip.id]).order_by_rand.first
+
+
+		@links = @strip.links.split(" ")
 	end
 	
 	private

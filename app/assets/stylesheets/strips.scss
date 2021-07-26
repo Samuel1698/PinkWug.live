@@ -317,17 +317,6 @@ main {
   color: $wug-black;
   border: 2px solid $wug-black;
   position: relative;
-  // &::before {
-  //   display: block;
-  //   width: 0;
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   right: 0;
-  //   border-top: 30px solid #F9E6B2;
-  //   border-right: 30px solid white;
-  //   border-width: 30px 30px 0 0;
-  // }
   img {
     float: left;
     margin-right: 8px;
@@ -349,40 +338,75 @@ main {
       color: darkseagreen; 
     }
   }
-  button { // Tooltip 
-    position: relative;
-    cursor: pointer;
-    background: image-url("copy.svg")50% 50% no-repeat;
-    bottom: 0;
-    padding: 14px 25px;
-    span { // Tooltip text
-      position: absolute;
-      z-index: -1;
-      width: 110px;
-      bottom: 70%;
-      left: -10%;
-      margin-left: -55px; //Has to be half of the width
-      background-color: $dark-brown;
-      color: white;
-      text-align: center;
-      padding: 6px 0 4px;
-      border-radius: 6px;
-      margin-bottom: 6px;
-      &::after { // Down arrow
-        content: " ";
-        position: absolute;
-        top: 100%; /* At the bottom of the tooltip */
-        left: 75%; // 50% for center
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: $dark-brown transparent transparent transparent;
-      }
+  .share_buttons {
+    // background-color: #F9E6B2;
+    font-size: 0;
+    height: 30px;
+    a, button {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: 5px 5px 0 10px;
     }
-    &.active {
-      background: image-url("clipboard-check.svg")50% 50% no-repeat;
-      visibility: visible;
-      z-index: 0;
+    p {
+      background: initial;
+      display: inline-block;
+      padding: 0;
+      height: 20px;
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+    }
+    .twitter {
+      background: image-url("twitter_logo_400x400") center/20px no-repeat;
+    }
+    .facebook {
+      background: image-url("facebook_logo_400x400") center/20px no-repeat;
+    }
+    .instagram {
+      background: image-url("instagram_logo_400x400") center/20px no-repeat;
+    }
+    .reddit {
+      background: image-url("reddit_logo_400x400") center/20px no-repeat;
+    }
+    .tumblr {
+      background: image-url("tumblr_logo_400x400") center/20px no-repeat;
+    }
+    button { // Tooltip 
+      font-size: 18px;
+      cursor: pointer;
+      background: image-url("copy.svg") center/25px no-repeat;
+      position: relative;
+      bottom: 10px;
+      span { // Tooltip text
+        position: absolute;
+        z-index: -1;
+        width: 110px;
+        bottom: 90%;
+        left: -10%;
+        margin-left: -55px; //Has to be half of the width
+        background-color: $dark-brown;
+        color: white;
+        text-align: center;
+        padding: 6px 0 4px;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        &::after { // Down arrow
+          content: " ";
+          position: absolute;
+          top: 100%; /* At the bottom of the tooltip */
+          left: 65%; // 50% for center
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: $dark-brown transparent transparent transparent;
+        }
+      }
+      &.active {
+        background: image-url("clipboard-check.svg")50% 50% no-repeat;
+        visibility: visible;
+        z-index: 0;
+      }
     }
   }
 }

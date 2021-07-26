@@ -104,4 +104,4 @@
 - [ ] Fix archive title alignment on 320px devices (image min width)
 - [ ] Search way to prevent horizontal scrolling????? on ipads ????????? tf
 - [ ] Search in archive
-- [ ] Use images for the navigation arrows
+- [ ] Javascript navigation broken
