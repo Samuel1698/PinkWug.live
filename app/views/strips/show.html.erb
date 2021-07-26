@@ -17,10 +17,25 @@
 	  creator: '@pinkwug',
 	  image: strip_variant(@strip, "786")
 	} %>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+			if (window.innerWidth <= 500) {
+				document.querySelector('.parent').style.minHeight = window.innerWidth + "px";
+				document.querySelector('.parent').style.minWidth  = window.innerWidth + "px";
+			}
+			if (window.innerWidth >  500) {
+				document.querySelector('.parent').style.minHeight = "70vh";
+			}
+			if (document.querySelector('.comic').complete && document.querySelector('.comic').naturalWidth != 0){
+				document.querySelector('.parent').style.minHeight = 0;
+				document.querySelector('.parent').style.minWidth = 0;
+			}
+		});
+	</script>
 <% end %>
 <div class="content">
 	<h1 class="visually-hidden"><%= title @title %></h1>
-	<div class="parent" style="min-height: 70vh;">
+	<div class="parent">
 		<%= image_tag(url_for(@strip.image), 
 		  srcset: { strip_variant(@strip, "375") => "375w",
 								strip_variant(@strip, "600") => "600w",
@@ -54,9 +69,11 @@
 <% content_for :javascripts do %>
   <%= javascript_include_tag "strips.js", "data-turbolinks-track" => true %>
   <script>
-   	document.querySelector(".comic").addEventListener('load', function(){
-  		document.querySelector('.parent').style.minHeight = 0;
-  	});
+	 	document.querySelector(".comic").addEventListener('load', function(){
+	 		console.log('Image Loaded')
+			document.querySelector('.parent').style.minHeight = 0;
+			document.querySelector('.parent').style.minWidth = 0;
+		});
   	var icons = document.querySelectorAll(".icons");
   	for (let i=0; i < icons.length; i++){
   		icons[i].classList.remove("active");
