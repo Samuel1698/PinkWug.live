@@ -132,7 +132,7 @@ header {
     z-index: 0;
     top: -30.8px
   }
-  ul {
+  nav ul {
     text-align: center;
     margin: 0 auto;
     padding: 0;
@@ -170,7 +170,6 @@ header {
           top: 1px;
           &:hover {
             background: image-url("Shop2.png") center/80px no-repeat;
-            top: 1px;
           }
           span {
             right: 23.5px;
@@ -181,7 +180,6 @@ header {
           top: 0.8px;
           &:hover {
             background: image-url("About2.png") center/80px no-repeat;
-            top: 0.8px;
           }
           span {
             right: 20.5px;

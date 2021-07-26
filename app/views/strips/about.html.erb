@@ -69,3 +69,8 @@
 	</form>
 	</div>
 </div>
+<% content_for :javascripts do %>
+  <script>
+  	document.querySelector(".about_path").classList.add("active");
+  </script>
+<% end %>
