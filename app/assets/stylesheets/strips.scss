@@ -126,6 +126,9 @@ header {
     position: relative;
     z-index: 1;
     background: image-url("Profile.png") center/115px no-repeat;
+    &:hover, &.active {
+      background: image-url("Profile2.png") center/115px no-repeat;
+    }
   }
   a {
     display: block;
@@ -165,7 +168,7 @@ header {
           background: image-url("Archive.png") center/80px no-repeat;
           top: 1px;
           left: 0.7px;
-          &:hover {
+          &:hover, &.active {
             background: image-url("Archive2.png") center/80px no-repeat;
           }
           span {
@@ -175,7 +178,7 @@ header {
         &.store_index_path {
           background: image-url("Shop.png") center/80px no-repeat;
           top: 1px;
-          &:hover {
+          &:hover, &.active {
             background: image-url("Shop2.png") center/80px no-repeat;
           }
           span {
@@ -185,7 +188,7 @@ header {
         &.about_path {
           background: image-url("About.png") center/80px no-repeat;
           top: 0.8px;
-          &:hover {
+          &:hover, &.active {
             background: image-url("About2.png") center/80px no-repeat;
           }
           span {
