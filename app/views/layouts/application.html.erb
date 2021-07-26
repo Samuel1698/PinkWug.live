@@ -39,7 +39,7 @@
                 <span>about</span>
               <% end %>
             </li>
-            <%= image_tag("Menu.png", tabindex: '-1', width: "350px", class: "shelf") %>
+            <div class="shelf" width="350px" tabindex="-1"></div>
           </ul>
         </nav>
         <div class="header_links">
@@ -76,7 +76,7 @@
     </div>
     <script>
       var assets = ["<%= asset_path("Archive2.png") %>","<%= asset_path("Shop2.png") %>","<%= asset_path("About2.png") %>","<%= asset_path("Menu.png") %>","<%= asset_path("Profile2.png") %>"];
-      preloadImages(assets, Number(1));
+      preloadImages(assets, 1);
     </script>
     <%= yield(:javascripts) %>
   </body>
