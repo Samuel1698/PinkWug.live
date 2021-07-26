@@ -22,7 +22,7 @@
     <div class="container">
       <div id="skip"><a href="#main" data-turbolinks="false">Skip to Main Content</a></div> 
       <header class="header">
-        <%= link_to image_tag("Profile.png", width: "115px"), root_path, class: "header_logo" %>
+        <%= link_to "", root_path, class: "header_logo" %>
         <nav>
           <ul>
             <li>
@@ -44,7 +44,7 @@
         <div class="header_links">
           <%= link_to "","https://ko-fi.com/L3L42AQKS", target: "_blank", class: "kofi_link" %>
           <%= link_to "","https://www.patreon.com/pinkwug", target: "_blank", class: "patreon_link" %>
-          <%= image_tag("Dono.png", tabindex: '-1', width: "180px") %>
+          <div class="sibling"></div>
         </div>
       </header>
       <main id="main">
@@ -71,6 +71,8 @@
       <img id="preload-03">
       <img id="preload-04">
       <img id="preload-05">
+      <img id="preload-06">
+      <img id="preload-07">
     </div>
     <%= yield(:javascripts) %>
     <script>
@@ -82,6 +84,8 @@
           document.getElementById("preload-03").style.background = 'url(<%= asset_path("About2.png") %>) no-repeat -9999px -9999px';
           document.getElementById("preload-04").style.background = 'url(<%= asset_path("Menu.png") %>) no-repeat -9999px -9999px';
           document.getElementById("preload-05").style.background = 'url(<%= asset_path("Profile2.png") %>) no-repeat -9999px -9999px';
+          document.getElementById("preload-06").style.background = 'url(<%= asset_path("Dono1.png") %>) no-repeat -9999px -9999px';
+          document.getElementById("preload-07").style.background = 'url(<%= asset_path("Dono2.png") %>) no-repeat -9999px -9999px';
         }
       }
       function addLoadEvent(func) {
