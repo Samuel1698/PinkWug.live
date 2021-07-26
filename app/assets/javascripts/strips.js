@@ -85,13 +85,6 @@ function updateClipboard(newClip) {
   }, 2500);
 }
 // --------------------------------------------------
-// Height of parent
-// --------------------------------------------------
-var parent = document.querySelector('.parent');
-function resetHeight() {
-  parent.style.minHeight = 0;
-}
-// --------------------------------------------------
 // In-image comic navigation
 // --------------------------------------------------
 parent.addEventListener("click", function(event){

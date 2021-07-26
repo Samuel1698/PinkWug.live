@@ -85,6 +85,9 @@ input[type="submit"], img {
   width: 1px;
   display: inline-block;
 }
+body:hover .visually-hidden a, 
+body:hover .visually-hidden input, 
+body:hover .visually-hidden button { display: none}
 // Skip all navigation and jump to content
 #skip a {
   position:absolute;
@@ -106,9 +109,6 @@ input[type="submit"], img {
   display: flex;
   flex-direction: column;
 }
-body:hover .visually-hidden a, 
-body:hover .visually-hidden input, 
-body:hover .visually-hidden button { display: none}
 
 // =============================================================================
 // Header
@@ -288,38 +288,32 @@ main {
   }
 }
 .comic_Nav {
-  display: grid;
-  grid-template-areas:
-    "first  previous random next recent";
-  font-size: 24px;
+  font-size: 38px;
+  display: flex;
+  justify-content: space-between;
   a {
+    display: inline-block;
     background-color: white;
     border: none;
     text-align: center;
-    padding: 6px;
     cursor: pointer;
-    &:not(:last-child){
-      margin-right: 20px;
-    }
+    height: 38px;
+    width: 50px;
     &.disabled {
       pointer-events: none;
       color: grey;
     }
-  }
-  .fa-angle-double-left {
-    grid-area: first;
-  }
-  .fa-angle-left {
-    grid-area: previous;
-  }
-  .fa-rotate-right {
-    grid-area: random;  
-  }
-  .fa-angle-right {
-    grid-area: next;
-  }
-  .fa-angle-double-right{
-    grid-area: recent;
+    // Random arrow
+    &.fa:nth-child(3) {
+      font-size: 27px;
+      &::before {
+        margin-top: 7px;
+      }
+    }
+    &.fa::before {
+      height: 27px;
+      display: inline-block;
+    }
   }
 }
 .comment {

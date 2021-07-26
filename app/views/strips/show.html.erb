@@ -51,7 +51,9 @@
 <% content_for :javascripts do %>
   <%= javascript_include_tag "strips.js", "data-turbolinks-track" => true %>
   <script>
-  	document.querySelector(".comic").addEventListener('load', resetHeight);
+   	document.querySelector(".comic").addEventListener('load', function(){
+  		document.querySelector('.parent').style.minHeight = 0;
+  	});
   	var icons = document.querySelectorAll(".icons");
   	for (let i=0; i < icons.length; i++){
   		icons[i].classList.remove("active");

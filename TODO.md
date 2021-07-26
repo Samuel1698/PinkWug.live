@@ -99,8 +99,9 @@
   - [x] js to detect url after ? and match with collection to make that active by default
 - [x] Strip 'has print available' boolean
 - [x] Use display:flex on container to prevent whitespace instead of javascript
-- [ ] new shop rspec
-- [ ] Fix archive title alignment on 320px devices
- - [ ] The problem is image min width for smaller devices 
+- [ ] new shop spec
+- [ ] new search spec
+- [ ] Fix archive title alignment on 320px devices (image min width)
 - [ ] Search way to prevent horizontal scrolling????? on ipads ????????? tf
 - [ ] Search in archive
+- [ ] Use images for the navigation arrows
