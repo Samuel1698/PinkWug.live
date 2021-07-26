@@ -11,13 +11,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= preload_link_tag("Archive.png",  as: "image") %>
+    <%= preload_link_tag("Archive.png", as: "image") %>
     <%= preload_link_tag("Archive2.png", as: "image") %>
-    <%= preload_link_tag("Shop.png",     as: "image") %>
-    <%= preload_link_tag("Shop2.png",    as: "image") %>
-    <%= preload_link_tag("About.png",    as: "image") %>
-    <%= preload_link_tag("About2.png",   as: "image") %>
-    <%= preload_link_tag("Menu.png",     as: "image") %>
+    <%= preload_link_tag("Shop.png", as: "image") %>
+    <%= preload_link_tag("Shop2.png", as: "image") %>
+    <%= preload_link_tag("About.png", as: "image") %>
+    <%= preload_link_tag("About2.png", as: "image") %>
+    <%= preload_link_tag("Menu.png", as: "image") %>
 
     <%= favicon_link_tag asset_path("Favicon.png") %>  
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -30,7 +30,7 @@
     <div class="container">
       <div id="skip"><a href="#main" data-turbolinks="false">Skip to Main Content</a></div> 
       <header class="header">
-        <%= link_to image_tag("Profile.png", width: "115px"), root_url, class: "header_logo" %>
+        <%= link_to image_tag("Profile.png", width: "115px"), root_path, class: "header_logo" %>
         <nav>
           <ul>
             <li>
