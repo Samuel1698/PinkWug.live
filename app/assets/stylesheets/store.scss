@@ -10,6 +10,7 @@
 	.shop_collections {
 		text-align: center;
 		position: relative;
+		margin-bottom: 12px;
 		button {
 			position: relative;
 			z-index: 1;
@@ -21,7 +22,9 @@
 			border: none;
 			bottom: -3px;
 		}
-		img {
+		.shopShelf {
+			height: 106px;
+			background: image-url("ShopShelf.png") center/320px no-repeat;
 			margin: 0 auto;
 			position: absolute;
 			bottom: -11px;
