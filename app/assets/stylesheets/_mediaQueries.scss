@@ -4,11 +4,33 @@
 // For iPads & Devices that dont support hover
 //-----------------------------------------------
 @media (hover: none) and (pointer: coarse) {
-	header .header_wrapper nav ul li {
-		a:active {
-			border-radius: 6px;
-		  color: $dark-brown;
-		  background-color: white;
+	header nav ul li {
+		a.strips_path:active {
+			background: image-url("Archive2.png") center/80px no-repeat;
+		}
+		a.store_index_path:active {
+			background: image-url("Shop2.png") center/80px no-repeat;
+		}
+		a.about_path:active {
+			background: image-url("About2.png") center/80px no-repeat;
+		}
+		a.strips_path:hover {
+			background: image-url("Archive2.png") center/80px no-repeat;
+		}
+		a.store_index_path:hover {
+			background: image-url("Shop2.png") center/80px no-repeat;
+		}
+		a.about_path:hover {
+			background: image-url("About2.png") center/80px no-repeat;
+		}
+		a.strips_path.active {
+			background: image-url("Archive2.png") center/80px no-repeat;
+		}
+		a.store_index_path.active {
+			background: image-url("Shop2.png") center/80px no-repeat;
+		}
+		a.about_path.active {
+			background: image-url("About2.png") center/80px no-repeat;
 		}
 	}
 	.comment {
@@ -27,16 +49,42 @@
 // For desktops & Devices that support hover
 //-----------------------------------------------
 @media (hover: hover) and (pointer: fine) {
-	.header_wrapper nav ul li {
-		a:hover {
-		  border-radius: 6px;
-		  color: $dark-brown;
-		  background-color: white;
+	header nav ul li {
+		a.strips_path:active {
+			background: image-url("Archive2.png") center/80px no-repeat;
 		}
-		a:focus-visible {
-			border-radius: 6px;
-		  color: $dark-brown;
-		  background-color: white;
+		a.store_index_path:active {
+			background: image-url("Shop2.png") center/80px no-repeat;
+		}
+		a.about_path:active {
+			background: image-url("About2.png") center/80px no-repeat;
+		}
+		a.strips_path:hover {
+			background: image-url("Archive2.png") center/80px no-repeat;
+		}
+		a.store_index_path:hover {
+			background: image-url("Shop2.png") center/80px no-repeat;
+		}
+		a.about_path:hover {
+			background: image-url("About2.png") center/80px no-repeat;
+		}
+		a.strips_path:focus-visible {
+			background: image-url("Archive2.png") center/80px no-repeat;
+		}
+		a.store_index_path:focus-visible {
+			background: image-url("Shop2.png") center/80px no-repeat;
+		}
+		a.about_path:focus-visible {
+			background: image-url("About2.png") center/80px no-repeat;
+		}
+		a.strips_path.active {
+			background: image-url("Archive2.png") center/80px no-repeat;
+		}
+		a.store_index_path.active {
+			background: image-url("Shop2.png") center/80px no-repeat;
+		}
+		a.about_path.active {
+			background: image-url("About2.png") center/80px no-repeat;
 		}
 	}
 	.comment {
