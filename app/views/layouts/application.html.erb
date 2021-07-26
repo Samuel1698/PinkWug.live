@@ -11,14 +11,6 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= preload_link_tag("Archive.png", as: "image") %>
-    <%= preload_link_tag("Archive2.png", as: "image") %>
-    <%= preload_link_tag("Shop.png", as: "image") %>
-    <%= preload_link_tag("Shop2.png", as: "image") %>
-    <%= preload_link_tag("About.png", as: "image") %>
-    <%= preload_link_tag("About2.png", as: "image") %>
-    <%= preload_link_tag("Menu.png", as: "image") %>
-
     <%= favicon_link_tag asset_path("Favicon.png") %>  
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -74,7 +66,35 @@
         </div>
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>
+      <img id="preload-01">
+      <img id="preload-02">
+      <img id="preload-03">
     </div>
     <%= yield(:javascripts) %>
+    <script>
+      // better image preloading @ https://perishablepress.com/press/2009/12/28/3-ways-preload-images-css-javascript-ajax/
+      function preloader() {
+        if (document.getElementById) {
+          document.getElementById("preload-01").style.background = 'url(<%= asset_path("Archive2.png") %>) no-repeat -9999px -9999px';
+          document.getElementById("preload-02").style.background = 'url(<%= asset_path("Shop2.png") %>) no-repeat -9999px -9999px';
+          document.getElementById("preload-03").style.background = 'url(<%= asset_path("About2.png") %>) no-repeat -9999px -9999px';
+          document.getElementById("preload-04").style.background = 'url(<%= asset_path("Menu.png") %>) no-repeat -9999px -9999px';
+        }
+      }
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+      }
+      addLoadEvent(preloader);
+    </script>
   </body>
 </html>
