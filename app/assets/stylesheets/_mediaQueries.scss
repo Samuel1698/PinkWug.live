@@ -140,6 +140,9 @@
 // Header resizing for smallest screens
 // ----------------------------------------------
 @media (max-width: 350px){
+	.store .shop_collections img {
+		bottom: -9px;
+	}
 	header {
 		.shelf {
 			width: 320px;
@@ -238,7 +241,7 @@
 		font-size: 1rem;
 	}
 	header {
-		height: 150px;
+		height: 140px;
 		ul {
 			position: relative;
 			bottom: 60px;
