@@ -116,11 +116,8 @@ body:hover .visually-hidden button { display: none}
 
 header {
   font-size: 18px;
-  .header_wrapper {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-  }
+  min-width: 320px;
+  height: 200px;
   .header_logo {
     margin: 12px 12px 0;
     display: inline-block;
