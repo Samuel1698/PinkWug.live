@@ -42,9 +42,9 @@
           </ul>
         </nav>
         <div class="header_links">
-          <%= link_to image_tag("Ko-fi.png", width: "40px", alt: "Kofi link"), "https://ko-fi.com/L3L42AQKS", target: "_blank", class: "kofi_link" %>
-          <%= link_to image_tag("Patreon.png", width: "40px", alt: "Patreon link"), "https://www.patreon.com/pinkwug", target: "_blank", class: "patreon_link" %>
-          <%= image_tag("Shelf3.png", tabindex: '-1', width: "178px") %>
+          <%= link_to "","https://ko-fi.com/L3L42AQKS", target: "_blank", class: "kofi_link" %>
+          <%= link_to "","https://www.patreon.com/pinkwug", target: "_blank", class: "patreon_link" %>
+          <%= image_tag("Dono.png", tabindex: '-1', width: "180px") %>
         </div>
       </header>
       <main id="main">
@@ -69,6 +69,8 @@
       <img id="preload-01">
       <img id="preload-02">
       <img id="preload-03">
+      <img id="preload-04">
+      <img id="preload-05">
     </div>
     <%= yield(:javascripts) %>
     <script>
@@ -79,6 +81,7 @@
           document.getElementById("preload-02").style.background = 'url(<%= asset_path("Shop2.png") %>) no-repeat -9999px -9999px';
           document.getElementById("preload-03").style.background = 'url(<%= asset_path("About2.png") %>) no-repeat -9999px -9999px';
           document.getElementById("preload-04").style.background = 'url(<%= asset_path("Menu.png") %>) no-repeat -9999px -9999px';
+          document.getElementById("preload-05").style.background = 'url(<%= asset_path("Profile2.png") %>) no-repeat -9999px -9999px';
         }
       }
       function addLoadEvent(func) {

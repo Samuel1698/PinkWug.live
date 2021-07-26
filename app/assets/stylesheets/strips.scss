@@ -197,12 +197,13 @@ header {
     display: inline-block;
     a {
       position: absolute;
-      bottom: 18px;
+      padding: 25px 25px 10px;
+      right: 90px;
       &.kofi_link {
-        right: 69px;
+        bottom: 9px;
       }
       &.patreon_link {
-        right: 25px;
+        bottom: 45px;
       }
     }
   }
