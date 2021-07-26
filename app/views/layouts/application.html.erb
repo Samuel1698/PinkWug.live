@@ -11,6 +11,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= preload_link_tag("Archive.png",  as: "image") %>
+    <%= preload_link_tag("Archive2.png", as: "image") %>
+    <%= preload_link_tag("Shop.png",     as: "image") %>
+    <%= preload_link_tag("Shop2.png",    as: "image") %>
+    <%= preload_link_tag("About.png",    as: "image") %>
+    <%= preload_link_tag("About2.png",   as: "image") %>
+    <%= preload_link_tag("Menu.png",     as: "image") %>
+    
     <%= favicon_link_tag asset_path("Favicon.png") %>  
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -27,18 +35,18 @@
           <ul>
             <li>
               <%= link_to strips_path, class: "strips_path" do %>
-                <span class="visually-hidden">Archive</span>
+                <span>archive</span>
               <% end %>
             </li><li>
               <%= link_to store_index_path, class: "store_index_path" do %>
-                <span class="visually-hidden">Shop</span>
+                <span>shop</span>
               <% end %>
             </li><li>
               <%= link_to about_path, class: "about_path" do %>
-                <span class="visually-hidden">About</span>
+                <span>about</span>
               <% end %>
             </li>
-            <%= image_tag("Shelf2.png", tabindex: '-1', width: "215px", height: "20px", class: "shelf") %>
+            <%= image_tag("Menu.png", tabindex: '-1', width: "350px", class: "shelf") %>
           </ul>
           <div class="header_links">
             <%= link_to image_tag("Ko-fi.png", width: "40px", alt: "Kofi link"), "https://discord.gg/pinkwug", target: "_blank", class: "kofi_link" %>
