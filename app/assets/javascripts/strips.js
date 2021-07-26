@@ -87,6 +87,7 @@ function updateClipboard(newClip) {
 // --------------------------------------------------
 // In-image comic navigation
 // --------------------------------------------------
+var parent = document.querySelector('.parent');
 parent.addEventListener("click", function(event){
   pos_x = event.offsetX ? (event.offsetX) : event.pageX - this.offsetLeft;
   pos_y = event.offsetY ? (event.offsetY) : event.pageY - this.offsetTop;
