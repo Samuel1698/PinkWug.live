@@ -121,6 +121,8 @@ header {
   .header_logo {
     margin: 12px 12px 0;
     display: inline-block;
+    position: relative;
+    z-index: 1;
   }
   a {
     display: block;
