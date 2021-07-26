@@ -1,6 +1,6 @@
 ActiveAdmin.register Strip do
 
-  permit_params :title, :description, :image, :keywords, :keywords_raw, :transcript, :created_at, :updated_at, :comment, :has_print
+  permit_params :title, :description, :image, :keywords, :keywords_raw, :transcript, :created_at, :updated_at, :comment, :has_print, :links
 
 
   filter :title
@@ -50,6 +50,7 @@ ActiveAdmin.register Strip do
       f.input :description, as: :text, hint: "Short description. Only visible on search results & link embeds", :input_html => { :rows => 2 }
       f.input :keywords_raw, as: :string, label: "Tags", hint: "What is this comic about? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon"
       f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
+      f.input :links, as: :text, hint: "Twitter, Instagram, Reddit, Facebook & Tumblr links", :input_html => { :rows => 12}
       div do 
         span "Image*", id: "image-label"
         div id: "drop-region" do

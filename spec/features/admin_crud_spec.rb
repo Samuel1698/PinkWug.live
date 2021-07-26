@@ -13,6 +13,12 @@ RSpec.feature "admin CRUD", type: :feature do
 
     fill_in "Title", with: "Relatable"
     fill_in "Description", with: "My reaction when someone says they relate to my comics"
+    fill_in "Author Comment", with: "Hello there"
+    fill_in "Links", with: "https://twitter.com/PinkWug/status/1415352022967140358
+    https://www.instagram.com/p/CRUI7fAl7j5/
+    https://www.reddit.com/r/PinkWug/comments/ok89q3/when_governments_criminalize_homelessness/
+    https://www.facebook.com/PinkWug/posts/685510745726284
+    https://pinkwug.tumblr.com/post/656703380823097344/when-governments-criminalize-homelessness"
     fill_in "Tags", with: "Non-political, Yellow"
     attach_file('Image', "spec/images/Relatable.jpg")
     fill_in "Transcript", with: "Yellow wug says 'I relate so much to your comics'.
@@ -28,7 +34,7 @@ RSpec.feature "admin CRUD", type: :feature do
       expect(page).to have_css('img')
     end
     # Puts message to show that test was successful
-    puts 'Strip "Relatable" created successfully'
+    puts ' Strip "Relatable" created successfully'
   end
   it "edits new strip" do
     # Click on Edit Strip
@@ -37,6 +43,8 @@ RSpec.feature "admin CRUD", type: :feature do
     fill_in "Title", with: "Avocado (Collab with ThingsInSquares)"
     fill_in "Description", with: "Millenials and their student debt"
     fill_in "Tags", with: "Student Debt, Loans, Millenials"
+    fill_in "Author Comment", with: "General kenobi"
+    fill_in "Links", with: "https://twitter.com/PinkWug/status/1415352022967140358"
     attach_file('Image', "spec/images/avocado (collab with ThingsInSquares).png")
     fill_in "Transcript", with: "Pink Wug reading a headline from his laptop reading: How to pay off student loans... 'eat less avocado' highlighted among the text of the newspaper. Next panel is pink wug calculating, the phrase '12654 fewer avocados' appears among different equations. Next panel shows him vomiting an avocado and counting, saying 'that makes 31...' Next panel shows him handing a banker the keys to a truck full of avocados in the back, saying 'I'm paying off my debt please'"
     fill_in "Created In", with: "11/02/2021"
@@ -47,12 +55,14 @@ RSpec.feature "admin CRUD", type: :feature do
       expect(page).to have_text("Avocado (Collab with ThingsInSquares)")
       expect(page).to have_text("Millenials and their student debt")
       expect(page).to have_text("Student Debt, Loans, Millenials")
+      expect(page).to have_text("General kenobi")
+      expect(page).to have_text("https://twitter.com/PinkWug/status/1415352022967140358")
       expect(page).to have_css('img')
       expect(page).to have_text("Pink Wug reading a headline from his laptop reading: How to pay off student loans... 'eat less avocado' highlighted among the text of the newspaper. Next panel is pink wug calculating, the phrase '12654 fewer avocados' appears among different equations. Next panel shows him vomiting an avocado and counting, saying 'that makes 31...' Next panel shows him handing a banker the keys to a truck full of avocados in the back, saying 'I'm paying off my debt please'")
       expect(page).to have_text("Feb 11 2021")
     end
     # Puts message to show that test was successful
-    puts 'Strip "Relatable" edited successfully to "Avocado"'
+    puts ' Strip "Relatable" edited successfully to "Avocado"'
   end
   it "deletes new strip" do 
     # Click on Delete Strip button
@@ -63,6 +73,6 @@ RSpec.feature "admin CRUD", type: :feature do
       expect(page).to_not have_text("Relatable")
     end
     # Puts message to show that test was successful
-    puts 'Strip "Relatable" was successfully destroyed'
+    puts ' Strip "Relatable" was successfully destroyed'
   end
 end
