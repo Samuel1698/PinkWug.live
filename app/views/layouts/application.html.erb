@@ -67,12 +67,9 @@
         </div>
         <p>© 2021, PinkWug powered by Sam D</p>
       </footer>
-      <img id="preload-01">
-      <img id="preload-02">
-      <img id="preload-03">
-      <img id="preload-04">
-      <img id="preload-05">
-      <%= yield(:preload) %>
+    </div>
+    <div class="preload"><img id="preload-01"><img id="preload-02"><img id="preload-03"><img id="preload-04"><img id="preload-05">
+    <%= yield(:preload) %>
     </div>
     <script>
       var assets = ["<%= asset_path("Archive2.png") %>","<%= asset_path("Shop2.png") %>","<%= asset_path("About2.png") %>","<%= asset_path("Menu.png") %>","<%= asset_path("Profile2.png") %>"];

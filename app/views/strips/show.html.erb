@@ -32,20 +32,18 @@
 	</div>
 	<%= render 'comicNav' %>
 	<div class="comment", tabindex="0">
-		<%= image_tag("wugART@3x.png", style: "width: 32px", alt: "") %>
 		<p>published in <%= @strip.created_at.strftime("%B %-d, %Y") %> </p>	
 		<%= Rinku.auto_link(simple_format(@strip.comment), :all, 'target="_blank"').html_safe unless @strip.comment.blank? %>
 		<% if @strip.has_print? %>
 			<p>This comic has a print available for purchase in the
 			<%= link_to "shop!", store_index_url << "?prints" %></p>
 		<% end %>
-	</div>
-	<div class="share", tabindex="0">
 		<p>share this comic!</p>
-		<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
-			<span>copy link</span>
-		</button>
-		<p><%= strip_url(@strip) %></p>
+		<div class="share_buttons">
+			<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
+				<span>copy link</span>
+			</button>
+		</div>
 	</div>
 </div>
 <% content_for :javascripts do %>
