@@ -119,10 +119,13 @@ header {
   min-width: 320px;
   height: 200px;
   .header_logo {
+    width: 115px;
+    height: 86.7px;
     margin: 12px 12px 0;
     display: inline-block;
     position: relative;
     z-index: 1;
+    background: image-url("Profile.png") center/115px no-repeat;
   }
   a {
     display: block;
@@ -195,6 +198,13 @@ header {
     top: 0;
     right: 5px;
     display: inline-block;
+    width: 180px;
+    height: 108.6px;
+    background: image-url("Dono.png") center/180px no-repeat;
+    .sibling {
+      width: 180px;
+      height: 108.6px;
+    }
     a {
       position: absolute;
       padding: 25px 25px 10px;

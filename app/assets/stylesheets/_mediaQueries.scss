@@ -4,35 +4,48 @@
 // For iPads & Devices that dont support hover
 //-----------------------------------------------
 @media (hover: none) and (pointer: coarse) {
-	header nav ul li {
-		a.strips_path:active {
-			background: image-url("Archive2.png") center/80px no-repeat;
+	header {
+		.header_logo {
+			&:active {
+				background: image-url("Profile2.png") center/115px no-repeat;
+			}
+			&:hover {
+				background: image-url("Profile2.png") center/115px no-repeat;
+			}
+			&.active {
+				background: image-url("Profile2.png") center/115px no-repeat;
+			}
 		}
-		a.store_index_path:active {
-			background: image-url("Shop2.png") center/80px no-repeat;
+		nav ul li {
+			a.strips_path:active {
+				background: image-url("Archive2.png") center/80px no-repeat;
+			}
+			a.store_index_path:active {
+				background: image-url("Shop2.png") center/80px no-repeat;
+			}
+			a.about_path:active {
+				background: image-url("About2.png") center/80px no-repeat;
+			}
+			a.strips_path:hover {
+				background: image-url("Archive2.png") center/80px no-repeat;
+			}
+			a.store_index_path:hover {
+				background: image-url("Shop2.png") center/80px no-repeat;
+			}
+			a.about_path:hover {
+				background: image-url("About2.png") center/80px no-repeat;
+			}
+			a.strips_path.active {
+				background: image-url("Archive2.png") center/80px no-repeat;
+			}
+			a.store_index_path.active {
+				background: image-url("Shop2.png") center/80px no-repeat;
+			}
+			a.about_path.active {
+				background: image-url("About2.png") center/80px no-repeat;
+			}
 		}
-		a.about_path:active {
-			background: image-url("About2.png") center/80px no-repeat;
-		}
-		a.strips_path:hover {
-			background: image-url("Archive2.png") center/80px no-repeat;
-		}
-		a.store_index_path:hover {
-			background: image-url("Shop2.png") center/80px no-repeat;
-		}
-		a.about_path:hover {
-			background: image-url("About2.png") center/80px no-repeat;
-		}
-		a.strips_path.active {
-			background: image-url("Archive2.png") center/80px no-repeat;
-		}
-		a.store_index_path.active {
-			background: image-url("Shop2.png") center/80px no-repeat;
-		}
-		a.about_path.active {
-			background: image-url("About2.png") center/80px no-repeat;
-		}
-	}
+	} 
 	.comment {
 		a:active {
 			color: limegreen;
@@ -49,42 +62,66 @@
 // For desktops & Devices that support hover
 //-----------------------------------------------
 @media (hover: hover) and (pointer: fine) {
-	header nav ul li {
-		a.strips_path:active {
-			background: image-url("Archive2.png") center/80px no-repeat;
+	header {
+		.header_logo {
+			&:active {
+				background: image-url("Profile2.png") center/115px no-repeat;
+			}
+			&:hover {
+				background: image-url("Profile2.png") center/115px no-repeat;
+			}
+			&:focus-visible {
+				background: image-url("Profile2.png") center/115px no-repeat;
+			}
+			&.active {
+				background: image-url("Profile2.png") center/115px no-repeat;
+			}
 		}
-		a.store_index_path:active {
-			background: image-url("Shop2.png") center/80px no-repeat;
+		nav ul li {
+			a.strips_path:active {
+				background: image-url("Archive2.png") center/80px no-repeat;
+			}
+			a.store_index_path:active {
+				background: image-url("Shop2.png") center/80px no-repeat;
+			}
+			a.about_path:active {
+				background: image-url("About2.png") center/80px no-repeat;
+			}
+			a.strips_path:hover {
+				background: image-url("Archive2.png") center/80px no-repeat;
+			}
+			a.store_index_path:hover {
+				background: image-url("Shop2.png") center/80px no-repeat;
+			}
+			a.about_path:hover {
+				background: image-url("About2.png") center/80px no-repeat;
+			}
+			a.strips_path:focus-visible {
+				background: image-url("Archive2.png") center/80px no-repeat;
+			}
+			a.store_index_path:focus-visible {
+				background: image-url("Shop2.png") center/80px no-repeat;
+			}
+			a.about_path:focus-visible {
+				background: image-url("About2.png") center/80px no-repeat;
+			}
+			a.strips_path.active {
+				background: image-url("Archive2.png") center/80px no-repeat;
+			}
+			a.store_index_path.active {
+				background: image-url("Shop2.png") center/80px no-repeat;
+			}
+			a.about_path.active {
+				background: image-url("About2.png") center/80px no-repeat;
+			}
 		}
-		a.about_path:active {
-			background: image-url("About2.png") center/80px no-repeat;
-		}
-		a.strips_path:hover {
-			background: image-url("Archive2.png") center/80px no-repeat;
-		}
-		a.store_index_path:hover {
-			background: image-url("Shop2.png") center/80px no-repeat;
-		}
-		a.about_path:hover {
-			background: image-url("About2.png") center/80px no-repeat;
-		}
-		a.strips_path:focus-visible {
-			background: image-url("Archive2.png") center/80px no-repeat;
-		}
-		a.store_index_path:focus-visible {
-			background: image-url("Shop2.png") center/80px no-repeat;
-		}
-		a.about_path:focus-visible {
-			background: image-url("About2.png") center/80px no-repeat;
-		}
-		a.strips_path.active {
-			background: image-url("Archive2.png") center/80px no-repeat;
-		}
-		a.store_index_path.active {
-			background: image-url("Shop2.png") center/80px no-repeat;
-		}
-		a.about_path.active {
-			background: image-url("About2.png") center/80px no-repeat;
+		.header_links {
+			.patreon_link:hover ~ .sibling {
+				background: image-url("Dono1.png") center/180px no-repeat;
+			}
+			.kofi_link:hover ~ .sibling {
+				background: image-url("Dono2.png") center/180px no-repeat;
+			}
 		}
 	}
 	.comment {
