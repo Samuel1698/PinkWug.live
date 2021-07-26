@@ -160,7 +160,7 @@ header {
         span {
           display: inline-block;
           position: absolute;
-          color: #404041;
+          color: $wug-black;
           font-size: 10.5px;
           bottom: -10.1px;
         }
@@ -206,10 +206,6 @@ header {
     width: 180px;
     height: 108.6px;
     background: image-url("Dono.png") center/180px no-repeat;
-    .sibling {
-      width: 180px;
-      height: 108.6px;
-    }
     a {
       position: absolute;
       padding: 25px 25px 10px;
@@ -282,7 +278,7 @@ main {
   .parent {
     width: 100%;
   }
-  div:not(:first-of-type) {
+  .comic_Nav, .comment {
     max-width: 93%;
     margin: 0 auto 8px;
   }
@@ -317,25 +313,34 @@ main {
   }
 }
 .comment {
-  background-color: $dark-grey;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 12px;
+  background-color: #FCF2D2;
+  color: $wug-black;
+  border: 2px solid $wug-black;
+  position: relative;
+  // &::before {
+  //   display: block;
+  //   width: 0;
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   right: 0;
+  //   border-top: 30px solid #F9E6B2;
+  //   border-right: 30px solid white;
+  //   border-width: 30px 30px 0 0;
+  // }
   img {
     float: left;
     margin-right: 8px;
   }
   p {
+    word-wrap: break-word;
     font-size: 0.9rem;
-    margin: 0;
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-    }
+    margin: 0 12px;
     &:first-of-type {
       font-size: 0.8rem;
-      // Pixel amount is based on image size +2 for bottom margin/padding
-      margin-top:    calc( 18px - (0.8rem / 2));
-      margin-bottom: calc( 14px - (0.8rem / 2)); //20px
+      margin: 0 0 10px;
+      background-color: #F9E6B2;
+      padding: 4px 12px;
     }
     &:nth-child(3){
       margin-top: 0.7rem;
@@ -344,31 +349,12 @@ main {
       color: darkseagreen; 
     }
   }
-}
-.share {
-  font-family: 'JollyGood Sans Bold', 'JollyGood Sans Basic', sans-serif;
-  font-weight: bold;
-  background-color: $light-grey;
-  padding: 8px 12px;
-  border-radius: 12px;
-  position: relative;
-  p {
-    word-wrap: break-word;
-    font-size: 0.8rem;
-    margin: 0;
-    &:last-child {
-      margin-right: 40px;
-      font-size: 0.7rem;
-    }
-  }
   button { // Tooltip 
-    position: absolute;
+    position: relative;
     cursor: pointer;
     background: image-url("copy.svg")50% 50% no-repeat;
-    right: 0;
-    top: 0;
     bottom: 0;
-    padding: 23px 25px;
+    padding: 14px 25px;
     span { // Tooltip text
       position: absolute;
       z-index: -1;
@@ -435,5 +421,10 @@ footer {
   }
   margin-top: 30px;
   margin-bottom: 10px;
+}
+.preload {
+  position: absolute;
+  bottom: 0;
+  left: -9999px;
 }
 @import "mediaQueries"

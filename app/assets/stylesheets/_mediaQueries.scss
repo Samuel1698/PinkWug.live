@@ -50,11 +50,11 @@
 		a:active {
 			color: limegreen;
 		}
-	}
-	.share button:hover {
-		span {
-			visibility: visible;
-			z-index: 0;
+		button:hover {
+			span {
+				visibility: visible;
+				z-index: 0;
+			}
 		}
 	}
 }
@@ -131,11 +131,11 @@
 		a:hover {
 			color: limegreen;
 		}
-	}
-	.share button:hover{
-		span {
-			visibility: visible;
-			z-index: 0;
+		button:hover{
+			span {
+				visibility: visible;
+				z-index: 0;
+			}
 		}
 	}
 }
