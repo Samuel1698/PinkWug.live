@@ -325,7 +325,7 @@ main {
     word-wrap: break-word;
     font-size: 0.9rem;
     margin: 0 12px;
-    &:first-of-type {
+    &:first-child {
       font-size: 0.8rem;
       margin: 0 0 10px;
       background-color: #F9E6B2;
@@ -335,78 +335,77 @@ main {
       margin-top: 0.7rem;
     }
     a {
-      color: darkseagreen; 
+      color: #275e80; 
     }
   }
-  .share_buttons {
-    // background-color: #F9E6B2;
-    font-size: 0;
-    height: 30px;
-    a, button {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin: 5px 5px 0 10px;
-    }
-    p {
-      background: initial;
-      display: inline-block;
-      padding: 0;
-      height: 20px;
+}
+.share_buttons {
+  font-size: 0;
+  height: 30px;
+  text-align: end;
+  a, button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px 10px 0 5px;
+  }
+  p {
+    font-size: 0.8rem;
+    background: initial;
+    display: inline-block;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+  }
+  .twitter {
+    background: image-url("twitter_logo_400x400") center/20px no-repeat;
+  }
+  .facebook {
+    background: image-url("facebook_logo_400x400") center/20px no-repeat;
+  }
+  .instagram {
+    background: image-url("instagram_logo_400x400") center/20px no-repeat;
+  }
+  .reddit {
+    background: image-url("reddit_logo_400x400") center/20px no-repeat;
+  }
+  .tumblr {
+    background: image-url("tumblr_logo_400x400") center/20px no-repeat;
+  }
+  button { // Tooltip 
+    font-size: 18px;
+    cursor: pointer;
+    background: image-url("copy.svg") center/25px no-repeat;
+    position: relative;
+    bottom: 10px;
+    span { // Tooltip text
       position: absolute;
-      bottom: -8px;
-      right: 0;
-    }
-    .twitter {
-      background: image-url("twitter_logo_400x400") center/20px no-repeat;
-    }
-    .facebook {
-      background: image-url("facebook_logo_400x400") center/20px no-repeat;
-    }
-    .instagram {
-      background: image-url("instagram_logo_400x400") center/20px no-repeat;
-    }
-    .reddit {
-      background: image-url("reddit_logo_400x400") center/20px no-repeat;
-    }
-    .tumblr {
-      background: image-url("tumblr_logo_400x400") center/20px no-repeat;
-    }
-    button { // Tooltip 
-      font-size: 18px;
-      cursor: pointer;
-      background: image-url("copy.svg") center/25px no-repeat;
-      position: relative;
-      bottom: 10px;
-      span { // Tooltip text
+      z-index: -1;
+      width: 110px;
+      bottom: 90%;
+      left: -10%;
+      margin-left: -55px; //Has to be half of the width
+      background-color: $dark-brown;
+      color: white;
+      text-align: center;
+      padding: 6px 0 4px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      &::after { // Down arrow
+        content: " ";
         position: absolute;
-        z-index: -1;
-        width: 110px;
-        bottom: 90%;
-        left: -10%;
-        margin-left: -55px; //Has to be half of the width
-        background-color: $dark-brown;
-        color: white;
-        text-align: center;
-        padding: 6px 0 4px;
-        border-radius: 6px;
-        margin-bottom: 6px;
-        &::after { // Down arrow
-          content: " ";
-          position: absolute;
-          top: 100%; /* At the bottom of the tooltip */
-          left: 65%; // 50% for center
-          margin-left: -5px;
-          border-width: 5px;
-          border-style: solid;
-          border-color: $dark-brown transparent transparent transparent;
-        }
+        top: 100%; /* At the bottom of the tooltip */
+        left: 60%; // 50% for center
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $dark-brown transparent transparent transparent;
       }
-      &.active {
-        background: image-url("clipboard-check.svg")50% 50% no-repeat;
-        visibility: visible;
-        z-index: 0;
-      }
+    }
+    &.active {
+      background: image-url("clipboard-check.svg")50% 50% no-repeat;
+      visibility: visible;
+      z-index: 0;
     }
   }
 }
