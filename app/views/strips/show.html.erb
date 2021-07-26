@@ -38,11 +38,16 @@
 			<p>This comic has a print available for purchase in the
 			<%= link_to "shop!", store_index_url << "?prints" %></p>
 		<% end %>
-		<p>share this comic!</p>
 		<div class="share_buttons">
+			<% @links.each do |link| %>
+				<%= link_to link, target: "_blank", class: split_url(link) do %>
+					<span class="visually-hidden"><%= split_url(link) %></span>	
+				<% end %>
+			<% end %>
 			<button class="tooltip" onclick="updateClipboard('<%= strip_url(@strip) %>')">
 				<span>copy link</span>
 			</button>
+			<p>share this comic!</p>
 		</div>
 	</div>
 </div>
