@@ -107,7 +107,7 @@
 - [x] Fix Javascript navigation
 - [x] Get rid of old font
 - [x] Margin between header and content
-- [ ] Limit shop images to 300px
+- [x] Limit shop images to 300px
 - [x] Footer image for small screens
 - [ ] Share icons overflow to 'share this icon' paragraph on small screens
 - [x] Admin
