@@ -103,5 +103,7 @@
 - [ ] new search spec
 - [ ] Fix archive title alignment on 320px devices (image min width)
 - [ ] Search way to prevent horizontal scrolling????? on ipads ????????? tf
-- [ ] Search in archive
+- [x] Search in archive
 - [x] Fix Javascript navigation
+- [ ] Get rid of old font
+- [ ] Margin between header and content
