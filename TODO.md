@@ -101,10 +101,12 @@
 - [x] Use display:flex on container to prevent whitespace instead of javascript
 - [ ] new shop spec
 - [ ] new search spec
-- [ ] Fix archive title alignment on 320px devices (image min width)
+- [x] Fix archive title alignment on 320px devices (image min width)
 - [ ] Search way to prevent horizontal scrolling????? on ipads ????????? tf
 - [x] Search in archive
 - [x] Fix Javascript navigation
-- [ ] Get rid of old font
-- [ ] Margin between header and content
+- [x] Get rid of old font
+- [x] Margin between header and content
 - [ ] Limit shop images to 300px
+- [ ] Footer image for small screens
+- [ ] Share icons overflow to 'share this icon' paragraph on small screens
