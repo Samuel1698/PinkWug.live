@@ -420,34 +420,36 @@ footer {
   bottom: 0;
   margin: auto auto 0;
   height: 170px;
-  width: 445px;
-  background: image_url("Footer.png") center/445px no-repeat;
+  width: 1200px;
+  background: image_url("Footer.png") center/1200px no-repeat;
   font-size: 0; //To get rid of generated whitespace
   a {
     position: absolute;
-    height: 49px;
-    width: 49px;
+    display: inline-block;
+    padding: 20px 10px 0 9px;
+    bottom: 39.3px;
+    transform: translateY(-0.5px);
     img {
-      height: 49px;
-      width: 49px;
+      height: 46px;
+      width: 46px;
     }
     &.discord {
-      left: 40.6px;
+      left: calc(397.56px - 9px); // -9 from padding
     }
     &.twitter {
-      left: 113.7px;
+      left: calc(468.34px - 9px); 
     }
     &.instagram {
-      left: 185.5px;
+      left: calc(541.12px - 9px); 
     }
     &.facebook {
-      left: 257.3px;
+      left: calc(612.9px - 9px); 
     }
     &.reddit {
-      left: 329.1px;
+      left: calc(684.68px - 9px); 
     }
     &.tumblr {
-      left: 400.8px;
+      left: calc(756.46px - 9px); 
     }
   }
   p {
@@ -457,9 +459,6 @@ footer {
   }
 }
 .socialMediaLinks {
-  position: relative;
-  bottom: -81px;
-  left: -22px;
   div {
     display: inline-block;
   }
