@@ -160,12 +160,12 @@
 @media (min-width: 900px){
 	.index {
 		max-width: 900px;
-		position: initial;
+		position: relative;
 	}
 	.search {
 		position: absolute;
-		top: 18.1%;
-		right: 2%;
+		top: -0.5%;
+		right: 0.4%;
 		form {
 			input:not(:last-child){
 				min-width: 280px;

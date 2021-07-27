@@ -107,3 +107,4 @@
 - [x] Fix Javascript navigation
 - [ ] Get rid of old font
 - [ ] Margin between header and content
+- [ ] Limit shop images to 300px
