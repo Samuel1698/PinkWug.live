@@ -1,9 +1,3 @@
-document.addEventListener('turbolinks:before-render', () => {
-	var toggle = null;
-	var line   = null;
-	var table  = null;
-	var rows   = null;
-});
 var toggle = document.querySelector(".toggle");
 var line   = document.querySelector(".index");
 var table  = document.querySelector(".table");
@@ -13,18 +7,27 @@ var button = document.querySelectorAll(".button.gallery");
 var title = document.querySelector(".title");
 var date  = document.querySelector(".date");
 
+// Reset search
+searchForm.classList.remove("active");
+searchToggle.classList.remove("active");
+searchToggle.setAttribute("aria-label", "Open search"); //Label for search button
+
+// Reset toggle
 line.classList.remove("line");
 table.classList.add("gallery");
 toggle.classList.add("gallery");
 toggle.firstElementChild.innerHTML = 'Toggle Line View';
+
 for (let i = 0; i < rows.length; i++){
 	rows[i].classList.add("gallery");
 }
+
 for (let i = 0; i < bigrow.length; i++){
 	bigrow[i].classList.add("gallery");
 	button[i].classList.add("gallery");
 }
 
+// Toggle functions
 function toggleOn(){
 	line.classList.remove("line");
 	table.classList.add("gallery");
