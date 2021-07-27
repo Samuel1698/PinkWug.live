@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Pink Wug"
+  config.site_title = "PinkWug"
 
   # Required lines by arctic_admin (https://github.com/cprodhomme/arctic_admin)
   meta_tags_options = { viewport: 'width=device-width, initial-scale=1' }
@@ -177,7 +177,7 @@ ActiveAdmin.setup do |config|
 
   # == Setting a Favicon
   #
-  config.favicon = 'Profile.png'
+  config.favicon = 'Favicon.png'
 
   # == Meta Tags
   #
@@ -323,7 +323,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  # config.footer = 'my custom footer text'
+  config.footer = 'Powered by Sam D'
 
   # == Sorting
   #
