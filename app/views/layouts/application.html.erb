@@ -52,20 +52,19 @@
         <%= yield %>
       </main>
       <footer class="footer">
-        <div class="footer_Border"></div>
         <div class="socialMediaLinks">
           <div class="firstThree">
-            <%= link_to image_tag("Discord_196x196.png", alt: "Discord Link", class: "bottom_Logo"), "https://discord.gg/pinkwug", target: "_blank" %>
-            <%= link_to image_tag("Twitter_196x196.png", alt: "Twitter Link", class: "bottom_Logo"), "https://twitter.com/pinkwug", target: "_blank"%>
-            <%= link_to image_tag("Instagram_196x196.png", alt: "Instagram Link", class: "bottom_Logo"), "https://www.instagram.com/pinkwug/", target: "_blank"  %>
+            <%= link_to image_tag("Discord_196x196.png", alt: "Discord Link", class: "bottom_Logo"), "https://discord.gg/pinkwug", target: "_blank", class: "discord" %>
+            <%= link_to image_tag("Twitter_196x196.png", alt: "Twitter Link", class: "bottom_Logo"), "https://twitter.com/pinkwug", target: "_blank", class:"twitter" %>
+            <%= link_to image_tag("Instagram_196x196.png", alt: "Instagram Link", class: "bottom_Logo"), "https://www.instagram.com/pinkwug/", target: "_blank", class: "instagram" %>
           </div>
           <div class="lastThree">
-            <%= link_to image_tag("Facebook_196x196.png", alt: "Facebook Link", class: "bottom_Logo"), "https://www.facebook.com/PinkWug", target: "_blank" %>
-            <%= link_to image_tag("Reddit_196x196.png", alt: "Reddit Link", class: "bottom_Logo"), "https://www.reddit.com/r/PinkWug/", target: "_blank"  %>
-            <%= link_to image_tag("Tumblr_196x196.png", alt: "Tumblr Link", class: "bottom_Logo"), "https://pinkwug.tumblr.com/", target: "_blank"  %>
+            <%= link_to image_tag("Facebook_196x196.png", alt: "Facebook Link", class: "bottom_Logo"), "https://www.facebook.com/PinkWug", target: "_blank", class: "facebook" %>
+            <%= link_to image_tag("Reddit_196x196.png", alt: "Reddit Link", class: "bottom_Logo"), "https://www.reddit.com/r/PinkWug/", target: "_blank", class:"reddit"   %>
+            <%= link_to image_tag("Tumblr_196x196.png", alt: "Tumblr Link", class: "bottom_Logo"), "https://pinkwug.tumblr.com/", target: "_blank", class:  "tumblr" %>
           </div>
         </div>
-        <p>© 2021, PinkWug powered by Sam D</p>
+        <!-- <p>© 2021, PinkWug powered by Sam D</p> -->
       </footer>
     </div>
     <div class="preload"><img id="preload-01"><img id="preload-02"><img id="preload-03"><img id="preload-04"><img id="preload-05">
