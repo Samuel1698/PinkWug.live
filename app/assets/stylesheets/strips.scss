@@ -325,11 +325,19 @@ main {
       background-color: #F9E6B2;
       padding: 4px 12px;
     }
-    &:nth-child(3){
+    &.ad {
       margin-top: 0.7rem;
     }
     a {
       color: #275e80; 
+    }
+    &:last-of-type {
+      font-size: 0.8rem;
+      background: initial;
+      display: inline-block;
+      position: absolute;
+      bottom: 6px;
+      left: 0;
     }
   }
 }
@@ -344,12 +352,7 @@ main {
     margin: 5px 10px 0 5px;
   }
   p {
-    font-size: 0.8rem;
-    background: initial;
-    display: inline-block;
-    position: absolute;
-    bottom: 6px;
-    left: 0;
+    
   }
   .twitter {
     background: image-url("Twitter.png") center/20px no-repeat;

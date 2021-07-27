@@ -22,34 +22,4 @@
 			width: 64px;
 		}
 	}
-	.link {
-		margin-top: 1.5rem;
-		ul {
-			margin-top: 0;
-			margin-bottom: 12px;
-			list-style: none;
-			padding-left: 0;
-			li {
-				display: inline-block;
-			}
-			a {
-				padding: 8px 10px;
-			}
-			button {
-				background: none;
-				margin: 2px;
-				padding: 8px 10px;
-				border-radius: 7px;
-				background-color: $pink;
-				border: 2px solid black;
-			}
-		}
-	}
-}
-@media (hover: hover) and (pointer: fine) {
-	.content .link button {
-		&:focus, &:hover, &:focus-visible, &:active {
-			background-color: white;
-		}
-	}
 }

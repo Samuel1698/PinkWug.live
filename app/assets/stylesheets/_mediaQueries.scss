@@ -18,6 +18,12 @@
 // For the footer icons
 // ----------------------------------------------
 @media (max-width: 445px){
+	.comment p:last-of-type {
+		position: initial;
+		display: block;
+		text-align: end;
+		margin-top: 6px;
+	}
 	footer {
 		height: 250px;
 		width: 100%;
