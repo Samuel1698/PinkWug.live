@@ -110,6 +110,6 @@
 - [ ] Limit shop images to 300px
 - [x] Footer image for small screens
 - [ ] Share icons overflow to 'share this icon' paragraph on small screens
-- [ ] Admin
-  - [ ] Move 'has print' next to created in field
-  - [ ] Group author comment and link next to each other in large screens
+- [x] Admin
+  - [x] Move 'has print' next to created in field
+  - [x] Group author comment and link next to each other in large screens

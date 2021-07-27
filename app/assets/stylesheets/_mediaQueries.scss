@@ -207,9 +207,6 @@
 // target only landscape mobile users 
 //-----------------------------------------------
 @media (orientation: landscape) and (pointer: coarse) and (max-width: 900px) {
-	header {
-		width: 125vh;
-	}
 	.content {
 		max-width: 125vh;
 	}
