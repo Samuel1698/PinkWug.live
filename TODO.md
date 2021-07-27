@@ -108,5 +108,8 @@
 - [x] Get rid of old font
 - [x] Margin between header and content
 - [ ] Limit shop images to 300px
-- [ ] Footer image for small screens
+- [x] Footer image for small screens
 - [ ] Share icons overflow to 'share this icon' paragraph on small screens
+- [ ] Admin
+  - [ ] Move 'has print' next to created in field
+  - [ ] Group author comment and link next to each other in large screens
