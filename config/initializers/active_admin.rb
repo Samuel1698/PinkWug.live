@@ -20,7 +20,7 @@ ActiveAdmin.setup do |config|
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  config.site_title_image = "Profile.png"
+  config.site_title_image = "Profile3.png"
 
   # == Default Namespace
   #
@@ -28,7 +28,7 @@ ActiveAdmin.setup do |config|
   # will be added to.
   #
   # eg:
-  # config.default_namespace = :comics_admin
+  # config.default_namespace = :admin
   #
   # This will create resources in the HelloWorld module and
   # will namespace routes to /hello_world/*
