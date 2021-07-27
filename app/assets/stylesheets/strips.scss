@@ -18,14 +18,6 @@ button { border: none;}
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'JollyGood Sans Bold';
-  src: image-url('../fonts/JollyGoodSansBold.woff2') format('woff2'),
-       image-url('../fonts/JollyGoodSansBold.woff') format('woff'),
-       image-url('../fonts/JollyGoodSansBold.otf') format('otf');
-  font-weight: bold;
-  font-style: normal;
-}
 html {
   font-size: 1.125rem;
 }
@@ -427,29 +419,29 @@ footer {
   a {
     position: relative;
     display: inline-block;
-    padding: 20px 10px 0 9px;
+    padding: 20px 10px 0;
     bottom: -64.3px;
     img {
       height: 46px;
       width: 46px;
     }
     &.discord {
-      left: -17px;
+      left: -15px;
     }
     &.twitter {
-      left: -10px;  
+      left: -8px;  
     }
     &.instagram {
       left: -3px;  
     }
     &.facebook {
-      left: 4px;
+      left: 3px;
     }
     &.reddit {
-      left: 10px;  
+      left: 9px;  
     }
     &.tumblr {
-      left: 17px;  
+      left: 15px;  
     }
   }
   p {
@@ -457,9 +449,7 @@ footer {
     padding-bottom: 40px;
     margin-bottom: 0px;
   }
-}
-.socialMediaLinks {
-  div {
+  .wrap {
     display: inline-block;
   }
 }

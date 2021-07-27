@@ -17,9 +17,42 @@
 // ----------------------------------------------
 // For the footer icons
 // ----------------------------------------------
-@media (max-width: 485px){
-	footer .socialMediaLinks 	a {
-		margin: 10px 15px;
+@media (max-width: 445px){
+	footer {
+		height: 250px;
+		width: 100%;
+		max-width: 445px;
+		background: image_url("Footer2.png") 50% 0/445px no-repeat;
+		a {
+			&.discord {
+			  left: -6px;
+			}
+			&.twitter {
+			  left: 1px;  
+			}
+			&.instagram {
+			  left: 7px;  
+			}
+			&.facebook {
+			  left: -5px;
+			}
+			&.reddit {
+			  left: 0px;
+			}
+			&.tumblr {
+			  left: 6px;  
+			}
+		}
+		.wrap {
+			display: block;
+			height: 0;
+			&.one a {
+				bottom: -73.3px;
+			}
+			&.two a {
+			  bottom: -145.3px;
+			}
+		}
 	}
 }
 //-----------------------------------------------
@@ -138,22 +171,22 @@
 			bottom: 39.3px;
 			transform: translateY(-0.5px);
 			&.discord {
-			  left: calc(397.56px - 9px);
+			  left: calc(397.56px - 10px);
 			}
 			&.twitter {
-			  left: calc(468.34px - 9px); 
+			  left: calc(468.34px - 10px); 
 			}
 			&.instagram {
-			  left: calc(541.12px - 9px); 
+			  left: calc(541.12px - 10px); 
 			}
 			&.facebook {
-			  left: calc(612.9px - 9px); 
+			  left: calc(612.9px - 10px); 
 			}
 			&.reddit {
-			  left: calc(684.68px - 9px); 
+			  left: calc(684.68px - 10px); 
 			}
 			&.tumblr {
-			  left: calc(756.46px - 9px); 
+			  left: calc(756.46px - 10px); 
 			}
 		}
 	}
@@ -322,11 +355,21 @@
 	footer {
 		a:hover {
 			bottom: -54px;
-			padding: 10px 10px 10px 9px;
+			padding: 10px;
 			@media (min-width: $big) {
 				bottom: 39.3px;
 			}
 		}
+		.one a:hover {
+			@media (max-width: 445px){
+				bottom: -62.3px;
+			}
+		}
+		.two a:hover {
+			@media (max-width: 445px){
+				bottom: -134.3px;
+			}
+		} 
 		a:focus-visible {
 			bottom: -54px;
 			padding: 10px 10px 10px 9px;
