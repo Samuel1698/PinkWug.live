@@ -47,12 +47,14 @@ ActiveAdmin.register Strip do
   form do |f|
     f.semantic_errors *f.object.errors.keys
     f.inputs "Comic Details" do
-      f.input :title, required: true
-      f.input :description, as: :text, hint: "Short description. Only visible on search results & link embeds", :input_html => { :rows => 2 }
-      f.input :keywords_raw, as: :string, label: "Tags", hint: "What is this comic about? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon"
-      f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
-      f.input :links, as: :text, hint: "Twitter, Instagram, Reddit, Facebook & Tumblr links. Each link must be a new line.", :input_html => { :rows => 5}
-      div do 
+      div id: "first_grid" do 
+        f.input :title, required: true
+        f.input :keywords_raw, as: :string, label: "Tags", hint: "What is this comic about? Less than 20 words", placeholder: "Example: General Strike, Capitalism, Unions, Amazon"
+        f.input :description, as: :text, hint: "Short description. Only visible on search results & link embeds", :input_html => { :rows => 2 }
+        f.input :comment, label: "Author Comment", hint: "Relevant Links/Announcements. Press Enter once for a line break, twice for a new paragraph.", :input_html => { :rows => 2 }
+        f.input :links, as: :text, hint: "Twitter, Instagram, Reddit, Facebook & Tumblr links. Each link must be a new line.", :input_html => { :rows => 5}
+      end
+      div id: "custom_image_input" do 
         span "Image*", id: "image-label"
         div id: "drop-region" do
           f.input :image, as: :file
@@ -64,10 +66,12 @@ ActiveAdmin.register Strip do
           end
         end
       end
-      f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
-      a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
-      f.input :has_print
-      f.input :created_at, as: :datepicker, label: "Created In", hint: "If blank will default to Today", input_html: { value: strip.created_at.try(:strftime, '%B %d %Y'), placeholder: Time.now.utc.try(:strftime, '%B %d %Y')}, datepicker_options: { max_date: "+0D", dateFormat: "MM dd yy" }
+      div id: "second_grid" do
+        f.input :transcript, hint: "Important for accessibility. Describe every pannel of the comic.", :input_html => { :rows => 5 }
+        a "Click Here to Read More", href: "https://supercooldesign.co.uk/blog/how-to-write-good-alt-text", target: "_blank", class: "transcript_link"
+        f.input :has_print
+        f.input :created_at, as: :datepicker, label: "Created In", hint: "If blank will default to Today", input_html: { value: strip.created_at.try(:strftime, '%B %d %Y'), placeholder: Time.now.utc.try(:strftime, '%B %d %Y')}, datepicker_options: { max_date: "+0D", dateFormat: "MM dd yy" }
+      end
     end
     f.actions 
   end
