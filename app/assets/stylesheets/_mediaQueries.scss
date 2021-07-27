@@ -140,7 +140,17 @@
 	}
 	footer {
 		a:hover {
-			bottom: -40px;
+			padding: 10px 10px 10px 9px;
+		}
+		a:focus-visible {
+			padding: 10px 10px 10px 9px;
+			position: absolute;
+			&::after {
+				top: -3px;
+				left: -1px;
+				right: -1px;
+				bottom: 1px;
+			}
 		}
 	}
 }
