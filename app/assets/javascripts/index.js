@@ -7,11 +7,6 @@ var button = document.querySelectorAll(".button.gallery");
 var title = document.querySelector(".title");
 var date  = document.querySelector(".date");
 
-// Reset search
-searchForm.classList.remove("active");
-searchToggle.classList.remove("active");
-searchToggle.setAttribute("aria-label", "Open search"); //Label for search button
-
 // Reset toggle
 line.classList.remove("line");
 table.classList.add("gallery");
