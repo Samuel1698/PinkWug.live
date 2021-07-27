@@ -1,5 +1,186 @@
 @import "variables";
 
+// ----------------------------------------------
+// Header resizing for smallest screens
+// ----------------------------------------------
+@media (max-width: 350px){
+	.store .shop_collections img {
+		bottom: -11px;
+	}
+	header {
+		.shelf {
+			width: 320px;
+			background: image-url("MenuSmall.png") center/320px no-repeat;
+		}
+	}
+}
+// ----------------------------------------------
+// For the footer icons
+// ----------------------------------------------
+@media (max-width: 485px){
+	footer .socialMediaLinks 	a {
+		margin: 10px 15px;
+	}
+}
+//-----------------------------------------------
+// From 320 to 540 pixels
+// ----------------------------------------------
+@media (max-width: $small){
+	main {
+		max-width: $small;
+	}
+	h1, h2 {		
+		font-size: 1rem; 
+	}
+	p {
+		font-size: 0.8rem;
+		margin-right: 16px;
+		margin-left: 16px;
+	}
+	button {
+		h2 {
+			margin-right: 16px;
+			margin-left: 16px;
+		}
+	}
+	#main {
+		&.search_margin{
+			margin-top: 2.5rem;
+			transition: margin-top 0.1s ease-out, 0.1s ease-out;
+		}
+	}
+}
+// ---------------------------------------------------
+// Between 350 and 939 pixels
+// ---------------------------------------------------
+@media (max-width: $medium - 1) {
+	#main { 
+		&.menu_margin {
+			margin-top: 16rem; //4em for each extra menu item
+			transition: margin-top 0.3s ease-out, 0.3s ease-out;
+		}
+	}
+}
+
+// ---------------------------------------------------
+// From 541 to biggest screen size
+// ---------------------------------------------------
+@media (min-width: $small) {
+	h1, h2 {
+		font-size: 1.1rem;
+		margin-right: 16px;
+		margin-left: 16px;
+	}
+	p {
+		font-size: 1rem;
+	}	
+	.share button {
+		span {
+			left: 50%;
+			&::after {
+				left: 50%;
+			}
+		}
+	}
+	.img_container {
+		transform: translate(2%, -24%);
+	}
+}
+// ---------------------------------------------------
+// From 940 pixels upwards
+// ---------------------------------------------------
+@media (min-width: $medium - 1){
+	h1{
+		font-size: 1.2rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 1rem;
+	}
+	header {
+		height: 140px;
+		ul {
+			position: relative;
+			bottom: 60px;
+		}
+	}
+	.img_container {
+		transform: translate(1%, -22%);
+	}
+}
+// -----------------------------------------
+// For bigger monitors. 1200px +
+// -----------------------------------------
+@media (min-width: $big) {
+	h1 {
+		font-size: 1.3rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 1rem;
+	}
+	header {
+		position: relative;
+		display: block;
+		margin: 0 auto 15px;
+		width: $big;
+	}
+	.img_container {
+		transform: translate(-37%, -20%);
+	}
+	footer {
+		a {
+			position: absolute;
+			bottom: 39.3px;
+			transform: translateY(-0.5px);
+			&.discord {
+			  left: calc(397.56px - 9px);
+			}
+			&.twitter {
+			  left: calc(468.34px - 9px); 
+			}
+			&.instagram {
+			  left: calc(541.12px - 9px); 
+			}
+			&.facebook {
+			  left: calc(612.9px - 9px); 
+			}
+			&.reddit {
+			  left: calc(684.68px - 9px); 
+			}
+			&.tumblr {
+			  left: calc(756.46px - 9px); 
+			}
+		}
+	}
+}
+// -----------------------------------------
+// For biggest monitors. 2000px +
+// -----------------------------------------
+@media (min-width: $biggest){
+	h1 {
+		font-size: 1.5rem;
+	}
+	.img_container {
+		transform: translate(-60%, -12%);
+	}
+}
+//-----------------------------------------------
+// target only landscape mobile users 
+//-----------------------------------------------
+@media (orientation: landscape) and (pointer: coarse) and (max-width: 900px) {
+	header {
+		width: 125vh;
+	}
+	.content {
+		max-width: 125vh;
+	}
+}
+
 //-----------------------------------------------
 // For iPads & Devices that dont support hover
 //-----------------------------------------------
@@ -140,172 +321,31 @@
 	}
 	footer {
 		a:hover {
+			bottom: -54px;
 			padding: 10px 10px 10px 9px;
+			@media (min-width: $big) {
+				bottom: 39.3px;
+			}
 		}
 		a:focus-visible {
+			bottom: -54px;
 			padding: 10px 10px 10px 9px;
-			position: absolute;
+			@media (min-width: $big) {
+				position: absolute;
+				bottom: 39.3px;
+			}
 			&::after {
 				top: -3px;
 				left: -1px;
 				right: -1px;
 				bottom: 1px;
+				@media (min-width: $big) {
+					top: -3px;
+					left: -1px;
+					right: -1px;
+					bottom: 1px;
+				}
 			}
 		}
-	}
-}
-// ----------------------------------------------
-// Header resizing for smallest screens
-// ----------------------------------------------
-@media (max-width: 350px){
-	.store .shop_collections img {
-		bottom: -11px;
-	}
-	header {
-		.shelf {
-			width: 320px;
-			background: image-url("MenuSmall.png") center/320px no-repeat;
-		}
-	}
-}
-// ----------------------------------------------
-// For the footer icons
-// ----------------------------------------------
-@media (max-width: 485px){
-	footer .socialMediaLinks 	a {
-		margin: 10px 15px;
-	}
-}
-//-----------------------------------------------
-// From 320 to 540 pixels
-// ----------------------------------------------
-@media (max-width: $small){
-	main {
-		max-width: $small;
-	}
-	h1, h2 {		
-		font-size: 1rem; 
-	}
-	p {
-		font-size: 0.8rem;
-		margin-right: 16px;
-		margin-left: 16px;
-	}
-	button {
-		h2 {
-			margin-right: 16px;
-			margin-left: 16px;
-		}
-	}
-	#main {
-		&.search_margin{
-			margin-top: 2.5rem;
-			transition: margin-top 0.1s ease-out, 0.1s ease-out;
-		}
-	}
-}
-// ---------------------------------------------------
-// Between 350 and 939 pixels
-// ---------------------------------------------------
-@media (max-width: $medium - 1) {
-	#main { 
-		&.menu_margin {
-			margin-top: 16rem; //4em for each extra menu item
-			transition: margin-top 0.3s ease-out, 0.3s ease-out;
-		}
-	}
-}
-
-// ---------------------------------------------------
-// From 541 to biggest screen size
-// ---------------------------------------------------
-@media (min-width: $small) {
-	h1, h2 {
-		font-size: 1.1rem;
-		margin-right: 16px;
-		margin-left: 16px;
-	}
-	p {
-		font-size: 1rem;
-	}	
-	.share button {
-		span {
-			left: 50%;
-			&::after {
-				left: 50%;
-			}
-		}
-	}
-	.img_container {
-		transform: translate(2%, -24%);
-	}
-}
-// ---------------------------------------------------
-// From 940 pixels upwards
-// ---------------------------------------------------
-@media (min-width: $medium - 1){
-	h1{
-		font-size: 1.2rem;
-	}
-	h2 {
-		font-size: 1.1rem;
-	}
-	p {
-		font-size: 1rem;
-	}
-	header {
-		height: 140px;
-		ul {
-			position: relative;
-			bottom: 60px;
-		}
-	}
-	.img_container {
-		transform: translate(1%, -22%);
-	}
-}
-// -----------------------------------------
-// For bigger monitors. 1200px +
-// -----------------------------------------
-@media (min-width: $big) {
-	h1 {
-		font-size: 1.3rem;
-	}
-	h2 {
-		font-size: 1.1rem;
-	}
-	p {
-		font-size: 1rem;
-	}
-	header {
-		position: relative;
-		display: block;
-		margin: 0 auto 15px;
-		width: $big;
-	}
-	.img_container {
-		transform: translate(-37%, -20%);
-	}
-}
-// -----------------------------------------
-// For biggest monitors. 2000px +
-// -----------------------------------------
-@media (min-width: $biggest){
-	h1 {
-		font-size: 1.5rem;
-	}
-	.img_container {
-		transform: translate(-60%, -12%);
-	}
-}
-//-----------------------------------------------
-// target only landscape mobile users 
-//-----------------------------------------------
-@media (orientation: landscape) and (pointer: coarse) and (max-width: 900px) {
-	header {
-		width: 125vh;
-	}
-	.content {
-		max-width: 125vh;
 	}
 }
