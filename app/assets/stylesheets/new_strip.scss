@@ -1,5 +1,5 @@
 $primary-color: #21A793;
-.formtastic.strip {
+#active_admin_content .formtastic.strip {
   .errors {
     margin-bottom: 10px;
     li {
@@ -52,11 +52,25 @@ $primary-color: #21A793;
       color: skyblue;
     }
   }
+  #strip_has_print_input {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    top: 71.5px;
+    left: 28px;
+    label {
+      color: grey;
+      padding: 10px 40px 10px 10px;
+      border-radius: 7px;
+      border: 1px solid #e4eaec;
+      transition: border-color 0.5s ease-out;
+    }
+  }
   #strip_created_at {
     width: 165px;
   }
 }
-.formtastic.strip {
+#active_admin_content .formtastic.strip {
   ol #drop-region {
     display: block;
     margin-left: auto;
@@ -117,7 +131,8 @@ $primary-color: #21A793;
       display: none;
     }
     img {
-      width: 100%
+      width: 100%;
+      max-width: 700px;
     }
     .overlay {
       position: absolute;
@@ -163,21 +178,169 @@ $primary-color: #21A793;
       float: none;
       padding-right: 0;
     }
+    
+  }
+}
+@media (min-width: 576px){
+  #active_admin_content .formtastic.strip {
+    .inputs ol {
+      .inline-hints {
+        width: 65%; 
+      }
+      input, textarea {
+        width: 65%;
+      }
+    }
+    #strip_has_print_input {
+      input {
+        width: 15px;
+        display: inline-block;
+      }
+      top: 41.5px;
+      left: 28px;
+    }
+    ol #drop-region {
+      margin: 5px 0 20px 25%;
+      width: 65%;
+    }
+  }
+}
+
+
+@media (min-width: 1200px){
+  #active_admin_content .formtastic.strip {
+    .inputs ol {
+      .inline-hints {
+        margin: 5px 0 20px;
+        width: 95%; 
+      }
+      .label {
+        width: 5%;
+        float: none;
+        display: block;
+      }
+      textarea, input {
+        width: 96%; // This + next width has to be bigger than 100%
+        resize: none;
+        overflow: auto;
+      }
+      #first_grid {
+        display: grid;
+        align-items: start;
+        grid-template-columns: 15% auto auto 15%;
+        grid-template-rows: 76px 113px 200px;
+        grid-template-areas: "... title   description ..."
+                             "... tags    description ..."
+                             "... author  links       ...";
+      }
+      #second_grid {
+        display: grid;
+        align-items: start;
+        grid-template-columns: 15% auto auto 15%;
+        grid-template-rows: 185px 25px 77px;
+        grid-template-areas: "... alt     alt         ..."
+                             "... altInfo altInfo     ..."
+                             "... date    print       ...";
+      }
+      #strip_title_input {
+        grid-area: title;
+      }
+      #strip_keywords_raw_input {
+        grid-area: tags;
+      }
+      #strip_description_input {
+        grid-area: description;
+        textarea {
+          height: 113px;
+        }
+      }
+      #strip_comment_input {
+        grid-area: author;
+        label {
+          width: 130px;
+        }
+        textarea {
+          height: 124px;
+        }
+      }
+      #strip_links_input {
+        grid-area: links;
+        textarea {
+          height: 124px;
+        }
+      }
+      #custom_image_input {
+        grid-area: image;
+      }
+      #strip_transcript_input {
+        grid-area: alt;
+      }
+      .transcript_link {
+        grid-area: altInfo;
+        margin: 0;
+      }
+      #strip_has_print_input {
+        grid-area: print;
+        margin: 33px 0 0 -180px;
+        top: -0.5px;
+        left: 10px;
+        label {
+          padding: 10.5px 77px 10px 10px;
+        }
+      }
+      #strip_created_at_input {
+        grid-area: date;
+        label {
+          display: inline-block;
+          width: 85px;
+          float: none;
+        }
+        input {
+          display: block;
+        }
+      }
+      p, #drop-region {
+        width: 70%;
+      }
+      #image-label {
+        float: none;
+        margin-left: 15%;
+      }
+      #drop-region {
+        margin: 5px auto 20px;
+        display: block;
+      }
+    }
+    .actions {
+      padding-left: 15%;
+    }
   }
 }
 @media (hover: hover) and (pointer: fine){
   .formtastic.strip {
     ol {
+      #strip_has_print_input {
+        &:hover label {
+          border-color: $primary-color;
+          appearance: none;
+          transition: border-color 0.5s ease-out;
+        }
+        &:active label {
+          border-color: $primary-color;
+          appearance: none;
+          transition: border 0.25s ease-out;
+        }
+      }
       input, textarea, #drop-region {
         &:hover {
           border-color: $primary-color;
           appearance: none;
-          transition: border 0.25s linear;
+          transition: border 0.25s ease-out;
         }
         &:focus {
           border-color: $primary-color;
           appearance: none;
-          transition: border 0.25s linear;
+          transition: border 0.25s ease-out;
         }
       }
     }
