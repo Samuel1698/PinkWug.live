@@ -48,11 +48,10 @@
 	</div>
 	<%= render 'comicNav' %>
 	<div class="comment", tabindex="0">
-		<p>published in <%= @strip.created_at.strftime("%B %-d, %Y") %> </p>	
+		<p><%= @strip.title %><br>published in <%= @strip.created_at.strftime("%B %-d, %Y") %></p>	
 		<%= Rinku.auto_link(simple_format(@strip.comment), :all, 'target="_blank"').html_safe unless @strip.comment.blank? %>
 		<% if @strip.has_print? %>
-			<p class="ad">This comic has a print available for purchase in the
-			<%= link_to "shop!", store_index_url << "?prints" %></p>
+			<p class="ad"><%= link_to "print available!", store_index_url << "?prints" %></p>
 		<% end %>
 		<p><span>share this comic!</span></p>
 		<div class="share_buttons">
