@@ -35,14 +35,20 @@
 	}
 }
 // ----------------------------------------------
-// For the footer icons
+// Footer resizing for smallest screens
 // ----------------------------------------------
 @media (max-width: 445px){
-	.comment p:last-of-type {
+	.comment {
+		p.ad {
+			position: absolute;
+			bottom: 30px;
+		}
+		p:last-of-type {
 		position: initial;
 		display: block;
 		text-align: end;
 		margin-top: 6px;
+		}
 	}
 	footer {
 		height: 250px;
