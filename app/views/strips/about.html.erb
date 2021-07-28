@@ -20,54 +20,11 @@
 	<%= stylesheet_link_tag "about" %>
 <% end %>
 <div class="content_about">
-	<div class="grid">
-		<div class="about me" tabindex="0">
-			<h1><%= title 'About Me' %></h1>	
-			<p>i make comics on social and economic justice with relatable, fun, and sinister revelations mixed in</p>
-		</div>
-		
-		<div class="about support" tabindex="0">
-			<h2>Want to support me?</h2>
-			<p>you can get 10% off on all merch, cute wallpapers, and my eternal gratitude</p>
-			<div class="support_buttons">
-				<a href="https://ko-fi.com/L3L42AQKS" target="_blank" tabindex="-1">
-				  <button class="kofi">
-				    <span>Buy me a coffee</span>
-				  </button>
-				</a><br>
-				<a href="https://www.patreon.com/pinkwug" target="_blank" tabindex="-1">
-				  <button class="patreon">
-				    <span>Become a Patron</span>
-				  </button>
-				</a>
-			</div>
-		</div>
-		<div class="about discord" tabindex="0">
-			<h2>Join my Discord</h2>
-			<p>review comic drafts, give suggestions, or vote on comic topics!</p>
-			<p class="discord_logo">
-				<%= link_to "https://discord.gg/pinkwug", target: "_blank", tabindex: "-1" do %>
-					<button>
-						<%= image_tag("Discord-Logo+Wordmark-White.svg", alt: "Discord Link", id: "discordImageId") %> 
-					</button>
-				<% end %>
-			</p>
-		</div>
-	</div>
-	<div class="about business" tabindex="0">
-		<h2>For business inquiries:</h2>
-		<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mjvjorpo" method="post">
-	    <label for="full-name">Name/Company:</label>
-	    <input type="text" name="name" id="full-name" required="true">
-	    <label for="email-address">Email Address:</label>
-	    <input type="email" name="from" id="email-address" required="true">
-	    <label for="message">Message:</label>
-	    <textarea name="message" id="message" placeholder="" required="true"></textarea>
-	    <input type="hidden" name="_subject" id="email-subject" value="Business Inquiry from PinkWug.live">
-	 	 	<p class="warning">all fields required</p>
-	 	 	<input type="submit" value="Send">
-	</form>
-	</div>
+	<h1><%= title 'About' %></h1>	
+	<p>Hey, welcome to my website! I'm Pink and I make comics on ✨ society ✨. I aim to make my comics accessible to the general public and raise awareness on important issues in a digestible and shareable format. Political apathy is a real problem and I wanted to play a small role in getting more people to care about civil and labor rights.</p>
+	<p>If you wanna  support me what I do, you can sub to my Ko-fi or Patreon and get some cool perks like wallpapers and high-res prints! And as always, you help out simply by sharing and engaging with my comics!</p>
+	<p>If you have any questions, feel free to drop by my comfy Discord server. I'm very active there and you will see my opinions on most stuff.</p>
+	<p>For business inquiries: pinkwug@gmail.com</p>
 </div>
 <% content_for :javascripts do %>
   <script>
