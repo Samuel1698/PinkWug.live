@@ -42,15 +42,10 @@
 	<div id='collection-stickers' class="collection stickers"></div>
 	<div id='collection-prints'   class="collection prints"></div>
 </div>
-<%= content_for :preload do %>
-	<img id="preload-06"><img id="preload-07"><img id="preload-08"><img id="preload-09">
-<% end %>
 
 <% content_for :javascripts do %>
   <%= javascript_include_tag "store.js", "data-turbolinks-track" => true %>
   <script>
   	document.querySelector(".store_index_path").classList.add("active");
-		var store_assets = ["<%= asset_path("Clothing2.png") %>","<%= asset_path("Mug2.png") %>","<%= asset_path("Sticker2.png") %>","<%= asset_path("Print2.png") %>"];
-		preloadImages(store_assets, 6);
   </script>
 <% end %>

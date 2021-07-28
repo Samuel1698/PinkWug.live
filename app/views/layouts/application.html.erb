@@ -14,7 +14,6 @@
     <%= favicon_link_tag asset_path("Favicon.png") %>  
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "preloader.js", "data-turbolinks-track" => true %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700">
   </head>
@@ -65,13 +64,6 @@
         <!-- <p>© 2021, PinkWug powered by Sam D</p> -->
       </footer>
     </div>
-    <div class="preload"><img id="preload-01"><img id="preload-02"><img id="preload-03"><img id="preload-04"><img id="preload-05">
-    <%= yield(:preload) %>
-    </div>
-    <script>
-      var assets = ["<%= asset_path("Archive2.png") %>","<%= asset_path("Shop2.png") %>","<%= asset_path("About2.png") %>","<%= asset_path("Menu.png") %>","<%= asset_path("Profile2.png") %>"];
-      preloadImages(assets, 1);
-    </script>
     <%= yield(:javascripts) %>
   </body>
 </html>
