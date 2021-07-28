@@ -71,6 +71,8 @@
 .row {
 	display: flex;
 	min-height: 2rem;
+	padding: 0 6px;
+	margin-bottom: 2px;
 	align-items: center;
 	text-align: center;
 	justify-content: space-between;
@@ -232,18 +234,8 @@
 @media (hover: hover) and (pointer: fine) {
 	.big_row {
 		.row:hover {
-			background-color: $light-grey;
-			a img{
-				opacity: 0.5;
-			}
-		}
-	}
-	.big_row.gallery {
-		.row:hover {
-			background-color: initial;
-			a img{
-				opacity: 1;
-			}
+			box-shadow: 0 0 0 2px $light-grey;
+			border-radius: 7px;
 		}
 	}
 }
