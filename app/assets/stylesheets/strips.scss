@@ -133,8 +133,8 @@ header {
     margin: 0 auto;
     position: relative;
     z-index: 0;
-    top: -30.8px;
-    height: 40.7px;
+    top: -85.9px;
+    height: 110.7px;
     background: image-url("Menu.png") center/350px no-repeat;
   }
   nav ul {
@@ -151,7 +151,7 @@ header {
         cursor: pointer;
         margin: 0 16px;
         position: relative;
-        left: 1.2px;
+        left: -0.8px;
         span {
           display: inline-block;
           position: absolute;
@@ -179,10 +179,10 @@ header {
           }
         }
         &.icons {
-          top: 0.8px;
+          top: 1.1px;
           background-position-y: 0;
           &:hover, &.active {
-            background-position-y: -80px;
+            background-position-y: -80.1px;
           }
         }
       }
@@ -216,40 +216,6 @@ header {
 main {
   margin: 0 auto 25px;
   min-width: 320px;
-}
-.support_buttons { 
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  button {
-    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-    line-height: 32px;
-    display: inline-block;
-    padding: 1px 10px 2px 36px;
-    border-radius: 7px;
-    cursor: pointer;
-    border: 0 none white;
-    text-decoration: none;
-    text-shadow: none;
-    font-family: 'Quicksand', 'JollyGood Sans Basic', sans-serif ;
-    font-weight: 700;
-    font-size: 14px;
-    &.patreon {
-      background: image-url("icons8-patreon-white.svg") 8% 50%/16px no-repeat,
-                  linear-gradient($fiery-coral,$fiery-coral);
-    }
-    &.kofi {
-      background: image-url("Ko-fi_Icon_RGBforDarkBg.png") 4% 50%/28px no-repeat,
-                  linear-gradient($kofi,$kofi);
-    }
-    span {
-      color: white;
-      letter-spacing: -0.15px;
-      padding: 0;
-      text-decoration: none;
-      text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
-    }
-  }
 }
 .parent {
   position: relative;
