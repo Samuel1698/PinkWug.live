@@ -23,14 +23,14 @@
 			appearance: none;
 			cursor: pointer;
 			border: none;
-			bottom: -3px;
+			bottom: 1px;
 		}
 		.shopShelf {
 			height: 106px;
 			background: image-url("ShopShelf.png") center/320px no-repeat;
 			margin: 0 auto;
 			position: absolute;
-			bottom: -11px;
+			bottom: -7px;
 			right: 0;
 			left: 0;
 			z-index: 0;
@@ -119,6 +119,7 @@
     	margin: 0 auto;
     	height: calc(100% - 100px);
     	width: 75%;
+    	cursor: pointer;
     	background: initial;
     	text-indent: -99999px;
     }
@@ -162,6 +163,12 @@
 		}
 		#prints:hover {
 			background-image: image-url("Print2.png");	
+		}
+	}
+	.store .shopify-buy__product .shopify-buy__btn {
+		&:hover {
+			box-shadow: 0 0 0 2px $light-grey;
+			border-radius: 7px;
 		}
 	}
 }
