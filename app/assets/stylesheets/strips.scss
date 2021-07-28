@@ -162,9 +162,6 @@ header {
           background: image-url("Archive.png") center/80px no-repeat;
           top: 1px;
           left: 0.7px;
-          &:hover, &.active {
-            background: image-url("Archive2.png") center/80px no-repeat;
-          }
           span {
             right: 16.1px;
           }
@@ -172,9 +169,6 @@ header {
         &.store_index_path {
           background: image-url("Shop.png") center/80px no-repeat;
           top: 1px;
-          &:hover, &.active {
-            background: image-url("Shop2.png") center/80px no-repeat;
-          }
           span {
             right: 23.5px;
           }
@@ -182,11 +176,14 @@ header {
         &.about_path {
           background: image-url("About.png") center/80px no-repeat;
           top: 0.8px;
-          &:hover, &.active {
-            background: image-url("About2.png") center/80px no-repeat;
-          }
           span {
             right: 20.5px;
+          }
+        }
+        &.icons {
+          background-position-y: 0;
+          &:hover, &.active {
+            background-position-y: -80px;
           }
         }
       }
@@ -456,10 +453,5 @@ footer {
   .wrap {
     display: inline-block;
   }
-}
-.preload {
-  position: absolute;
-  bottom: 0;
-  left: -9999px;
 }
 @import "mediaQueries"

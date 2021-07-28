@@ -235,33 +235,18 @@
 			}
 		}
 		nav ul li {
-			a.strips_path:active {
-				background: image-url("Archive2.png") center/80px no-repeat;
+			a.icons:active, a.icons:focus-visible, a.icons:hover, a.icons.active {
+				background-position-y: -80px;
 			}
-			a.store_index_path:active {
-				background: image-url("Shop2.png") center/80px no-repeat;
-			}
-			a.about_path:active {
-				background: image-url("About2.png") center/80px no-repeat;
-			}
-			a.strips_path:hover {
-				background: image-url("Archive2.png") center/80px no-repeat;
-			}
-			a.store_index_path:hover {
-				background: image-url("Shop2.png") center/80px no-repeat;
-			}
-			a.about_path:hover {
-				background: image-url("About2.png") center/80px no-repeat;
-			}
-			a.strips_path.active {
-				background: image-url("Archive2.png") center/80px no-repeat;
-			}
-			a.store_index_path.active {
-				background: image-url("Shop2.png") center/80px no-repeat;
-			}
-			a.about_path.active {
-				background: image-url("About2.png") center/80px no-repeat;
-			}
+			// a.icons:focus-visible {
+			// 	background-position-y: -80px;
+			// }
+			// a.icons:hover {
+			// 	background-position-y: -80px;
+			// }
+			// a.icons.active {
+			// 	background-position-y: -80px;
+			// }
 		}
 	} 
 	.comment {
@@ -296,42 +281,21 @@
 			}
 		}
 		nav ul li {
-			a.strips_path:active {
-				background: image-url("Archive2.png") center/80px no-repeat;
+			a.icons:active, a.icons:focus-visible, a.icons:hover, a.icons.active {
+				background-position-y: -80px;
 			}
-			a.store_index_path:active {
-				background: image-url("Shop2.png") center/80px no-repeat;
-			}
-			a.about_path:active {
-				background: image-url("About2.png") center/80px no-repeat;
-			}
-			a.strips_path:hover {
-				background: image-url("Archive2.png") center/80px no-repeat;
-			}
-			a.store_index_path:hover {
-				background: image-url("Shop2.png") center/80px no-repeat;
-			}
-			a.about_path:hover {
-				background: image-url("About2.png") center/80px no-repeat;
-			}
-			a.strips_path:focus-visible {
-				background: image-url("Archive2.png") center/80px no-repeat;
-			}
-			a.store_index_path:focus-visible {
-				background: image-url("Shop2.png") center/80px no-repeat;
-			}
-			a.about_path:focus-visible {
-				background: image-url("About2.png") center/80px no-repeat;
-			}
-			a.strips_path.active {
-				background: image-url("Archive2.png") center/80px no-repeat;
-			}
-			a.store_index_path.active {
-				background: image-url("Shop2.png") center/80px no-repeat;
-			}
-			a.about_path.active {
-				background: image-url("About2.png") center/80px no-repeat;
-			}
+			// a.icons:active {
+			// 	background-position-y: -80px;
+			// }
+			// a.icons:hover {
+			// 	background-position-y: -80px;
+			// }
+			// a.icons:focus-visible {
+			// 	background-position-y: -80px;
+			// }
+			// a.icons.active {
+			// 	background-position-y: -80px;
+			// }
 		}
 		.header_links {
 			.patreon_link:hover {
