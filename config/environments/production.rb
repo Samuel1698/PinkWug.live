@@ -11,7 +11,8 @@ Rails.application.configure do
   config.eager_load = true
 
   # Use heroku/pinkwug.live as action mailer url
-  config.action_mailer.default_url_options = { :host => "https://pinkwug.live" }
+  config.action_mailer.default_url_options = { :host => "https://www.pinkwug.live" }
+  config.action_mailer.asset_host = 'https://www.pinkwug.live'
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
