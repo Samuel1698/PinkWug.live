@@ -223,30 +223,13 @@
 //-----------------------------------------------
 @media (hover: none) and (pointer: coarse) {
 	header {
-		.header_logo {
-			&:active {
-				background: image-url("Profile2.png") center/115px no-repeat;
-			}
-			&:hover {
-				background: image-url("Profile2.png") center/115px no-repeat;
-			}
-			&.active {
-				background: image-url("Profile2.png") center/115px no-repeat;
-			}
+		.header_logo:active, .header_logo:hover, .header_logo.active {
+			background-position-y: -89.8px;
 		}
 		nav ul li {
 			a.icons:active, a.icons:focus-visible, a.icons:hover, a.icons.active {
 				background-position-y: -80px;
 			}
-			// a.icons:focus-visible {
-			// 	background-position-y: -80px;
-			// }
-			// a.icons:hover {
-			// 	background-position-y: -80px;
-			// }
-			// a.icons.active {
-			// 	background-position-y: -80px;
-			// }
 		}
 	} 
 	.comment {
@@ -266,36 +249,13 @@
 //-----------------------------------------------
 @media (hover: hover) and (pointer: fine) {
 	header {
-		.header_logo {
-			&:active {
-				background: image-url("Profile2.png") center/115px no-repeat;
-			}
-			&:hover {
-				background: image-url("Profile2.png") center/115px no-repeat;
-			}
-			&:focus-visible {
-				background: image-url("Profile2.png") center/115px no-repeat;
-			}
-			&.active {
-				background: image-url("Profile2.png") center/115px no-repeat;
-			}
+		.header_logo:active, .header_logo:hover, .header_logo:focus-visible, .header_logo.active {
+			background-position-y: -89.8px;
 		}
 		nav ul li {
 			a.icons:active, a.icons:focus-visible, a.icons:hover, a.icons.active {
 				background-position-y: -80px;
 			}
-			// a.icons:active {
-			// 	background-position-y: -80px;
-			// }
-			// a.icons:hover {
-			// 	background-position-y: -80px;
-			// }
-			// a.icons:focus-visible {
-			// 	background-position-y: -80px;
-			// }
-			// a.icons.active {
-			// 	background-position-y: -80px;
-			// }
 		}
 		.header_links {
 			.patreon_link:hover {
