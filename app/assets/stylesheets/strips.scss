@@ -137,6 +137,9 @@ header {
     height: 110.7px;
     background: image-url("Menu.png") center/350px no-repeat;
   }
+  nav {
+    margin-top: 15px;
+  } 
   nav ul {
     text-align: center;
     margin: 0 auto;
@@ -147,7 +150,7 @@ header {
       position: relative;
       z-index: 1;
       a {
-        padding: 30px 3px;
+        padding: 35px 3px 12px ;
         cursor: pointer;
         margin: 0 16px;
         position: relative;
@@ -157,7 +160,7 @@ header {
           position: relative;
           color: $wug-black;
           font-size: 15px;
-          bottom: -45.4px;
+          bottom: -40.4px;
           height: 24px;
           line-height: 24px;
           width: 64px;
@@ -173,7 +176,7 @@ header {
           background: image-url("About.png") center/80px no-repeat;
         }
         &.icons {
-          top: -0.9px;
+          top: -13.9px;
           background-position-y: 0;
           &:hover, &.active {
             background-position-y: -80.1px;
