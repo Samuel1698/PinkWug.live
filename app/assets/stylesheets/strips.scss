@@ -347,8 +347,8 @@ main {
     height: 22px;
     margin: 5px 10px 0 5px;
   }
-  p {
-    
+  button:first-child {
+    bottom: 0;
   }
   .twitter {
     background: image-url("Twitter.png") center/20px no-repeat;
