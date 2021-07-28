@@ -80,6 +80,9 @@
 			  bottom: -144.3px;
 			}
 		}
+		#plug {
+			font-size: 11px;
+		}
 	}
 }
 //-----------------------------------------------
@@ -196,7 +199,7 @@
 		a {
 			position: absolute;
 			bottom: 39.3px;
-			transform: translateY(-0.5px);
+			// transform: translateY(-0.5px);
 			&.discord {
 			  left: calc(397.56px - 10px);
 			}
