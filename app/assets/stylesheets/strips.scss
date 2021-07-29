@@ -379,7 +379,7 @@ main {
       bottom: 90%;
       left: -10%;
       margin-left: -55px; //Has to be half of the width
-      background-color: $dark-brown;
+      background-color: $wug-black;
       color: white;
       text-align: center;
       padding: 6px 0 4px;
@@ -393,7 +393,7 @@ main {
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: $dark-brown transparent transparent transparent;
+        border-color: $wug-black transparent transparent transparent;
       }
     }
     &.active {
