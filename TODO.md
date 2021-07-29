@@ -98,7 +98,7 @@
   - [x] js to detect url after ? and match with collection to make that active by default
 - [x] Strip 'has print available' boolean
 - [x] Use display:flex on container to prevent whitespace instead of javascript
-- [ ] new shop spec
+- [x] new shop spec
 - [x] new search spec
 - [x] Fix archive title alignment on 320px devices (image min width)
 - [x] Search in archive
