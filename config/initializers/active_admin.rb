@@ -177,7 +177,7 @@ ActiveAdmin.setup do |config|
 
   # == Setting a Favicon
   #
-  config.favicon = 'Favicon.png'
+  config.favicon = 'favicon.ico'
 
   # == Meta Tags
   #
@@ -323,7 +323,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  config.footer = 'Powered by Sam D'
+  config.footer = 'Website by Samuel G. Muñoz'
 
   # == Sorting
   #
