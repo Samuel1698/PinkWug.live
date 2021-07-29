@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	if (document.getElementById("page_title").innerText == "Dashboard"){
 		document.getElementById("main_content").classList.add("mine");
 		var FID = document.createElement("iframe");
-		FID.src = "https://chart-embed.service.newrelic.com/herald/a3f53eff-e6a7-40e2-9be5-6760347a9a3d?height=300px&timepicker=true&allowtransparency=true";
+		FID.src = "https://chart-embed.service.newrelic.com/herald/a3f53eff-e6a7-40e2-9be5-6760347a9a3d?height=300px&timepicker=true";
 		FID.style.width = '320px';
 		FID.style.height = '350px';
 		FID.scrolling = 'no';

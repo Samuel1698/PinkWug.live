@@ -20,14 +20,13 @@ button { border: none;}
 }
 html {
   font-size: 1.125rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 body {
   font-family: 'JollyGood Sans Basic', sans-serif;
   font-weight: normal;
   font-style: normal;
-  display: flex;
-  overflow-x: hidden;
-  justify-content: center;
   margin: 0;
   padding: 0;
 }
