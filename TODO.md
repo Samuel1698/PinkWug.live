@@ -99,9 +99,8 @@
 - [x] Strip 'has print available' boolean
 - [x] Use display:flex on container to prevent whitespace instead of javascript
 - [ ] new shop spec
-- [ ] new search spec
+- [x] new search spec
 - [x] Fix archive title alignment on 320px devices (image min width)
-- [ ] Search way to prevent horizontal scrolling????? on ipads ????????? tf
 - [x] Search in archive
 - [x] Fix Javascript navigation
 - [x] Get rid of old font
