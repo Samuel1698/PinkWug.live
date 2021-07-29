@@ -3,8 +3,8 @@
 	margin-bottom: 0;
 }
 .store {
+	width: 100%;
 	h1 {
-		padding-top: 14px;
 		margin-top: 0;
 		img {
 			height: 100px;
@@ -14,7 +14,7 @@
 		text-align: center;
 		position: relative;
 		margin-bottom: 12px;
-		bottom: 0;
+		bottom: -13.4px;
 		button {
 			position: relative;
 			z-index: 1;
@@ -31,7 +31,7 @@
 			background: image-url("ShopShelf.png") center/320px no-repeat;
 			margin: 0 auto;
 			position: absolute;
-			bottom: -8px;
+			bottom: -8.2px;
 			right: 0;
 			left: 0;
 			z-index: 0;
