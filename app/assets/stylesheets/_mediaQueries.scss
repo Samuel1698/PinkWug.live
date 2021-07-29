@@ -4,8 +4,8 @@
 // Header resizing for smallest screens
 // ----------------------------------------------
 @media (max-width: 350px){
-	.store .shop_collections img {
-		bottom: -11px;
+	.store .shop_collections {
+		bottom: 0.5px;
 	}
 	header {
 		nav ul li a {
@@ -120,18 +120,6 @@
 	}
 }
 // ---------------------------------------------------
-// Between 350 and 939 pixels
-// ---------------------------------------------------
-@media (max-width: $medium - 1) {
-	#main { 
-		&.menu_margin {
-			margin-top: 16rem; //4em for each extra menu item
-			transition: margin-top 0.3s ease-out, 0.3s ease-out;
-		}
-	}
-}
-
-// ---------------------------------------------------
 // From 541 to biggest screen size
 // ---------------------------------------------------
 @media (min-width: $small) {
@@ -174,6 +162,9 @@
 			position: relative;
 			bottom: 60px;
 		}
+	}
+	.store .shop_collections {
+		bottom: -3px;
 	}
 	.img_container {
 		transform: translate(1%, -22%);
