@@ -251,27 +251,22 @@ header {
         width: 16px;
         background-color: #F3F3F4;
       }
-      .hour-hand {
-        display: inline-block;
-        height: 6.3px;
-        width: 6.3px;
-        border-left: 1.4px solid $wug-black;
+      .hand {
         position: absolute;
-        right: 9px;
-        bottom: 16px;
-        z-index: 2;
-        transform-origin: 0.5px 101%;
-      }
-      .minu-hand {
         display: inline-block;
         height: 10px;
-        width: 10px;
-        border-left: 1.4px solid $wug-black;
-        position: absolute;
-        right: 5.3px;
+        width: 5px;
+        right: 13.3px;
         bottom: 16px;
         z-index: 2;
-        transform-origin: 0.4px 101%;
+        transform-origin: 50% 95%;
+
+      }
+      .hour {
+        background: image-url("ClockHandle1.png") center bottom/1.4px no-repeat;
+      }
+      .minute { 
+        background: image-url("ClockHandle2.png") center bottom/1.4px no-repeat;
       }
     }
   }
