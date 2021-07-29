@@ -254,19 +254,20 @@ header {
       .hand {
         position: absolute;
         display: inline-block;
-        height: 10px;
+        height: 12px;
         width: 5px;
-        right: 13.3px;
-        bottom: 16px;
+        right: 13px;
+        bottom: 15.8px;
         z-index: 2;
         transform-origin: 50% 95%;
 
       }
       .hour {
-        background: image-url("ClockHandle1.png") center bottom/1.4px no-repeat;
+        background: image-url("ClockHandle1.png") center bottom/2px no-repeat;
       }
       .minute { 
-        background: image-url("ClockHandle2.png") center bottom/1.4px no-repeat;
+        background: image-url("ClockHandle2.png") center 0.3px/2px no-repeat;
+
       }
     }
   }
