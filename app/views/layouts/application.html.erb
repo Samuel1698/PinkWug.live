@@ -22,7 +22,13 @@
     <div class="container">
       <div id="skip"><a href="#main" data-turbolinks="false">Skip to Main Content</a></div> 
       <header class="header">
-        <%= link_to "", root_path, class: "header_logo" %>
+        <div class="header_logo">
+          <%= link_to root_path, class: "logo" do %>
+            <span></span>
+          <% end %>
+          <a href="https://www.cia.gov/" target="_blank" class="plant" tabindex="-1"></a>
+          <div class="profileShelf" tabindex="-1"></div>
+        </div>
         <nav>
           <ul>
             <li>
