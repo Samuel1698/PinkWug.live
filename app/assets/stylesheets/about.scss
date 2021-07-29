@@ -22,12 +22,17 @@
 	.before {
 		margin-bottom: 10px;
 	}
-	a {
-		display: inline-block;
-		max-width: 49%;
-		margin: 0 auto;
-		img {
-			width: 100%;
+	.images {
+		position: relative;
+		width: 104.8%;
+		left: -1.6%;
+		a {
+			display: inline-block;
+			max-width: 49%;
+			margin: 0 auto;
+			img {
+				width: 100%;
+			}
 		}
 	}
 	.after {
