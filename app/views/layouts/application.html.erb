@@ -50,6 +50,11 @@
         <div class="header_links">
           <%= link_to "","https://ko-fi.com/L3L42AQKS", target: "_blank", class: "kofi_link" %>
           <%= link_to "","https://www.patreon.com/pinkwug", target: "_blank", class: "patreon_link" %>
+          <div class="clock">
+            <span class="hide"></span>
+            <span class="hour-hand"></span>
+            <span class="minu-hand"></span>
+          </div>
         </div>
       </header>
       <main id="main">
@@ -70,5 +75,9 @@
       </footer>
     </div>
     <%= yield(:javascripts) %>
+    <%= javascript_include_tag "clock.js", "data-turbolinks-track" => true %>
+    <script>
+      document.querySelector("body").addEventListener("load", startTime());
+    </script>
   </body>
 </html>
