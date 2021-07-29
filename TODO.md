@@ -112,6 +112,6 @@
 - [x] Admin
   - [x] Move 'has print' next to created in field
   - [x] Group author comment and link next to each other in large screens
-- [ ] Fix 'copy' tooltip placement across devices
+- [x] Fix 'copy' tooltip placement across devices
 - [x] Align copyright on small devices
 - [ ] Align clock hands to hours
