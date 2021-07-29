@@ -132,14 +132,6 @@
 	p {
 		font-size: 1rem;
 	}	
-	.share button {
-		span {
-			left: 50%;
-			&::after {
-				left: 50%;
-			}
-		}
-	}
 	.img_container {
 		transform: translate(2%, -24%);
 	}
@@ -162,6 +154,14 @@
 		ul {
 			position: relative;
 			bottom: 60px;
+		}
+	}
+	.share_buttons button {
+		span {
+			left: 50%;
+			&::after {
+				left: 50%;
+			}
 		}
 	}
 	.store .shop_collections {
