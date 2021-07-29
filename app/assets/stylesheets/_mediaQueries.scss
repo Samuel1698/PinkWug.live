@@ -5,7 +5,7 @@
 // ----------------------------------------------
 @media (max-width: 350px){
 	.store .shop_collections {
-		bottom: 0.5px;
+		bottom: -12.5px;
 	}
 	header {
 		nav ul li a {
@@ -164,14 +164,14 @@
 		}
 	}
 	.store .shop_collections {
-		bottom: -3px;
+		bottom: -17px;
 	}
 	.img_container {
 		transform: translate(1%, -22%);
 	}
 }
 // -----------------------------------------
-// For bigger monitors. 1200px +
+// For bigger monitors. 1248px +
 // -----------------------------------------
 @media (min-width: $big) {
 	h1 {
