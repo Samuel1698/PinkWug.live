@@ -113,4 +113,3 @@
 - [x] Admin
   - [x] Move 'has print' next to created in field
   - [x] Group author comment and link next to each other in large screens
-- [ ] Header plant links to cia website
