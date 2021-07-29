@@ -14,6 +14,7 @@
 		text-align: center;
 		position: relative;
 		margin-bottom: 12px;
+		bottom: 0;
 		button {
 			position: relative;
 			z-index: 1;
@@ -23,14 +24,14 @@
 			appearance: none;
 			cursor: pointer;
 			border: none;
-			bottom: 1px;
+			bottom: 0;
 		}
 		.shopShelf {
 			height: 106px;
 			background: image-url("ShopShelf.png") center/320px no-repeat;
 			margin: 0 auto;
 			position: absolute;
-			bottom: -7px;
+			bottom: -8px;
 			right: 0;
 			left: 0;
 			z-index: 0;
