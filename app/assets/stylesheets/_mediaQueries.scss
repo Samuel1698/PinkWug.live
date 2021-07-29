@@ -246,14 +246,15 @@
 		max-width: 125vh;
 	}
 }
-
 //-----------------------------------------------
 // For iPads & Devices that dont support hover
 //-----------------------------------------------
 @media (hover: none) and (pointer: coarse) {
-	header {
-		.header_logo:active, .header_logo:hover, .header_logo.active {
-			background-position-y: -89.8px;
+	header .header_logo {
+		.logo:active, .logo:hover, .logo.active {
+			span {
+				background-position-y: bottom;
+			}
 		}
 		nav ul li {
 			a.icons:active, a.icons:focus-visible, a.icons:hover, a.icons.active {
@@ -278,8 +279,12 @@
 //-----------------------------------------------
 @media (hover: hover) and (pointer: fine) {
 	header {
-		.header_logo:active, .header_logo:hover, .header_logo:focus-visible, .header_logo.active {
-			background-position-y: -89.8px;
+		.header_logo {
+			.logo:active, .logo:hover, .logo:focus-visible, .logo.active {
+				span {
+					background-position-y: bottom;
+				}
+			}
 		}
 		nav ul li {
 			a.icons:active, a.icons:focus-visible, a.icons:hover, a.icons.active {
