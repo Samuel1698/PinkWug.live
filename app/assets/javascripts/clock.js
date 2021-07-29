@@ -13,7 +13,7 @@ function setClock(){
   let h = today.getHours();
   let m = today.getMinutes();
 
-  h_degrees = h * 15; //360 % 24
+  h_degrees = h * 30; //360 % 12
   m_degrees = m * 6;  //360 % 60 
 
   h_hand.style.transform = `rotate(${h_degrees}deg)`;
