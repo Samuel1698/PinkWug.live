@@ -26,7 +26,7 @@
           <%= link_to root_path, class: "logo" do %>
             <span></span>
           <% end %>
-          <a href="https://www.canada.ca/en/security-intelligence-service.html" target="_blank" class="plant" tabindex="-1"></a>
+          <span class="plant" tabindex="-1"></span>
           <div class="profileShelf" tabindex="-1"></div>
         </div>
         <nav>
@@ -78,6 +78,9 @@
     <%= javascript_include_tag "clock.js", "data-turbolinks-track" => true %>
     <script>
       document.querySelector("body").addEventListener("load", startTime());
+      document.querySelector(".plant").addEventListener("click", function(){
+        window.open("https://www.canada.ca/en/security-intelligence-service.html", '_blank');
+      });
     </script>
   </body>
 </html>
