@@ -79,7 +79,6 @@
 - [x] Switch to PostgreSQL
 
 ### Requests/bugs
-- [x] Find bold version of font
 - [x] Logo
 - [x] Replace Social Media links
 - [x] Shop icon on H1 of store
@@ -113,3 +112,4 @@
 - [x] Admin
   - [x] Move 'has print' next to created in field
   - [x] Group author comment and link next to each other in large screens
+- [ ] Fix 'copy' tooltip placement across devices

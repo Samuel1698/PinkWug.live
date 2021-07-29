@@ -71,12 +71,12 @@
     overflow: hidden;
 	}
 	.shopify-buy__collection-products {
-    margin-left: -15px;
     text-align: center;
 	}
 	.shopify-buy__product {
-    min-width: 320px;
-    max-width: 320px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 0 6px;
     margin-top: 30px;
     display: inline-block;
     vertical-align: top;
@@ -141,14 +141,13 @@
 @media (min-width: 787px){
 	.store {
 		.shopify-buy__product { 
-			max-width: calc(25% - 20px);
 			margin-bottom: 50px;
 		}
 	}
 }
-@media (min-width: 1200px){
+@media (min-width: 1248px){
 	.store {
-		max-width: 1280px;
+		max-width: 1248px;
 	}
 }
 @media (hover: hover) and (pointer: fine) {
