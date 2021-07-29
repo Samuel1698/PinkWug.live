@@ -5,7 +5,7 @@ function startTime(){
   let h = today.getHours();
   let m = today.getMinutes();
 
-  h_degrees = h * 60;
+  h_degrees = h * 15;
   m_degrees = m * 6;
 
   h_hand.style.transform = `rotate(${h_degrees}deg)`;
@@ -16,10 +16,9 @@ function startTime(){
     let h = today.getHours();
     let m = today.getMinutes();
 
-    h_degrees = h * 60;
+    h_degrees = h * 15;
     m_degrees = m * 6;
 
-    console.log(h + ":" + m);
     h_hand.style.transform = `rotate(${h_degrees}deg)`;
     m_hand.style.transform = `rotate(${m_degrees}deg)`;
   }, 30000);
