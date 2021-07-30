@@ -11,7 +11,7 @@ button { border: none;}
 // Base tags
 // =============================================================================
 @font-face {
-  font-family: 'JollyGood Sans Basic';
+  font-family: 'JollyGoodSansBasic';
   src: image-url('../fonts/JollyGoodSansBasic.woff2') format('woff2'),
        image-url('../fonts/JollyGoodSansBasic.woff') format('woff'),
        image-url('../fonts/JollyGoodSansBasic.otf') format('otf');
@@ -24,7 +24,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  font-family: 'JollyGood Sans Basic', sans-serif;
+  font-family: 'JollyGoodSansBasic', sans-serif;
   font-weight: normal;
   font-style: normal;
   margin: 0;
