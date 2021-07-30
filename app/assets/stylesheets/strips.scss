@@ -12,9 +12,8 @@ button { border: none;}
 // =============================================================================
 @font-face {
   font-family: 'JollyGoodSansBasic';
-  src: image-url('../fonts/JollyGoodSansBasic.woff2') format('woff2'),
-       image-url('../fonts/JollyGoodSansBasic.woff') format('woff'),
-       image-url('../fonts/JollyGoodSansBasic.otf') format('otf');
+  src: image-url('../fonts/JollyGoodSansBasic.otf') format('opentype'),
+       image-url('../fonts/JollyGoodSansBasic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
