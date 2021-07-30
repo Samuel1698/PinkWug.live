@@ -24,7 +24,7 @@
       <header class="header">
         <div class="header_logo">
           <%= link_to root_path, class: "logo" do %>
-            <span></span>
+            <span>Home</span>
           <% end %>
           <span class="plant" tabindex="-1"></span>
           <div class="profileShelf" tabindex="-1"></div>
@@ -48,8 +48,12 @@
           </ul>
         </nav>
         <div class="header_links">
-          <%= link_to "","https://ko-fi.com/L3L42AQKS", target: "_blank", class: "kofi_link" %>
-          <%= link_to "","https://www.patreon.com/pinkwug", target: "_blank", class: "patreon_link" %>
+          <%= link_to "https://ko-fi.com/L3L42AQKS", target: "_blank", class: "kofi_link" do %>
+            <span class="visually-hidden">kofi</span>
+          <% end %>
+          <%= link_to "https://www.patreon.com/pinkwug", target: "_blank", class: "patreon_link" do %>
+            <span class="visually-hidden">patreon</span>
+          <% end %>
           <div class="clock">
             <span class="hide"></span>
             <span class="hour hand"></span>
