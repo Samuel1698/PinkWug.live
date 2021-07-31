@@ -114,3 +114,4 @@
 - [x] Fix 'copy' tooltip placement across devices
 - [x] Align copyright on small devices
 - [x] Align clock hands to hours
+- [ ] Header divs need tabindex -1

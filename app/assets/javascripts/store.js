@@ -92,6 +92,7 @@ function dropDown(button){
 		      },
 		      "button": {
 		        "color": "#000000",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "color": "#000000",
 		          "background-color": "#EFB9D5"
@@ -116,6 +117,7 @@ function dropDown(button){
 		          "background-color": "#EFB9D5"
 		        },
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":focus": {
 		          "background-color": "#EFB9D5"
 		        }
@@ -130,6 +132,7 @@ function dropDown(button){
 		    "styles": {
 		      "toggle": {
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "background-color": "#EFB9D5"
 		        },
@@ -189,6 +192,7 @@ function dropDown(button){
 		      },
 		      "button": {
 		        "color": "#000000",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "color": "#000000",
 		          "background-color": "#EFB9D5"
@@ -213,6 +217,7 @@ function dropDown(button){
 		          "background-color": "#EFB9D5"
 		        },
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":focus": {
 		          "background-color": "#EFB9D5"
 		        }
@@ -227,6 +232,7 @@ function dropDown(button){
 		    "styles": {
 		      "toggle": {
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "background-color": "#EFB9D5"
 		        },
@@ -286,6 +292,7 @@ function dropDown(button){
 		      },
 		      "button": {
 		        "color": "#000000",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "color": "#000000",
 		          "background-color": "#EFB9D5"
@@ -310,6 +317,7 @@ function dropDown(button){
 		          "background-color": "#EFB9D5"
 		        },
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":focus": {
 		          "background-color": "#EFB9D5"
 		        }
@@ -324,6 +332,7 @@ function dropDown(button){
 		    "styles": {
 		      "toggle": {
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "background-color": "#EFB9D5"
 		        },
@@ -383,6 +392,7 @@ function dropDown(button){
 		      },
 		      "button": {
 		        "color": "#000000",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "color": "#000000",
 		          "background-color": "#EFB9D5"
@@ -407,6 +417,7 @@ function dropDown(button){
 		          "background-color": "#EFB9D5"
 		        },
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":focus": {
 		          "background-color": "#EFB9D5"
 		        }
@@ -421,6 +432,7 @@ function dropDown(button){
 		    "styles": {
 		      "toggle": {
 		        "background-color": "#FAD2DC",
+		        "border-radius": "7px",
 		        ":hover": {
 		          "background-color": "#EFB9D5"
 		        },
