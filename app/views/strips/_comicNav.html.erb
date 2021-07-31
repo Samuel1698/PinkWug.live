@@ -1,17 +1,27 @@
 <div class="comic_Nav">
-	<%= link_to strip_url(@first_strip), {class: 'fa fa-angle-double-left'} do %>
-		<span class="visually-hidden">First Comic</span>
-	<% end %>
-	<%= link_to strip_url(@previous_strip), {class: 'fa fa-angle-left'} do %>
-		<span class="visually-hidden">Previous</span>
+	<% if @first_strip == @strip %>
+		<div class="fa fa-angle-double-left disabled"></div>
+		<div class="fa fa-angle-left disabled"></div>
+	<% else %>
+		<%= link_to strip_url(@first_strip), {class: 'fa fa-angle-double-left'} do %>
+			<span class="visually-hidden">First Comic</span>
+		<% end %>
+		<%= link_to strip_url(@previous_strip), {class: 'fa fa-angle-left'} do %>
+			<span class="visually-hidden">Previous</span>
+		<% end %>
 	<% end %>
   <%= link_to strip_url(@random_strip), {class: 'fa fa-rotate-right'} do %>
 		<span class="visually-hidden">Random</span>
 	<% end %>
-	<%= link_to strip_url(@next_strip), {class: 'fa fa-angle-right'} do %>
-		<span class="visually-hidden">Next</span>
-	<% end %>
-	<%= link_to strip_url(@last_strip), {class: 'fa fa-angle-double-right'} do %>
-		<span class="visually-hidden">Most Recent</span>
-	<% end %>  
+	<% if @last_strip == @strip %>
+		<div class="fa fa-angle-right disabled"></div>
+		<div class="fa fa-angle-double-right disabled"></div>
+	<% else %>
+		<%= link_to strip_url(@next_strip), {class: 'fa fa-angle-right'} do %>
+			<span class="visually-hidden">Next</span>
+		<% end %>
+		<%= link_to strip_url(@last_strip), {class: 'fa fa-angle-double-right'} do %>
+			<span class="visually-hidden">Most Recent</span>
+		<% end %> 
+	<% end %> 
 </div>
