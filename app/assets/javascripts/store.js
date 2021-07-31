@@ -94,11 +94,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -113,11 +113,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -129,12 +129,12 @@ function dropDown(button){
 		  "toggle": {
 		    "styles": {
 		      "toggle": {
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":hover": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      },
 		      "count": {
@@ -191,11 +191,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -210,11 +210,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -226,12 +226,12 @@ function dropDown(button){
 		  "toggle": {
 		    "styles": {
 		      "toggle": {
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":hover": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      },
 		      "count": {
@@ -288,11 +288,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -307,11 +307,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -323,12 +323,12 @@ function dropDown(button){
 		  "toggle": {
 		    "styles": {
 		      "toggle": {
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":hover": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      },
 		      "count": {
@@ -385,11 +385,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -404,11 +404,11 @@ function dropDown(button){
 		        "color": "#000000",
 		        ":hover": {
 		          "color": "#000000",
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      }
 		    },
@@ -420,12 +420,12 @@ function dropDown(button){
 		  "toggle": {
 		    "styles": {
 		      "toggle": {
-		        "background-color": "#d2a2d6",
+		        "background-color": "#FAD2DC",
 		        ":hover": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        },
 		        ":focus": {
-		          "background-color": "#bd92c1"
+		          "background-color": "#EFB9D5"
 		        }
 		      },
 		      "count": {
