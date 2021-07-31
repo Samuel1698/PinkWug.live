@@ -114,4 +114,6 @@
 - [x] Fix 'copy' tooltip placement across devices
 - [x] Align copyright on small devices
 - [x] Align clock hands to hours
-- [ ] Use rails instead of javascript to disable comic nav repeated links
+- [x] Use rails instead of javascript to disable comic nav repeated links
+- [ ] Replace custom font arrows with images/svgs
+- [ ] Test compressing images to 85 and check quality for better loading times
