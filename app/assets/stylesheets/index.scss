@@ -6,6 +6,9 @@
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
+	h1 {
+		margin-bottom: 15px;
+	}
 }
 .img_container {
 	position: absolute;
@@ -82,7 +85,6 @@
 		justify-content: center;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: 15px;
 		button {
 			padding: 6px 10px;
 			margin: 0;
@@ -162,11 +164,13 @@
 }
 @media (min-width: 624px){
 	.index {
+		min-width: 624px;
 		max-width: 624px;
 	}
 }
 @media (min-width: 936px){
 	.index {
+		min-width: 936px;
 		max-width: 936px;
 		position: relative;
 	}
@@ -217,11 +221,6 @@
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-	}
-}
-@media (min-width: $medium){
-	.line {
-		max-width: 1000px;
 	}
 }
 @media (min-width: 825px){
