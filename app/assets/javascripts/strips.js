@@ -1,31 +1,3 @@
-var current_strip  = window.location.pathname; 
-var first_strip    = document.querySelector(".fa-angle-double-left");
-var previous_strip = document.querySelector(".fa-angle-left");
-var next_strip     = document.querySelector(".fa-angle-right");
-var last_strip     = document.querySelector(".fa-angle-double-right");
-
-
-if (first_strip.pathname == current_strip) {
-  first_strip.querySelector(".visually-hidden").remove();
-  first_strip.removeAttribute('href');
-  first_strip.classList.add("disabled");
-}
-if (previous_strip.pathname == current_strip) {
-  previous_strip.querySelector(".visually-hidden").remove();
-  previous_strip.removeAttribute('href');
-  previous_strip.classList.add("disabled");
-}
-if (next_strip.pathname == current_strip || location.pathname == "/") {
-  next_strip.querySelector(".visually-hidden").remove();
-  next_strip.removeAttribute('href');
-  next_strip.classList.add("disabled");
-}
-if (last_strip.pathname == current_strip || location.pathname == "/") {
-  last_strip.querySelector(".visually-hidden").remove();
-  last_strip.removeAttribute('href');
-  last_strip.classList.add("disabled");
-}
-
 // --------------------------------------------------
 // Tooltip & Clipboard
 // --------------------------------------------------
@@ -87,6 +59,8 @@ function updateClipboard(newClip) {
 // --------------------------------------------------
 // In-image comic navigation
 // --------------------------------------------------
+var previous_strip = document.querySelector(".fa-angle-left");
+var next_strip     = document.querySelector(".fa-angle-right");
 var parent = document.querySelector('.parent');
 parent.addEventListener("click", function(event){
   pos_x = event.offsetX ? (event.offsetX) : event.pageX - this.offsetLeft;
