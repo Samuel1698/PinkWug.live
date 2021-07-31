@@ -152,16 +152,16 @@
 }
 @media (hover: hover) and (pointer: fine) {
 	.store .shop_collections {
-		#clothes:hover {
+		#clothes:hover, #clothes.active {
 			background-image: image-url("Clothing2.png");	
 		}
-		#mugs:hover {
+		#mugs:hover, #mugs.active {
 			background-image: image-url("Mug2.png");
 		}
-		#stickers:hover {
+		#stickers:hover, #stickers.active {
 			background-image: image-url("Sticker2.png");	
 		}
-		#prints:hover {
+		#prints:hover, #prints.active {
 			background-image: image-url("Print2.png");	
 		}
 	}
