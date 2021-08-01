@@ -15,6 +15,7 @@ button { border: none;}
   src: url('../fonts/JollyGoodSansBasic.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
 html {
   font-size: 1.125rem;

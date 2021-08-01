@@ -115,5 +115,5 @@
 - [x] Align copyright on small devices
 - [x] Align clock hands to hours
 - [x] Use rails instead of javascript to disable comic nav repeated links
-- [ ] Replace custom font arrows with images/svgs
-- [ ] Test compressing images to 85 and check quality for better loading times
+- [x] Replace custom font arrows with images/svgs
+- [x] Test compressing images to 85 and check quality for better loading times
