@@ -38,4 +38,3 @@ en:
     formats:
       long: "%b-%d-%Y %k:%M:%S"
       short: "%b %d %Y"
-      

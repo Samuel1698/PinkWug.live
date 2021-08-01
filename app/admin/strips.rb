@@ -45,7 +45,7 @@ ActiveAdmin.register Strip do
   end
 
   form do |f|
-    f.semantic_errors *f.object.errors.keys
+    f.semantic_errors *f.object.errors.attribute_names
     f.inputs "Comic Details" do
       div id: "first_grid" do 
         f.input :title, required: true
