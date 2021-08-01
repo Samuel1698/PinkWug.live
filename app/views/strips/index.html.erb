@@ -29,7 +29,7 @@
   <h1><%= title 'Comic Archive' %></h1>
   <div class="search">
     <%= form_for :query, url: strips_path, method: :get, html: {class: 'search_form'} do |form|  %>
-      <%= form.label 'Search', class: 'sr-only' %>
+      <%= form.label 'Search', class: 'visually-hidden' %>
       <%= form.text_field :text, placeholder: 'search comics', value: params.dig('query', 'text'), autocomplete: 'off' %>
       <%= form.submit '',class: 'submit_button', title: 'submit search' %>
     <% end %>

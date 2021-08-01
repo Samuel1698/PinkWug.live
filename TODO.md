@@ -117,3 +117,4 @@
 - [x] Use rails instead of javascript to disable comic nav repeated links
 - [x] Replace custom font arrows with images/svgs
 - [x] Test compressing images to 85 and check quality for better loading times
+- [ ] Search bar on archive needs better alignment
