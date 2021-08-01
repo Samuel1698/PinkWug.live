@@ -1,17 +1,17 @@
 <div class="comic_Nav">
 	<% if @first_strip == @strip %>
-		<div class="disabled"><%= image_tag("chevron-double-left.svg", width: "38px", height: "38px") %></div>	
-		<div class="disabled"><%= image_tag("chevron-left.svg", width: "38px", height: "38px") %></div>	
+		<div class="disabled"><%= image_tag("chevron-double-left.svg", width: "32px", height: "32px") %></div>	
+		<div class="disabled"><%= image_tag("chevron-left.svg", width: "32px", height: "32px") %></div>	
 	<% else %>
-		<%= link_to image_tag("chevron-double-left.svg", alt: "First Comic", width: "38px", height: "38px"), strip_url(@first_strip), {class: 'arrow'} %>
-		<%= link_to image_tag("chevron-left.svg", alt: "Previous", width: "38px", height: "38px"), strip_url(@previous_strip), {class: 'arrow'} %>
+		<%= link_to image_tag("chevron-double-left.svg", alt: "First Comic", width: "32px", height: "32px"), strip_url(@first_strip), {class: 'arrow'} %>
+		<%= link_to image_tag("chevron-left.svg", alt: "Previous", width: "32px", height: "32px"), strip_url(@previous_strip), {class: 'arrow'} %>
 	<% end %>
-  <%= link_to image_tag("rotate-clockwise.svg", alt: "Random", width: "34px", height: "34px", class: "random"), strip_url(@random_strip), {class: 'arrow'} %>
+  <%= link_to image_tag("rotate-clockwise.svg", alt: "Random", width: "38px", height: "38px", class: "random"), strip_url(@random_strip), {class: 'arrow'} %>
 	<% if @last_strip == @strip %>
-		<div class="disabled"><%= image_tag("chevron-right.svg", width: "38px", height: "38px") %></div>	
-		<div class="disabled"><%= image_tag("chevron-double-right.svg", width: "38px", height: "38px") %></div>
+		<div class="disabled"><%= image_tag("chevron-right.svg", width: "32px", height: "32px") %></div>	
+		<div class="disabled"><%= image_tag("chevron-double-right.svg", width: "32px", height: "32px") %></div>
 	<% else %>
-		<%= link_to image_tag("chevron-right.svg", alt: "Next", width: "38px", height: "38px"), strip_url(@next_strip), {class: 'arrow'} %>
-		<%= link_to image_tag("chevron-double-right.svg", alt: "Most Recent", width: "38px", height: "38px"), strip_url(@last_strip), class: 'arrow' %>
+		<%= link_to image_tag("chevron-right.svg", alt: "Next", width: "32px", height: "32px"), strip_url(@next_strip), {class: 'arrow'} %>
+		<%= link_to image_tag("chevron-double-right.svg", alt: "Most Recent", width: "32px", height: "32px"), strip_url(@last_strip), class: 'arrow' %>
 	<% end %> 
 </div>
