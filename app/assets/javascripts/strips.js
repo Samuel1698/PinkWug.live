@@ -59,8 +59,8 @@ function updateClipboard(newClip) {
 // --------------------------------------------------
 // In-image comic navigation
 // --------------------------------------------------
-var previous_strip = document.querySelector(".fa-angle-left");
-var next_strip     = document.querySelector(".fa-angle-right");
+var previous_strip = document.querySelector(".prev");
+var next_strip     = document.querySelector(".next");
 var parent = document.querySelector('.parent');
 parent.addEventListener("click", function(event){
   pos_x = event.offsetX ? (event.offsetX) : event.pageX - this.offsetLeft;
