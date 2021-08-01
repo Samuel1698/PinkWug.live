@@ -37,13 +37,12 @@
 <div class="content">
 	<h1 class="visually-hidden"><%= title @title %></h1>
 	<div class="parent">
-		<%= image_tag(url_for(@strip.image), 
+		<%= image_tag(strip_variant(@strip, "1780"), 
 		  srcset: { strip_variant(@strip, "375") => "375w",
 								strip_variant(@strip, "600") => "600w",
 								strip_variant(@strip, "786") => "786w",
 								strip_variant(@strip, "1080") => "1080w",
 							  strip_variant(@strip, "1600") => "1600w",
-							  strip_variant(@strip, "1780") => "1780w",
 							}, sizes: "70vh", alt: h(@strip.transcript).gsub(/\n/, '&#13;&#10;').html_safe, class: "#{@last} comic", tabindex: '0', width: '100%', height: '100%') %>
 	</div>
 	<%= render 'comicNav' %>
