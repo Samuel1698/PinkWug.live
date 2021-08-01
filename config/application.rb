@@ -12,6 +12,7 @@ module PinkWug
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.active_storage.variant_processor = :vips
     config.exceptions_app = self.routes
     config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
     # Settings in config/environments/* take precedence over those specified here.
