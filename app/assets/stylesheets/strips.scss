@@ -299,12 +299,16 @@ main {
   }
   .comic_Nav, .comment {
     max-width: 93%;
-    margin: 0 auto 4px;
+    margin: 2px auto 4px;
   }
 }
 .comic_Nav {
   display: flex;
   justify-content: space-between;
+  a:hover {
+    box-shadow: 0 0 0 2px #979797;
+    border-radius: 7px;
+  }
   a, div {
     display: inline-block;
     background-color: transparent;
@@ -314,10 +318,15 @@ main {
     height: 42px;
     line-height: 38px;
     width: 50px;
-    .random {
+    &.random img {
       transform: rotate(175deg);
       position: relative;
       bottom: -0.8px;
+      transition: none;
+    }
+    &.random:hover img {
+      transform: rotate(535deg);
+      transition: transform 0.6s ease-out;
     }
     &.disabled {
       pointer-events: none;

@@ -68,10 +68,10 @@ parent.addEventListener("click", function(event){
   middle = (parent.offsetWidth / 2);
   margin = (parent.offsetWidth * .07) / 2;
   if (pos_y > margin && pos_y < parent.offsetHeight - margin){
-    if (pos_x > margin && pos_x < middle){
+    if (pos_x > margin && pos_x < middle && previous_strip){
       previous_strip.click();
     }
-    if (pos_x > middle && pos_x < parent.offsetWidth - margin){
+    if (pos_x > middle && pos_x < parent.offsetWidth - margin && next_strip){
       next_strip.click();
     }
   }
