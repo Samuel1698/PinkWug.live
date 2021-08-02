@@ -21,7 +21,9 @@ Rails.application.configure do
   config.action_controller.asset_host = "d1bstxkqfzhrl6.cloudfront.net"
   # Explicitly set header so that fonts are cached in aws
   config.public_file_server.headers = {
-    'Access-Control-Allow-Origin' => 'https://pinkwug.live'
+    'Access-Control-Allow-Origin' => 'https://pinkwug.live',
+    'Cache-Control' => 'public, max-age=31536000',
+    'Expires' => 1.year.from_now.to_formatted_s(:rfc822)
   }
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
