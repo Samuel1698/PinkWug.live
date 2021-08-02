@@ -77,7 +77,7 @@
       </footer>
     </div>
     <%= yield(:javascripts) %>
-    <%= javascript_include_tag "clock.js", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "clock.js", defer: true %>
     <script>
       document.querySelector("body").addEventListener("load", startTime());
       document.querySelector(".plant").addEventListener("click", function(){
