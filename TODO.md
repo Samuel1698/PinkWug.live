@@ -119,3 +119,4 @@
 - [x] Test compressing images to 85 and check quality for better loading times
 - [ ] Search bar on archive needs better alignment
 - [ ] Align inline errors on screens >1200px
+- [ ] Prevent CLS on archive
