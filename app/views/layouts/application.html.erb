@@ -77,12 +77,29 @@
       </footer>
     </div>
     <%= yield(:javascripts) %>
-    <%= javascript_include_tag "clock.js", defer: true %>
     <script>
-      document.querySelector("body").addEventListener("load", startTime());
       document.querySelector(".plant").addEventListener("click", function(){
         window.open("https://www.canada.ca/en/security-intelligence-service.html", '_blank');
       });
+
+      setClock();
+      setInterval(function() {
+        setClock();
+      }, 30000);
+
+      function setClock(){
+        var h_hand = document.querySelector(".hour");
+        var m_hand = document.querySelector(".minute");
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+
+        h_degrees = h * 30; //360 % 12
+        m_degrees = m * 6;  //360 % 60 
+
+        h_hand.style.transform = `rotate(${h_degrees}deg)`;
+        m_hand.style.transform = `rotate(${m_degrees}deg)`;
+      }
     </script>
   </body>
 </html>
