@@ -203,7 +203,6 @@ GEM
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
-    newrelic_rpm (7.2.0)
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
@@ -360,7 +359,6 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   meta-tags
-  newrelic_rpm
   pg
   puma (~> 4.1)
   rails (~> 6.1.3, >= 6.1.3.2)
