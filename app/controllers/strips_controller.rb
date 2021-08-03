@@ -8,7 +8,7 @@ class StripsController < ApplicationController
 	def show
 		@title       = @strip.title
 		@keywords    = @strip.keywords
-		@description = @strip.description << " Pink Wug Comics"
+		@description = "Pink Wug Comics" << @strip.description
 		if (@strip == Strip.last)
 			@keywords = @strip.keywords.push("latest")
 			@last = "last" 
