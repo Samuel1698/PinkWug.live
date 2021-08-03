@@ -18,7 +18,7 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.action_controller.asset_host = "d1bstxkqfzhrl6.cloudfront.net"
+  # config.action_controller.asset_host = "d1bstxkqfzhrl6.cloudfront.net"
   # Explicitly set header so that fonts are cached in aws
   config.public_file_server.headers = {
     'Access-Control-Allow-Origin' => 'https://pinkwug.live',
