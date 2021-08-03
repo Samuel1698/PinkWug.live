@@ -214,13 +214,17 @@ $primary-color: #21A793;
         margin: 5px 0 20px;
         width: 95%; 
       }
+      .inline-errors {
+        padding-left: 0;
+        color: #dc4747;
+      }
       .label {
         width: 5%;
         float: none;
         display: block;
       }
       textarea, input {
-        width: 96%; // This + next width has to be bigger than 100%
+        width: 96%; // This + previous width has to be bigger than 100%
         resize: none;
         overflow: auto;
       }
@@ -228,7 +232,7 @@ $primary-color: #21A793;
         display: grid;
         align-items: start;
         grid-template-columns: 15% auto auto 15%;
-        grid-template-rows: 76px 113px 200px;
+        grid-template-rows: 80px 115px 200px;
         grid-template-areas: "... title   description ..."
                              "... tags    description ..."
                              "... author  links       ...";
@@ -251,7 +255,7 @@ $primary-color: #21A793;
       #strip_description_input {
         grid-area: description;
         textarea {
-          height: 113px;
+          height: 115px;
         }
       }
       #strip_comment_input {
@@ -307,8 +311,12 @@ $primary-color: #21A793;
         margin-left: 15%;
       }
       #drop-region {
-        margin: 5px auto 20px;
+        margin: 5px auto 8px;
         display: block;
+        & + .inline-errors {
+          padding-left: 15%;
+          margin-bottom: 0;
+        }
       }
     }
     .actions {
