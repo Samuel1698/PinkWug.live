@@ -21,7 +21,12 @@ for (let i = 0; i < bigrow.length; i++){
 	bigrow[i].classList.add("gallery");
 	button[i].classList.add("gallery");
 }
-
+// Reset inline style that prevents CLS
+function resetHeight(){
+	for (let i = 0; i < rows.length; i++){
+		rows[i].style.minHeight = 0;
+	}
+}
 // Toggle functions
 function toggleOn(){
 	line.classList.remove("line");
@@ -54,6 +59,7 @@ function galleryToggle(state){
 	return function(){
 		if (table.classList.contains("gallery") && !state){ 
 			toggleOff();
+			resetHeight();
 		}
 		else if ((!table.classList.contains("gallery") && !state) || (state == true && window.innerWidth <= 700)) {
 			toggleOn();
@@ -66,7 +72,7 @@ toggle.addEventListener("click", switchRows("stDate", "desc", button[0]));
 window.addEventListener('resize', galleryToggle(true));
 document.addEventListener('turbolinks:load', galleryToggle(true));
 document.addEventListener('turbolinks:load', switchRows("stDate", "desc", button[0]));
-
+rows[rows.length - 1].querySelector('img').addEventListener('load', resetHeight);
 // Sorts the array based on the array key "property"
 function dynamicSort(property, state){
 	var sortOrder = 1;

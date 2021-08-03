@@ -74,7 +74,6 @@
 
 .row {
 	display: flex;
-	min-height: 2rem;
 	padding: 0 6px;
 	margin-bottom: 2px;
 	align-items: center;
@@ -137,11 +136,7 @@
 		display: none;
 	}
 	.cell {
-		min-width: 200px;
-	 	max-width: 300px;
-	 	&:first-child {
-	 		min-width: 300px;
-	 	}
+		width: 300px;
 	}
 	p {
 		margin: 2px 0px 10px;
@@ -176,7 +171,7 @@
 	}
 	.search {
 		position: absolute;
-		top: -0.5%;
+		top: -0.6%;
 		right: 3.6%;
 		form {
 			input:not(:last-child){
