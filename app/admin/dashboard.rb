@@ -3,8 +3,13 @@ ActiveAdmin.register_page "Dashboard" do
 
   content title: proc { I18n.t("active_admin.dashboard") } do
     columns do 
+      column do 
+        panel "Admnistration Links", class: "admin_panel" do
+          render("/admin/admin_links", model: "dashboard")
+        end
+      end
       column do
-        panel "Contact the Developer", class: "developer_info" do
+        panel "Contact the Developer", class: "admin_panel" do
           render("/admin/sidebar_links", model: "dashboard")
         end
       end

@@ -4,155 +4,42 @@
 	font-weight: normal;
 	font-style: normal;
 }
-#main_content.mine {
-	background-color: transparent;
-	padding: 0;
+#wrapper {
+	min-height: 94vh;
 }
-.header .site_title {
-	z-index: 10;
+#footer {
+	margin-top: auto;
 }
-.columns {
-	margin-bottom: 10px;
-	padding-bottom: 5px;
-	background-color: white;
-	border-radius: 5px;
-	.column {
-		position: relative;
-		padding: 20px;
+body.active_admin.logged_in #active_admin_content.mine {
+	padding: 20px 45px 20px 25px;
+	#main_content_wrapper {
+		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+		background-color: white;
+		border-radius: 7px;
+	}
+	#main_content {
+		background-color: transparent;
+		padding: 0;
+	}
+	.header .site_title {
+		z-index: 10;
+	}
+	.columns {
 		margin-bottom: 10px;
-		.loading {
-			font-family: "LatoWeb", Arial, sans-serif;
-			position: absolute;
-			bottom: 27%;
-			left: 25%;
-			padding: 60px;
-			font-size: 14px;
-			color: grey;
-			background: image-url("greyspinner.gif")50% 50%/150px no-repeat;
-		}
-		.tooltip {
-			position: absolute;
-			padding: 15px;
-		  display: inline-block;
-		  background: image-url("icons8-info.svg")50% 50%/20px no-repeat;
-		  top: 8%;
-		  left: 92.5%;
-		  z-index: 1;
-		  .tooltiptext {
-		    visibility: hidden;
-		    width: 280px;
-		    background-color: #616161;
-		    color: #fff;
-		    text-align: center;
-		    padding: 10px;
-		    border-radius: 6px;
-		   	// Tooltip position
-		    position: absolute;
-		    z-index: 1;
-		    top: 100%;
-        right: -30%; 
-        margin-left: -140px;
-        &::after {
-      	  content: " ";
-      	  position: absolute;
-      	  right: 6.7%;
-      	  bottom: 100%; /* To the top of the tooltip */
-      	  margin-top: -5px;
-      	  border-width: 5px;
-      	  border-style: solid;
-      	  border-color: transparent transparent #616161 transparent;
-        }
-		  	p {
-		  		margin: 0;
-		  	}
-		  	a {
-		  		color: skyblue;
-		  		&:hover {
-		  			color: #21A793;
-		  		}
-		  	}
-		  }
+		padding-bottom: 5px;
+		border-radius: 5px;
+		.column {
+			position: relative;
+			padding: 20px;
+			margin-bottom: 10px;
 		}
 	}
-	#Graph {
-		overflow: auto;
-	}
-	#FID, #CLS, #LCP {
-		max-width: 370px;
-		min-width: 370px;
-		font-family: 'FF Meta';
-		position: relative;
-		.figcaption {
-			position: absolute;
-			bottom: 0;
-			z-index: 0;
-			margin-left: 16px;
-			display: grid;
-			grid-template-areas: "good average bad";
-			div {
-				font-size: 0.7rem;
-				color: #9DA2A2;
-				font-weight: bold;
-				display: flex;
-				flex-direction: column;
-			  align-items: center;
-			  margin-right: 40px;
-			}
-			.good {
-				grid-area: good;
-				span:last-child {
-					color: #0CCE6B;
-				}
-			}
-			.average {
-				grid-area: average;
-				span:last-child {
-					color: #FFA400;
-				}
-			}
-			.bad {
-				grid-area: bad;
-				span:last-child {
-					color: #FF4E42;
-				}
+	.admin_panel {
+		a {
+			color: #21A793;
+			&:hover {
+				color: skyblue;
 			}
 		}
-	}
-}
-.developer_info {
-	a {
-		color: #21A793;
-		&:hover {
-			color: skyblue;
-		}
-	}
-}
-.disabled {
-	display: none !important;
-}
-@media (hover: hover) {
-	.columns .column .tooltip {
-		&:hover {
-			background-size: 15px;
-		}
-		&.active {
-			background: image-url("icons8-info-lock.svg")50% 50%/20px no-repeat;
-		}
-		&:hover, &.active {
-			.tooltiptext {
-				visibility: visible;
-			}
-		}
-	}
-}
-@media (hover: none) {
-	.columns .column .tooltip {
-		&:hover {
-			background: image-url("icons8-info-lock.svg")50% 50%/20px no-repeat;
-	  	background-size: 20px;
-	  	.tooltiptext {
-	  		visibility: visible;
-	  	}
-	  }
 	}
 }
