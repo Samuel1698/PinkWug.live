@@ -122,7 +122,7 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   # config.root_to = 'dashboard#index'
-  config.root_to = 'strips#index'
+  config.root_to = 'dashboard#index'
 
   # == Admin Comments
   #
@@ -219,7 +219,6 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
   #
   # To load a javascript file:
-  config.register_javascript 'dashboard.js'
   config.register_javascript 'image_upload.js'
   config.register_javascript 'admin_index.js'
 
