@@ -42,6 +42,17 @@ ActiveAdmin.register Strip do
       row :has_print if strip.has_print?
       row :created_at
     end
+    div class: "action_items" do 
+      span class: "action_item" do 
+        link_to "View on Website", strip_url, target: "_blank"
+      end
+      span class: "action_item" do 
+        link_to "Edit", edit_admin_strip_url
+      end
+      span class: "action_item" do 
+        link_to "Delete", admin_strip_url, { data: {confirm: "Are you sure you want to delete this?", method: "delete"}}
+      end
+    end
   end
 
   form do |f|
