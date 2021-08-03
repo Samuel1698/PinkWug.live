@@ -119,5 +119,6 @@
 - [x] Test compressing images to 85 and check quality for better loading times
 - [x] Search bar on archive needs better alignment
 - [x] Prevent CLS on archive
-- [ ] Align inline errors on screens >1200px
+- [x] Align inline errors on screens >1200px
+- [x] Admin edit/new pages box padding and border radius
 - [ ] Detect webp support to show footer images

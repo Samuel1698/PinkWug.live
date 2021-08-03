@@ -10,8 +10,10 @@
 #footer {
 	margin-top: auto;
 }
-body.active_admin.logged_in #active_admin_content.mine {
-	padding: 20px 45px 20px 25px;
+.disabled {
+	display: none !important;
+}
+body.active_admin.logged_in #active_admin_content {
 	#main_content_wrapper {
 		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
 		background-color: white;
@@ -19,10 +21,6 @@ body.active_admin.logged_in #active_admin_content.mine {
 	}
 	#main_content {
 		background-color: transparent;
-		padding: 0;
-	}
-	.header .site_title {
-		z-index: 10;
 	}
 	.columns {
 		margin-bottom: 10px;
@@ -41,5 +39,16 @@ body.active_admin.logged_in #active_admin_content.mine {
 				color: skyblue;
 			}
 		}
+	}
+}
+@media screen and (min-width: 992px) {
+	#title_bar.title_bar {
+		margin-right: 25px;
+	}
+	#active_admin_content.with_sidebar #main_content_wrapper #main_content {
+		margin-right: 0;
+	}
+	#active_admin_content.with_sidebar #main_content_wrapper #main_content {
+		margin-right: 0;
 	}
 }
