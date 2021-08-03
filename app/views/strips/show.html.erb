@@ -17,15 +17,22 @@
 	  creator: '@pinkwug',
 	  image: strip_variant(@strip, "786")
 	} %>
-	<%= preload_link_tag 'Twitter.png' %>    
-	<%= preload_link_tag 'Facebook.png' %>    
-	<%= preload_link_tag 'Instagram.png' %>    
-	<%= preload_link_tag 'Reddit.png' %>    
-	<%= preload_link_tag 'Tumblr.png' %>   
+	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+      if (window.innerWidth >  500) {
+        document.querySelector('.parent').style.minHeight = "70vh";
+        document.querySelector('.parent').style.minWidth  = "70vh";
+      }
+      if (document.querySelector('.comic').complete && document.querySelector('.comic').naturalWidth != 0){
+        document.querySelector('.parent').style.minHeight = 0;
+        document.querySelector('.parent').style.minWidth = 0;
+      }
+		});
+	 </script>
 <% end %>
-<div class="content" style="max-width: 70vh; min-width: 100%;" >
+<div class="content">
 	<h1 class="visually-hidden"><%= title @title %></h1>
-	<div class="parent" style="min-height: 100%; max-height: 70vh;">
+	<div class="parent" style="min-width: 100vw; min-height: 100vw;">
 		<%= image_tag(strip_variant(@strip, "1780"), 
 		  srcset: { strip_variant(@strip, "375") => "375w",
 								strip_variant(@strip, "600") => "600w",
@@ -56,7 +63,11 @@
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "strips.js", "data-turbolinks-track" => true %>
-  <script>	 
+  <script>
+  	document.querySelector(".comic").addEventListener('load', function(){
+      document.querySelector('.parent').style.minHeight = 0;
+      document.querySelector('.parent').style.minWidth = 0;
+    }); 
   	var icons = document.querySelectorAll(".icons");
   	for (let i=0; i < icons.length; i++){
   		icons[i].classList.remove("active");
