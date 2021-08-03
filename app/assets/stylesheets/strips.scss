@@ -452,16 +452,16 @@ footer {
   position: relative;
   bottom: 0;
   margin: auto auto 0;
-  height: 170px;
+  height: 220px;
   width: 100%;
   max-width: 1200px;
-  background: image_url("Footer.png") 50% 0/1200px no-repeat;
+  background: image_url("Footer1.webp") 50% 0/1200px no-repeat;
   font-size: 0; //To get rid of generated whitespace
   a {
     position: relative;
     display: inline-block;
     padding: 20px 10px 0;
-    bottom: -64.3px;
+    bottom: -114.3px;
     img {
       height: 46px;
       width: 46px;

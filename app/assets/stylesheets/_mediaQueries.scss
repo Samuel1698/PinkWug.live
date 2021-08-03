@@ -54,7 +54,7 @@
 		height: 250px;
 		width: 100%;
 		max-width: 445px;
-		background: image_url("Footer2.png") 50% 0/445px no-repeat;
+		background: image_url("Footer2.webp") 50% 0/445px no-repeat;
 		a {
 			padding: 21px 9px 0;
 			&.discord {
@@ -311,7 +311,7 @@
 			color: #21A793;
 		}
 		a:hover {
-			bottom: -54px;
+			bottom: -104px;
 			padding: 10px;
 			@media (min-width: $big) {
 				bottom: 39.3px;
