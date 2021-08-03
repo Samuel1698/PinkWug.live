@@ -122,3 +122,4 @@
 - [x] Align inline errors on screens >1200px
 - [x] Admin edit/new pages box padding and border radius
 - [ ] Detect webp support to show footer images
+- [ ] Email in about me page links to email prompt
