@@ -50,12 +50,12 @@
     </button>
     <div class="big_row gallery">
       <% for strip in strips %>
-        <div class="row gallery">
+        <div class="row gallery" style="min-height: 300px;">
           <%= link_to image_tag(strip_variant(strip, "900"), 
                       srcset: { strip_variant(strip, "300") => "1x",
                                 strip_variant(strip, "600") => "2x",
                                 strip_variant(strip, "900") => "3x",
-                              }, sizes: "300px", class: 'cell', alt: strip.title, loading: 'lazy'), strip %>
+                              }, sizes: "300px", class: 'cell', alt: strip.title, loading: 'lazy', width: "300px"), strip %>
           <p class="cell"><%= strip.title %></p>
           <p class="cell"><%= strip.created_at.strftime("%m/%d/%Y") %></p>
         </div>
