@@ -22,6 +22,9 @@
   transition: border 0.2s linear, color 0.2s linear, width 0.2s linear, background-color 0.2s linear;
   cursor: pointer;
   padding: 5px 8px;
+  &:hover {
+  	background-color: #29d2b8;
+  }
 }
 body.active_admin.logged_in #active_admin_content {
 	#main_content_wrapper {
