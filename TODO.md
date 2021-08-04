@@ -124,5 +124,4 @@
 - [x] Email in about me page links to email prompt
 - [x] Detect webp support for comics
 - [x] Detect webp support to show footer images
-- [ ] Loading screen on shop
-- [ ] Download-image icon
+- [x] Loading screen on shop
