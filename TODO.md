@@ -121,5 +121,5 @@
 - [x] Prevent CLS on archive
 - [x] Align inline errors on screens >1200px
 - [x] Admin edit/new pages box padding and border radius
+- [x] Email in about me page links to email prompt
 - [ ] Detect webp support to show footer images
-- [ ] Email in about me page links to email prompt
