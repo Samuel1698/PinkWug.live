@@ -67,9 +67,11 @@ function shopNav(button){
 		    },
 		    "events": {
 		    	"afterRender": function(){
-		    		setTimeout(fixCollectionBug,500);
-		    		setTimeout(detectCollection(collection),500);
-		    		document.querySelector(".loading-gif").classList.add("disabled");
+		    		setTimeout(function(){
+		    			fixCollectionBug();
+		    			detectCollection(collection);
+		    			document.querySelector(".loading-gif").classList.add("disabled");
+		    		}, 1000);
 		    	},
 		    },
 		  },
