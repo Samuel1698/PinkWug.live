@@ -68,6 +68,7 @@
 	}
 	#email-checkbox {
 		position: fixed;
+		left: 125%
 	}
 	#email-checkbox:checked {
 		& ~ .overlay {
