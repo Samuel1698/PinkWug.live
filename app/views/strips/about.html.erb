@@ -1,5 +1,5 @@
 <% content_for :head do  %>
-	<%= display_meta_tags description: 'Suggestions, business inquiries, and who is Pink Wug.' %>
+	<%= display_meta_tags description: 'Suggestions, business inquiries, and who is PinkWug' %>
 	<%= display_meta_tags keywords: 'Pink Wug, About, Business, Discord' %>
 	<%= display_meta_tags og: {
     title: :title,
@@ -28,7 +28,34 @@
   </div>
 	<p class="after">If you wanna support my work, you can sub to my <a href="https://ko-fi.com/L3L42AQKS" target="_blank" class="kofi">Ko-fi</a> or <a href="https://www.patreon.com/pinkwug" target="_blank" class="patreon">Patreon</a> and get some cool perks like wallpapers and high-res prints! And as always, you help out simply by sharing and engaging with my comics!</p>
 	<p>If you have any questions, feel free to drop by my comfy <a href="https://discord.gg/pinkwug" target="_blank" class="discord">Discord</a> server. I'm very active there and you will see my opinions on most stuff.</p>
-	<p>For business inquiries: pinkwug@gmail.com</p>
+  <input type="checkbox" id="email-checkbox">
+	<p>For business inquiries: <label for="email-checkbox">pinkwug@gmail.com</label></p>
+  <label for="email-checkbox" class="overlay"></label>
+  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mjvjorpo" method="post">
+    <div class="form-input">
+      <label for="full-name">name:</label>
+      <input type="text" name="name" id="full-name" placeholder="" required="true">
+    </div>
+
+    <div class="form-input">
+      <label for="company-name">company:</label>
+      <input type="text" name="name" id="company-name" placeholder="">
+    </div>
+
+    <div class="form-input">
+      <label for="email-address">email&nbsp;address:</label>
+      <input type="email" name="from" id="email-address" placeholder="" required="true">
+    </div>
+
+    <div class="form-textarea">
+      <label for="message">body:</label>
+      <textarea name="message" id="message" placeholder="" required="true"></textarea>
+    </div>
+
+    <input type="hidden" name="_subject" id="email-subject" value="Business Inquiry from PinkWug.live">
+
+    <input type="submit" value="Send">
+  </form>
 </div>
 <% content_for :javascripts do %>
   <script>
