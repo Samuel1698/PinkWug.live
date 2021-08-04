@@ -22,6 +22,10 @@
 			color: $discord;
 			cursor: pointer;
 		}
+		a:hover, label:hover {
+			border-bottom: 2px dashed;
+			margin-bottom: -2px;
+		}
 	}
 	p:last-of-type {
 		margin-bottom: 0;
