@@ -92,6 +92,7 @@ ActiveAdmin.register Strip do
 
   before_save do |strip|
     strip.keywords_raw = params[:strip][:keywords_raw].split(", ") unless params[:strip].nil? or params[:strip][:keywords_raw].nil?
+    
     strip.created_at = Time.new().utc if strip.created_at.nil?
     if ((strip.created_at.strftime('%H') == "00") && (strip.created_at.strftime('%M') == "00") && (strip.created_at.strftime('%S') == "00"))  
       hour   = Time.new().utc.strftime('%H').to_i * 60 * 60
