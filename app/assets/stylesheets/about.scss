@@ -116,11 +116,14 @@
 			overflow-y: auto;
 			resize: none;
 		}
-		input[type=submit] {
+		.form-send {
 			background-color: white;
 			cursor: pointer;
 			margin-bottom: 0;
 			width: 80px;
+			color: #777;
+			font-size: 0.9rem;
+			padding: 4px 0;
 		}
 	}
 
@@ -145,12 +148,8 @@
 				width: 47%;
 				margin-left: 10px;
 			}
-			.form-textarea {
+			.form-textarea, .form-send {
 				margin-left: 10px;
-			}
-			input[type=submit] {
-				margin-left: 10px;
-				color: #777;
 			}
 		}
 	}
