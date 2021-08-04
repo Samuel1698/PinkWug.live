@@ -358,10 +358,10 @@ main {
     }
     a {
       color: #275e80; 
-      a:hover {
-        border-bottom: 2px dashed;
-        margin-bottom: -2px;
-      }
+    }
+    a:hover {
+      border-bottom: 2px dashed;
+      margin-bottom: -2px;
     }
     &:last-of-type {
       font-size: 0.8rem;
