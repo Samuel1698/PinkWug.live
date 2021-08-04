@@ -18,6 +18,13 @@
 		.discord {
 			color: $discord;
 		}
+		label {
+			color: $discord;
+			cursor: pointer;
+		}
+	}
+	p:last-of-type {
+		margin-bottom: 0;
 	}
 	.before {
 		margin-bottom: 10px;
@@ -43,10 +50,115 @@
 		margin-top: 10px;
 		margin-bottom: 30px;
 	}
+	.overlay {
+		visibility: hidden;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(0,0,0, .4);
+		z-index: 9;
+		transition: all 500ms ease;
+	}
+	#email-checkbox {
+		position: fixed;
+	}
+	#email-checkbox:checked {
+		& ~ .overlay {
+			visibility: visible;
+			opacity: 1;
+			transition: all 500ms ease;
+		}
+		& ~ form {
+			right: 8px;
+			left: 0;
+			@media (min-width: 330px){
+				left: 8px;
+			}
+			transition: all 500ms ease;
+		}
+	}
+	form {
+		transition: all 500ms ease;
+		min-width: 320px;
+		background-color: white;
+		font-size: 0.8rem;
+		color: #777;
+		border: 1px solid #ccc;
+		text-align: initial;
+		padding: 15px;
+		border-radius: 7px;
+		display: inline-block;
+		position: fixed;
+		right: -100%;
+		left: 100%;
+		top: 15%;
+		z-index: 10;
+		overflow: auto;
+		label {
+			margin-bottom: 2px;
+		}
+		input, textarea {
+			width: 100%;
+			margin: 2px 0 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		textarea {
+			height: 30vh;
+			overflow-y: auto;
+			resize: none;
+		}
+		input[type=submit] {
+			background-color: white;
+			cursor: pointer;
+			margin-bottom: 0;
+			width: 80px;
+		}
+	}
+
 }
 @media (min-width: $small){
 	.content_about {
 		margin: 0 20px;
+		#email-checkbox:checked ~ form {
+			right: 18px;
+			left: 18px;
+		}
+		form {
+			input, label {
+				display: block;
+				width: 100%;
+			}
+			textarea {
+				width: 98%;
+			}
+			.form-input {
+				display: inline-block;
+				width: 47%;
+				margin-left: 10px;
+			}
+			.form-textarea {
+				margin-left: 10px;
+			}
+			input[type=submit] {
+				margin-left: 10px;
+				color: #777;
+			}
+		}
+	}
+}
+@media (min-width: 640px){
+	.content_about {
+		#email-checkbox:checked ~ form {
+			right: 0;
+			left: 0;
+			display: block;
+			margin: auto;
+			width: 600px;
+		}
 	}
 }
 @media (min-width: 850px){
