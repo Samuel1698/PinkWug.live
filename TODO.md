@@ -125,4 +125,4 @@
 - [x] Detect webp support for comics
 - [x] Detect webp support to show footer images
 - [ ] Loading screen on shop
-- [ ] Download image icon
+- [ ] Download-image icon

@@ -2,11 +2,11 @@ var buttons = document.querySelectorAll(".collection_button");
 var	collection = document.querySelectorAll('.collection')
 
 for (var i=0;i < buttons.length;i++){
-	buttons[i].addEventListener("click", dropDown(buttons[i]));
+	buttons[i].addEventListener("click", shopNav(buttons[i]));
 }
 detectCollection(buttons);
 
-function dropDown(button){
+function shopNav(button){
 	return function(){
 		button.classList.add("active");
 		for (let i=0; i < buttons.length; i++) {
@@ -67,8 +67,9 @@ function dropDown(button){
 		    },
 		    "events": {
 		    	"afterRender": function(){
-		    		fixCollectionBug();
 		    		setTimeout(fixCollectionBug,500);
+		    		setTimeout(detectCollection(collection),500);
+		    		document.querySelector(".loading-gif").classList.add("disabled");
 		    	},
 		    },
 		  },
@@ -501,7 +502,6 @@ function fixCollectionBug() {
 			products[j].querySelector('.shopify-buy__btn').innerText = ' ';
 		}
 	}
-	detectCollection(collection);
 	function matchProductToCollection(product, text) {
 		// Check if each collection's class matches the text
 		for (let i = 0; i < collection.length; i++){
@@ -514,10 +514,9 @@ function fixCollectionBug() {
 	};
 };
 
-// Detect url query  and make that collection active
+// Detect url query and make that collection active
 function detectCollection(nodeList) {
 	var url = window.location.search.substring(1);
-	// console.log(url);
 	if (url) {
 		for (let i=0; i < collection.length; i++){
 			if (collection[i].classList.contains(url)){
