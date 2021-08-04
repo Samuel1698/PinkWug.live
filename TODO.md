@@ -124,3 +124,4 @@
 - [x] Email in about me page links to email prompt
 - [ ] Detect webp support to show footer images
 - [ ] Loading screen on shop
+- [ ] Download image icon
