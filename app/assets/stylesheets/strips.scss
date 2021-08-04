@@ -307,11 +307,9 @@ main {
   display: flex;
   justify-content: space-between;
   a:hover {
-    box-shadow: 0 0 0 2px #979797;
-    border-radius: 7px;
     img {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
     }
   }
   a, div {

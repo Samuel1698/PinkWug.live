@@ -19,7 +19,7 @@
 			color: $discord;
 		}
 		label {
-			color: $discord;
+			color: $email;
 			cursor: pointer;
 		}
 		a:hover, label:hover {
@@ -78,16 +78,17 @@
 		}
 		& ~ form {
 			right: 8px;
+			transition: all 500ms ease;
 			left: 0;
 			@media (min-width: 330px){
 				left: 8px;
 			}
-			transition: all 500ms ease;
 		}
 	}
 	form {
-		transition: all 500ms ease;
+		transition: all 700ms ease;
 		min-width: 320px;
+		max-width: 600px;
 		background-color: white;
 		font-size: 0.8rem;
 		color: #777;
@@ -158,10 +159,10 @@
 	.content_about {
 		#email-checkbox:checked ~ form {
 			right: 0;
-			left: 0;
 			display: block;
 			margin: auto;
 			width: 600px;
+			left: 0;
 		}
 	}
 }
