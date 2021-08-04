@@ -47,6 +47,9 @@ ActiveAdmin.register Strip do
         link_to "View on Website", strip_url, target: "_blank"
       end
       span class: "action_item" do 
+        link_to "New", new_admin_strip_url
+      end
+      span class: "action_item" do 
         link_to "Edit", edit_admin_strip_url
       end
       span class: "action_item" do 
