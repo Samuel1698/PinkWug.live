@@ -360,6 +360,10 @@ main {
     }
     a {
       color: #275e80; 
+      a:hover {
+        border-bottom: 2px dashed;
+        margin-bottom: -2px;
+      }
     }
     &:last-of-type {
       font-size: 0.8rem;
@@ -492,6 +496,10 @@ footer {
       color: #275e80;
       position: initial;
       padding: 0;
+    }
+    a:hover {
+      border-bottom: 2px dashed;
+      margin-bottom: -2px;
     }
   }
   .wrap {
