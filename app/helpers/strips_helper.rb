@@ -1,9 +1,11 @@
 module StripsHelper
   def strip_variant(s, resolution)
     if request.env['HTTP_ACCEPT'] && request.env['HTTP_ACCEPT'].include?('image/webp') 
-      url_for(s.image.variant(resize_to_limit:[resolution,nil], quality: [85], format: :webp).processed).sub(/\?.*/, '')
+      url = url_for(s.image.variant(resize_to_limit:[resolution,nil], quality: [85], format: :webp).processed)
+      url.sub(/\?.*/, '')
     else 
-      url_for(s.image.variant(resize_to_limit:[resolution,nil], quality: [100]).processed).sub(/\?.*/, '')
+      url = url_for(s.image.variant(resize_to_limit:[resolution,nil], quality: [100]).processed)
+      url.sub(/\?.*/, '')
     end
   end
   def split_url(url)
