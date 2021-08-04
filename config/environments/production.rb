@@ -50,7 +50,6 @@ Rails.application.configure do
 
   # Store uploaded files on the amazon S3
   config.active_storage.service = :amazon
-
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
