@@ -123,3 +123,4 @@
 - [x] Admin edit/new pages box padding and border radius
 - [x] Email in about me page links to email prompt
 - [ ] Detect webp support to show footer images
+- [ ] Loading screen on shop
