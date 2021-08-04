@@ -24,6 +24,7 @@ body.index {
 		}
 		&::after {
 			left: 0;
+			right: calc(100% - 10px)
 		}
 	}
 	#sidebar {
