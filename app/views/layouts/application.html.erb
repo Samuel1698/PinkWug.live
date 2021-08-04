@@ -81,7 +81,9 @@
       document.querySelector(".plant").addEventListener("click", function(){
         window.open("https://www.canada.ca/en/security-intelligence-service.html", '_blank');
       });
-
+      document.querySelector(".clock").addEventListener("click", function(){
+        window.open("<%= admin_root_path %>");
+      });
       setClock();
       setInterval(function() {
         setClock();
