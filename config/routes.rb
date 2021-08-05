@@ -24,7 +24,7 @@ Rails.application.routes.draw do
         :rails_service_blob_proxy,
         model.signed_id,
         model.filename,
-        options.merge(host: ENV['S3_BUCKET_NAME'])
+        options.merge(host: 'pinkwug.live')
       )
     else
       signed_blob_id = model.blob.signed_id
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
         signed_blob_id,
         variation_key,
         filename,
-        options.merge(host: ENV['S3_BUCKET_NAME'])
+        options.merge(host: 'pinkwug.live')
       )
     end
   end
