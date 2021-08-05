@@ -24,13 +24,16 @@ body.show {
 	.action_items.parent {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	.first, .second {
 		display: inline-block;
-		margin-left: 4px;
 		.action_item a {
 			margin-top: 4px;
 		}
+	}
+	.first {
+		margin-right: 25px;
 	}
 }
 body.index {
