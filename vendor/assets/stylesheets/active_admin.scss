@@ -17,6 +17,11 @@ $primary-color: #21A793;
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+body.show {
+	table img {
+		width: 100%;
+	}
+}
 body.index {
 	th.sortable.col {
 		a {

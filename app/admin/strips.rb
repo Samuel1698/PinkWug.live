@@ -44,7 +44,13 @@ ActiveAdmin.register Strip do
     end
     div class: "action_items" do 
       span class: "action_item" do 
-        link_to "View on Website", strip_url, target: "_blank"
+        link_to "Previous", admin_strip_url(Strip.where(["created_at < ?", strip.created_at]).order('created_at').last || Strip.order("created_at ASC").first)
+      end
+      span class: "action_item" do 
+        link_to "View on Website", strip_url
+      end
+      span class: "action_item" do 
+        link_to "Next", admin_strip_url(Strip.where(["created_at > ?", strip.created_at]).order('created_at').first || Strip.order("created_at ASC").last)
       end
       span class: "action_item" do 
         link_to "New", new_admin_strip_url

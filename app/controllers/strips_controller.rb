@@ -9,20 +9,19 @@ class StripsController < ApplicationController
 		@title       = @strip.title
 		@keywords    = @strip.keywords
 		if @strip.description.blank?
-			@description = "PinkWug Comics: " << @strip.title
+			@description = "PinkWug Comic: " << @strip.title
 		else 
-			@description = "PinkWug Comics | " << @strip.description
+			@description = @strip.description
 		end
 		if (@strip == Strip.last)
 			@keywords = @strip.keywords.push("latest")
-			@last = "last" 
+			@last = "last"
 		end
 		@first_strip    = Strip.order("created_at ASC").first
 		@last_strip     = Strip.order("created_at ASC").last
 		@previous_strip = Strip.where(["created_at < ?", @strip.created_at]).order('created_at').last || @first_strip
 		@next_strip     = Strip.where(["created_at > ?", @strip.created_at]).order('created_at').first || @last_strip
 		@random_strip   = Strip.where(["id != ?", @strip.id]).order_by_rand.first
-
 
 		@links = @strip.links.split(" ")
 	end
@@ -31,6 +30,7 @@ class StripsController < ApplicationController
 		def set_strip
 			if (params[:id] == -1 || params[:id] == nil)
 				@strip = Strip.order("created_at ASC").last 
+				@strip.description = "PinkWug Comics"
 			else
 				@strip = Strip.order("created_at ASC").find(params[:id])
 			end
