@@ -15,9 +15,13 @@ ActiveAdmin.register Strip do
     config.per_page = 10
   end
 
+
   # Sort order for index
   config.sort_order = 'created_at_desc'
-
+  # For link to site on show
+  action_item :view, only: :show do
+    link_to 'View on Site', strip_path(strip)
+  end
   index download_links: false do |f|
     f.selectable_column 
     f.column :image do |strip|
@@ -48,7 +52,7 @@ ActiveAdmin.register Strip do
           link_to "Previous", admin_strip_url(Strip.where(["created_at < ?", strip.created_at]).order('created_at').last || Strip.order("created_at ASC").first)
         end
         span class: "action_item" do 
-          link_to "View on Website", strip_url
+          link_to "View on Site", strip_url
         end
         span class: "action_item" do 
           link_to "Next", admin_strip_url(Strip.where(["created_at > ?", strip.created_at]).order('created_at').first || Strip.order("created_at ASC").last)
