@@ -20,6 +20,7 @@ $primary-color: #21A793;
 body.show {
 	table img {
 		width: 100%;
+		max-width: 700px;
 	}
 	.action_items.parent {
 		display: flex;
