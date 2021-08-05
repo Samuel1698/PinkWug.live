@@ -6,21 +6,21 @@ Rails.application.routes.draw do
   end
   root controller: :strips, action: :show, id: -1
 
-  direct :rails_public_blob do |blob|
-    if Rails.env.test? || Rails.env.development?
-      route = 
-        # ActiveStorage::VariantWithRecord was introduced in Rails 6.1
-        # Remove the second check if you're using an older version
-        if blob.is_a?(ActiveStorage::Variant) || blob.is_a?(ActiveStorage::VariantWithRecord)
-          :rails_representation
-        else
-         :rails_blob
-        end
-      route_for(route, blob)
-    else
-      File.join("#{ENV['S3_BUCKET_NAME']}", blob.key)
-    end
-  end
+  # direct :rails_public_blob do |blob|
+  #   if Rails.env.test? || Rails.env.development?
+  #     route = 
+  #       # ActiveStorage::VariantWithRecord was introduced in Rails 6.1
+  #       # Remove the second check if you're using an older version
+  #       if blob.is_a?(ActiveStorage::Variant) || blob.is_a?(ActiveStorage::VariantWithRecord)
+  #         :rails_representation
+  #       else
+  #        :rails_blob
+  #       end
+  #     route_for(route, blob)
+  #   else
+  #     File.join("#{ENV['S3_BUCKET_NAME']}", blob.key)
+  #   end
+  # end
   get 'about' => 'strips#about'
   resources :archive, as: :strips, controller: :strips, only: [:index]
   resources :comics, as: :strips, controller: :strips, only: [:show]
