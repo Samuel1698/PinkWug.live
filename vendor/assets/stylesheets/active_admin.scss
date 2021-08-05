@@ -21,6 +21,17 @@ body.show {
 	table img {
 		width: 100%;
 	}
+	.action_items.parent {
+		display: flex;
+		justify-content: space-between;
+	}
+	.first, .second {
+		display: inline-block;
+		margin-left: 4px;
+		.action_item a {
+			margin-top: 4px;
+		}
+	}
 }
 body.index {
 	th.sortable.col {
