@@ -6,8 +6,10 @@ class StripsController < ApplicationController
 		@strips_months = @strips.group_by { |s| s.created_at.beginning_of_month }
 	end
 	def show
-		@title       = @strip.title
-		@keywords    = @strip.keywords
+		@title    = @strip.title
+		@keywords = @strip.keywords
+		@alt      = "" if @alt.blank?
+		@alt     += @strip.transcript
 		if @strip.description.blank?
 			@description = "PinkWug Comic: " << @strip.title
 		else 
@@ -31,6 +33,7 @@ class StripsController < ApplicationController
 			if (params[:id] == -1 || params[:id] == nil)
 				@strip = Strip.order("created_at ASC").last 
 				@strip.description = "PinkWug Comics"
+				@alt = "Pinkwug Comic : "
 			else
 				@strip = Strip.order("created_at ASC").find(params[:id])
 			end
