@@ -5,7 +5,7 @@
 	  title: :title,
 	  type: 'website',
 	  url: strip_url(@strip),
-	  image: strip_variant(@strip, "786"),
+	  image: @og_img,
 	  description: :description,
 	  site_name: 'PinkWug' 
 	} %>
@@ -15,7 +15,7 @@
 	  title: :title,
 	  description: :description,
 	  creator: '@pinkwug',
-	  image: strip_variant(@strip, "786")
+	  image: @og_img
 	} %>
 	<script>
 		document.addEventListener("DOMContentLoaded", function(){
