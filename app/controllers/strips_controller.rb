@@ -34,7 +34,7 @@ class StripsController < ApplicationController
 			if (params[:id] == -1 || params[:id] == nil)
 				@strip = Strip.order("created_at ASC").last 
 				@strip.description = "PinkWug Comics"
-				@alt = "Pinkwug Comic : "
+				@alt = "Pinkwug Comic: "
 			else
 				@strip = Strip.order("created_at ASC").find(params[:id])
 			end
