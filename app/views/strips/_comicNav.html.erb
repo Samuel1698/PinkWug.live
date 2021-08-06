@@ -6,7 +6,7 @@
 		<%= link_to image_tag("Left2.png", alt: "First Comic", width: "26px", height: "26px"), strip_url(@first_strip), {class: 'first'} %>
 		<%= link_to image_tag("Left.png", alt: "Previous", width: "26px", height: "26px"), strip_url(@previous_strip), class: 'prev' %>
 	<% end %>
-  <%= link_to image_tag("Interrogation.png", alt: "Random", width: "26px", height: "26px"), strip_url(@random_strip), class: "random" %>
+  <%= link_to image_tag("Interrogation.png", alt: "Random pinkwug comic", width: "26px", height: "26px"), strip_url(@random_strip), class: "random" %>
 	<% if @last_strip == @strip %>
 		<div class="disabled"><%= image_tag("Right.png", width: "26px", height: "26px") %></div>	
 		<div class="disabled"><%= image_tag("Right2.png", width: "26px", height: "26px") %></div>
