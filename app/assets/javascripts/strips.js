@@ -97,9 +97,10 @@ function check_webp_feature(feature, callback) {
     callback(feature, false);
   };
   img.src = "data:image/webp;base64," + kTestImages[feature];
+  img.alt = "pinkwug comic, pink wug";
 }
 check_webp_feature('lossy', function (feature, isSupported) {
-  if (isSupported) {
-    document.querySelector("footer").classList.add("webp");
+  if (!isSupported) {
+    document.querySelector("footer").classList.add("png");
   }
 });

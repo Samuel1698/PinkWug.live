@@ -442,8 +442,8 @@ main {
 // =============================================================================
 // footer
 // =============================================================================
-footer.webp {
-  background: image_url("Footer1.webp") 50% 0/1200px no-repeat;
+footer.png {
+  background: image_url("Footer1.png") 50% 0/1200px no-repeat;
 }
 footer {
   text-align: center;
@@ -453,7 +453,7 @@ footer {
   height: 220px;
   width: 100%;
   max-width: 1200px;
-  background: image_url("Footer1.png") 50% 0/1200px no-repeat;
+  background: image_url("Footer1.webp") 50% 0/1200px no-repeat;
   font-size: 0; //To get rid of generated whitespace
   a {
     position: relative;
