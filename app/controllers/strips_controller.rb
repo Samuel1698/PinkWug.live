@@ -10,6 +10,7 @@ class StripsController < ApplicationController
 		@keywords = @strip.keywords
 		@alt      = "" if @alt.blank?
 		@alt     += @strip.transcript
+		@og_img   = helpers.strip_variant(@strip, "786")
 		if @strip.description.blank?
 			@description = "PinkWug Comic: " << @strip.title
 		else 
