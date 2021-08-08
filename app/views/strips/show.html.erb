@@ -69,7 +69,7 @@
   		let msg   = "<%= @SEO %>";
   		for (let i=0; i < arrow.length; i++){
   			oldAlt = arrow[i].alt;
-  			newAlt = oldAlt.replace(msg, "");
+  			newAlt = oldAlt.replace(msg, "").trim();
   			arrow[i].alt = newAlt; 
   		}
   	});
