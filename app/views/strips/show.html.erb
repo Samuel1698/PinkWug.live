@@ -64,10 +64,19 @@
 <% content_for :javascripts do %>
   <%= javascript_include_tag "strips.js", "data-turbolinks-track" => true %>
   <script>
+  	document.addEventListener('DOMContentLoaded', function(){
+  		let arrow = document.querySelectorAll(".arrow");
+  		let msg   = "<%= @SEO %>";
+  		for (let i=0; i < arrow.length; i++){
+  			oldAlt = arrow[i].alt;
+  			newAlt = oldAlt.replace(msg, "");
+  			arrow[i].alt = newAlt; 
+  		}
+  	});
   	document.querySelector(".comic").addEventListener('load', function(){
       document.querySelector('.parent').style.minHeight = 0;
       document.querySelector('.parent').style.minWidth = 0;
-    }); 
+    });
   	var icons = document.querySelectorAll(".icons");
   	for (let i=0; i < icons.length; i++){
   		icons[i].classList.remove("active");
