@@ -125,4 +125,3 @@
 - [x] Detect webp support for comics
 - [x] Detect webp support to show footer images
 - [x] Loading screen on shop
-- [ ] Use same detection for webp in backend to determine css support instead of javascript
