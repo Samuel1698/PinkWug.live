@@ -34,15 +34,15 @@
 		}
 	}
 }
-@media (max-width: 400px){
+@media (min-width: 400px){
 	.comment {
 		.ad {
-			position: absolute;
-			bottom: 30px;
+			position: initial;
 		}
 		.share_buttons {
-			align-items: flex-end;
-			flex-direction: column;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
 		}
 	}
 }
