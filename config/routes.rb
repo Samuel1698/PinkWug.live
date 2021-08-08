@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :archive, as: :strips, controller: :strips, only: [:index]
   resources :comics, as: :strips, controller: :strips, only: [:show]
   resources :shop, as: :store, controller: :store, only: [:index]
+
+  get '/products', to: redirect('/shop')
+  get '/collections', to: redirect('/shop')
+
   match "/404", to: "errors#not_found", via: :all
   match "/422", to: "errors#unacceptable", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
