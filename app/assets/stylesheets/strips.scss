@@ -335,6 +335,7 @@ main {
   border: 2px solid $wug-black;
   position: relative;
   min-height: 85px;
+  padding-bottom: 5px;
   img {
     float: left;
     margin-right: 8px;
@@ -352,11 +353,6 @@ main {
       background-color: #F9E6B2;
       padding: 4px 12px;
     }
-    &.ad {
-      font-size: 0.8rem;
-      margin-top: 0.7rem;
-      margin-bottom: 0;
-    }
     a {
       color: #275e80; 
     }
@@ -364,49 +360,62 @@ main {
       border-bottom: 2px dashed;
       margin-bottom: -2px;
     }
-    &:last-of-type {
-      font-size: 0.8rem;
-      margin: 0 10px 0;
-      background: initial;
-      display: inline-block;
-      position: absolute;
-      bottom: 6px;
-      left: 0;
+  }
+  .ad {
+    word-wrap: break-word;
+    font-size: 0.8rem;
+    margin: 0.7rem 12px 0;
+    a {
+      color: #275e80; 
+    }
+    a:hover {
+      border-bottom: 2px dashed;
+      margin-bottom: -2px;
     }
   }
 }
 .share_buttons {
+  display: flex;
   font-size: 0;
-  height: 30px;
-  text-align: end;
+  justify-content: space-between;
+  align-items: center;
   a, button {
     display: inline-block;
     width: 22px;
     height: 22px;
-    margin: 5px 10px 0 5px;
+    margin: 0 10px 0 5px;
+  }
+  .share_one {
+    margin: 0 10px 0 12px;
+    font-size: 0.8rem;
+    line-height: 22px;
+    height: 22px;
+  }
+  .share_two {
+    height: 22px;
   }
   button:first-child {
     bottom: 0;
   }
   .twitter {
-    background: image-url("Twitter.png") center/20px no-repeat;
+    background: image-url("Twitter.png") center calc(50% - 1px)/20px no-repeat;
   }
   .facebook {
-    background: image-url("Facebook.png") center/20px no-repeat;
+    background: image-url("Facebook.png") center calc(50% - 1px)/20px no-repeat;
   }
   .instagram {
-    background: image-url("Instagram.png") center/20px no-repeat;
+    background: image-url("Instagram.png") center calc(50% - 1px)/20px no-repeat;
   }
   .reddit {
-    background: image-url("Reddit.png") center/20px no-repeat;
+    background: image-url("Reddit.png") center calc(50% - 1px)/20px no-repeat;
   }
   .tumblr {
-    background: image-url("Tumblr.png") center/20px no-repeat;
+    background: image-url("Tumblr.png") center calc(50% - 1px)/20px no-repeat;
   }
   button { // Tooltip 
     font-size: 18px;
     cursor: pointer;
-    background: image-url("Copy.png") center/20px no-repeat;
+    background: image-url("Copy.png") center calc(50% - 1px)/20px no-repeat;
     position: relative;
     padding: 0;
     bottom: 11px;
