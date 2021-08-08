@@ -394,6 +394,8 @@ main {
     height: 22px;
   }
   .share_two {
+    overflow: hidden;
+    white-space: nowrap;
     height: 22px;
   }
   button:first-child {
