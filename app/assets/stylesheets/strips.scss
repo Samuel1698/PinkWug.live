@@ -334,6 +334,7 @@ main {
   color: $wug-black;
   border: 2px solid $wug-black;
   position: relative;
+  min-height: 85px;
   img {
     float: left;
     margin-right: 8px;
