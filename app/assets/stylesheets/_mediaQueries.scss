@@ -34,22 +34,22 @@
 		}
 	}
 }
+@media (max-width: 400px){
+	.comment {
+		.ad {
+			position: absolute;
+			bottom: 30px;
+		}
+		.share_buttons {
+			align-items: flex-end;
+			flex-direction: column;
+		}
+	}
+}
 // ----------------------------------------------
 // Footer resizing for smallest screens
 // ----------------------------------------------
 @media (max-width: 445px){
-	.comment {
-		p.ad {
-			position: absolute;
-			bottom: 30px;
-		}
-		p:last-of-type {
-		position: initial;
-		display: block;
-		text-align: end;
-		margin-top: 6px;
-		}
-	}
 	footer.png {
 		background: image_url("Pink_Wug_Footer2.png") 50% 0/445px no-repeat;
 	}
