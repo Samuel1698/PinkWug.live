@@ -8,8 +8,7 @@ class StripsController < ApplicationController
 	def show
 		@title    = @strip.title
 		@keywords = @strip.keywords
-		@alt      = "" if @alt.blank?
-		@alt     += @strip.transcript
+		@alt      = "pinkwug comic: " + @strip.transcript
 		@og_img   = helpers.strip_variant(@strip, "786")
 		if @strip.description.blank?
 			@description = "PinkWug Comic: " << @strip.title
@@ -34,8 +33,7 @@ class StripsController < ApplicationController
 			if (params[:id] == -1 || params[:id] == nil)
 				@strip = Strip.order("created_at ASC").last 
 				@strip.description = "PinkWug Comics"
-				@alt = "Pinkwug Comic: "
-				@SEO = "pinkwug comic | Pink Wug"
+				@SEO = "pinkwug comic"
 			else
 				@strip = Strip.order("created_at ASC").find(params[:id])
 			end

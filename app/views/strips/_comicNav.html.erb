@@ -11,7 +11,7 @@
 		<div class="disabled"><%= image_tag("Right.png", width: "26px", height: "26px") %></div>	
 		<div class="disabled"><%= image_tag("Right2.png", width: "26px", height: "26px") %></div>
 	<% else %>
-		<%= link_to image_tag("Right.png", alt: "Next #{@SEO}", class: "arrow", width: "26px", height: "26px"), strip_url(@next_strip),class: 'next' %>
-		<%= link_to image_tag("Right2.png", alt: "Most Recent #{@SEO}", class: "arrow", width: "26px", height: "26px"), strip_url(@last_strip), class: 'last' %>
+		<%= link_to image_tag("Right.png", alt: "Next", class: "arrow", width: "26px", height: "26px"), strip_url(@next_strip),class: 'next' %>
+		<%= link_to image_tag("Right2.png", alt: "Most Recent", class: "arrow", width: "26px", height: "26px"), strip_url(@last_strip), class: 'last' %>
 	<% end %> 
 </div>
