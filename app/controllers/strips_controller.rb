@@ -35,6 +35,7 @@ class StripsController < ApplicationController
 				@strip = Strip.order("created_at ASC").last 
 				@strip.description = "PinkWug Comics"
 				@alt = "Pinkwug Comic: "
+				@SEO = "pinkwug comic | Pink Wug"
 			else
 				@strip = Strip.order("created_at ASC").find(params[:id])
 			end
