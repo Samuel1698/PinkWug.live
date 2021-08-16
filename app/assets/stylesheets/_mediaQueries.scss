@@ -273,7 +273,7 @@
 //-----------------------------------------------
 // For desktops & Devices that support hover
 //-----------------------------------------------
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) and (pointer: fine) {
 	header {
 		.header_logo {
 			.logo:active, .logo:hover, .logo:focus-visible, .logo.active {
