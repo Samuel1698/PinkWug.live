@@ -4,11 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
+gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
+gem 'sass-rails', '>= 6.0.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -23,15 +23,15 @@ gem 'jbuilder', '~> 2.7'
 # Use randumb to select a random strip from database without performance issue
 gem 'randumb'
 # Use devise for login and user ids
-gem 'devise', '~> 4.8'
+gem 'devise', '~> 4.8', '>= 4.8.0'
 # Use FriendlyID for SEO-friendly Slugs
 gem 'friendly_id', '~> 5.4.0'
 # Use Active Admin for content management
-gem 'activeadmin', '~> 2.2'
+gem 'activeadmin', '~> 2.9', '>= 2.9.0'
 # Use artic admin to override how aa looks
-gem 'arctic_admin'
+gem 'arctic_admin', '>= 3.3.0'
 # Use meta-tags for SEO
-gem 'meta-tags'
+gem 'meta-tags', '>= 2.14.0'
 # Resize image attachments
 gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
@@ -47,12 +47,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # use dotenv to store Shopify API tokens
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 2.7.6'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
