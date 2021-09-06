@@ -10,7 +10,7 @@
     "trim-newlines": "^4.0.2",
     "turbolinks": "^5.2.0",
     "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.8.0"
   },
   "version": "0.1.0",
   "devDependencies": {
