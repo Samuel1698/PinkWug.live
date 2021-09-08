@@ -21,8 +21,5 @@
     "@webpack-cli/serve": "^1.5.2",
     "babel-plugin-macros": "^3.1.0",
     "webpack-dev-server": "^4.1.1"
-  },
-  "scripts": {
-    "postinstall": "npm rebuild node-sass"
   }
 }
