@@ -9,7 +9,7 @@ I can only grant this license to my work, and as such, all the files in app/asse
 
 ## To run this application you need
 * Ruby 3.0.0
-* Rails 6.1.4
+* Rails 6.1.4.1
 * PostgreSQL
 
 ### Install Command Line Tools (MacOS)
