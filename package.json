@@ -1,5 +1,5 @@
 {
-  "name": "pinkwug app",
+  "name": "app",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "latest",
