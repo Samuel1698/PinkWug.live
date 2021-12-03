@@ -11,8 +11,8 @@ module PinkWug
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.exceptions_app = self.routes
     # This middleware was causing the production issue with webpacker
-    # onfig.exceptions_app = self.routes
     # config.middleware.insert_after ActionDispatch::Static, Rack::Deflaterc
     
     # Configuration for the application, engines, and railties goes here.
