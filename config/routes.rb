@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   constraints(host: /^www\./i) do
     get '(*any)' => redirect { |params, request|
       URI.parse(request.url).tap { |uri| uri.host.sub!(/^www\./i, '') }.to_s

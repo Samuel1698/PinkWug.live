@@ -4,7 +4,8 @@
   "dependencies": {
     "@rails/actioncable": "latest",
     "@rails/activestorage": "latest",
-    "@rails/webpacker": "^6.0.0-rc.5",
+    "@rails/webpacker": "^6.0.0-rc.6",
+    "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
   },
   "version": "0.1.0",
@@ -17,9 +18,8 @@
     "defaults"
   ],
   "devDependencies": {
-    "@webpack-cli/serve": "^1.5.2",
+    "@webpack-cli/serve": "^1.6.0",
     "babel-plugin-macros": "^3.1.0",
-    "webpack": "^5.52.0",
-    "webpack-dev-server": "^4.1.1"
+    "webpack-dev-server": "^4.6.0"
   }
 }
