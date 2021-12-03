@@ -13,7 +13,7 @@ module PinkWug
 
     config.exceptions_app = self.routes
     # This middleware was causing the production issue with webpacker
-    # config.middleware.insert_after ActionDispatch::Static, Rack::Deflaterc
+    config.middleware.insert_after Rack::Sendfile, Rack::Deflater
     
     # Configuration for the application, engines, and railties goes here.
     #
