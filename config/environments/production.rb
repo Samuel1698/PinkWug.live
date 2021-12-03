@@ -12,7 +12,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  # Use heroku/pinkwug.live as action mailer url
+# Use heroku/pinkwug.live as action mailer url
   config.action_mailer.default_url_options = { :host => "https://pinkwug.live" }
   config.action_mailer.asset_host = 'https://pinkwug.live'
   # Full error reports are disabled and caching is turned on.
@@ -30,7 +30,7 @@ Rails.application.configure do
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
 
-  
+
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
@@ -50,6 +50,7 @@ Rails.application.configure do
 
   # Store uploaded files on the amazon S3
   config.active_storage.service = :amazon
+
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
