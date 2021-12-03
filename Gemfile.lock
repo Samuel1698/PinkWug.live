@@ -358,7 +358,7 @@ DEPENDENCIES
   listen (~> 3.2)
   meta-tags (>= 2.14.0)
   pg
-  puma (~> 4.1)
+  puma (~> 4.3, >= 4.3.9)
   rails (~> 6.1.4, >= 6.1.4)
   randumb
   rinku (~> 2.0, >= 2.0.6)
