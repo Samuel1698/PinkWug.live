@@ -33,7 +33,7 @@ gem 'arctic_admin', '>= 3.3.0'
 # Use meta-tags for SEO
 gem 'meta-tags', '>= 2.14.0'
 # Resize image attachments
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12', '>= 1.12.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 # Use autoprefixer for browser compatibility
