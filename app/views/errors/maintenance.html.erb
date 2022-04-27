@@ -1,0 +1,13 @@
+<% content_for :head do  %>
+	<%= display_meta_tags title: 'Maintenance' %>
+	<%= display_meta_tags description: 'This site feature is currently a Work in Progress' %>
+	<%= stylesheet_link_tag "errors" %>
+<% end %>
+<div class="content">
+	<div class="error box">
+		<h1><%= title 'Page in Maintenance' %></h1>
+		<%= image_tag("Error.png", alt: "Error", width: "80px") %>
+		<h2>the page you're trying to load is currently on maintenance</h2>
+		<p>please hold tight while we work to improve our services</p>
+	</div>
+</div>
