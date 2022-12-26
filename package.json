@@ -2,7 +2,7 @@
   "name": "app",
   "private": true,
   "dependencies": {
-    "@rails/actioncable": "latest",
+    "@rails/actioncable": "^7.0.4",
     "@rails/activestorage": "6.1.4",
     "@rails/webpacker": "^6.0.0-rc.6",
     "webpack": "^5.51.1",
