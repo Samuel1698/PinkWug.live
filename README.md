@@ -3,7 +3,7 @@
 ## License:
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-I can only grant this license to my work, and as such, all the files in app/assets/images are not free to use, copy, or share.
+I can only grant this license to my work, and as such, **none** of the images in app/assets/images are to use, copy, or share.
 ## Dependencies:
 * [Imagemagick VIPS](https://github.com/janko/image_processing)
 
