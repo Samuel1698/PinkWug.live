@@ -357,7 +357,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activeadmin (~> 2.9, >= 2.9.0)
+  activeadmin (~> 2.13, >= 2.13.1)
   arctic_admin (>= 3.3.0)
   autoprefixer-rails
   aws-sdk-s3
