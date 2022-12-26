@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
+gem 'rails', '~> 6.1.7'
 # Use Puma as the app server
 gem 'puma', '~> 4.3', '>= 4.3.9'
 # Use SCSS for stylesheets
@@ -14,7 +14,7 @@ gem 'webpacker', '6.0.0.rc.5'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.11', '>= 2.11.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -23,15 +23,15 @@ gem 'jbuilder', '~> 2.7'
 # Use randumb to select a random strip from database without performance issue
 gem 'randumb'
 # Use devise for login and user ids
-gem 'devise', '~> 4.8', '>= 4.8.0'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 # Use FriendlyID for SEO-friendly Slugs
 gem 'friendly_id', '~> 5.4.0'
 # Use Active Admin for content management
-gem 'activeadmin', '~> 2.9', '>= 2.9.0'
+gem 'activeadmin', '~> 2.13', '>= 2.13.1'
 # Use artic admin to override how aa looks
 gem 'arctic_admin', '>= 3.3.0'
 # Use meta-tags for SEO
-gem 'meta-tags', '>= 2.16.0'
+gem 'meta-tags', '>= 2.18.0'
 # Resize image attachments
 gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
@@ -47,7 +47,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # use dotenv to store local variables
-  gem 'dotenv-rails', '>= 2.7.6'
+  gem 'dotenv-rails', '>= 2.8.1'
 end
 
 group :development do
@@ -61,7 +61,7 @@ end
 
 group :test do
   # Use rspect-rails for testing environment
-  gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   # use selenium webdriver
