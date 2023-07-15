@@ -27,7 +27,7 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 # Use FriendlyID for SEO-friendly Slugs
 gem 'friendly_id', '~> 5.4.0'
 # Use Active Admin for content management
-gem 'activeadmin', '~> 2.13', '>= 2.13.1'
+gem 'activeadmin', '~> 3.0', '>= 3.0.0'
 # Use artic admin to override how aa looks
 gem 'arctic_admin', '>= 3.3.0'
 # Use meta-tags for SEO
