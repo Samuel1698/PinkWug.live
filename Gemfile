@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.7'
+gem 'rails', '~> 7.1.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.3', '>= 4.3.9'
 # Use SCSS for stylesheets
@@ -23,15 +23,15 @@ gem 'jbuilder', '~> 2.11', '>= 2.11.5'
 # Use randumb to select a random strip from database without performance issue
 gem 'randumb'
 # Use devise for login and user ids
-gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'devise', '~> 4.9', '>= 4.9.0'
 # Use FriendlyID for SEO-friendly Slugs
 gem 'friendly_id', '~> 5.4.0'
 # Use Active Admin for content management
-gem 'activeadmin', '~> 2.13', '>= 2.13.1'
+gem 'activeadmin', '~> 2.14', '>= 2.14.0'
 # Use artic admin to override how aa looks
-gem 'arctic_admin', '>= 3.3.0'
+gem 'arctic_admin', '>= 4.1.0'
 # Use meta-tags for SEO
-gem 'meta-tags', '>= 2.18.0'
+gem 'meta-tags', '>= 2.19.0'
 # Resize image attachments
 gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
@@ -52,7 +52,7 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 4.2.0'
+  gem 'web-console', '>= 4.2.1'
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -61,7 +61,7 @@ end
 
 group :test do
   # Use rspect-rails for testing environment
-  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.0'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   # use selenium webdriver
