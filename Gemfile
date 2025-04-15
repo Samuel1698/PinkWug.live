@@ -6,7 +6,7 @@ ruby '3.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.4'
 # Use Puma as the app server
-gem 'puma', '~> 4.3', '>= 4.3.9'
+gem 'puma', '~> 5.6', '>= 5.6.8'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6.0.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -25,7 +25,7 @@ gem 'randumb'
 # Use devise for login and user ids
 gem 'devise', '~> 4.9', '>= 4.9.0'
 # Use FriendlyID for SEO-friendly Slugs
-gem 'friendly_id', '~> 5.4.0'
+gem 'friendly_id', '~> 5.4.2'
 # Use Active Admin for content management
 gem 'activeadmin', '~> 2.14', '>= 2.14.0'
 # Use artic admin to override how aa looks
