@@ -9,7 +9,7 @@ I can only grant this license to my work, and as such, **none** of the images in
 
 ## To run this application you need
 * Ruby 3.4.3
-* Rails 68.0.2
+* Rails 8.0.2
 * PostgreSQL
 
 ### Install Command Line Tools (MacOS)
