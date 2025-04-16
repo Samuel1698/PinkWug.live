@@ -129,8 +129,8 @@ strips = [
 
 strips.each do |strip|
 	if Strip.find_by(title: strip[:attributes][:title])
-	   puts "#{strip[:attributes][:title]} already exists, skipping"
-	   next
+	  puts "#{strip[:attributes][:title]} already exists, skipping"
+	  next
 	end
 	s = Strip.new(strip[:attributes])
 	fn = Rails.root.join("app", "assets", "images" ,"comics", "#{strip[:image]}")

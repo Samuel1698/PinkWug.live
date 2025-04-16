@@ -70,8 +70,8 @@ function galleryToggle(state){
 toggle.addEventListener("click", galleryToggle());
 toggle.addEventListener("click", switchRows("stDate", "desc", button[0]));
 window.addEventListener('resize', galleryToggle(true));
-document.addEventListener('turbolinks:load', galleryToggle(true));
-document.addEventListener('turbolinks:load', switchRows("stDate", "desc", button[0]));
+document.addEventListener('turbo:load', galleryToggle(true));
+document.addEventListener('turbo:load', switchRows("stDate", "desc", button[0]));
 rows[rows.length - 1].querySelector('img').addEventListener('load', resetHeight);
 // Sorts the array based on the array key "property"
 function dynamicSort(property, state){

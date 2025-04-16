@@ -8,8 +8,8 @@ I can only grant this license to my work, and as such, **none** of the images in
 * [Imagemagick VIPS](https://github.com/janko/image_processing)
 
 ## To run this application you need
-* Ruby 3.0.0
-* Rails 6.1.4.1
+* Ruby 3.4.3
+* Rails 68.0.2
 * PostgreSQL
 
 ### Install Command Line Tools (MacOS)

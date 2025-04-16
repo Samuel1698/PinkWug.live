@@ -12,14 +12,13 @@
     <%= csp_meta_tag %>
 
     <%= favicon_link_tag asset_path("favicon.ico") %>  
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag "application" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
   </head>
 
   <body tabindex="0">
     <div class="container">
-      <div id="skip"><a href="#main" data-turbolinks="false">Skip to Main Content</a></div> 
+      <div id="skip"><a href="#main" data-turbo="false">Skip to Main Content</a></div> 
       <header class="header">
         <div class="header_logo">
           <%= link_to root_path, class: "logo" do %>

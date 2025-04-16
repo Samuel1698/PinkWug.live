@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.4.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.7', '>= 6.1.7.4'
+gem 'rails', '~> 8.0.2'
 # Use Puma as the app server
-gem 'puma', '~> 5.6', '>= 5.6.8'
+gem 'puma', '~> 6.6', '>= 6.6.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '>= 6.0.0'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '6.0.0.rc.5'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5.2.0'
+gem 'sassc-rails'
+# Transpile app-like JavaScript. Read more: https://github.com/shakacode/shakapacker/tree/main
+gem 'shakapacker', '~> 7.2.3'
+# turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo
+gem 'turbo-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.11', '>= 2.11.5'
 # Use Redis adapter to run Action Cable in production
@@ -27,7 +27,7 @@ gem 'devise', '~> 4.9', '>= 4.9.0'
 # Use FriendlyID for SEO-friendly Slugs
 gem 'friendly_id', '~> 5.4.2'
 # Use Active Admin for content management
-gem 'activeadmin', '~> 2.14', '>= 2.14.0'
+gem 'activeadmin', '~> 3.2.0', '>= 3.2.0'
 # Use artic admin to override how aa looks
 gem 'arctic_admin', '>= 4.1.0'
 # Use meta-tags for SEO
@@ -55,8 +55,8 @@ group :development do
   gem 'web-console', '>= 4.2.0'
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  # gem 'spring' No longer needed in Rails 8.0.2
+  # gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
