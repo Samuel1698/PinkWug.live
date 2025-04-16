@@ -95,9 +95,9 @@ For further instructions on Linux, visit the [Yarn Installation Website](https:/
   ```shell
   psql postgres
   ```
-2. Here we will need to create a new user. Substitude **username** and **password** for your own. Don't forget the **;** at the end.
+2. Here we will need to create a new user. Substitude **username** and **password** for your own. Don't forget the **;** at the end. By default the username the test uses in `config/database.yml` is `pinkwug` and `465469`. If using something different make sure to modify those as well.
 ```shell
-CREATE ROLE <username> WITH LOGIN PASSWORD "<password>";
+CREATE ROLE <username> WITH PASSWORD "<password>";
 ```
 
 ```shell
