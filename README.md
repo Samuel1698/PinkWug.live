@@ -138,7 +138,7 @@ bundle install
 
 yarn upgrade
 
-bundle exec rails webpacker:install
+bundle exec rails shakapacker:install
 
 rails db:reset
 ```

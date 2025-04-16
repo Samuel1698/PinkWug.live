@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Strip, type: :model do
   subject {
-    described_class.new( title: "Relatable",
-                         image: Rack::Test::UploadedFile.new("#{Rails.root}/spec/images/Relatable.jpg"))
+    described_class.new(title: "Relatable",
+                        image: Rack::Test::UploadedFile.new("#{Rails.root}/spec/images/Relatable.jpg"))
   }
   it "is valid with valid attributes" do
     expect(subject).to be_valid

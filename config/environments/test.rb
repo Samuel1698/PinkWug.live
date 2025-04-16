@@ -18,6 +18,8 @@ Rails.application.configure do
   # Configure public file server for tests with cache-control for performance.
   config.public_file_server.headers = { "cache-control" => "public, max-age=3600" }
 
+  # Add this line to enable gzip compression in tests
+  config.middleware.use Rack::Deflater
   # Show full error reports.
   config.consider_all_requests_local = true
   config.cache_store = :null_store

@@ -6,5 +6,10 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.configure_rspec_metadata!
 
+  c.ignore_hosts(
+    'storage.googleapis.com',
+    'googlechromelabs.github.io',
+    'edgedl.me.gvt1.com'
+  )
   c.filter_sensitive_data('<SHOPIFY_API_SECRET>') {"#{ENV['SHOPIFY_API_SECRET']}"}
 end
