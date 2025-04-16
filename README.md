@@ -140,6 +140,8 @@ yarn upgrade
 
 bundle exec rails shakapacker:install
 
+yarn add @hotwired/turbo-rails @rails/activestorage @rails/ujs mini-css-extract-plugin
+
 rails db:reset
 ```
 2. You're now ready to start the server, in the command line, type:
