@@ -10,9 +10,9 @@ gem 'puma', '~> 6.6', '>= 6.6.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/shakacode/shakapacker/tree/main
-gem 'shakapacker', '~> 7.2.3'
+gem 'shakapacker', '~> 8.0.0'
 # turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo
-gem 'turbo-rails'
+gem 'turbo-rails', '>= 2.0.14'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.11', '>= 2.11.5'
 # Use Redis adapter to run Action Cable in production
@@ -27,9 +27,9 @@ gem 'devise', '~> 4.9', '>= 4.9.0'
 # Use FriendlyID for SEO-friendly Slugs
 gem 'friendly_id', '~> 5.4.2'
 # Use Active Admin for content management
-gem 'activeadmin', '~> 3.2.0', '>= 3.2.0'
+gem 'activeadmin', '~> 3.3.0'
 # Use artic admin to override how aa looks
-gem 'arctic_admin', '>= 4.1.0'
+gem 'arctic_admin', '>= 4.3.3'
 # Use meta-tags for SEO
 gem 'meta-tags', '>= 2.18.0'
 # Resize image attachments
@@ -61,7 +61,7 @@ end
 
 group :test do
   # Use rspect-rails for testing environment
-  gem 'rspec-rails', '~> 6.0', '>= 6.0.0'
+  gem 'rspec-rails', '~> 7.0', '>= 7.0.0'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   # use selenium webdriver
