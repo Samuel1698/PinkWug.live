@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.4.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 8.0.2'
+gem 'rails', '~> 8.0.2', '>= 8.0.2.1'
 # Use Puma as the app server
 gem 'puma', '~> 6.6', '>= 6.6.0'
 # Use SCSS for stylesheets
@@ -25,11 +25,11 @@ gem 'randumb'
 # Use devise for login and user ids
 gem 'devise', '~> 4.9', '>= 4.9.0'
 # Use FriendlyID for SEO-friendly Slugs
-gem 'friendly_id', '~> 5.4.2'
+gem 'friendly_id', '~> 5.5.0'
 # Use Active Admin for content management
-gem 'activeadmin', '~> 3.2.0', '>= 3.2.0'
+gem 'activeadmin', '~> 3.3.0'
 # Use artic admin to override how aa looks
-gem 'arctic_admin', '>= 4.1.0'
+gem 'arctic_admin', '>= 4.3.3'
 # Use meta-tags for SEO
 gem 'meta-tags', '>= 2.18.0'
 # Resize image attachments
