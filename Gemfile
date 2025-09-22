@@ -65,7 +65,7 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   # use selenium webdriver
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '>= 4.11.0'
   # Use database_cleaner to wipe and rebuild the test database between the test runs
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
   # Easy installation and use of web drivers to run system tests with browsers
