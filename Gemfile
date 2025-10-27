@@ -31,7 +31,7 @@ gem 'activeadmin', '~> 3.2.0', '>= 3.2.0'
 # Use artic admin to override how aa looks
 gem 'arctic_admin', '>= 4.1.0'
 # Use meta-tags for SEO
-gem 'meta-tags', '>= 2.18.0'
+gem 'meta-tags', '>= 2.22.2'
 # Resize image attachments
 gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
@@ -71,7 +71,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   # Use webmock for stubbing and setting HTTP request expectations
-  gem "webmock"
+  gem "webmock", ">= 3.25.2"
   # Use VCR to get API call during test
   gem "vcr"
 end
