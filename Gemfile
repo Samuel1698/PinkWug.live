@@ -41,7 +41,7 @@ gem "autoprefixer-rails"
 # Use rinku to bring back auto_link functionality to rails
 gem 'rinku', '~> 2.0', '>= 2.0.6'
 # Use aws-sdk-s3 to configure Rails to use Amazon Web Services
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', '>= 1.208.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
