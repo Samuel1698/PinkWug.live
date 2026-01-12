@@ -10,7 +10,7 @@ gem 'puma', '~> 6.6', '>= 6.6.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/shakacode/shakapacker/tree/main
-gem 'shakapacker', '~> 7.2.3'
+gem 'shakapacker', '~> 9.5.0'
 # turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo
 gem 'turbo-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
