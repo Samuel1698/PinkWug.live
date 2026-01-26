@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.11', '>= 2.11.5'
 # Use randumb to select a random strip from database without performance issue
 gem 'randumb'
 # Use devise for login and user ids
-gem 'devise', '~> 4.9', '>= 4.9.0'
+gem 'devise', '~> 5.0', '>= 5.0.0'
 # Use FriendlyID for SEO-friendly Slugs
 gem 'friendly_id', '~> 5.4.2'
 # Use Active Admin for content management
